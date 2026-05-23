@@ -150,27 +150,27 @@ This installs project-local adapters only. To also update the global Codex skill
 python .\scripts\install_or_update_skill.py --agent all --target C:\path\to\your-project --include-global-codex
 ```
 
-After the first GitHub release is published, users can pull the latest approved public release:
+Once a GitHub release is available, users can pull the latest approved public release:
 
 ```powershell
 python .\scripts\install_or_update_skill.py --agent codex --use-latest-release
 ```
 
-Until the public repository and first GitHub release exist, use local package installs only and do not advertise `--use-latest-release` as available.
+Latest-release updates are enabled only for human-approved GitHub releases. Do not point users at private watcher artifacts or unreviewed branches.
 
 The updater refuses to overwrite local user changes unless `--force` is provided.
 
-## First Release Checklist
+## Maintainer Release Checklist
 
-Before announcing latest-release updates:
+Before announcing a new approved release:
 
-1. Create the public GitHub repository at `ArabAgentSkills/arab-payments-skill-atlas`.
-2. Set the local git remote to `https://github.com/ArabAgentSkills/arab-payments-skill-atlas.git`.
+1. Confirm the public repository is `ArabAgentSkills/arab-payments-skill-atlas`.
+2. Run the validation commands in this README.
 3. Push `main`.
-4. Create the first version tag: `v0.1.0`.
+4. Create a version tag such as `v0.1.0`.
 5. Publish a GitHub release from that tag.
 6. Run `python .\scripts\install_or_update_skill.py --agent codex --use-latest-release --dry-run`.
-7. Update release notes only after the release dry-run succeeds.
+7. Announce the release only after the release dry-run succeeds.
 
 ## Source Watch And Approval
 

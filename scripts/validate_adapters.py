@@ -137,8 +137,8 @@ def validate_docs() -> None:
         fail("README must include the approved public repository URL")
     if "--include-global-codex" not in readme:
         fail("README must document explicit --include-global-codex behavior")
-    if "Until the public repository and first GitHub release exist" not in readme:
-        fail("README must state latest-release updates are unavailable before first release")
+    if "Latest-release updates are enabled only for human-approved GitHub releases" not in readme:
+        fail("README must state latest-release updates are limited to approved releases")
     if "--agent all --target" not in readme:
         fail("README must document project-local all-agent install")
     if "--agent codex --dry-run" not in readme:
