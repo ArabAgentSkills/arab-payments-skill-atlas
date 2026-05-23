@@ -7,12 +7,12 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-INDEX_PATH = ROOT / "skills" / "egypt-payment-guardian" / "references" / "provider-index.json"
+SKILLS_ROOT = ROOT / "skills"
 BASELINE_PATH = ROOT / "docs" / "source-watch-baseline.json"
 REPORT_PATH = ROOT / "docs" / "source-watch-report.md"
 MAX_BASELINE_BYTES = 200_000
 MAX_EXCERPT_CHARS = 600
-ALLOWED_STATUSES = {"OK", "JS_CHALLENGE", "FAIL"}
+ALLOWED_STATUSES = {"OK", "JS_CHALLENGE", "TLS_VERIFY", "FAIL"}
 
 
 def fail(message: str) -> None:
@@ -26,12 +26,20 @@ def read_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def provider_index_paths() -> list[Path]:
+    paths = sorted(SKILLS_ROOT.glob("*/references/provider-index.json"))
+    if not paths:
+        fail("No provider-index.json files found under skills/")
+    return paths
+
+
 def provider_urls() -> set[str]:
-    data = read_json(INDEX_PATH)
     urls: set[str] = set()
-    for provider in data["providers"]:
-        for url in provider["source_urls"]:
-            urls.add(url)
+    for index_path in provider_index_paths():
+        data = read_json(index_path)
+        for provider in data["providers"]:
+            for url in provider["source_urls"]:
+                urls.add(url)
     return urls
 
 

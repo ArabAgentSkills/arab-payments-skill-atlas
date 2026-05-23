@@ -2,6 +2,8 @@
 
 You are working with the Egypt Payment Guardian skill. Treat `skills/egypt-payment-guardian/SKILL.md` as the canonical source of truth. Before building or reviewing Egypt payment code, read that file and then read only the relevant provider reference under `skills/egypt-payment-guardian/references/providers/`.
 
+If the work is broader Arab/MENA PSP or BNPL scope, switch to `skills/mena-payment-guardian/SKILL.md` instead.
+
 Use this for Paymob, FawryPay, Geidea Egypt, EasyKash, Kashier, PaySky, valU, Souhoola, callbacks, webhooks, redirects, HMAC, signatures, SecureHash, refunds, voids, captures, payment inquiry, or payment secret boundaries.
 
 Payment non-negotiables:

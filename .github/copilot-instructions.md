@@ -1,6 +1,10 @@
-# Egypt Payment Guardian Copilot Instructions
+# Arab Payments Skill Atlas Copilot Instructions
 
-For Egypt payment work, use `skills/egypt-payment-guardian/SKILL.md` as the source of truth. Load provider detail from `skills/egypt-payment-guardian/references/providers/` for Paymob, FawryPay, Geidea Egypt, EasyKash, Kashier, PaySky, valU, or Souhoola.
+For Egypt-only payment work, use `skills/egypt-payment-guardian/SKILL.md` as the source of truth.
+
+For broader Arab/MENA PSP or BNPL work, use `skills/mena-payment-guardian/SKILL.md` as the source of truth.
+
+Load provider detail only when relevant. Covered providers include Paymob, FawryPay, Geidea, PayTabs, Tap Payments, MyFatoorah, HyperPay, Moyasar, Amazon Payment Services, EasyKash, Kashier, PaySky, Tabby, Tamara, valU, and Souhoola.
 
 Payment non-negotiables:
 

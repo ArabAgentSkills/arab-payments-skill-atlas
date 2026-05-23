@@ -1,10 +1,15 @@
-# Egypt Payment Guardian Adapter
+# Arab Payments Skill Atlas Adapter
 
 Use this adapter for Codex, OpenCode, AGENTS.md-compatible agents, and any coding agent that reads root project instructions.
 
-Before building or reviewing Egypt payment code, load `skills/egypt-payment-guardian/SKILL.md`. Then load only the needed provider reference from `skills/egypt-payment-guardian/references/providers/`.
+Before building or reviewing payment code in this region, choose the smallest matching skill:
 
-Trigger on Paymob, FawryPay, Geidea Egypt, EasyKash, Kashier, PaySky, valU, Souhoola, checkout, callbacks, webhooks, redirects, HMAC, signatures, SecureHash, refunds, voids, captures, payment inquiry, or payment secret boundaries.
+- Egypt-only work: load `skills/egypt-payment-guardian/SKILL.md`.
+- Broader Arab/MENA PSP or BNPL work: load `skills/mena-payment-guardian/SKILL.md`.
+
+Then load only the needed provider reference from the selected skill's `references/providers/` folder.
+
+Trigger on Paymob, FawryPay, Geidea, PayTabs, Tap Payments, MyFatoorah, HyperPay, Moyasar, Amazon Payment Services, EasyKash, Kashier, PaySky, Tabby, Tamara, valU, Souhoola, checkout, callbacks, webhooks, redirects, HMAC, signatures, SecureHash, refunds, voids, captures, payment inquiry, BNPL, or payment secret boundaries.
 
 Payment non-negotiables:
 

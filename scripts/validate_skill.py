@@ -8,8 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL_DIR = ROOT / "skills" / "egypt-payment-guardian"
-INDEX_PATH = SKILL_DIR / "references" / "provider-index.json"
+SKILLS_ROOT = ROOT / "skills"
 
 REQUIRED_PROVIDER_HEADINGS = [
     "## Use When",
@@ -64,12 +63,19 @@ def read_text(path: Path) -> str:
         fail(f"{path} is not valid UTF-8: {exc}")
 
 
-def parse_frontmatter(text: str) -> tuple[dict[str, str], str]:
+def skill_dirs() -> list[Path]:
+    dirs = sorted(path for path in SKILLS_ROOT.iterdir() if (path / "SKILL.md").exists())
+    if not dirs:
+        fail("No installable skills found under skills/")
+    return dirs
+
+
+def parse_frontmatter(text: str, path: Path) -> tuple[dict[str, str], str]:
     if not text.startswith("---\n"):
-        fail("SKILL.md must start with YAML frontmatter")
+        fail(f"{path.relative_to(ROOT)} must start with YAML frontmatter")
     end = text.find("\n---\n", 4)
     if end == -1:
-        fail("SKILL.md frontmatter must close with ---")
+        fail(f"{path.relative_to(ROOT)} frontmatter must close with ---")
     raw = text[4:end]
     body = text[end + 5 :]
     data: dict[str, str] = {}
@@ -77,71 +83,67 @@ def parse_frontmatter(text: str) -> tuple[dict[str, str], str]:
         if not line.strip():
             continue
         if ":" not in line:
-            fail(f"Invalid frontmatter line: {line}")
+            fail(f"Invalid frontmatter line in {path.relative_to(ROOT)}: {line}")
         key, value = line.split(":", 1)
         data[key.strip()] = value.strip().strip('"').strip("'")
     return data, body
 
 
-def validate_skill_md() -> None:
-    path = SKILL_DIR / "SKILL.md"
+def validate_skill_md(skill_dir: Path, providers: list[dict[str, object]]) -> None:
+    path = skill_dir / "SKILL.md"
     if not path.exists():
-        fail("Missing skills/egypt-payment-guardian/SKILL.md")
+        fail(f"Missing {path.relative_to(ROOT)}")
     text = read_text(path)
-    frontmatter, body = parse_frontmatter(text)
+    frontmatter, body = parse_frontmatter(text, path)
     if set(frontmatter) != {"name", "description"}:
-        fail("SKILL.md frontmatter must contain only name and description")
-    if frontmatter["name"] != "egypt-payment-guardian":
-        fail("Skill name must be egypt-payment-guardian")
+        fail(f"{path.relative_to(ROOT)} frontmatter must contain only name and description")
+    if frontmatter["name"] != skill_dir.name:
+        fail(f"{path.relative_to(ROOT)} name must be {skill_dir.name}")
     if not re.fullmatch(r"[a-z0-9-]+", frontmatter["name"]):
-        fail("Skill name must use lowercase letters, digits, and hyphens only")
+        fail(f"{path.relative_to(ROOT)} name must use lowercase letters, digits, and hyphens only")
     if not frontmatter["description"].startswith("Use when "):
-        fail('Skill description must start with "Use when "')
+        fail(f'{path.relative_to(ROOT)} description must start with "Use when "')
     if len(frontmatter["name"]) + len(frontmatter["description"]) > 1024:
-        fail("Frontmatter name plus description is too long")
-    required_refs = [
-        "references/providers/paymob.md",
-        "references/providers/fawrypay.md",
-        "references/providers/geidea-egypt.md",
-        "references/providers/easykash.md",
-        "references/providers/kashier.md",
-        "references/providers/paysky.md",
-        "references/providers/egypt-bnpl-methods.md",
-        "references/patterns/webhook-first-fulfillment.md",
-        "references/patterns/idempotency-state-transitions.md",
-        "references/patterns/server-secret-boundary.md",
-        "references/patterns/private-docs-policy.md",
-    ]
+        fail(f"{path.relative_to(ROOT)} frontmatter name plus description is too long")
+    required_refs = [str(provider["reference_file"]) for provider in providers]
+    required_refs.extend(path.relative_to(skill_dir).as_posix() for path in sorted((skill_dir / "references" / "patterns").glob("*.md")))
     for ref in required_refs:
         if ref not in body:
-            fail(f"SKILL.md does not reference {ref}")
+            fail(f"{path.relative_to(ROOT)} does not reference {ref}")
 
 
-def validate_provider_index() -> None:
-    if not INDEX_PATH.exists():
-        fail("Missing provider-index.json")
-    data = json.loads(read_text(INDEX_PATH))
+def load_provider_index(skill_dir: Path) -> list[dict[str, object]]:
+    index_path = skill_dir / "references" / "provider-index.json"
+    if not index_path.exists():
+        fail(f"Missing {index_path.relative_to(ROOT)}")
+    data = json.loads(read_text(index_path))
+    if data.get("skill") != skill_dir.name:
+        fail(f"{index_path.relative_to(ROOT)} skill must be {skill_dir.name}")
     providers = data.get("providers")
     if not isinstance(providers, list) or not providers:
-        fail("provider-index.json must contain a non-empty providers list")
+        fail(f"{index_path.relative_to(ROOT)} must contain a non-empty providers list")
+    return providers
+
+
+def validate_provider_index(skill_dir: Path, providers: list[dict[str, object]]) -> None:
     seen_ids: set[str] = set()
     for provider in providers:
         for field in REQUIRED_PROVIDER_FIELDS:
             if field not in provider:
-                fail(f"Provider entry missing {field}: {provider}")
-        provider_id = provider["id"]
+                fail(f"{skill_dir.name} provider entry missing {field}: {provider}")
+        provider_id = str(provider["id"])
         if provider_id in seen_ids:
-            fail(f"Duplicate provider id: {provider_id}")
+            fail(f"{skill_dir.name} duplicate provider id: {provider_id}")
         seen_ids.add(provider_id)
         if not isinstance(provider["source_urls"], list) or not provider["source_urls"]:
             fail(f"{provider_id} must have source_urls")
         for url in provider["source_urls"]:
             if not isinstance(url, str) or not url.startswith("https://"):
-                fail(f"{provider_id} has non-HTTPS or invalid source URL: {url}")
-        ref_path = SKILL_DIR / provider["reference_file"]
+                fail(f"{skill_dir.name}:{provider_id} has non-HTTPS or invalid source URL: {url}")
+        ref_path = skill_dir / str(provider["reference_file"])
         if not ref_path.exists():
-            fail(f"{provider_id} reference file missing: {ref_path}")
-        validate_provider_file(provider_id, ref_path)
+            fail(f"{skill_dir.name}:{provider_id} reference file missing: {ref_path}")
+        validate_provider_file(f"{skill_dir.name}:{provider_id}", ref_path)
 
 
 def validate_provider_file(provider_id: str, path: Path) -> None:
@@ -164,10 +166,10 @@ def validate_provider_file(provider_id: str, path: Path) -> None:
             fail(f"{provider_id} missing metadata prefix {prefix}")
 
 
-def validate_evals() -> None:
-    scenarios = sorted((SKILL_DIR / "evals" / "scenarios").glob("*.md"))
+def validate_evals(skill_dir: Path) -> None:
+    scenarios = sorted((skill_dir / "evals" / "scenarios").glob("*.md"))
     if len(scenarios) < 8:
-        fail("Expected at least 8 eval scenarios")
+        fail(f"{skill_dir.name} expected at least 8 eval scenarios")
     for path in scenarios:
         text = read_text(path)
         for heading in ["## User Prompt", "## Required Skill Use", "## Expected Agent Behavior", "## Fail If"]:
@@ -191,9 +193,11 @@ def scan_for_forbidden_markers() -> None:
 
 
 def main() -> None:
-    validate_skill_md()
-    validate_provider_index()
-    validate_evals()
+    for skill_dir in skill_dirs():
+        providers = load_provider_index(skill_dir)
+        validate_skill_md(skill_dir, providers)
+        validate_provider_index(skill_dir, providers)
+        validate_evals(skill_dir)
     scan_for_forbidden_markers()
     print("Skill validation passed")
 

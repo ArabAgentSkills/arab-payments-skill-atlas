@@ -1,13 +1,26 @@
 {
-  "name": "egypt-payment-guardian",
+  "name": "arab-payments-skill-atlas",
   "package_name": "arab-payments-skill-atlas",
   "package_title": "Arab Payments Skill Atlas",
-  "skill_title": "Egypt Payment Guardian",
-  "version": "0.1.0",
-  "release_date": "2026-05-23",
+  "version": "1.0.0",
+  "release_date": "2026-05-24",
   "canonical_repo_url": "https://github.com/ArabAgentSkills/arab-payments-skill-atlas",
-  "minimum_updater_version": "0.1.0",
-  "skill_path": "skills/egypt-payment-guardian",
+  "minimum_updater_version": "1.0.0",
   "release_channel": "approved-public",
-  "update_policy": "Installed copies update only when a user runs the opt-in updater or configures a local scheduled task."
+  "skills": [
+    {
+      "name": "egypt-payment-guardian",
+      "title": "Egypt Payment Guardian",
+      "skill_path": "skills/egypt-payment-guardian",
+      "scope": "Egypt-only payment provider coverage"
+    },
+    {
+      "name": "mena-payment-guardian",
+      "title": "MENA Payment Guardian",
+      "skill_path": "skills/mena-payment-guardian",
+      "scope": "Arab/MENA PSP and BNPL payment provider coverage"
+    }
+  ],
+  "legacy_default_skill": "egypt-payment-guardian",
+  "update_policy": "Installed copies update only when a user runs npx skills update or the opt-in Python updater against an approved public release."
 }

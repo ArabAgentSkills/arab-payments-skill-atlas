@@ -1,0 +1,365 @@
+{
+  "skill": "mena-payment-guardian",
+  "version_scope": "v1-arab-mena-payments-bnpl",
+  "last_updated": "2026-05-24",
+  "source_policy": "Summaries and official links only. Do not vendor full provider docs. Workbook URLs are seed links; official/provider-controlled docs decide what is documented.",
+  "coverage_tiers": {
+    "full-depth": [
+      "paymob",
+      "fawrypay",
+      "geidea",
+      "paytabs",
+      "tap-payments",
+      "myfatoorah",
+      "hyperpay",
+      "moyasar",
+      "amazon-payment-services",
+      "easykash",
+      "paysky",
+      "tabby",
+      "tamara"
+    ],
+    "method-depth": [
+      "valu-souhoola"
+    ],
+    "conservative": [
+      "kashier"
+    ]
+  },
+  "providers": [
+    {
+      "id": "paymob",
+      "name": "Paymob",
+      "category": "Payments / PSP",
+      "market": "Egypt / MENA",
+      "priority": "P0",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public-js-challenge-aware",
+      "reference_file": "references/providers/paymob.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://developers.paymob.com/paymob-docs/getting-started/overview.md",
+        "https://developers.paymob.com/paymob-docs/getting-started/integration-checklist.md",
+        "https://developers.paymob.com/paymob-docs/integration-paths/apis.md",
+        "https://developers.paymob.com/paymob-docs/payments-and-features/payment-methods.md",
+        "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/refund.md",
+        "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/void.md",
+        "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/capture.md",
+        "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/transaction-callbacks.md",
+        "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/hmac/hmac-transaction-callback.md",
+        "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/hmac/hmac-for-card-tokens.md"
+      ],
+      "notes": "Public developer docs may return JavaScript verification to simple link checks. Backend callbacks and HMAC verification are mandatory."
+    },
+    {
+      "id": "fawrypay",
+      "name": "FawryPay",
+      "category": "Payments / PSP",
+      "market": "Egypt",
+      "priority": "P0",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public-tls-manual-verify",
+      "reference_file": "references/providers/fawrypay.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://developer.fawrystaging.com/docs/introduction",
+        "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/get-payment-notification",
+        "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/server-notification-v2",
+        "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/get-payment-status-v2",
+        "https://developer.fawrystaging.com/docs/server-apis/server-apis-overview",
+        "https://developer.fawrystaging.com/docs/card-tokens/card-tokenization-overview"
+      ],
+      "notes": "Callback notification URL is account-level setup, not per-order, for the documented notification flow. Status pull is the fallback."
+    },
+    {
+      "id": "geidea",
+      "name": "Geidea",
+      "category": "Payments / PSP",
+      "market": "Saudi Arabia / Egypt / UAE",
+      "priority": "P0",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public",
+      "reference_file": "references/providers/geidea.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://docs.geidea.net/",
+        "https://docs.geidea.net/docs/overview-1",
+        "https://docs.geidea.net/docs/geidea-checkout-v2",
+        "https://docs.geidea.net/docs/pay-v2",
+        "https://docs.geidea.net/docs/sample-callback-responses",
+        "https://docs.geidea.net/docs/pay-by-link-apis",
+        "https://docs.geidea.net/docs/refund-2",
+        "https://docs.geidea.net/docs/cancel-order-1",
+        "https://docs.geidea.net/docs/void-1",
+        "https://docs.geidea.net/reference/capture-transaction-1"
+      ],
+      "notes": "Docs cover hosted checkout, direct Pay API, Pay by Link, callbacks, and back-office operations. Country endpoint and merchant setup must match the account."
+    },
+    {
+      "id": "paytabs",
+      "name": "PayTabs",
+      "category": "Payments / PSP",
+      "market": "Saudi Arabia / UAE / MENA",
+      "priority": "P0",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public",
+      "reference_file": "references/providers/paytabs.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://docs.paytabs.com/",
+        "https://support.paytabs.com/en/support/solutions/articles/60000992876-3-2-1-hosted-payment-page-apis-initiating-the-payment",
+        "https://support.paytabs.com/en/support/solutions/articles/60000805341",
+        "https://support.paytabs.com/en/support/solutions/articles/60000710069",
+        "https://support.paytabs.com/en/support/solutions/articles/60000718961",
+        "https://support.paytabs.com/en/support/solutions/articles/60000803800-request-response-parameters-the-return-url-return-",
+        "https://support.paytabs.com/en/support/solutions/articles/60000818152-request-response-parameters-cart-id-cart-id-",
+        "https://support.paytabs.com/en/support/solutions/articles/60000818154-request-response-parameters-cart-amount-cart-amount-",
+        "https://support.paytabs.com/en/support/solutions/articles/60000818155-request-response-parameters-cart-currency-cart-currency-"
+      ],
+      "notes": "Docs cover hosted payment pages, callback/IPN, return signatures, cart amount/currency/reference, and server-key signature verification."
+    },
+    {
+      "id": "tap-payments",
+      "name": "Tap Payments",
+      "category": "Payments / PSP",
+      "market": "Kuwait / GCC / MENA",
+      "priority": "P0",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public",
+      "reference_file": "references/providers/tap-payments.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://developers.tap.company/docs/get-started",
+        "https://developers.tap.company/docs/webhook",
+        "https://developers.tap.company/docs/authentication",
+        "https://developers.tap.company/reference/api-actions",
+        "https://developers.tap.company/docs/recurring-payments"
+      ],
+      "notes": "Docs cover hosted checkout, Charge and Authorize APIs, webhook payloads, authorization/capture/void flows, and secret-key authentication."
+    },
+    {
+      "id": "myfatoorah",
+      "name": "MyFatoorah",
+      "category": "Payments / PSP",
+      "market": "Kuwait / GCC",
+      "priority": "P0",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public",
+      "reference_file": "references/providers/myfatoorah.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://docs.myfatoorah.com/docs/get-started",
+        "https://docs.myfatoorah.com/docs/execute-payment",
+        "https://docs.myfatoorah.com/docs/webhook-v2",
+        "https://docs.myfatoorah.com/docs/get-payment-details",
+        "https://docs.myfatoorah.com/docs/v3-updating-payment-status-guidelines",
+        "https://docs.myfatoorah.com/docs/v3-auth-capture",
+        "https://docs.myfatoorah.com/reference/update-payment"
+      ],
+      "notes": "Docs explicitly recommend combining webhooks with Get Payment Details and treating success as final."
+    },
+    {
+      "id": "hyperpay",
+      "name": "HyperPay",
+      "category": "Payments / PSP",
+      "market": "Saudi Arabia / MENA",
+      "priority": "P0",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public",
+      "reference_file": "references/providers/hyperpay.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://www.hyperpay.com/integration-guide/",
+        "https://hyperpay.docs.oppwa.com/integrations/widget",
+        "https://hyperpay.docs.oppwa.com/integrations/server-to-server",
+        "https://hyperpay.docs.oppwa.com/tutorials/webhooks",
+        "https://hyperpay.docs.oppwa.com/reference/resultCodes",
+        "https://hyperpay.docs.oppwa.com/reference/parameters"
+      ],
+      "notes": "Docs cover COPYandPAY, Server-to-Server, Transaction Status query, back-office operations, and encrypted webhook payload handling. OPPWA docs may require manual browser/TLS verification in simple Python checks."
+    },
+    {
+      "id": "moyasar",
+      "name": "Moyasar",
+      "category": "Payments / PSP",
+      "market": "Saudi Arabia",
+      "priority": "P0",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public",
+      "reference_file": "references/providers/moyasar.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://docs.moyasar.com/",
+        "https://docs.moyasar.com/category/payments-api/",
+        "https://docs.moyasar.com/api/authentication/",
+        "https://docs.moyasar.com/guides/payment-operations/",
+        "https://docs.moyasar.com/guides/dashboard/setting-up-webhooks/",
+        "https://docs.moyasar.com/api/other/webhooks/webhook-reference"
+      ],
+      "notes": "Docs cover purchase, authorization, capture, void, refund, webhook secret token validation, and payment status events."
+    },
+    {
+      "id": "amazon-payment-services",
+      "name": "Amazon Payment Services",
+      "category": "Payments / PSP",
+      "market": "MENA",
+      "priority": "P1",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public",
+      "reference_file": "references/providers/amazon-payment-services.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://paymentservices.amazon.com/docs/",
+        "https://paymentservices.amazon.com/docs/managing-payments/tracking-a-payment/webhooks",
+        "https://paymentservices.amazon.com/docs/managing-payments/capturing-payment",
+        "https://paymentservices.amazon.com/docs/api/faqs/faq"
+      ],
+      "notes": "Docs cover Hosted Checkout/custom integration, transaction feedback, notification feedback, signature credentials, capture, and backend API endpoints."
+    },
+    {
+      "id": "easykash",
+      "name": "EasyKash",
+      "category": "Payments / PSP",
+      "market": "Egypt",
+      "priority": "P2",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public-gitbook",
+      "reference_file": "references/providers/easykash.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://easykash.gitbook.io/easykash-apis-documentation/",
+        "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/pay-api",
+        "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/callback-service",
+        "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/callback-service/callback-response-verification",
+        "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/payment-inquiry",
+        "https://easykash.gitbook.io/easykash-apis-documentation/cash-api-cash-only"
+      ],
+      "notes": "Public GitBook covers Direct Payment Hosted, callback HMAC SHA-512, inquiry statuses, and Cash API."
+    },
+    {
+      "id": "kashier",
+      "name": "Kashier",
+      "category": "Payments / PSP",
+      "market": "Egypt",
+      "priority": "P1",
+      "readiness": "B",
+      "coverage_depth": "conservative",
+      "public_docs_status": "partially-public-official-github",
+      "reference_file": "references/providers/kashier.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://www.kashier.io/",
+        "https://www.kashier.io/blog-posts/kashier-api---power-flexibility-simplicity",
+        "https://github.com/Kashier-payments",
+        "https://github.com/Kashier-payments/NodeJs-Checkout-Demo",
+        "https://github.com/Kashier-payments/Php-Checkout-Demo",
+        "https://github.com/Kashier-payments/Kashier-WooCommerce-UI-Plugin"
+      ],
+      "notes": "Use official site, official GitHub demos, and official plugins. Ask for merchant docs before endpoint-level custom API work."
+    },
+    {
+      "id": "paysky",
+      "name": "PaySky",
+      "category": "Payments / PSP",
+      "market": "Egypt / MENA",
+      "priority": "P1",
+      "readiness": "B+",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public-partial",
+      "reference_file": "references/providers/paysky.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://paysky.io/docs/",
+        "https://paysky.io/docs/paysky-omni-gateway-payform-plus-integration-guide/",
+        "https://paysky.io/docs/paysky-omni-gateway/",
+        "https://paysky.io/docs/paysky-paybutton-sdk-android-guide/",
+        "https://paysky.io/docs/paysky-paybutton-sdk-ios-guide/"
+      ],
+      "notes": "Public docs cover PayForm Plus, notification SecureHash, ActionCode, TxnType, EGP numeric 818, and smallest-unit amount handling."
+    },
+    {
+      "id": "tabby",
+      "name": "Tabby",
+      "category": "BNPL / Consumer Finance",
+      "market": "UAE / Saudi Arabia / MENA",
+      "priority": "P0",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public",
+      "reference_file": "references/providers/tabby.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://docs.tabby.ai/introduction/what-is-tabby",
+        "https://docs.tabby.ai/api-reference/checkout/create-a-session",
+        "https://docs.tabby.ai/pay-in-4-custom-integration/checkout-flow",
+        "https://docs.tabby.ai/pay-in-4-custom-integration/payment-processing",
+        "https://docs.tabby.ai/pay-in-4-custom-integration/payment-statuses",
+        "https://docs.tabby.ai/pay-in-4-custom-integration/webhooks",
+        "https://docs.tabby.ai/api-reference/payments/retrieve-a-payment"
+      ],
+      "notes": "Docs cover checkout session, payment verification, webhooks, capture, close, refund, idempotent reference_id, and payment status handling."
+    },
+    {
+      "id": "tamara",
+      "name": "Tamara",
+      "category": "BNPL / Consumer Finance",
+      "market": "Saudi Arabia / GCC",
+      "priority": "P0",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public",
+      "reference_file": "references/providers/tamara.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://docs.tamara.co/",
+        "https://docs.tamara.co/docs/direct-online-checkout",
+        "https://docs.tamara.co/docs/transaction-authorisation",
+        "https://docs.tamara.co/docs/online-order-status-flow",
+        "https://docs.tamara.co/reference/captureorder",
+        "https://docs.tamara.co/reference/simplifiedrefund",
+        "https://docs.tamara.co/reference/getorderdetails"
+      ],
+      "notes": "Docs cover checkout sessions, webhook registration, approved to authorised transition, capture, cancel, refund, and order status inquiry."
+    },
+    {
+      "id": "valu-souhoola",
+      "name": "valU and Souhoola",
+      "category": "BNPL / Consumer Finance",
+      "market": "Egypt",
+      "priority": "P1",
+      "readiness": "B",
+      "coverage_depth": "method-depth",
+      "public_docs_status": "psp-routed",
+      "reference_file": "references/providers/valu-souhoola.md",
+      "last_checked": "2026-05-24",
+      "source_urls": [
+        "https://docs.geidea.net/docs/buy-now-pay-later-bnpl",
+        "https://docs.geidea.net/docs/valu",
+        "https://docs.geidea.net/docs/souhoola",
+        "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/pay-api",
+        "https://developers.paymob.com/paymob-docs/payments-and-features/payment-methods/bnpls-egy-ksa-uae.md"
+      ],
+      "notes": "Treat as PSP-routed methods unless direct official merchant API docs are provided."
+    }
+  ],
+  "deferred_future_packs": [
+    "open banking",
+    "tax and e-invoicing",
+    "commerce, POS, and accounting",
+    "logistics",
+    "communications",
+    "identity and government",
+    "HR and payroll",
+    "Arabic NLP"
+  ]
+}

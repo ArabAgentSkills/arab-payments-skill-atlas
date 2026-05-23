@@ -2,10 +2,12 @@
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
 import html
 import json
 import re
+import ssl
 import sys
 import urllib.error
 import urllib.request
@@ -17,10 +19,10 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parents[1]
-INDEX_PATH = ROOT / "skills" / "egypt-payment-guardian" / "references" / "provider-index.json"
+SKILLS_ROOT = ROOT / "skills"
 BASELINE_PATH = ROOT / "docs" / "source-watch-baseline.json"
 REPORT_PATH = ROOT / "docs" / "source-watch-report.md"
-USER_AGENT = "egypt-payment-guardian-source-watch/1.0"
+USER_AGENT = "arab-payments-skill-atlas-source-watch/1.0"
 MAX_EXCERPT_CHARS = 500
 
 
@@ -33,13 +35,15 @@ def ascii_safe(value: str) -> str:
 
 
 def load_provider_urls() -> dict[str, dict[str, object]]:
-    data = json.loads(INDEX_PATH.read_text(encoding="utf-8"))
     urls: dict[str, dict[str, object]] = {}
-    for provider in data["providers"]:
-        provider_id = provider["id"]
-        for url in provider["source_urls"]:
-            item = urls.setdefault(url, {"url": url, "provider_ids": []})
-            item["provider_ids"].append(provider_id)
+    for index_path in sorted(SKILLS_ROOT.glob("*/references/provider-index.json")):
+        data = json.loads(index_path.read_text(encoding="utf-8"))
+        skill = data.get("skill", index_path.parents[1].name)
+        for provider in data["providers"]:
+            provider_id = f"{skill}:{provider['id']}"
+            for url in provider["source_urls"]:
+                item = urls.setdefault(url, {"url": url, "provider_ids": []})
+                item["provider_ids"].append(provider_id)
     for item in urls.values():
         item["provider_ids"] = sorted(set(item["provider_ids"]))
     return dict(sorted(urls.items()))
@@ -85,12 +89,16 @@ def fetch_url(url: str) -> dict[str, object]:
         headers={
             "User-Agent": USER_AGENT,
             "Accept": "text/html,application/json,text/plain,*/*",
+            "Accept-Encoding": "identity",
         },
         method="GET",
     )
     try:
         with urllib.request.urlopen(request, timeout=30) as response:
             raw = response.read()
+            content_encoding = response.headers.get("content-encoding", "").lower()
+            if "gzip" in content_encoding:
+                raw = gzip.decompress(raw)
             status = response.status
             content_type = response.headers.get("content-type", "")
             preview = raw[:4096].decode("utf-8", errors="ignore").lower()
@@ -130,6 +138,24 @@ def fetch_url(url: str) -> dict[str, object]:
             "hash": "",
             "content_length": 0,
             "excerpt": f"HTTP error {exc.code}.",
+        }
+    except urllib.error.URLError as exc:
+        if isinstance(getattr(exc, "reason", None), ssl.SSLCertVerificationError):
+            return {
+                "status": "TLS_VERIFY",
+                "http_status": "",
+                "normalized": "",
+                "hash": "",
+                "content_length": 0,
+                "excerpt": "Manual browser/TLS verification required.",
+            }
+        return {
+            "status": "FAIL",
+            "http_status": "",
+            "normalized": "",
+            "hash": "",
+            "content_length": 0,
+            "excerpt": exc.__class__.__name__,
         }
     except Exception as exc:
         return {
@@ -229,6 +255,12 @@ def render_report(changes: list[dict[str, object]], current: list[dict[str, obje
     if js_items:
         lines.extend(["## Manual Browser Verification", ""])
         for item in js_items:
+            lines.append(f"- {item['url']}")
+        lines.append("")
+    tls_items = [item for item in current if item["status"] == "TLS_VERIFY"]
+    if tls_items:
+        lines.extend(["## Manual Browser/TLS Verification", ""])
+        for item in tls_items:
             lines.append(f"- {item['url']}")
         lines.append("")
     return "\n".join(lines)

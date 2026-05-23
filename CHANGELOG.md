@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.0.0 - 2026-05-24
+
+- Added `mena-payment-guardian` as a second installable skill for Arab/MENA PSP and BNPL work.
+- Covered Paymob, FawryPay, Geidea, PayTabs, Tap Payments, MyFatoorah, HyperPay, Moyasar, Amazon Payment Services, EasyKash, Kashier, PaySky, Tabby, Tamara, valU, and Souhoola.
+- Kept `egypt-payment-guardian` stable for existing Egypt-only users.
+- Updated adapters, README, source-watch tooling, and updater behavior for two installable skills.
+- Deferred non-payment workbook rows to future packs.
+
+## 0.1.1 - 2026-05-23
+
+- Added `npx skills` install and update documentation.
+- Polished the public GitHub storefront presentation and repository install path.
+
 ## 0.1.0 - 2026-05-23
 
 - Initial Arab Payments Skill Atlas public package, starting with the Egypt Payment Guardian V1 skill pack.

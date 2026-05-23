@@ -16,18 +16,26 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION_PATH = ROOT / "skill-version.json"
-UPDATER_VERSION = "0.1.0"
-MANIFEST_NAME = ".egypt-payment-guardian-install.json"
+UPDATER_VERSION = "1.0.0"
+MANIFEST_NAME = ".arab-payments-skill-atlas-install.json"
+AVAILABLE_SKILLS = ["egypt-payment-guardian", "mena-payment-guardian"]
+GENERIC_PROMPTS = {
+    "egypt-payment-guardian": "EGYPT_PAYMENT_GUARDIAN_PROMPT.md",
+    "mena-payment-guardian": "MENA_PAYMENT_GUARDIAN_PROMPT.md",
+}
 
 
 def load_version(root: Path) -> dict[str, str]:
     path = root / "skill-version.json"
     if not path.exists():
         return {
-            "name": "egypt-payment-guardian",
+            "name": "arab-payments-skill-atlas",
             "version": "local",
             "canonical_repo_url": "",
-            "skill_path": "skills/egypt-payment-guardian",
+            "skills": [
+                {"name": "egypt-payment-guardian", "skill_path": "skills/egypt-payment-guardian"},
+                {"name": "mena-payment-guardian", "skill_path": "skills/mena-payment-guardian"},
+            ],
         }
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -73,7 +81,7 @@ def write_manifest(target: Path, files: dict[str, str], version: str, dry_run: b
         return
     manifest_path = target / MANIFEST_NAME if target.is_dir() else target.parent / MANIFEST_NAME
     payload = {
-        "name": "egypt-payment-guardian",
+        "name": "arab-payments-skill-atlas",
         "version": version,
         "updater_version": UPDATER_VERSION,
         "files": files,
@@ -170,29 +178,42 @@ def download_latest_release(repo_url: str) -> Path:
     return roots[0]
 
 
-def install_plan(source_root: Path, agent: str, target: Path | None, include_global_codex: bool) -> list[tuple[Path, Path, str]]:
+def resolve_skills(selection: str) -> list[str]:
+    if selection == "all":
+        return AVAILABLE_SKILLS
+    return [selection]
+
+
+def install_plan(source_root: Path, agent: str, target: Path | None, include_global_codex: bool, skill_selection: str) -> list[tuple[Path, Path, str]]:
     home = Path.home()
     items: list[tuple[Path, Path, str]] = []
+    selected_skills = resolve_skills(skill_selection)
     if agent == "codex" or (agent == "all" and include_global_codex):
-        items.append((source_root / "skills" / "egypt-payment-guardian", home / ".agents" / "skills" / "egypt-payment-guardian", "global-codex"))
+        for skill in selected_skills:
+            items.append((source_root / "skills" / skill, home / ".agents" / "skills" / skill, "global-codex"))
     project = target or Path.cwd()
     if agent == "all":
         items.append((source_root / "AGENTS.md", project / "AGENTS.md", "project-local"))
     if agent in {"claude", "all"}:
-        items.append((source_root / "skills" / "egypt-payment-guardian", project / ".claude" / "skills" / "egypt-payment-guardian", "project-local"))
+        for skill in selected_skills:
+            items.append((source_root / "skills" / skill, project / ".claude" / "skills" / skill, "project-local"))
         items.append((source_root / "CLAUDE.md", project / "CLAUDE.md", "project-local"))
     if agent in {"cursor", "all"}:
-        items.append((source_root / ".cursor" / "rules" / "egypt-payment-guardian.mdc", project / ".cursor" / "rules" / "egypt-payment-guardian.mdc", "project-local"))
+        for skill in selected_skills:
+            items.append((source_root / ".cursor" / "rules" / f"{skill}.mdc", project / ".cursor" / "rules" / f"{skill}.mdc", "project-local"))
     if agent in {"copilot", "all"}:
         items.append((source_root / ".github" / "copilot-instructions.md", project / ".github" / "copilot-instructions.md", "project-local"))
     if agent in {"generic", "all"}:
-        items.append((source_root / "adapters" / "generic" / "EGYPT_PAYMENT_GUARDIAN_PROMPT.md", project / "EGYPT_PAYMENT_GUARDIAN_PROMPT.md", "project-local"))
+        for skill in selected_skills:
+            prompt_name = GENERIC_PROMPTS[skill]
+            items.append((source_root / "adapters" / "generic" / prompt_name, project / prompt_name, "project-local"))
     return items
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Install or update Egypt Payment Guardian from an approved public package.")
+    parser = argparse.ArgumentParser(description="Install or update Arab Payments Skill Atlas from an approved public package.")
     parser.add_argument("--agent", choices=["codex", "claude", "cursor", "copilot", "generic", "all"], default="codex")
+    parser.add_argument("--skill", choices=["egypt-payment-guardian", "mena-payment-guardian", "all"], default="all", help="Install one skill or all published skills.")
     parser.add_argument("--target", type=Path, help="Target project root for project-local adapters.")
     parser.add_argument("--source-root", type=Path, default=ROOT, help="Local approved package root.")
     parser.add_argument("--use-latest-release", action="store_true", help="Download latest approved public GitHub release before installing.")
@@ -215,12 +236,12 @@ def main() -> None:
             raise SystemExit(f"Could not download latest approved release: {exc}") from exc
 
     print(f"{version.get('package_title', 'Arab Payments Skill Atlas')} updater {UPDATER_VERSION}")
-    print(f"Installed skill: {version.get('name', 'egypt-payment-guardian')}")
+    print(f"Selected skill: {args.skill}")
     print(f"Source version: {version.get('version', 'local')}")
     print("Updates are opt-in and install only from the selected approved public package.")
     if args.agent == "all" and not args.include_global_codex:
         print("Mode: project-local adapters only. Add --include-global-codex to update the global Codex skill too.")
-    for source, target, scope in install_plan(source_root, args.agent, args.target, args.include_global_codex):
+    for source, target, scope in install_plan(source_root, args.agent, args.target, args.include_global_codex, args.skill):
         if not source.exists():
             raise SystemExit(f"Missing source path: {source}")
         copy_item(source, target, str(version.get("version", "local")), args.force, args.dry_run, scope)

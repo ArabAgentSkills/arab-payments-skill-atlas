@@ -1,8 +1,12 @@
-# Egypt Payment Guardian Claude Adapter
+# Arab Payments Skill Atlas Claude Adapter
 
-For Claude Code, treat `skills/egypt-payment-guardian/SKILL.md` as the canonical skill. If native skills are available, install the folder at `.claude/skills/egypt-payment-guardian/SKILL.md`. This file is only a project memory shim.
+For Claude Code, treat the skill folders as canonical and this file as a project memory shim.
 
-Use the skill before building or reviewing Egypt payment flows involving Paymob, FawryPay, Geidea Egypt, EasyKash, Kashier, PaySky, valU, Souhoola, callbacks, webhooks, redirects, HMAC, signatures, SecureHash, payment inquiry, refunds, voids, captures, or payment secret boundaries.
+Use `skills/egypt-payment-guardian/SKILL.md` for Egypt-only payment flows. If native skills are available, install it at `.claude/skills/egypt-payment-guardian/SKILL.md`.
+
+Use `skills/mena-payment-guardian/SKILL.md` for broader Arab/MENA PSP or BNPL flows. If native skills are available, install it at `.claude/skills/mena-payment-guardian/SKILL.md`.
+
+Trigger on Paymob, FawryPay, Geidea, PayTabs, Tap Payments, MyFatoorah, HyperPay, Moyasar, Amazon Payment Services, EasyKash, Kashier, PaySky, Tabby, Tamara, valU, Souhoola, callbacks, webhooks, redirects, HMAC, signatures, SecureHash, payment inquiry, refunds, voids, captures, BNPL, or payment secret boundaries.
 
 Payment non-negotiables:
 
@@ -12,4 +16,4 @@ Payment non-negotiables:
 - Compare amount, currency, order reference, and provider reference.
 - Process callbacks and retries idempotently.
 
-Load provider detail from `skills/egypt-payment-guardian/references/providers/` only when the provider is relevant. If official docs are missing, partial, or gated, ask for merchant docs instead of guessing.
+Load provider detail only when the provider is relevant. If official docs are missing, partial, or gated, ask for merchant docs instead of guessing.

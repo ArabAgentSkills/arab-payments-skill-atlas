@@ -1,0 +1,19 @@
+---
+description: Use when building or reviewing Arab/MENA payment or BNPL flows with Paymob, FawryPay, Geidea, PayTabs, Tap Payments, MyFatoorah, HyperPay, Moyasar, Amazon Payment Services, EasyKash, Kashier, PaySky, Tabby, Tamara, valU, Souhoola, callbacks, webhooks, HMAC, SecureHash, redirects, refunds, captures, or payment secrets.
+globs:
+alwaysApply: false
+---
+
+# MENA Payment Guardian Cursor Rule
+
+Load `skills/mena-payment-guardian/SKILL.md` before implementing or reviewing Arab/MENA payment or BNPL code. Use provider references under `skills/mena-payment-guardian/references/providers/` only when that provider is relevant.
+
+Payment non-negotiables:
+
+- Never trust redirect alone.
+- Verify signature, HMAC, or SecureHash before processing.
+- Keep payment secrets server-side.
+- Compare amount, currency, order reference, and provider reference.
+- Process callbacks and retries idempotently.
+
+If official provider docs are partial or gated, ask for merchant docs. Do not invent endpoints, fields, signatures, status names, test cards, or credentials.

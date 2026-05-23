@@ -1,6 +1,6 @@
 # Source Watch
 
-Arab Payments Skill Atlas monitors official provider documentation with public-safe fingerprints. V1 monitoring covers the Egypt Payment Guardian provider set. The public repository stores hashes, content lengths, statuses, timestamps, and short excerpts only.
+Arab Payments Skill Atlas monitors official provider documentation with public-safe fingerprints. V1.0.0 monitoring covers both `egypt-payment-guardian` and `mena-payment-guardian` provider indexes. The public repository stores hashes, content lengths, statuses, timestamps, and short excerpts only.
 
 ## What Is Public
 
@@ -41,3 +41,5 @@ The `source-watch-artifacts/` folder is ignored by git.
 ## Approval Policy
 
 Provider docs may change automatically, but public payment guidance must not. A maintainer should review the private watcher output, update provider summaries by hand, run validation, then publish an approved release.
+
+`JS_CHALLENGE` and `TLS_VERIFY` records mean the URL needs manual browser verification; they are not treated as broken source links by themselves.
