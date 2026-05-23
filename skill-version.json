@@ -1,0 +1,13 @@
+{
+  "name": "egypt-payment-guardian",
+  "package_name": "arab-payments-skill-atlas",
+  "package_title": "Arab Payments Skill Atlas",
+  "skill_title": "Egypt Payment Guardian",
+  "version": "0.1.0",
+  "release_date": "2026-05-23",
+  "canonical_repo_url": "https://github.com/ArabAgentSkills/arab-payments-skill-atlas",
+  "minimum_updater_version": "0.1.0",
+  "skill_path": "skills/egypt-payment-guardian",
+  "release_channel": "approved-public",
+  "update_policy": "Installed copies update only when a user runs the opt-in updater or configures a local scheduled task."
+}

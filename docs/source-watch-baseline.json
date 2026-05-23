@@ -1,0 +1,547 @@
+{
+  "generated_at": "2026-05-23T19:49:13Z",
+  "policy": "Public-safe source watch baseline. Stores hashes, lengths, statuses, timestamps, and short excerpts only. Full provider docs are not committed.",
+  "sources": [
+    {
+      "url": "https://developer.fawrystaging.com/docs/card-tokens/card-tokenization-overview",
+      "provider_ids": [
+        "fawrypay"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "042e4c87205cb9167bf2375a99ccd7a5ee904444319ae834434dfe3cf1fe7183",
+      "content_length": 2992,
+      "excerpt": "FawryPay-Documentation Let's start Support Ticket Tracking Back Card Tokenization Overview Create and Use Card Tokens Manage Card Tokens Checking Payment Status Get Payment Notification Server Notification V2 push Get Payment Status V2 pull End-to-End Testing Error Codes Quick Links Support Card Tokenization Store your client's card information for a more secure and fast checkout experience. Introduction With FawryPay, you can securely store one or more payment details per client. Storing your c...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/get-payment-notification",
+      "provider_ids": [
+        "fawrypay"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "dda79a586b12ad2fd2d93cd32a73c65cdc4458571fdd5ca2e19b21f7d8abba82",
+      "content_length": 3027,
+      "excerpt": "FawryPay-Documentation Let's start Support Ticket Tracking Back Card Tokenization Overview Create and Use Card Tokens Manage Card Tokens Checking Payment Status Get Payment Notification Server Notification V2 push Get Payment Status V2 pull End-to-End Testing Error Codes Quick Links Support Stay Updated With Your Transactions Status Whenever a transaction status has been updated, FawryPay will keep you informed. Introduction After a successful issuance of a given payment transaction by one of yo...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/get-payment-status-v2",
+      "provider_ids": [
+        "fawrypay"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "05b805f7fd3184a1039177365c98f79e84b7fd5e11fe6744121e24a109cc0497",
+      "content_length": 18689,
+      "excerpt": "FawryPay-Documentation Let's start Support Ticket Tracking Back Card Tokenization Overview Create and Use Card Tokens Manage Card Tokens Checking Payment Status Get Payment Notification Server Notification V2 push Get Payment Status V2 pull End-to-End Testing Error Codes Quick Links Support Get Payment Status V2 Pull information about your transactions whenever needed. FawryPay delivers the Get Payment Status API as a responsive API for merchants who wishes to pull the status of their transactio...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/server-notification-v2",
+      "provider_ids": [
+        "fawrypay"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "eb9a480ee00b8f941d055cd0ac8dd61982787674f41b43fe7f43651df3cb3d39",
+      "content_length": 11472,
+      "excerpt": "FawryPay-Documentation Let's start Support Ticket Tracking Back Card Tokenization Overview Create and Use Card Tokens Manage Card Tokens Checking Payment Status Get Payment Notification Server Notification V2 push Get Payment Status V2 pull End-to-End Testing Error Codes Quick Links Support Server To Server Notification V2 Throughout its entire roadmap, Your FawryPay transactions shall experience several status updates. Depending on the specific nature of your core business, the status of your c...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developer.fawrystaging.com/docs/introduction",
+      "provider_ids": [
+        "fawrypay"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "d2306d6cf55e8a3dd390dae1b030dca88622ef4735e002a864004eec8fba4838",
+      "content_length": 7738,
+      "excerpt": "FawryPay-Documentation Let's start Support Ticket Tracking Home Getting Started Integration Guide Online Payments Overview Express Checkout Overview Checkout Button Integration Checkout Link Integration myFawry App Payment Migrate From Legacy Checkout Plugin Server-Side APIs Overview Pay Using Card Pay Using Card Moto Authorize and Capture Payments E-Wallet Payments Payment Request using Reference Number myFawry App Payment Pay Using Bank Installments Refund API Cancel Unpaid Order Checking Paym...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developer.fawrystaging.com/docs/server-apis/server-apis-overview",
+      "provider_ids": [
+        "fawrypay"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "d65605d692a95d8274305c5fe264f0c5b67cf4e1d3536f16ed828cf5912ecd80",
+      "content_length": 6137,
+      "excerpt": "FawryPay-Documentation Let's start Support Ticket Tracking Back Server Side APIs Overview Pay Using Card Pay Using Card Moto Authorize and Capture Payments E-Wallet Payments Payment Request using Reference Number MyFawry Payment Pay Using Bank Installments Refund API Cancel Unpaid Order Checking Payment Status Get Payment Notification Server Notification V2 push Get Payment Status V2 pull End-to-End Testing Error Codes Quick Links Support Server to Server APIs The fastest way to build conversion...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/hmac/hmac-for-card-tokens.md",
+      "provider_ids": [
+        "paymob"
+      ],
+      "status": "JS_CHALLENGE",
+      "http_status": 403,
+      "sha256": "",
+      "content_length": 0,
+      "excerpt": "Manual browser verification required.",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/hmac/hmac-transaction-callback.md",
+      "provider_ids": [
+        "paymob"
+      ],
+      "status": "JS_CHALLENGE",
+      "http_status": 403,
+      "sha256": "",
+      "content_length": 0,
+      "excerpt": "Manual browser verification required.",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/transaction-callbacks.md",
+      "provider_ids": [
+        "paymob"
+      ],
+      "status": "JS_CHALLENGE",
+      "http_status": 403,
+      "sha256": "",
+      "content_length": 0,
+      "excerpt": "Manual browser verification required.",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developers.paymob.com/paymob-docs/getting-started/integration-checklist.md",
+      "provider_ids": [
+        "paymob"
+      ],
+      "status": "JS_CHALLENGE",
+      "http_status": 403,
+      "sha256": "",
+      "content_length": 0,
+      "excerpt": "Manual browser verification required.",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developers.paymob.com/paymob-docs/getting-started/overview.md",
+      "provider_ids": [
+        "paymob"
+      ],
+      "status": "JS_CHALLENGE",
+      "http_status": 403,
+      "sha256": "",
+      "content_length": 0,
+      "excerpt": "Manual browser verification required.",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developers.paymob.com/paymob-docs/integration-paths/apis.md",
+      "provider_ids": [
+        "paymob"
+      ],
+      "status": "JS_CHALLENGE",
+      "http_status": 403,
+      "sha256": "",
+      "content_length": 0,
+      "excerpt": "Manual browser verification required.",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/capture.md",
+      "provider_ids": [
+        "paymob"
+      ],
+      "status": "JS_CHALLENGE",
+      "http_status": 403,
+      "sha256": "",
+      "content_length": 0,
+      "excerpt": "Manual browser verification required.",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/refund.md",
+      "provider_ids": [
+        "paymob"
+      ],
+      "status": "JS_CHALLENGE",
+      "http_status": 403,
+      "sha256": "",
+      "content_length": 0,
+      "excerpt": "Manual browser verification required.",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/void.md",
+      "provider_ids": [
+        "paymob"
+      ],
+      "status": "JS_CHALLENGE",
+      "http_status": 403,
+      "sha256": "",
+      "content_length": 0,
+      "excerpt": "Manual browser verification required.",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://developers.paymob.com/paymob-docs/payments-and-features/payment-methods.md",
+      "provider_ids": [
+        "paymob"
+      ],
+      "status": "JS_CHALLENGE",
+      "http_status": 403,
+      "sha256": "",
+      "content_length": 0,
+      "excerpt": "Manual browser verification required.",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://docs.geidea.net/",
+      "provider_ids": [
+        "geidea-egypt"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "de3f40ef5933e0cdd5a7c4b51bd69fc4865bc31894212829218e98445c7fe06d",
+      "content_length": 7178,
+      "excerpt": "Overview For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Overview Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Portal [KSA] Direct API...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://docs.geidea.net/docs/buy-now-pay-later-bnpl",
+      "provider_ids": [
+        "egypt-bnpl-methods"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "4558e789c001627ce06ee34597eb38701ae32ae6c2e33c2725149f384cd11522",
+      "content_length": 4598,
+      "excerpt": "Buy Now Pay Later (BNPL) For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Buy Now Pay Later (BNPL) Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by I...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://docs.geidea.net/docs/cancel-order-1",
+      "provider_ids": [
+        "geidea-egypt"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "7326b9a81267ab5f6ef595d21653fef8091cd5d1baf2f497118d0b4f8e58fd6d",
+      "content_length": 4477,
+      "excerpt": "Cancel Order For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Cancel Order Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Portal [KSA] Di...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://docs.geidea.net/docs/geidea-checkout-v2",
+      "provider_ids": [
+        "geidea-egypt"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "e711affca8e59384d3caa4d4aca7cebde2a25c29b27e7f082cd4c7a58de62d47",
+      "content_length": 27477,
+      "excerpt": "Geidea HPP Checkout For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Geidea HPP Checkout Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - P...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://docs.geidea.net/docs/overview-1",
+      "provider_ids": [
+        "geidea-egypt"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "9e7963961a9bab84cec96a177615e3b8343a9e961e5b02f3003dbe880eae57e4",
+      "content_length": 2495,
+      "excerpt": "Transaction and Order Management For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Transaction and Order Management Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://docs.geidea.net/docs/pay-by-link-apis",
+      "provider_ids": [
+        "geidea-egypt"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "91f6cf30df694ea1b291a3362de9a088012072bdd8aa2b47a0c792c669149ec0",
+      "content_length": 33866,
+      "excerpt": "Pay by Link - APIs For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Pay by Link - APIs Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Por...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://docs.geidea.net/docs/pay-v2",
+      "provider_ids": [
+        "geidea-egypt"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "e05071adc12eb1ad699df7c29327cc2620c44495e15eb6760d2050f9a0e87611",
+      "content_length": 17276,
+      "excerpt": "Pay For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Pay Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Portal [KSA] Direct API Integrati...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://docs.geidea.net/docs/refund-2",
+      "provider_ids": [
+        "geidea-egypt"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "b795ea10d4c48e038ed7e793712f6439b71522a401ca5c536d0e8330e49712be",
+      "content_length": 16020,
+      "excerpt": "Refund For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Refund Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Portal [KSA] Direct API Int...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://docs.geidea.net/docs/sample-callback-responses",
+      "provider_ids": [
+        "geidea-egypt"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "50e40229f71f81283d55ffdfd64be36b22adbce44298f554102c0c8f49a5d4ea",
+      "content_length": 5569,
+      "excerpt": "Webhook/Callback Notifications For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Webhook/Callback Notifications Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - A...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://docs.geidea.net/docs/souhoola",
+      "provider_ids": [
+        "egypt-bnpl-methods"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "682c6bccbb6aff4179f85431c17e3c0749327111f7833b2a2f9d08c2aaad9a81",
+      "content_length": 4071,
+      "excerpt": "Souhoola [Egypt] For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Souhoola [Egypt] Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Portal...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://docs.geidea.net/docs/valu",
+      "provider_ids": [
+        "egypt-bnpl-methods"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "dfe9b1a33f13a18cd7c8ced79b265f982e716f57df71dcc0cd6c227dcca8c4ed",
+      "content_length": 3864,
+      "excerpt": "ValU [Egypt] For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference ValU [Egypt] Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Portal [KSA] Di...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://docs.geidea.net/docs/void-1",
+      "provider_ids": [
+        "geidea-egypt"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "cf5e009549880941de2b0fc6349230deee30e46fa90514442e66f1f1576a3bd9",
+      "content_length": 2841,
+      "excerpt": "Void For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Void Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Portal [KSA] Direct API Integra...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://docs.geidea.net/reference/capture-transaction-1",
+      "provider_ids": [
+        "geidea-egypt"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "98075eb2dd81d5dda014b1a4a6e2d388c044aa3b98f1e108c541f5d907e195e8",
+      "content_length": 1444,
+      "excerpt": "Capture Transaction For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea API Reference geidea Docs API Reference Capture Transaction JUMP TO Powered by Capture Transaction Copy Page post https://api.ksamerchant.geidea.net /pgw/api/v1/direct/capture Recent Requests Log in to see full request history Time Status User Agent Retrieving recent requests\\u2026 Loading Loading\\u2026 Body...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://easykash.gitbook.io/easykash-apis-documentation/",
+      "provider_ids": [
+        "easykash"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "e40d22350c32faaa57c2255923be6e0a93801f001641c8bf1425a18a70c002f4",
+      "content_length": 1403,
+      "excerpt": "Direct Payment (Hosted) | EasyKash APIs EasyKash APIs \\u2318 Ctrl k EasyKash APIs Direct Payment (Hosted) Pay API Callback Service Payment Inquiry Cash API (Cash-only) Direct Payment (WordPress WooCommerce Plugin) Direct Payment shopify plugin Powered by GitBook On this page Copy On this page Direct Payment (Hosted) Direct Payment is an API to allow customers to integrate Easykash\\u2019s payment methods into their website. Prerequisites: To be able to begin the integration of your website with Direct Paym...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://easykash.gitbook.io/easykash-apis-documentation/cash-api-cash-only",
+      "provider_ids": [
+        "easykash"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "262b17775c15c87d4fd1c719ec69a7c264a7f7bb9cf04fec5629d39d43d26cdb",
+      "content_length": 1337,
+      "excerpt": "Cash API (Cash-only) | EasyKash APIs EasyKash APIs \\u2318 Ctrl k EasyKash APIs Direct Payment (Hosted) Cash API (Cash-only) Create a payment Direct Payment (WordPress WooCommerce Plugin) Direct Payment shopify plugin Powered by GitBook On this page Copy On this page Cash API (Cash-only) This feature only works for Cash payment methods. What is our API feature? For Businesses that already have running websites, EasyKash provides an integration feature to perform two things. Create payments (cash only)...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/callback-service",
+      "provider_ids": [
+        "easykash"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "ca7fca8c9e098c96af1132b5badf22c63beff4db0bf869f5e6703c87a482ee1d",
+      "content_length": 2765,
+      "excerpt": "Callback Service | EasyKash APIs EasyKash APIs \\u2318 Ctrl k EasyKash APIs Direct Payment (Hosted) Pay API Callback Service Callback response verification Payment Inquiry Cash API (Cash-only) Direct Payment (WordPress WooCommerce Plugin) Direct Payment shopify plugin Powered by GitBook On this page Copy On this page Direct Payment (Hosted) Callback Service If your API service is enabled for your account, after every successful payment, you receive an API notification to the callback URL added in your...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/callback-service/callback-response-verification",
+      "provider_ids": [
+        "easykash"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "1afd85eea9915a4f89176d1a3e761644381b4079588562d4be9c78b08f7d55a2",
+      "content_length": 3745,
+      "excerpt": "Callback response verification | EasyKash APIs EasyKash APIs \\u2318 Ctrl k EasyKash APIs Direct Payment (Hosted) Pay API Callback Service Callback response verification Payment Inquiry Cash API (Cash-only) Direct Payment (WordPress WooCommerce Plugin) Direct Payment shopify plugin Powered by GitBook On this page Copy On this page Direct Payment (Hosted) Callback Service Callback response verification Callbacks rely on HMAC authentication to verify response's identity and integrity of its data. Prereq...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/pay-api",
+      "provider_ids": [
+        "easykash",
+        "egypt-bnpl-methods"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "23dbf8cc0bfaa7320d7ab6fe56508d7fed6e7a297fe7dc4c8c4600d58973dfc6",
+      "content_length": 3991,
+      "excerpt": "Pay API | EasyKash APIs EasyKash APIs \\u2318 Ctrl k EasyKash APIs Direct Payment (Hosted) Pay API Callback Service Payment Inquiry Cash API (Cash-only) Direct Payment (WordPress WooCommerce Plugin) Direct Payment shopify plugin Powered by GitBook On this page Copy On this page Direct Payment (Hosted) Pay API API to create direct pay link Create direct pay link POST https://back.easykash.net/api/directpayv1/pay To get your api key, open your Integration Settings page Headers Name Type Description auth...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/payment-inquiry",
+      "provider_ids": [
+        "easykash"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "8492a1d721ea658e26e9e88b294b41591bff44a274cc86b1649f621513be614e",
+      "content_length": 1591,
+      "excerpt": "Payment Inquiry | EasyKash APIs EasyKash APIs \\u2318 Ctrl k EasyKash APIs Direct Payment (Hosted) Pay API Callback Service Payment Inquiry Cash API (Cash-only) Direct Payment (WordPress WooCommerce Plugin) Direct Payment shopify plugin Powered by GitBook On this page Copy On this page Direct Payment (Hosted) Payment Inquiry If you'd like to inquire about a specific transaction, use this payment inquiry API below. Inquire about specific transaction on Easykash POST https://back.easykash.net/api/cash-a...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://github.com/Kashier-payments",
+      "provider_ids": [
+        "kashier"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "375ff3640f439715d279f5e995ebb4b0973e3bea5f35697aa10622c49b7b86a1",
+      "content_length": 9974,
+      "excerpt": "Kashier \\xb7 GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Kashier-payments Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes APPLICATION SECURITY GitHub Advanced Security...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://github.com/Kashier-payments/Kashier-WooCommerce-UI-Plugin",
+      "provider_ids": [
+        "kashier"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "dd60ba3f206a05462ffcf048716ca85eb7f69ee2170ada12fc4dbd652aa6b976",
+      "content_length": 9343,
+      "excerpt": "GitHub - Kashier-payments/Kashier-WooCommerce-UI-Plugin: Kashier WooCommerce Plugin \\xb7 GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://github.com/Kashier-payments/NodeJs-Checkout-Demo",
+      "provider_ids": [
+        "kashier"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "b6b5980f1f67cf0e1f79cbbb31c092f8db5a7ec57bf9cd99317ca2cc2b677e54",
+      "content_length": 6672,
+      "excerpt": "GitHub - Kashier-payments/NodeJs-Checkout-Demo: Create and pay orders through IFrame and Hosted Payment Page in Nodejs \\xb7 GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://github.com/Kashier-payments/Php-Checkout-Demo",
+      "provider_ids": [
+        "kashier"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "64b767f43403871a6c9a04e493592062bccf4dcd99830f7354f046fc2c0aed8f",
+      "content_length": 9064,
+      "excerpt": "GitHub - Kashier-payments/Php-Checkout-Demo: Create and pay orders through IFrame and Hosted Payment Page Demo \\xb7 GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and tra...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://paysky.io/docs/",
+      "provider_ids": [
+        "paysky"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "b7811dd2f10e625ed0104c9c99c0965ad43a1bdadc2bc5a440e606ef45be2313",
+      "content_length": 1754,
+      "excerpt": "Developers Section | Paysky Payments Solutions Home Individuals Business POS Terminals Online Payments E-Receipt Banks OMNI Payment Gateway Paysky Control Paysky Billers Gateway Paysky 3Ds 2.0 Solution Developers About Paysky About Paysky Leadership Partners News Press Paysky Ads Careers Awards Contact \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 +321 123 4567 info@test.com My Account API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide Ecommerce plugins 2 PAYSKY \\u2013 WOOCOMMERCE PLUGIN PaySky OMNI Gat...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://paysky.io/docs/paysky-omni-gateway-payform-plus-integration-guide/",
+      "provider_ids": [
+        "paysky"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "a6fe45f827c5e5a28b1c82760a5dbbe8390a2dc872ec0373ee337849d4e9deee",
+      "content_length": 26024,
+      "excerpt": "PaySky OMNI Gateway \\u2013 PayForm Plus Integration guide | Paysky Payments Solutions Home Individuals Business POS Terminals Online Payments E-Receipt Banks OMNI Payment Gateway Paysky Control Paysky Billers Gateway Paysky 3Ds 2.0 Solution Developers About Paysky About Paysky Leadership Partners News Press Paysky Ads Careers Awards Contact \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 +321 123 4567 info@test.com My Account API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide Ecommerce plugins 2 PAYSKY \\u2013...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://paysky.io/docs/paysky-omni-gateway/",
+      "provider_ids": [
+        "paysky"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "8fc373d43562bd22edd49887a5dc55e2d6f54246b8eeae61593a571f778c4e69",
+      "content_length": 12250,
+      "excerpt": "PaySky OMNI Gateway \\u2013 Notification Services Integration Guide | Paysky Payments Solutions Home Individuals Business POS Terminals Online Payments E-Receipt Banks OMNI Payment Gateway Paysky Control Paysky Billers Gateway Paysky 3Ds 2.0 Solution Developers About Paysky About Paysky Leadership Partners News Press Paysky Ads Careers Awards Contact \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 +321 123 4567 info@test.com My Account API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide Ecommerce plugins 2...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://paysky.io/docs/paysky-paybutton-sdk-android-guide/",
+      "provider_ids": [
+        "paysky"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "65c0959d02abb3de962d59e0570f8eebcc1078be7491f35628f93e248ccf2595",
+      "content_length": 9411,
+      "excerpt": "PAYSKY PAYBUTTON SDK ANDROID GUIDE | Paysky Payments Solutions Home Individuals Business POS Terminals Online Payments E-Receipt Banks OMNI Payment Gateway Paysky Control Paysky Billers Gateway Paysky 3Ds 2.0 Solution Developers About Paysky About Paysky Leadership Partners News Press Paysky Ads Careers Awards Contact \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 +321 123 4567 info@test.com My Account API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide Ecommerce plugins 2 PAYSKY \\u2013 WOOCOMMERCE PLUGIN...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://paysky.io/docs/paysky-paybutton-sdk-ios-guide/",
+      "provider_ids": [
+        "paysky"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "1df7626001434e083eccd4d21bcac497bf744ae88e5d38adb701bba0a18799f0",
+      "content_length": 6284,
+      "excerpt": "PAYSKY PAYBUTTON SDK IOS GUIDE | Paysky Payments Solutions Home Individuals Business POS Terminals Online Payments E-Receipt Banks OMNI Payment Gateway Paysky Control Paysky Billers Gateway Paysky 3Ds 2.0 Solution Developers About Paysky About Paysky Leadership Partners News Press Paysky Ads Careers Awards Contact \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 +321 123 4567 info@test.com My Account API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide Ecommerce plugins 2 PAYSKY \\u2013 WOOCOMMERCE PLUGIN Pay...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    },
+    {
+      "url": "https://www.kashier.io/",
+      "provider_ids": [
+        "kashier"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "6e82608cb1e44a138d9fffad56ea31ced101d690e12682bb0fee8a717c1135e6",
+      "content_length": 8154,
+      "excerpt": "Kashier | Online Payment Platform Create A Free Account Log In \\u0639\\u0631\\u0628\\u064a Product Invoice Recurring Payment Payment Acceptance INVOICE Online Invoicing PAYLINX Digital Payments \\u2013 no coding ECOMMERCE Web API & App SDK Integrations SOCIAL NEW Online Store SCAN2PAY NEW In store self checkouts E-INVOICE PAYLINX ECOMMERCE SOCIAL SCAN2PAY POS SUBSCRIPTIONS SUBSCRIPTIONS Periodical Payments made easy Growth Solutions CONTROL Real-time Business Dashboard PAYOUTS COMING SOON Manage your value chain MARKETPLACE...",
+      "last_checked": "2026-05-23T19:48:51Z"
+    }
+  ]
+}

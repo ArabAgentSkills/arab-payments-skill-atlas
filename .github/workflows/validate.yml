@@ -1,0 +1,36 @@
+name: Validate Arab Payments Skill Atlas
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * 1"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate skill
+        run: python scripts/validate_skill.py
+      - name: Validate agent adapters
+        run: python scripts/validate_adapters.py
+      - name: Validate source watch baseline
+        run: python scripts/validate_source_watch.py
+      - name: Secret scan
+        run: python scripts/secret_scan.py
+
+  source-links:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check provider source links
+        run: python scripts/check_source_links.py

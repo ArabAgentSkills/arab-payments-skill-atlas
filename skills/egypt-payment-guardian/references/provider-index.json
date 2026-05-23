@@ -1,0 +1,187 @@
+{
+  "skill": "egypt-payment-guardian",
+  "version_scope": "v1-egypt-payments",
+  "last_updated": "2026-05-23",
+  "source_policy": "Summaries and official links only. Do not vendor full provider docs. Public docs that challenge simple HTTP fetches should be marked JS_CHALLENGE, not treated as private.",
+  "coverage_tiers": {
+    "full-depth": [
+      "paymob",
+      "fawrypay",
+      "geidea-egypt",
+      "easykash",
+      "paysky"
+    ],
+    "method-depth": [
+      "egypt-bnpl-methods"
+    ],
+    "conservative": [
+      "kashier"
+    ]
+  },
+  "providers": [
+    {
+      "id": "paymob",
+      "name": "Paymob",
+      "category": "Payments / PSP",
+      "market": "Egypt / MENA",
+      "priority": "P0",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public-js-challenge-aware",
+      "reference_file": "references/providers/paymob.md",
+      "last_checked": "2026-05-23",
+      "source_urls": [
+        "https://developers.paymob.com/paymob-docs/getting-started/overview.md",
+        "https://developers.paymob.com/paymob-docs/getting-started/integration-checklist.md",
+        "https://developers.paymob.com/paymob-docs/integration-paths/apis.md",
+        "https://developers.paymob.com/paymob-docs/payments-and-features/payment-methods.md",
+        "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/refund.md",
+        "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/void.md",
+        "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/capture.md",
+        "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/transaction-callbacks.md",
+        "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/hmac/hmac-transaction-callback.md",
+        "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/hmac/hmac-for-card-tokens.md"
+      ],
+      "notes": "Public developer docs may return JavaScript verification to simple link checks. Backend callbacks and HMAC verification are mandatory."
+    },
+    {
+      "id": "fawrypay",
+      "name": "FawryPay",
+      "category": "Payments / PSP",
+      "market": "Egypt",
+      "priority": "P0",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public",
+      "reference_file": "references/providers/fawrypay.md",
+      "last_checked": "2026-05-23",
+      "source_urls": [
+        "https://developer.fawrystaging.com/docs/introduction",
+        "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/get-payment-notification",
+        "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/server-notification-v2",
+        "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/get-payment-status-v2",
+        "https://developer.fawrystaging.com/docs/server-apis/server-apis-overview",
+        "https://developer.fawrystaging.com/docs/card-tokens/card-tokenization-overview"
+      ],
+      "notes": "Callback notification URL is account-level setup, not per-order, for the documented notification flow. Status pull is the fallback."
+    },
+    {
+      "id": "geidea-egypt",
+      "name": "Geidea Egypt",
+      "category": "Payments / PSP",
+      "market": "Egypt / UAE / Saudi Arabia",
+      "priority": "P0",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public",
+      "reference_file": "references/providers/geidea-egypt.md",
+      "last_checked": "2026-05-23",
+      "source_urls": [
+        "https://docs.geidea.net/",
+        "https://docs.geidea.net/docs/geidea-checkout-v2",
+        "https://docs.geidea.net/docs/pay-v2",
+        "https://docs.geidea.net/docs/sample-callback-responses",
+        "https://docs.geidea.net/docs/pay-by-link-apis",
+        "https://docs.geidea.net/docs/refund-2",
+        "https://docs.geidea.net/docs/cancel-order-1",
+        "https://docs.geidea.net/docs/void-1",
+        "https://docs.geidea.net/reference/capture-transaction-1",
+        "https://docs.geidea.net/docs/overview-1"
+      ],
+      "notes": "Egypt endpoint is documented as https://api.merchant.geidea.net/. Operation signatures are field-order specific."
+    },
+    {
+      "id": "easykash",
+      "name": "EasyKash",
+      "category": "Payments / PSP",
+      "market": "Egypt",
+      "priority": "P2",
+      "readiness": "A",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public-gitbook",
+      "reference_file": "references/providers/easykash.md",
+      "last_checked": "2026-05-23",
+      "source_urls": [
+        "https://easykash.gitbook.io/easykash-apis-documentation/",
+        "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/pay-api",
+        "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/callback-service",
+        "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/callback-service/callback-response-verification",
+        "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/payment-inquiry",
+        "https://easykash.gitbook.io/easykash-apis-documentation/cash-api-cash-only"
+      ],
+      "notes": "Public GitBook covers Direct Payment, callback HMAC SHA-512, inquiry statuses, and Cash API."
+    },
+    {
+      "id": "kashier",
+      "name": "Kashier",
+      "category": "Payments / PSP",
+      "market": "Egypt",
+      "priority": "P1",
+      "readiness": "B",
+      "coverage_depth": "conservative",
+      "public_docs_status": "partially-public-official-github",
+      "reference_file": "references/providers/kashier.md",
+      "last_checked": "2026-05-23",
+      "source_urls": [
+        "https://www.kashier.io/",
+        "https://github.com/Kashier-payments",
+        "https://github.com/Kashier-payments/NodeJs-Checkout-Demo",
+        "https://github.com/Kashier-payments/Php-Checkout-Demo",
+        "https://github.com/Kashier-payments/Kashier-WooCommerce-UI-Plugin"
+      ],
+      "notes": "Use official site, official GitHub demos, and official plugins. Ask for merchant docs before endpoint-level custom API work."
+    },
+    {
+      "id": "paysky",
+      "name": "PaySky",
+      "category": "Payments / PSP",
+      "market": "Egypt / MENA",
+      "priority": "P1",
+      "readiness": "B+",
+      "coverage_depth": "full-depth",
+      "public_docs_status": "public-partial",
+      "reference_file": "references/providers/paysky.md",
+      "last_checked": "2026-05-23",
+      "source_urls": [
+        "https://paysky.io/docs/",
+        "https://paysky.io/docs/paysky-omni-gateway-payform-plus-integration-guide/",
+        "https://paysky.io/docs/paysky-omni-gateway/",
+        "https://paysky.io/docs/paysky-paybutton-sdk-android-guide/",
+        "https://paysky.io/docs/paysky-paybutton-sdk-ios-guide/"
+      ],
+      "notes": "Public docs cover PayForm Plus, notification SecureHash, ActionCode, TxnType, EGP numeric 818, and smallest-unit amount handling."
+    },
+    {
+      "id": "egypt-bnpl-methods",
+      "name": "Egypt BNPL Methods",
+      "category": "BNPL / Consumer Finance",
+      "market": "Egypt",
+      "priority": "P1",
+      "readiness": "B",
+      "coverage_depth": "method-depth",
+      "public_docs_status": "psp-routed",
+      "reference_file": "references/providers/egypt-bnpl-methods.md",
+      "last_checked": "2026-05-23",
+      "source_urls": [
+        "https://docs.geidea.net/docs/buy-now-pay-later-bnpl",
+        "https://docs.geidea.net/docs/valu",
+        "https://docs.geidea.net/docs/souhoola",
+        "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/pay-api"
+      ],
+      "notes": "Treat valU and Souhoola as PSP-routed methods until direct official merchant API docs are provided."
+    }
+  ],
+  "deferred_v2": [
+    "Egyptian Tax Authority eInvoicing/eReceipt SDK",
+    "Daftra",
+    "Bosta",
+    "ShipBlu",
+    "CEQUENS",
+    "PayTabs",
+    "Tap Payments",
+    "MyFatoorah",
+    "HyperPay",
+    "Moyasar",
+    "Amazon Payment Services"
+  ]
+}

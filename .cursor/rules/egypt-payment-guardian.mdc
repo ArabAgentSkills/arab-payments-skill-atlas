@@ -1,0 +1,19 @@
+---
+description: Use when building or reviewing Egypt payment flows with Paymob, FawryPay, Geidea, EasyKash, Kashier, PaySky, valU, Souhoola, callbacks, webhooks, HMAC, SecureHash, redirects, refunds, payment inquiry, or payment secrets.
+globs:
+alwaysApply: false
+---
+
+# Egypt Payment Guardian Cursor Rule
+
+Load `skills/egypt-payment-guardian/SKILL.md` before implementing or reviewing Egypt payment code. Use provider references under `skills/egypt-payment-guardian/references/providers/` only when that provider is relevant.
+
+Payment non-negotiables:
+
+- Never trust redirect alone.
+- Verify signature, HMAC, or SecureHash before processing.
+- Keep payment secrets server-side.
+- Compare amount, currency, order reference, and provider reference.
+- Process callbacks and retries idempotently.
+
+If official provider docs are partial or gated, ask for merchant docs. Do not invent endpoints, fields, signatures, status names, test cards, or credentials.
