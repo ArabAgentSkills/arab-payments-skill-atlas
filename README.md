@@ -1,58 +1,105 @@
 # Arab Payments Skill Atlas
 
+[![Release](https://img.shields.io/github/v/release/ArabAgentSkills/arab-payments-skill-atlas?label=release)](https://github.com/ArabAgentSkills/arab-payments-skill-atlas/releases)
+[![Validate](https://github.com/ArabAgentSkills/arab-payments-skill-atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/ArabAgentSkills/arab-payments-skill-atlas/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Agents](https://img.shields.io/badge/agents-Codex%20%7C%20Claude%20%7C%20Cursor%20%7C%20Copilot-111827)
+![Egypt V1](https://img.shields.io/badge/coverage-Egypt%20V1-0f766e)
+![Safety First](https://img.shields.io/badge/payments-webhook--first-critical)
+
+Payment integrations in our region deserve better than guesswork.
+
+مصمم لمساعدة المطورين في مصر والمنطقة العربية على بناء تكاملات دفع أكثر أمانا.
+
 Arab Payments Skill Atlas is a payment-safety skill project for AI coding agents. V1 ships with Egypt Payment Guardian, an Egypt-first provider pack for Paymob, FawryPay, Geidea Egypt, EasyKash, PaySky, Kashier, valU, and Souhoola.
 
 Created by Mohamed Waleed and Fady Azzouny with the help of Codex GPT-5.5.
 
-Public home after launch: `https://github.com/ArabAgentSkills/arab-payments-skill-atlas`
+Public repo: `https://github.com/ArabAgentSkills/arab-payments-skill-atlas`
 
-GitHub description: AI agent skill atlas for safe Arab-region payment integrations, starting with Egypt provider coverage.
+## Why This Exists
 
-## What This Skill Does
+Payment work breaks products when agents guess. A success redirect is not a paid order. A frontend SDK callback is not final settlement. A copied secret in browser code can turn a weekend MVP into a production incident.
 
-This repository packages source-backed guidance for payment providers and methods, starting with Egypt. The current installed skill is `egypt-payment-guardian`; future Arab-region packs can be added without renaming the Egypt V1 skill. The skill tells an agent what to verify before writing or reviewing payment code:
+This project gives coding agents a source-backed field guide for safer regional payment integrations. It starts with Egypt because that is where the current provider research is deepest. The broader Atlas name is intentional: later releases can add more Arab and MENA payment packs through the same review process.
 
-- which provider and integration path is being used
-- where secrets must live
-- what confirms payment success
-- how to verify callbacks, webhooks, HMACs, signatures, or SecureHash values
-- which amount, currency, order, and provider references must match
-- how to make callbacks, retries, redirects, and refreshes idempotent
-- what the agent must refuse to guess when docs are partial or gated
+## Quick Install
 
-## V1 Coverage
+Install the current Egypt V1 skill globally for Codex/AGENTS-compatible skill discovery:
+
+```powershell
+Copy-Item -Recurse .\skills\egypt-payment-guardian "$HOME\.agents\skills\egypt-payment-guardian" -Force
+```
+
+Install project-local adapters for common agents:
+
+```powershell
+python .\scripts\install_or_update_skill.py --agent all --target C:\path\to\your-project
+```
+
+Pull the latest approved public release:
+
+```powershell
+python .\scripts\install_or_update_skill.py --agent codex --use-latest-release
+```
+
+Dry-run first if you are installing into an active project:
+
+```powershell
+python .\scripts\install_or_update_skill.py --agent all --target C:\path\to\temp-project --dry-run
+python .\scripts\install_or_update_skill.py --agent codex --dry-run
+```
+
+The updater refuses to overwrite local user changes unless `--force` is provided. Installed copies cannot be updated remotely without user consent.
+
+## What Agents Learn
+
+The installed skill is `egypt-payment-guardian`. Its canonical source is `skills/egypt-payment-guardian/SKILL.md`.
+
+Agents are instructed to:
+
+- identify the provider, integration path, environment, and payment method before writing code
+- never fulfill from a browser redirect, SDK success callback, hosted checkout event, or frontend-only status
+- verify provider authenticity first: HMAC, signature, SecureHash, or documented status inquiry
+- compare amount, currency, local order reference, and provider transaction/order reference
+- process callbacks, retries, redirects, status pulls, and refreshes idempotently
+- keep merchant secrets, HMAC secrets, API passwords, terminal secrets, and service role keys server-side
+- refuse to invent endpoints, fields, signatures, test cards, or status names when docs are gated or partial
+
+## Egypt V1 Coverage
 
 V1 is Egypt-only. The repository name is intentionally broader because later releases can add more Arab and MENA payment packs after the same source-backed review process.
 
-Full-depth coverage where official public docs support it:
+| Tier | Providers and methods | What the skill covers |
+| --- | --- | --- |
+| Full-depth | Paymob, FawryPay, Geidea Egypt, EasyKash, PaySky | Hosted checkout/API paths, callbacks/webhooks, HMAC/signature/SecureHash guidance, amount/currency checks, status mapping, idempotency, refunds/voids/capture/inquiry where documented. |
+| Method-depth | valU, Souhoola | PSP-routed BNPL method guidance, especially through Geidea and other enabled PSP accounts. Not treated as standalone direct APIs unless official merchant docs exist. |
+| Conservative | Kashier | Official site, official GitHub demos, and plugins only until endpoint-level public docs or merchant docs are available. The skill tells agents not to invent missing API details. |
+| Deferred | ETA eInvoicing/eReceipt, Daftra, Bosta, ShipBlu, CEQUENS, PayTabs, Tap, MyFatoorah, HyperPay, Moyasar, Amazon Payment Services | Valuable future packs, not claimed as covered in Egypt V1. |
 
-- Paymob
-- FawryPay
-- Geidea Egypt
-- EasyKash
-- PaySky
+## Supported Agents
 
-Method-depth coverage:
+| Agent or runtime | Adapter | How to use |
+| --- | --- | --- |
+| Codex, OpenCode, AGENTS.md-compatible agents | `AGENTS.md` | Keep the repo root adapter or copy it into the target project root. |
+| Claude Code | `CLAUDE.md` and `skills/egypt-payment-guardian/` | Copy the skill folder into `.claude/skills/egypt-payment-guardian` or use the repo memory shim. |
+| Cursor | `.cursor/rules/egypt-payment-guardian.mdc` | Copy the rule into the target project's `.cursor/rules/` directory. |
+| GitHub Copilot | `.github/copilot-instructions.md` | Copy or merge the instructions into the target repository's Copilot instructions file. |
+| OpenClaw, Hermes, custom agents | `adapters/generic/EGYPT_PAYMENT_GUARDIAN_PROMPT.md` | Paste the prompt into the agent's system, project, or memory instructions. |
 
-- valU and Souhoola as PSP-routed BNPL payment methods, especially through Geidea and other enabled PSP accounts
+Manual fallback for any agent:
 
-Conservative coverage:
+```text
+Paste adapters/generic/EGYPT_PAYMENT_GUARDIAN_PROMPT.md into the agent's project instructions and keep this repo available as reference material.
+```
 
-- Kashier, using official site, official GitHub demos, and official plugins until endpoint-level docs are accessible
+To also update the global Codex skill when installing all project adapters, opt in explicitly:
 
-Deferred to v2:
+```powershell
+python .\scripts\install_or_update_skill.py --agent all --target C:\path\to\your-project --include-global-codex
+```
 
-- Egyptian Tax Authority eInvoicing/eReceipt SDK, Daftra, Bosta, ShipBlu, CEQUENS
-- PayTabs, Tap, MyFatoorah, HyperPay, Moyasar, Amazon Payment Services, and other broader MENA providers
-
-## Safety Principles
-
-- Never fulfill from a browser redirect, SDK success callback, hosted checkout event, or frontend-only status.
-- Verify provider authenticity first: HMAC, signature, SecureHash, or documented status inquiry.
-- Compare amount, currency, local order reference, and provider transaction/order reference.
-- Make provider callbacks, retries, status pulls, redirects, and page refreshes idempotent.
-- Keep merchant secrets, HMAC secrets, API passwords, terminal secrets, and service role keys server-side.
-- If docs are gated or partial, say so and ask for official merchant docs. Do not invent endpoints, fields, signatures, test cards, or status names.
+See `docs/agent-compatibility.md` for full compatibility notes.
 
 ## Repository Layout
 
@@ -80,87 +127,25 @@ scripts/
   install_or_update_skill.py
 ```
 
-## Install
+## For Maintainers
 
-This repo supports practical adapters for multiple agent runtimes. `skills/egypt-payment-guardian/SKILL.md` remains the canonical source of truth.
-
-| Agent or runtime | Adapter | How to use |
-| --- | --- | --- |
-| Codex, OpenCode, AGENTS.md-compatible agents | `AGENTS.md` | Keep the repo root adapter or copy it into the target project root. |
-| Claude Code | `CLAUDE.md` and `skills/egypt-payment-guardian/` | Copy the skill folder into `.claude/skills/egypt-payment-guardian` or use the repo memory shim. |
-| Cursor | `.cursor/rules/egypt-payment-guardian.mdc` | Copy the rule into the target project's `.cursor/rules/` directory. |
-| GitHub Copilot | `.github/copilot-instructions.md` | Copy or merge the instructions into the target repository's Copilot instructions file. |
-| OpenClaw, Hermes, custom agents | `adapters/generic/EGYPT_PAYMENT_GUARDIAN_PROMPT.md` | Paste the prompt into the agent's system, project, or memory instructions. |
-
-Copy the skill folder into your agent skill directory:
+Run the local checks before publishing, installing, or changing payment guidance:
 
 ```powershell
-Copy-Item -Recurse .\skills\egypt-payment-guardian "$HOME\.agents\skills\egypt-payment-guardian" -Force
+python .\scripts\validate_skill.py
+python .\scripts\validate_adapters.py
+python .\scripts\validate_source_watch.py
+python .\scripts\secret_scan.py
+python .\scripts\check_source_links.py
+python .\scripts\check_source_changes.py --check
+python .\scripts\install_or_update_skill.py --agent all --target C:\path\to\temp-project --dry-run
+python .\scripts\install_or_update_skill.py --agent codex --dry-run
+git diff --cached --check
 ```
 
-For Codex, restart or refresh the session after installing so the skill metadata is rediscovered.
+`check_source_links.py` uses the network. It reports `JS_CHALLENGE` when a public docs page requires browser or JavaScript verification and fails only on clear breakage such as missing hosts, TLS errors, or `404`.
 
-Claude Code project-local install:
-
-```powershell
-New-Item -ItemType Directory -Force .\.claude\skills | Out-Null
-Copy-Item -Recurse .\skills\egypt-payment-guardian .\.claude\skills\egypt-payment-guardian -Force
-```
-
-macOS/Linux agent skill install:
-
-```bash
-mkdir -p "$HOME/.agents/skills"
-cp -R ./skills/egypt-payment-guardian "$HOME/.agents/skills/egypt-payment-guardian"
-```
-
-Manual fallback for any agent:
-
-```text
-Paste adapters/generic/EGYPT_PAYMENT_GUARDIAN_PROMPT.md into the agent's project instructions and keep this repo available as reference material.
-```
-
-See `docs/agent-compatibility.md` for the full compatibility notes.
-
-## Update Installed Copies
-
-Installed copies cannot be updated remotely without user consent. Users can opt in by running the updater manually, or by scheduling it locally through Windows Task Scheduler or cron.
-
-Dry run the default Codex/global skill update:
-
-```powershell
-python .\scripts\install_or_update_skill.py --dry-run
-```
-
-Install or update the Codex/global skill from this approved package:
-
-```powershell
-python .\scripts\install_or_update_skill.py --agent codex
-```
-
-Install project-local adapters into another project:
-
-```powershell
-python .\scripts\install_or_update_skill.py --agent all --target C:\path\to\your-project
-```
-
-This installs project-local adapters only. To also update the global Codex skill, opt in explicitly:
-
-```powershell
-python .\scripts\install_or_update_skill.py --agent all --target C:\path\to\your-project --include-global-codex
-```
-
-Once a GitHub release is available, users can pull the latest approved public release:
-
-```powershell
-python .\scripts\install_or_update_skill.py --agent codex --use-latest-release
-```
-
-Latest-release updates are enabled only for human-approved GitHub releases. Do not point users at private watcher artifacts or unreviewed branches.
-
-The updater refuses to overwrite local user changes unless `--force` is provided.
-
-## Maintainer Release Checklist
+### Release Checklist
 
 Before announcing a new approved release:
 
@@ -172,7 +157,9 @@ Before announcing a new approved release:
 6. Run `python .\scripts\install_or_update_skill.py --agent codex --use-latest-release --dry-run`.
 7. Announce the release only after the release dry-run succeeds.
 
-## Source Watch And Approval
+Latest-release updates are enabled only for human-approved GitHub releases. Do not point users at private watcher artifacts or unreviewed branches.
+
+### Source Watch And Approval
 
 Provider documentation monitoring is split into public-safe metadata and private review evidence.
 
@@ -188,24 +175,6 @@ python .\scripts\check_source_changes.py --update-baseline
 ```
 
 See `docs/source-watch.md` and `docs/private-watcher-setup.md` for the full workflow.
-
-## Validate
-
-Run the local checks before publishing or installing:
-
-```powershell
-python .\scripts\validate_skill.py
-python .\scripts\validate_adapters.py
-python .\scripts\validate_source_watch.py
-python .\scripts\secret_scan.py
-python .\scripts\check_source_links.py
-python .\scripts\check_source_changes.py --check
-python .\scripts\install_or_update_skill.py --agent all --target C:\path\to\temp-project --dry-run
-python .\scripts\install_or_update_skill.py --agent codex --dry-run
-git diff --cached --check
-```
-
-`check_source_links.py` uses the network. It reports `JS_CHALLENGE` when a public docs page requires browser or JavaScript verification and fails only on clear breakage such as missing hosts, TLS errors, or `404`.
 
 ## Source Policy
 
