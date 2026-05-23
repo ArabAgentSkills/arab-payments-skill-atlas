@@ -2,6 +2,7 @@
 
 [![Release](https://img.shields.io/github/v/release/ArabAgentSkills/arab-payments-skill-atlas?label=release)](https://github.com/ArabAgentSkills/arab-payments-skill-atlas/releases)
 [![Validate](https://github.com/ArabAgentSkills/arab-payments-skill-atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/ArabAgentSkills/arab-payments-skill-atlas/actions/workflows/validate.yml)
+[![skills.sh](https://skills.sh/b/ArabAgentSkills/arab-payments-skill-atlas)](https://skills.sh/ArabAgentSkills/arab-payments-skill-atlas)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Agents](https://img.shields.io/badge/agents-Codex%20%7C%20Claude%20%7C%20Cursor%20%7C%20Copilot-111827)
 ![Egypt V1](https://img.shields.io/badge/coverage-Egypt%20V1-0f766e)
@@ -25,6 +26,44 @@ This project gives coding agents a source-backed field guide for safer regional 
 
 ## Quick Install
 
+### Install With `npx skills`
+
+List the skills discovered in this repository:
+
+```powershell
+npx skills add ArabAgentSkills/arab-payments-skill-atlas --list
+```
+
+Install Egypt Payment Guardian interactively:
+
+```powershell
+npx skills add ArabAgentSkills/arab-payments-skill-atlas --skill egypt-payment-guardian
+```
+
+Install globally for Codex:
+
+```powershell
+npx skills add ArabAgentSkills/arab-payments-skill-atlas --skill egypt-payment-guardian -g -a codex -y
+```
+
+Install for Claude Code in the current project:
+
+```powershell
+npx skills add ArabAgentSkills/arab-payments-skill-atlas --skill egypt-payment-guardian -a claude-code -y
+```
+
+Update later:
+
+```powershell
+npx skills update egypt-payment-guardian
+```
+
+`npx skills` follows the GitHub source. Updates are not silent; users must run `npx skills update` to refresh an installed copy. The `skills` CLI may collect anonymous install telemetry by default; set `DISABLE_TELEMETRY=1` before the command if you want to opt out.
+
+### Full Adapter Install
+
+The `npx skills` path installs the skill itself. Use the repo updater when you also want the project adapters: `AGENTS.md`, `CLAUDE.md`, Cursor rules, Copilot instructions, and the generic prompt.
+
 Install the current Egypt V1 skill globally for Codex/AGENTS-compatible skill discovery:
 
 ```powershell
@@ -42,6 +81,8 @@ Pull the latest approved public release:
 ```powershell
 python .\scripts\install_or_update_skill.py --agent codex --use-latest-release
 ```
+
+The Python updater follows approved GitHub releases, while `npx skills` follows the GitHub source.
 
 Dry-run first if you are installing into an active project:
 

@@ -135,6 +135,12 @@ def validate_docs() -> None:
         fail("README must include the approved co-creator credit")
     if "https://github.com/ArabAgentSkills/arab-payments-skill-atlas" not in readme:
         fail("README must include the approved public repository URL")
+    if "https://skills.sh/b/ArabAgentSkills/arab-payments-skill-atlas" not in readme:
+        fail("README must include the skills.sh badge")
+    if "npx skills add ArabAgentSkills/arab-payments-skill-atlas --skill egypt-payment-guardian" not in readme:
+        fail("README must document npx skills install for egypt-payment-guardian")
+    if "npx skills update egypt-payment-guardian" not in readme:
+        fail("README must document npx skills update for egypt-payment-guardian")
     if "--include-global-codex" not in readme:
         fail("README must document explicit --include-global-codex behavior")
     if "Latest-release updates are enabled only for human-approved GitHub releases" not in readme:
