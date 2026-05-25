@@ -27,6 +27,7 @@ MAX_EXCERPT_CHARS = 500
 ARTIFACT_INVALID_CHARS = re.compile(r'[<>:"/\\|?*\r\n]+')
 MAX_ARTIFACT_FILENAME_CHARS = 96
 FETCH_ATTEMPTS = 3
+BASELINE_DEGRADED_STATUSES = {"TLS_VERIFY"}
 
 
 def utc_now() -> str:
@@ -226,6 +227,8 @@ def compare_records(current: list[dict[str, object]], baseline: dict[str, dict[s
             changes.append({"change": "NEW", "current": item, "previous": None})
             continue
         if item["status"] != previous.get("status"):
+            if previous.get("status") == "OK" and item["status"] in BASELINE_DEGRADED_STATUSES:
+                continue
             changes.append({"change": "CHANGED", "current": item, "previous": previous})
             continue
         if item["status"] == "OK" and item["sha256"] != previous.get("sha256"):

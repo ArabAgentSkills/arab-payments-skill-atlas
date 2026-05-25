@@ -1,13 +1,13 @@
 # Source Watch Report
 
-- Generated: 2026-05-25T07:46:33Z
+- Generated: 2026-05-25T08:11:45Z
 - Total URLs checked: 98
 - Changes detected: 0
 - Full provider docs are not committed. Private watcher artifacts may contain fetched snapshots for maintainer review.
 
 ## Result
 
-No provider documentation changes detected.
+No provider documentation changes detected after refreshing the public-safe HyperPay baseline from the validated watcher environment.
 
 ## Manual Browser Verification
 
@@ -22,11 +22,3 @@ No provider documentation changes detected.
 - https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/void.md
 - https://developers.paymob.com/paymob-docs/payments-and-features/payment-methods.md
 - https://developers.paymob.com/paymob-docs/payments-and-features/payment-methods/bnpls-egy-ksa-uae.md
-
-## Manual Browser/TLS Verification
-
-- https://hyperpay.docs.oppwa.com/integrations/server-to-server
-- https://hyperpay.docs.oppwa.com/integrations/widget
-- https://hyperpay.docs.oppwa.com/reference/parameters
-- https://hyperpay.docs.oppwa.com/reference/resultCodes
-- https://hyperpay.docs.oppwa.com/tutorials/webhooks

@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Refreshed the HyperPay source-watch baseline from the validated watcher environment and normalized local TLS verification fallback handling.
+
 ## 1.0.1 - 2026-05-25
 
 - Added an executable eval scenario harness with automated `must` / `must-not` checks.

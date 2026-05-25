@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T07:46:33Z",
+  "generated_at": "2026-05-25T08:11:45Z",
   "policy": "Public-safe source watch baseline. Stores hashes, lengths, statuses, timestamps, and short excerpts only. Full provider docs are not committed.",
   "sources": [
     {
@@ -924,60 +924,60 @@
       "provider_ids": [
         "mena-payment-guardian:hyperpay"
       ],
-      "status": "TLS_VERIFY",
-      "http_status": "",
-      "sha256": "",
-      "content_length": 0,
-      "excerpt": "Manual browser/TLS verification required.",
-      "last_checked": "2026-05-25T07:43:51Z"
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "72aea7e1ea079543c306bd226777c5d988acbe7f00ebc42fd9c8dc7d406078b0",
+      "content_length": 14806,
+      "excerpt": "Server-to-Server | Developer Portal Get Started Guides 3D Secure 3D Secure Parameters Request Parameters Response Parameters 3D Secure Testing Guide Exemption Management Non-Payment Authentication 3RI authentication Identity Check Insights Frictionless Authentication Liability Shift Fraud Management Tokenization Network Tokens Test Cards Card-on-File Merchant Advice Code Multi-Acquiring Webhooks PCI DSS Click To Pay One-Click Payment Integrations COPYandPAY COPYandPAY API Customization Advanced...",
+      "last_checked": "2026-05-25T08:11:45Z"
     },
     {
       "url": "https://hyperpay.docs.oppwa.com/integrations/widget",
       "provider_ids": [
         "mena-payment-guardian:hyperpay"
       ],
-      "status": "TLS_VERIFY",
-      "http_status": "",
-      "sha256": "",
-      "content_length": 0,
-      "excerpt": "Manual browser/TLS verification required.",
-      "last_checked": "2026-05-25T07:43:51Z"
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "1026c0caa83d2379e598fedb333709272129fe7c6109546e63dd3c80e9a41b4c",
+      "content_length": 6770,
+      "excerpt": "Widget Integration Guide | Developer Portal Get Started Guides 3D Secure 3D Secure Parameters Request Parameters Response Parameters 3D Secure Testing Guide Exemption Management Non-Payment Authentication 3RI authentication Identity Check Insights Frictionless Authentication Liability Shift Fraud Management Tokenization Network Tokens Test Cards Card-on-File Merchant Advice Code Multi-Acquiring Webhooks PCI DSS Click To Pay One-Click Payment Integrations COPYandPAY COPYandPAY API Customization A...",
+      "last_checked": "2026-05-25T08:11:45Z"
     },
     {
       "url": "https://hyperpay.docs.oppwa.com/reference/parameters",
       "provider_ids": [
         "mena-payment-guardian:hyperpay"
       ],
-      "status": "TLS_VERIFY",
-      "http_status": "",
-      "sha256": "",
-      "content_length": 0,
-      "excerpt": "Manual browser/TLS verification required.",
-      "last_checked": "2026-05-25T07:43:51Z"
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "1aa05ab4e7924136589a2d46ad789574123589a3584e20e794f6503fc99bc6cd",
+      "content_length": 108222,
+      "excerpt": "API Reference | Developer Portal Get Started Guides 3D Secure 3D Secure Parameters Request Parameters Response Parameters 3D Secure Testing Guide Exemption Management Non-Payment Authentication 3RI authentication Identity Check Insights Frictionless Authentication Liability Shift Fraud Management Tokenization Network Tokens Test Cards Card-on-File Merchant Advice Code Multi-Acquiring Webhooks PCI DSS Click To Pay One-Click Payment Integrations COPYandPAY COPYandPAY API Customization Advanced Opt...",
+      "last_checked": "2026-05-25T08:11:45Z"
     },
     {
       "url": "https://hyperpay.docs.oppwa.com/reference/resultCodes",
       "provider_ids": [
         "mena-payment-guardian:hyperpay"
       ],
-      "status": "TLS_VERIFY",
-      "http_status": "",
-      "sha256": "",
-      "content_length": 0,
-      "excerpt": "Manual browser/TLS verification required.",
-      "last_checked": "2026-05-25T07:43:51Z"
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "936ee8879d1d1f7f6273070d8971c034a60634a77c9bb85ba2c265c1b46aa124",
+      "content_length": 53863,
+      "excerpt": "Result Codes | Developer Portal Get Started Guides 3D Secure 3D Secure Parameters Request Parameters Response Parameters 3D Secure Testing Guide Exemption Management Non-Payment Authentication 3RI authentication Identity Check Insights Frictionless Authentication Liability Shift Fraud Management Tokenization Network Tokens Test Cards Card-on-File Merchant Advice Code Multi-Acquiring Webhooks PCI DSS Click To Pay One-Click Payment Integrations COPYandPAY COPYandPAY API Customization Advanced Opti...",
+      "last_checked": "2026-05-25T08:11:45Z"
     },
     {
       "url": "https://hyperpay.docs.oppwa.com/tutorials/webhooks",
       "provider_ids": [
         "mena-payment-guardian:hyperpay"
       ],
-      "status": "TLS_VERIFY",
-      "http_status": "",
-      "sha256": "",
-      "content_length": 0,
-      "excerpt": "Manual browser/TLS verification required.",
-      "last_checked": "2026-05-25T07:43:51Z"
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "5e3a95b1a1eb0c02d3344e1dc4ef736cb4ea789873fe476ff684f6905a1d70c5",
+      "content_length": 19181,
+      "excerpt": "Webhooks | Developer Portal Get Started Guides 3D Secure 3D Secure Parameters Request Parameters Response Parameters 3D Secure Testing Guide Exemption Management Non-Payment Authentication 3RI authentication Identity Check Insights Frictionless Authentication Liability Shift Fraud Management Tokenization Network Tokens Test Cards Card-on-File Merchant Advice Code Multi-Acquiring Webhooks PCI DSS Click To Pay One-Click Payment Integrations COPYandPAY COPYandPAY API Customization Advanced Options...",
+      "last_checked": "2026-05-25T08:11:45Z"
     },
     {
       "url": "https://paymentservices.amazon.com/docs/",
