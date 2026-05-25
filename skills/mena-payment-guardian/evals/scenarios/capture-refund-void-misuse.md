@@ -21,3 +21,14 @@ The agent loads `capture-refund-void-lifecycle.md` and the provider reference.
 - Agent cancels after capture instead of refunding.
 - Agent refunds more than captured/paid amount.
 - Agent retries capture without idempotency.
+
+## Automated Checks
+
+- must: authorized
+- must: captured
+- must: paid
+- must: provider capture
+- must: void/cancel/release only before capture
+- must: refund only after paid/captured
+- must: operation idempotency keys
+- must-not: authorized as settled

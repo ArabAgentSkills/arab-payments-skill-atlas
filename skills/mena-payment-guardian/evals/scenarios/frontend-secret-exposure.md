@@ -19,3 +19,13 @@ The agent loads `server-secret-boundary.md` and the relevant provider reference.
 - Agent places secret credentials in browser/mobile bundle.
 - Agent logs secrets or signatures.
 - Agent allows client to control amount/currency/reference before backend creates payment.
+
+## Automated Checks
+
+- must: Refuses frontend exposure
+- must: backend/server functions
+- must: signature calculation
+- must: webhook verification
+- must: hosted checkout URL
+- must: publishable key
+- must-not: browser/mobile bundle

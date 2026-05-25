@@ -22,3 +22,13 @@ Load `references/providers/geidea-egypt.md` and `references/patterns/idempotency
 - The agent treats refund, cancel, void, and capture as interchangeable.
 - The agent refunds an uncaptured authorization instead of using the documented void path.
 - The agent captures without checking authorized amount and operation support.
+
+## Automated Checks
+
+- must: distinct Geidea operations
+- must: cancel only before Pay API completion
+- must: refund only for paid
+- must: void only for authorized
+- must: capture as completing an authorization
+- must: idempotency keys
+- must-not: interchangeable

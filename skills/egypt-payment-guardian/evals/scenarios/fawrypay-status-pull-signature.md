@@ -21,3 +21,12 @@ Load `references/providers/fawrypay.md` and `references/patterns/server-secret-b
 - The agent exposes the FawryPay secure key or signature generation in frontend code.
 - The agent treats status polling without signature as authoritative.
 - The agent marks paid from a generated reference number instead of verified status.
+
+## Automated Checks
+
+- must: server
+- must: secure key
+- must: documented status-pull signature
+- must: backend endpoint
+- must: matching amount/reference
+- must-not: frontend code

@@ -23,3 +23,13 @@ Load `references/providers/paymob.md` and `references/patterns/webhook-first-ful
 - HMAC verification is missing.
 - Callback and redirect ordering is not addressed.
 - Duplicate callback can create duplicate subscription rows.
+
+## Automated Checks
+
+- must: server-side
+- must: redirect as UX only
+- must: processing
+- must: Paymob HMAC verification
+- must: amount/currency/reference match
+- must: idempotent
+- must-not: redirect query params mark subscription active

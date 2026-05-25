@@ -21,6 +21,10 @@ jobs:
         run: python scripts/validate_adapters.py
       - name: Validate source watch baseline
         run: python scripts/validate_source_watch.py
+      - name: Validate eval scenarios
+        run: python scripts/eval_scenarios.py --validate --require-automated-checks
+      - name: Run unit tests
+        run: python -m unittest discover -s tests
       - name: Secret scan
         run: python scripts/secret_scan.py
 
@@ -34,3 +38,5 @@ jobs:
           python-version: "3.12"
       - name: Check provider source links
         run: python scripts/check_source_links.py
+      - name: Check provider source changes
+        run: python scripts/check_source_changes.py --check

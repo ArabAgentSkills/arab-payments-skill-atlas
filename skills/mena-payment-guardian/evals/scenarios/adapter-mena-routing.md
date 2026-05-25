@@ -20,3 +20,13 @@ The agent loads `skills/mena-payment-guardian/SKILL.md`, then the Tap Payments a
 - Agent loads only Egypt-specific docs.
 - Agent treats Tabby approval or Tap redirect as final fulfillment.
 - Agent writes secrets into frontend code.
+
+## Automated Checks
+
+- must: mena-payment-guardian
+- must: Tap Payments
+- must: Tabby
+- must: redirect success is UX only
+- must: server-side secret handling
+- must: authorization/capture lifecycle
+- must-not: Egypt-specific docs

@@ -20,3 +20,12 @@ Load `references/providers/kashier.md` and `references/patterns/private-docs-pol
 - The agent invents endpoint URLs or signature algorithms.
 - The agent uses an unofficial package as authoritative without warning.
 - The agent marks API docs as fully public without source evidence.
+
+## Automated Checks
+
+- must: not accessible
+- must: official public Kashier site
+- must: GitHub demos
+- must: merchant docs
+- must: callback signature verification
+- must-not: invents endpoint URLs

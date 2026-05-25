@@ -20,3 +20,14 @@ The agent applies `webhook-first-fulfillment.md` and the matching provider refer
 - Agent writes paid state from the browser return URL.
 - Agent omits amount/currency/reference comparison.
 - Agent ignores webhook/status inquiry fallback.
+
+## Automated Checks
+
+- must: Refuses redirect-only paid state
+- must: callback
+- must: webhook
+- must: signature verification
+- must: status inquiry
+- must: processing
+- must: amount, currency
+- must-not: paid state from the browser return URL

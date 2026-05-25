@@ -22,3 +22,13 @@ Load `references/providers/paysky.md`.
 - The agent ignores SecureHash.
 - The agent treats 200000 as 200000 EGP without checking smallest-unit rules.
 - The agent treats all ActionCodes as paid.
+
+## Automated Checks
+
+- must: Verifies SecureHash
+- must: sorted field list
+- must: Currency `818`
+- must: smallest currency units
+- must: ActionCode `00`
+- must: SystemReference
+- must-not: all ActionCodes as paid

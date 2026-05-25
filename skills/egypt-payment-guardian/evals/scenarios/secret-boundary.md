@@ -21,3 +21,13 @@ Load `references/patterns/server-secret-boundary.md`.
 - A secret appears in `VITE_`, `NEXT_PUBLIC_`, client config, mobile bundle, or checked-in files.
 - Client code calls provider secret APIs directly.
 - Logs include Authorization headers, HMAC secrets, or raw callback signatures.
+
+## Automated Checks
+
+- must: Refuses
+- must: server route
+- must: Edge Function
+- must: public checkout data
+- must: env var names only
+- must: service role keys must remain server-side
+- must-not: VITE_

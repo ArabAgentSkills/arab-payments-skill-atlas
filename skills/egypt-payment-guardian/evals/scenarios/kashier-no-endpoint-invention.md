@@ -21,3 +21,12 @@ Load `references/providers/kashier.md` and `references/patterns/private-docs-pol
 - The agent publishes unofficial endpoint URLs or signature formulas as official.
 - The agent fills gaps from memory or another provider.
 - The agent removes conservative warnings without official evidence.
+
+## Automated Checks
+
+- must: refuses to treat unofficial blog content as authoritative
+- must: official Kashier site
+- must: official merchant docs
+- must: unverified context
+- must: server-side secrets
+- must-not: publishes unofficial endpoint URLs

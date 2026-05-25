@@ -21,3 +21,13 @@ Load `references/providers/paymob.md`.
 - The agent says hashing all fields alphabetically is enough for Paymob.
 - The agent uses the card-token HMAC list for transaction callbacks.
 - The agent fulfills from redirect success before verified callback state.
+
+## Automated Checks
+
+- must: rejects generic alphabetical hashing
+- must: exact Paymob transaction HMAC field order
+- must: Processed POST
+- must: Response GET
+- must: valid HMAC
+- must: matching amount/currency/reference
+- must-not: hashing all fields alphabetically is enough

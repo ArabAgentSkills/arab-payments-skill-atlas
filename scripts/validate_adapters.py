@@ -143,8 +143,9 @@ def validate_docs() -> None:
         fail("README must include the approved co-creator credit")
     if "https://github.com/ArabAgentSkills/arab-payments-skill-atlas" not in readme:
         fail("README must include the approved public repository URL")
-    if "https://skills.sh/b/ArabAgentSkills/arab-payments-skill-atlas" not in readme:
-        fail("README must include the skills.sh badge")
+    github_repo_badge = "[![GitHub Repo](https://img.shields.io/badge/repo-GitHub-181717?logo=github)](https://github.com/ArabAgentSkills/arab-payments-skill-atlas)"
+    if github_repo_badge not in readme:
+        fail("README must include the static GitHub repo badge")
     if "npx skills add ArabAgentSkills/arab-payments-skill-atlas --skill egypt-payment-guardian" not in readme:
         fail("README must document npx skills install for egypt-payment-guardian")
     if "npx skills add ArabAgentSkills/arab-payments-skill-atlas --skill mena-payment-guardian" not in readme:

@@ -20,3 +20,13 @@ The agent applies `idempotency-state-transitions.md` and the provider reference.
 - Duplicate event grants duplicate credits, shipments, bookings, invoices, or subscriptions.
 - Stale failed callback overwrites paid/captured state.
 - Provider event is processed before authenticity and amount checks.
+
+## Automated Checks
+
+- must: unique constraints
+- must: provider event ids
+- must: duplicate callbacks
+- must: no-ops
+- must: stale pending/failed events
+- must: operation ids separately
+- must-not: duplicate credits

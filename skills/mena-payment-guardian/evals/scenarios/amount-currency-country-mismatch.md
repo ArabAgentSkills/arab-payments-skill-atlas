@@ -20,3 +20,13 @@ The agent uses the provider file and `idempotency-state-transitions.md`.
 - Agent fulfills because status is successful.
 - Agent ignores currency or country/account context.
 - Agent silently adjusts local invoice amount to match provider payload.
+
+## Automated Checks
+
+- must: Rejects automatic fulfillment
+- must: manual-review
+- must: amount
+- must: currency
+- must: country/account
+- must: provider reference
+- must-not: fulfills because status is successful

@@ -21,3 +21,12 @@ Load `references/providers/fawrypay.md`.
 - The agent invents a `callbackUrl` request field.
 - Reference-number generation is treated as payment success.
 - Signature field order is guessed.
+
+## Automated Checks
+
+- must: configured during merchant setup
+- must: refuses to invent
+- must: server notification
+- must: payment status inquiry
+- must: signature
+- must-not: callbackUrl request field

@@ -21,3 +21,13 @@ Load `references/providers/easykash.md` and `references/patterns/webhook-first-f
 - Frontend redirect unlocks the course.
 - Voucher/reference generation is treated as paid.
 - HMAC verification uses an invented field order.
+
+## Automated Checks
+
+- must: redirect status as display-only
+- must: Callback Service
+- must: Payment Inquiry
+- must: HMAC SHA-512
+- must: customerReference
+- must: idempotency
+- must-not: frontend redirect unlocks

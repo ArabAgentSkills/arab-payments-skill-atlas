@@ -21,3 +21,12 @@ Load `references/providers/easykash.md`.
 - The agent calls EasyKash inquiry from frontend code with the API key.
 - The agent marks paid from DELIVERED, voucher, or redirect state without a paid verification.
 - The agent ignores amount/reference comparison.
+
+## Automated Checks
+
+- must: server-side Payment Inquiry
+- must: customerReference
+- must: API key on the server
+- must: PAID
+- must: matching amount/reference
+- must-not: inquiry from frontend

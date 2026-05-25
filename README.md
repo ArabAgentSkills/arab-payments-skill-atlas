@@ -2,7 +2,7 @@
 
 [![Release](https://img.shields.io/github/v/release/ArabAgentSkills/arab-payments-skill-atlas?label=release)](https://github.com/ArabAgentSkills/arab-payments-skill-atlas/releases)
 [![Validate](https://github.com/ArabAgentSkills/arab-payments-skill-atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/ArabAgentSkills/arab-payments-skill-atlas/actions/workflows/validate.yml)
-[![skills.sh](https://skills.sh/b/ArabAgentSkills/arab-payments-skill-atlas)](https://skills.sh/ArabAgentSkills/arab-payments-skill-atlas)
+[![GitHub Repo](https://img.shields.io/badge/repo-GitHub-181717?logo=github)](https://github.com/ArabAgentSkills/arab-payments-skill-atlas)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Agents](https://img.shields.io/badge/agents-Codex%20%7C%20Claude%20%7C%20Cursor%20%7C%20Copilot-111827)
 ![Coverage](https://img.shields.io/badge/coverage-Egypt%20%2B%20MENA%20Payments-0f766e)
@@ -196,6 +196,8 @@ Run the local checks before publishing, installing, or changing payment guidance
 ```powershell
 python .\scripts\validate_skill.py
 python .\scripts\validate_adapters.py
+python .\scripts\eval_scenarios.py --validate --require-automated-checks
+python -m unittest discover -s tests
 python .\scripts\validate_source_watch.py
 python .\scripts\secret_scan.py
 python .\scripts\check_source_links.py
@@ -206,6 +208,8 @@ git diff --cached --check
 ```
 
 `check_source_links.py` uses the network. It reports `JS_CHALLENGE` when a public docs page requires browser or JavaScript verification, and `TLS_VERIFY` when a public docs site is browser-accessible but the simple Python fetch cannot verify its certificate chain. It fails only on clear breakage such as missing hosts or `404`.
+
+`eval_scenarios.py` validates the Markdown pressure scenarios and can score saved agent responses when they are named `skill__scenario.md` under a response directory.
 
 ### Release Checklist
 

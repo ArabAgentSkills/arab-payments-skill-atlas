@@ -20,3 +20,12 @@ The agent loads `tabby.md` or `tamara.md` plus `capture-refund-void-lifecycle.md
 - Agent ships from BNPL approval screen alone.
 - Agent skips Tabby retrieve payment or Tamara Authorise Order.
 - Agent mixes cancel/close/refund semantics.
+
+## Automated Checks
+
+- must: approval/authorization is not the same as capture/settlement
+- must: retrieves payment status
+- must: idempotent `reference_id`
+- must: Authorise Order
+- must: captures
+- must-not: ships from BNPL approval screen alone

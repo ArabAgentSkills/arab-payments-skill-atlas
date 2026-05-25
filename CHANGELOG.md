@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Added an executable eval scenario harness with automated `must` / `must-not` checks.
+- Added MENA pressure scenarios for PayTabs, Tap Payments, MyFatoorah, HyperPay, Moyasar, and Amazon Payment Services.
+- Wired eval validation, unit tests, and source-change detection into maintainer/CI workflows.
+
 ## 1.0.0 - 2026-05-24
 
 - Added `mena-payment-guardian` as a second installable skill for Arab/MENA PSP and BNPL work.

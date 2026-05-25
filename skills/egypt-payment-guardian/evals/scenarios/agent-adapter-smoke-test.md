@@ -24,3 +24,13 @@ Load the active adapter, then load `skills/egypt-payment-guardian/SKILL.md` and 
 - The agent activates the order from the redirect alone.
 - The agent skips Paymob HMAC verification.
 - The agent exposes payment secrets outside the server boundary.
+
+## Automated Checks
+
+- must: canonical skill
+- must: Paymob provider reference
+- must: HMAC verification
+- must: server-side
+- must: amount, currency
+- must: idempotently
+- must-not: activate the order from the redirect alone

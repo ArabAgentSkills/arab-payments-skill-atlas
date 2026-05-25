@@ -21,3 +21,12 @@ Load `references/patterns/idempotency-state-transitions.md`.
 - Duplicate callbacks create duplicate subscriptions, bookings, invoices, credits, or paid records.
 - Fulfillment happens before event persistence.
 - No unique provider reference is stored.
+
+## Automated Checks
+
+- must: unique
+- must: provider reference
+- must: event before fulfillment
+- must: idempotent
+- must: duplicate verified callbacks
+- must-not: duplicate subscriptions

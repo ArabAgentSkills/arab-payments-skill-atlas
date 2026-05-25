@@ -19,3 +19,14 @@ The agent loads the relevant provider file and `server-secret-boundary.md`.
 - Agent trusts webhook body without authenticity validation.
 - Agent invents a signature algorithm when docs are partial.
 - Agent exposes verification secrets in client code.
+
+## Automated Checks
+
+- must: authenticity validation
+- must: raw-body HMAC
+- must: SecureHash
+- must: response signature
+- must: webhook signature
+- must: encrypted webhook authentication
+- must: secret token
+- must-not: trusts webhook body

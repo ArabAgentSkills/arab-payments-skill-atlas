@@ -21,3 +21,12 @@ Load `references/providers/geidea-egypt.md` and `references/patterns/idempotency
 - The order is marked paid because provider status says success.
 - The agent ignores currency/amount comparison.
 - The agent recommends editing the order amount to match the provider after the fact.
+
+## Automated Checks
+
+- must: rejects fulfillment
+- must: amount differs
+- must: signature is valid
+- must: manual investigation
+- must: safe logging
+- must-not: marked paid because provider status says success
