@@ -37,7 +37,7 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public-js-challenge-aware",
       "reference_file": "references/providers/paymob.md",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "source_urls": [
         "https://developers.paymob.com/paymob-docs/getting-started/overview.md",
         "https://developers.paymob.com/paymob-docs/getting-started/integration-checklist.md",
@@ -140,7 +140,7 @@
         "https://developers.tap.company/reference/api-actions",
         "https://developers.tap.company/docs/recurring-payments"
       ],
-      "notes": "Docs cover hosted checkout, Charge and Authorize APIs, webhook payloads, authorization/capture/void flows, and secret-key authentication."
+      "notes": "Docs cover hosted checkout, Charge and Authorize APIs, webhook payloads, hashstring validation, authorization/capture/void flows, and secret-key authentication."
     },
     {
       "id": "myfatoorah",
@@ -152,7 +152,7 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/myfatoorah.md",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "source_urls": [
         "https://docs.myfatoorah.com/docs/get-started",
         "https://docs.myfatoorah.com/docs/execute-payment",
@@ -244,7 +244,7 @@
         "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/payment-inquiry",
         "https://easykash.gitbook.io/easykash-apis-documentation/cash-api-cash-only"
       ],
-      "notes": "Public GitBook covers Direct Payment Hosted, callback HMAC SHA-512, inquiry statuses, and Cash API."
+      "notes": "Public GitBook covers Direct Payment Hosted, callback HMAC SHA-512, inquiry by customerReference, documented inquiry statuses, and Cash API."
     },
     {
       "id": "kashier",
@@ -256,7 +256,7 @@
       "coverage_depth": "conservative",
       "public_docs_status": "partially-public-official-github",
       "reference_file": "references/providers/kashier.md",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-25",
       "source_urls": [
         "https://www.kashier.io/",
         "https://www.kashier.io/blog-posts/kashier-api---power-flexibility-simplicity",
@@ -329,7 +329,7 @@
         "https://docs.tamara.co/reference/simplifiedrefund",
         "https://docs.tamara.co/reference/getorderdetails"
       ],
-      "notes": "Docs cover checkout sessions, webhook registration, approved to authorised transition, capture, cancel, refund, and order status inquiry."
+      "notes": "Docs cover checkout sessions, webhook registration, approved to authorised transition, optional auto-authorisation, capture, cancel, refund, and order status inquiry."
     },
     {
       "id": "valu-souhoola",

@@ -5,7 +5,7 @@
 - Priority: P2
 - Readiness: A
 - Public docs status: public-gitbook
-- Last checked: 2026-05-24
+- Last checked: 2026-05-25
 - Source confidence: High for public EasyKash GitBook.
 - Sources: EasyKash API docs, Pay API, callback service, callback response verification, payment inquiry, Cash API.
 
@@ -25,7 +25,7 @@ Use for EasyKash hosted direct payment, redirect UX, callback HMAC verification,
 
 - Direct Payment Hosted Pay API creates a payment and sends the customer through hosted payment UX.
 - Callback service sends payment result to merchant backend.
-- Payment inquiry is the fallback/confirmation path.
+- Payment inquiry is the fallback/confirmation path by `customerReference`.
 - Cash API is separate from card/hosted payment flow.
 
 ## Setup Prerequisites
@@ -41,7 +41,7 @@ Use for EasyKash hosted direct payment, redirect UX, callback HMAC verification,
 
 - Redirect status is UX only and can show success, pending, or failed before backend reconciliation.
 - Use verified callback or payment inquiry before fulfillment.
-- Store EasyKash payment id/reference, local order id, amount, callback status, and inquiry status.
+- Store EasyKash payment id/reference, local order id, amount, callback status, inquiry status, and `customerReference`.
 
 ## Signature Or HMAC
 
@@ -61,9 +61,11 @@ Use for EasyKash hosted direct payment, redirect UX, callback HMAC verification,
 
 ## Status Mapping
 
-- Verified successful callback or successful inquiry maps to paid.
-- Pending remains pending until verified final status.
-- Failed/cancelled remains non-fulfillment unless inquiry later confirms paid.
+- Inquiry `PAID` with matching amount/reference maps to paid.
+- Inquiry `NEW` stays pending.
+- Inquiry `FAILED`, `EXPIRED`, or `CANCELED` remains non-fulfillment unless a later verified callback or inquiry confirms `PAID`.
+- Inquiry `REFUNDED` maps to refunded after reconciling the original paid state.
+- Inquiry `DELIVERED` is not automatically a new paid transition; map it only after payment-state reconciliation and product-specific fulfillment review.
 
 ## Refunds Voids And Subscriptions
 
@@ -77,7 +79,7 @@ Use for EasyKash hosted direct payment, redirect UX, callback HMAC verification,
 
 ## Unknowns And Do Not Invent
 
-- Do not invent status values, refund APIs, or callback fields beyond public GitBook or merchant docs.
+- Do not invent status values beyond `DELIVERED`, `EXPIRED`, `FAILED`, `NEW`, `PAID`, `REFUNDED`, and `CANCELED`, or refund APIs/callback fields beyond public GitBook or merchant docs.
 - If GitBook hash changes, manually inspect before changing guidance.
 
 ## Agent Checklist
@@ -87,10 +89,12 @@ Use for EasyKash hosted direct payment, redirect UX, callback HMAC verification,
 - Verify callback HMAC SHA-512.
 - Use inquiry fallback.
 - Compare amount/reference.
+- Treat only `PAID` inquiry as paid proof.
 
 ## Fail If
 
 - You fulfill from redirect result alone.
 - You skip HMAC verification.
 - You ignore inquiry fallback.
+- You treat `DELIVERED`, voucher, redirect, or `NEW` as paid.
 - Duplicate callback creates duplicate fulfillment.

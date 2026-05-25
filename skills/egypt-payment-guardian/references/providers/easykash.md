@@ -5,7 +5,7 @@
 - Priority: P2 in seed workbook; promoted to documented V1 provider after public GitBook docs were found.
 - Readiness: A for documented Direct Payment and Cash API; account-level method enablement remains merchant-specific.
 - Public docs status: public GitBook.
-- Last checked: 2026-05-23
+- Last checked: 2026-05-25
 - Source confidence: High for Pay API, callback verification, inquiry statuses, amount/currency notes, and cash/direct payment surfaces.
 - Sources:
   - https://easykash.gitbook.io/easykash-apis-documentation/

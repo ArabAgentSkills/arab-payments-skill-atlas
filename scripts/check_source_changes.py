@@ -24,6 +24,9 @@ BASELINE_PATH = ROOT / "docs" / "source-watch-baseline.json"
 REPORT_PATH = ROOT / "docs" / "source-watch-report.md"
 USER_AGENT = "arab-payments-skill-atlas-source-watch/1.0"
 MAX_EXCERPT_CHARS = 500
+ARTIFACT_INVALID_CHARS = re.compile(r'[<>:"/\\|?*\r\n]+')
+MAX_ARTIFACT_FILENAME_CHARS = 96
+FETCH_ATTEMPTS = 3
 
 
 def utc_now() -> str:
@@ -83,6 +86,22 @@ def excerpt(text: str) -> str:
     return ascii_safe(compact[:MAX_EXCERPT_CHARS].rstrip() + "...")
 
 
+def artifact_safe_slug(value: str) -> str:
+    cleaned = ARTIFACT_INVALID_CHARS.sub("-", value)
+    cleaned = re.sub(r"-{2,}", "-", cleaned).strip("-. ")
+    return cleaned or "source"
+
+
+def snapshot_filename(provider_ids: list[str], url: str) -> str:
+    provider_prefix = "-".join(artifact_safe_slug(provider_id) for provider_id in provider_ids)
+    name = hashlib.sha256(url.encode("utf-8")).hexdigest()[:16]
+    suffix = f"-{name}.txt"
+    max_prefix_length = max(1, MAX_ARTIFACT_FILENAME_CHARS - len(suffix))
+    if len(provider_prefix) > max_prefix_length:
+        provider_prefix = provider_prefix[:max_prefix_length].rstrip("-. ")
+    return f"{provider_prefix or 'source'}{suffix}"
+
+
 def fetch_url(url: str) -> dict[str, object]:
     request = urllib.request.Request(
         url,
@@ -93,79 +112,85 @@ def fetch_url(url: str) -> dict[str, object]:
         },
         method="GET",
     )
-    try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            raw = response.read()
-            content_encoding = response.headers.get("content-encoding", "").lower()
-            if "gzip" in content_encoding:
-                raw = gzip.decompress(raw)
-            status = response.status
-            content_type = response.headers.get("content-type", "")
-            preview = raw[:4096].decode("utf-8", errors="ignore").lower()
-            if "javascript is disabled" in preview and "verify that you're not a robot" in preview:
+    for attempt in range(1, FETCH_ATTEMPTS + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                raw = response.read()
+                content_encoding = response.headers.get("content-encoding", "").lower()
+                if "gzip" in content_encoding:
+                    raw = gzip.decompress(raw)
+                status = response.status
+                content_type = response.headers.get("content-type", "")
+                preview = raw[:4096].decode("utf-8", errors="ignore").lower()
+                if "javascript is disabled" in preview and "verify that you're not a robot" in preview:
+                    return {
+                        "status": "JS_CHALLENGE",
+                        "http_status": status,
+                        "normalized": "",
+                        "hash": "",
+                        "content_length": 0,
+                        "excerpt": "Manual browser verification required.",
+                    }
+                normalized = normalize_text(raw, content_type)
+                digest = hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+                return {
+                    "status": "OK",
+                    "http_status": status,
+                    "normalized": normalized,
+                    "hash": digest,
+                    "content_length": len(normalized),
+                    "excerpt": excerpt(normalized),
+                }
+        except urllib.error.HTTPError as exc:
+            if exc.code in {401, 403}:
                 return {
                     "status": "JS_CHALLENGE",
-                    "http_status": status,
+                    "http_status": exc.code,
                     "normalized": "",
                     "hash": "",
                     "content_length": 0,
                     "excerpt": "Manual browser verification required.",
                 }
-            normalized = normalize_text(raw, content_type)
-            digest = hashlib.sha256(normalized.encode("utf-8")).hexdigest()
             return {
-                "status": "OK",
-                "http_status": status,
-                "normalized": normalized,
-                "hash": digest,
-                "content_length": len(normalized),
-                "excerpt": excerpt(normalized),
-            }
-    except urllib.error.HTTPError as exc:
-        if exc.code in {401, 403}:
-            return {
-                "status": "JS_CHALLENGE",
+                "status": "FAIL",
                 "http_status": exc.code,
                 "normalized": "",
                 "hash": "",
                 "content_length": 0,
-                "excerpt": "Manual browser verification required.",
+                "excerpt": f"HTTP error {exc.code}.",
             }
-        return {
-            "status": "FAIL",
-            "http_status": exc.code,
-            "normalized": "",
-            "hash": "",
-            "content_length": 0,
-            "excerpt": f"HTTP error {exc.code}.",
-        }
-    except urllib.error.URLError as exc:
-        if isinstance(getattr(exc, "reason", None), ssl.SSLCertVerificationError):
+        except urllib.error.URLError as exc:
+            if isinstance(getattr(exc, "reason", None), ssl.SSLCertVerificationError):
+                return {
+                    "status": "TLS_VERIFY",
+                    "http_status": "",
+                    "normalized": "",
+                    "hash": "",
+                    "content_length": 0,
+                    "excerpt": "Manual browser/TLS verification required.",
+                }
+            if attempt < FETCH_ATTEMPTS:
+                continue
             return {
-                "status": "TLS_VERIFY",
+                "status": "FAIL",
                 "http_status": "",
                 "normalized": "",
                 "hash": "",
                 "content_length": 0,
-                "excerpt": "Manual browser/TLS verification required.",
+                "excerpt": exc.__class__.__name__,
             }
-        return {
-            "status": "FAIL",
-            "http_status": "",
-            "normalized": "",
-            "hash": "",
-            "content_length": 0,
-            "excerpt": exc.__class__.__name__,
-        }
-    except Exception as exc:
-        return {
-            "status": "FAIL",
-            "http_status": "",
-            "normalized": "",
-            "hash": "",
-            "content_length": 0,
-            "excerpt": exc.__class__.__name__,
-        }
+        except Exception as exc:
+            if attempt < FETCH_ATTEMPTS:
+                continue
+            return {
+                "status": "FAIL",
+                "http_status": "",
+                "normalized": "",
+                "hash": "",
+                "content_length": 0,
+                "excerpt": exc.__class__.__name__,
+            }
+    raise RuntimeError("unreachable fetch retry state")
 
 
 def build_current_records(output_dir: Path | None = None) -> list[dict[str, object]]:
@@ -186,9 +211,7 @@ def build_current_records(output_dir: Path | None = None) -> list[dict[str, obje
         }
         records.append(record)
         if output_dir and normalized:
-            provider_prefix = "-".join(record["provider_ids"])
-            name = hashlib.sha256(url.encode("utf-8")).hexdigest()[:16]
-            target = output_dir / f"{provider_prefix}-{name}.txt"
+            target = output_dir / snapshot_filename(list(record["provider_ids"]), url)
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(normalized, encoding="utf-8")
     return records

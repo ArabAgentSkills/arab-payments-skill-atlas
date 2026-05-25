@@ -29,7 +29,7 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public-js-challenge-aware",
       "reference_file": "references/providers/paymob.md",
-      "last_checked": "2026-05-23",
+      "last_checked": "2026-05-25",
       "source_urls": [
         "https://developers.paymob.com/paymob-docs/getting-started/overview.md",
         "https://developers.paymob.com/paymob-docs/getting-started/integration-checklist.md",
@@ -109,7 +109,7 @@
         "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/payment-inquiry",
         "https://easykash.gitbook.io/easykash-apis-documentation/cash-api-cash-only"
       ],
-      "notes": "Public GitBook covers Direct Payment, callback HMAC SHA-512, inquiry statuses, and Cash API."
+      "notes": "Public GitBook covers Direct Payment, callback HMAC SHA-512, inquiry by customerReference, documented inquiry statuses, and Cash API."
     },
     {
       "id": "kashier",

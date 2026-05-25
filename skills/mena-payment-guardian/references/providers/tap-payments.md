@@ -5,8 +5,8 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public
-- Last checked: 2026-05-24
-- Source confidence: High for official Tap developer docs; signature details must be checked against the exact webhook/API version in use.
+- Last checked: 2026-05-25
+- Source confidence: High for official Tap developer docs; webhook `hashstring` details are public but must be checked against the exact webhook/API version in use.
 - Sources: Tap get started, webhook, authentication, API actions, recurring payments.
 
 ## Use When
@@ -40,13 +40,16 @@ Use for Tap checkout, charges, authorizations, captures, voids, webhooks, and re
 ## Callback Or Webhook Contract
 
 - Tap webhook payloads include object type, status, amount, currency, transaction/reference fields, redirect/post information, and merchant identifiers.
+- Tap docs say the POST URL is the reliable fallback when browser redirect fails after capture; accept raw posted data only on a reachable HTTPS endpoint.
 - Use webhook or server-side retrieve/action response as the authoritative signal; redirect status is UX.
 - Store charge/authorize id, reference order, transaction id, amount, currency, and status.
 
 ## Signature Or HMAC
 
-- Verify Tap webhook authenticity using the current official webhook signing rules for the account/API version.
-- If the public page in use does not expose the signature formula, ask for merchant docs or use documented retrieve/status API to confirm before fulfillment.
+- Verify Tap webhook authenticity using the `hashstring` header and current official webhook signing rules for the account/API version.
+- Public docs describe HMAC-SHA256 over operation-specific `x_` fields with the Tap secret API key: charge/authorize/refund responses use id, amount, currency, gateway/payment references, status, and created timestamp; invoice responses use id, amount, currency, updated, status, and created timestamp.
+- Round amount according to the documented ISO currency decimal precision before computing `hashstring`.
+- If the public page or merchant account docs differ for the operation in use, ask for merchant docs or use documented retrieve/status API to confirm before fulfillment.
 
 ## Idempotency Keys
 
@@ -78,7 +81,8 @@ Use for Tap checkout, charges, authorizations, captures, voids, webhooks, and re
 
 ## Unknowns And Do Not Invent
 
-- Do not invent webhook signature algorithm, supported local methods, capture window, or status names.
+- Do not invent supported local methods, capture window, or status names.
+- Do not reuse one `hashstring` field set for every object type.
 - Ask for current Tap merchant docs when the account uses custom/local payment methods.
 
 ## Agent Checklist
@@ -93,5 +97,5 @@ Use for Tap checkout, charges, authorizations, captures, voids, webhooks, and re
 
 - You treat `AUTHORIZED` as fulfilled.
 - You trust redirect status without server confirmation.
-- You invent webhook signature details.
+- You skip `hashstring` verification or reuse the wrong operation field set.
 - You capture/void a payment method that does not support authorization.

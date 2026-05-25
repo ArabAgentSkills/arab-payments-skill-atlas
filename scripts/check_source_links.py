@@ -11,6 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS_ROOT = ROOT / "skills"
+FETCH_ATTEMPTS = 3
 
 
 def load_urls() -> list[str]:
@@ -32,25 +33,31 @@ def check_url(url: str) -> tuple[str, str]:
         },
         method="GET",
     )
-    try:
-        with urllib.request.urlopen(request, timeout=25) as response:
-            status = response.status
-            body = response.read(4096).decode("utf-8", errors="ignore").lower()
-            if "javascript is disabled" in body and "verify that you're not a robot" in body:
-                return "js_challenge", str(status)
-            if 200 <= status < 400:
-                return "ok", str(status)
-            return "fail", str(status)
-    except urllib.error.HTTPError as exc:
-        if exc.code in {401, 403}:
-            return "js_challenge", str(exc.code)
-        return "fail", str(exc.code)
-    except urllib.error.URLError as exc:
-        if isinstance(getattr(exc, "reason", None), ssl.SSLCertVerificationError):
-            return "tls_verify", "manual browser verification required"
-        return "fail", exc.__class__.__name__
-    except Exception as exc:
-        return "fail", exc.__class__.__name__
+    for attempt in range(1, FETCH_ATTEMPTS + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=25) as response:
+                status = response.status
+                body = response.read(4096).decode("utf-8", errors="ignore").lower()
+                if "javascript is disabled" in body and "verify that you're not a robot" in body:
+                    return "js_challenge", str(status)
+                if 200 <= status < 400:
+                    return "ok", str(status)
+                return "fail", str(status)
+        except urllib.error.HTTPError as exc:
+            if exc.code in {401, 403}:
+                return "js_challenge", str(exc.code)
+            return "fail", str(exc.code)
+        except urllib.error.URLError as exc:
+            if isinstance(getattr(exc, "reason", None), ssl.SSLCertVerificationError):
+                return "tls_verify", "manual browser verification required"
+            if attempt < FETCH_ATTEMPTS:
+                continue
+            return "fail", exc.__class__.__name__
+        except Exception as exc:
+            if attempt < FETCH_ATTEMPTS:
+                continue
+            return "fail", exc.__class__.__name__
+    return "fail", "retry exhausted"
 
 
 def main() -> None:
