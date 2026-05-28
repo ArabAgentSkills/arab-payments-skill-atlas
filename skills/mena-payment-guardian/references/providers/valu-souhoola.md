@@ -5,9 +5,9 @@
 - Priority: P1
 - Readiness: B
 - Public docs status: psp-routed
-- Last checked: 2026-05-24
+- Last checked: 2026-05-29
 - Source confidence: Medium-high for PSP-routed Geidea docs; direct standalone merchant APIs are not documented here.
-- Sources: Geidea BNPL overview, Geidea valU, Geidea Souhoola, EasyKash Pay API, Paymob BNPL payment methods.
+- Sources: Geidea BNPL overview, Geidea valU, Geidea Souhoola, EasyKash Pay API, Paymob BNPL payment methods, and official Geidea `llms.txt` index for Geidea-routed BNPL pages.
 
 ## Use When
 
@@ -20,6 +20,7 @@ Use when valU or Souhoola appears as a payment method through Geidea, Paymob, Ea
 - Souhoola through Geidea: `https://docs.geidea.net/docs/souhoola`
 - EasyKash Pay API: `https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/pay-api`
 - Paymob BNPL methods: `https://developers.paymob.com/paymob-docs/payments-and-features/payment-methods/bnpls-egy-ksa-uae.md`
+- Agent-readable docs: `https://docs.geidea.net/llms.txt`
 
 ## Integration Paths
 
@@ -75,6 +76,7 @@ Use when valU or Souhoola appears as a payment method through Geidea, Paymob, Ea
 
 - Direct standalone valU/Souhoola endpoint docs, signature rules, and status enums are unknown in this public skill.
 - Ask for official merchant docs before direct integration.
+- For Egypt-only BNPL details, switch to `egypt-payment-guardian`; this MENA file only covers regional PSP-routed method guidance.
 
 ## Agent Checklist
 

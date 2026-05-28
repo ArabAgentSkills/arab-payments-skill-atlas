@@ -5,8 +5,8 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public-tls-manual-verify
-- Last checked: 2026-05-24
-- Source confidence: High for HyperPay/OPPWA docs; endpoint host and entity IDs are account/environment-specific. Simple Python checks may report manual TLS verification for OPPWA pages.
+- Last checked: 2026-05-29
+- Source confidence: High for HyperPay/OPPWA docs; endpoint host and entity IDs are account/environment-specific. Simple Python checks may report manual TLS verification for OPPWA pages. No public `llms.txt` endpoint was available during review.
 - Sources: HyperPay integration guide, COPYandPAY widget, Server-to-Server guide, webhooks, result codes, API parameters.
 
 ## Use When
@@ -20,6 +20,7 @@ Use for HyperPay COPYandPAY, direct Server-to-Server card flows, transaction sta
 - Server-to-Server: `https://hyperpay.docs.oppwa.com/integrations/server-to-server`
 - Webhooks: `https://hyperpay.docs.oppwa.com/tutorials/webhooks`
 - Result codes: `https://hyperpay.docs.oppwa.com/reference/resultCodes`
+- Agent-readable docs: none found; use official HyperPay/OPPWA docs and transaction status query pages directly.
 
 ## Integration Paths
 
@@ -79,6 +80,7 @@ Use for HyperPay COPYandPAY, direct Server-to-Server card flows, transaction sta
 
 - Do not invent entity ids, base URLs, result-code regexes, webhook secret, or payment brand support.
 - Ask for merchant docs when account-specific connector behavior changes result codes or operation availability.
+- Re-check official HyperPay/OPPWA pages manually when endpoint-level details are needed because no public `llms.txt` manifest was available.
 
 ## Agent Checklist
 

@@ -71,6 +71,14 @@ Load only the provider file needed for the task:
 
 Use `references/provider-index.json` to check source URLs, coverage depth, readiness, public/gated status, and last verification dates.
 
+## Latest Official Docs Access
+
+- Use the provider reference first as the public-safe integration checklist.
+- For endpoint-level fields, signatures, status values, payment-method availability, or country/account behavior, check the provider's `source_urls` in `references/provider-index.json` and fetch the official provider-controlled docs or `llms.txt` index when available.
+- Keep Arab/MENA-wide updates in this skill. If the task is Egypt-specific Geidea, Paymob, FawryPay, EasyKash, Kashier, PaySky, valU, or Souhoola behavior, switch to `egypt-payment-guardian` and its Egypt provider index.
+- Do not import Egypt-only endpoint, currency, callback, BNPL, or signature assumptions into regional guidance unless the official MENA provider docs say they apply across the requested country/account.
+- Do not vendor full provider docs, watcher snapshots, screenshots, merchant docs, credentials, signatures, test cards, or dashboard material into the skill.
+
 ## Shared Patterns
 
 Load these when the implementation touches the matching risk:

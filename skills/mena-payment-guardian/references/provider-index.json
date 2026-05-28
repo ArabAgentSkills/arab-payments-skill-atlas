@@ -1,7 +1,7 @@
 {
   "skill": "mena-payment-guardian",
   "version_scope": "v1-arab-mena-payments-bnpl",
-  "last_updated": "2026-05-24",
+  "last_updated": "2026-05-29",
   "source_policy": "Summaries and official links only. Do not vendor full provider docs. Workbook URLs are seed links; official/provider-controlled docs decide what is documented.",
   "coverage_tiers": {
     "full-depth": [
@@ -83,8 +83,9 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/geidea.md",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-29",
       "source_urls": [
+        "https://docs.geidea.net/llms.txt",
         "https://docs.geidea.net/",
         "https://docs.geidea.net/docs/overview-1",
         "https://docs.geidea.net/docs/geidea-checkout-v2",
@@ -96,7 +97,7 @@
         "https://docs.geidea.net/docs/void-1",
         "https://docs.geidea.net/reference/capture-transaction-1"
       ],
-      "notes": "Docs cover hosted checkout, direct Pay API, Pay by Link, callbacks, and back-office operations. Country endpoint and merchant setup must match the account."
+      "notes": "Docs cover hosted checkout, direct Pay API, Pay by Link, callbacks, and back-office operations. Country endpoint and merchant setup must match the account. Official agent-readable docs index is available at llms.txt."
     },
     {
       "id": "paytabs",
@@ -132,15 +133,16 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/tap-payments.md",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-29",
       "source_urls": [
+        "https://developers.tap.company/llms.txt",
         "https://developers.tap.company/docs/get-started",
         "https://developers.tap.company/docs/webhook",
         "https://developers.tap.company/docs/authentication",
         "https://developers.tap.company/reference/api-actions",
         "https://developers.tap.company/docs/recurring-payments"
       ],
-      "notes": "Docs cover hosted checkout, Charge and Authorize APIs, webhook payloads, hashstring validation, authorization/capture/void flows, and secret-key authentication."
+      "notes": "Docs cover hosted checkout, Charge and Authorize APIs, webhook payloads, hashstring validation, authorization/capture/void flows, and secret-key authentication. Official agent-readable docs index is available at llms.txt."
     },
     {
       "id": "myfatoorah",
@@ -152,8 +154,9 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/myfatoorah.md",
-      "last_checked": "2026-05-25",
+      "last_checked": "2026-05-29",
       "source_urls": [
+        "https://docs.myfatoorah.com/llms.txt",
         "https://docs.myfatoorah.com/docs/get-started",
         "https://docs.myfatoorah.com/docs/execute-payment",
         "https://docs.myfatoorah.com/docs/webhook-v2",
@@ -162,7 +165,7 @@
         "https://docs.myfatoorah.com/docs/v3-auth-capture",
         "https://docs.myfatoorah.com/reference/update-payment"
       ],
-      "notes": "Docs explicitly recommend combining webhooks with Get Payment Details and treating success as final."
+      "notes": "Docs explicitly recommend combining webhooks with Get Payment Details and treating success as final. Official agent-readable docs index is available at llms.txt."
     },
     {
       "id": "hyperpay",
@@ -174,7 +177,7 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/hyperpay.md",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-29",
       "source_urls": [
         "https://www.hyperpay.com/integration-guide/",
         "https://hyperpay.docs.oppwa.com/integrations/widget",
@@ -183,7 +186,7 @@
         "https://hyperpay.docs.oppwa.com/reference/resultCodes",
         "https://hyperpay.docs.oppwa.com/reference/parameters"
       ],
-      "notes": "Docs cover COPYandPAY, Server-to-Server, Transaction Status query, back-office operations, and encrypted webhook payload handling. OPPWA docs may require manual browser/TLS verification in simple Python checks."
+      "notes": "Docs cover COPYandPAY, Server-to-Server, Transaction Status query, back-office operations, and encrypted webhook payload handling. OPPWA docs may require manual browser/TLS verification in simple Python checks; no public llms.txt endpoint was available during review."
     },
     {
       "id": "moyasar",
@@ -297,8 +300,9 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/tabby.md",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-29",
       "source_urls": [
+        "https://docs.tabby.ai/llms.txt",
         "https://docs.tabby.ai/introduction/what-is-tabby",
         "https://docs.tabby.ai/api-reference/checkout/create-a-session",
         "https://docs.tabby.ai/pay-in-4-custom-integration/checkout-flow",
@@ -307,7 +311,7 @@
         "https://docs.tabby.ai/pay-in-4-custom-integration/webhooks",
         "https://docs.tabby.ai/api-reference/payments/retrieve-a-payment"
       ],
-      "notes": "Docs cover checkout session, payment verification, webhooks, capture, close, refund, idempotent reference_id, and payment status handling."
+      "notes": "Docs cover checkout session, payment verification, webhooks, capture, close, refund, idempotent reference_id, and payment status handling. Official agent-readable docs index is available at llms.txt."
     },
     {
       "id": "tamara",
@@ -319,8 +323,9 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/tamara.md",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-29",
       "source_urls": [
+        "https://docs.tamara.co/llms.txt",
         "https://docs.tamara.co/",
         "https://docs.tamara.co/docs/direct-online-checkout",
         "https://docs.tamara.co/docs/transaction-authorisation",
@@ -329,7 +334,7 @@
         "https://docs.tamara.co/reference/simplifiedrefund",
         "https://docs.tamara.co/reference/getorderdetails"
       ],
-      "notes": "Docs cover checkout sessions, webhook registration, approved to authorised transition, optional auto-authorisation, capture, cancel, refund, and order status inquiry."
+      "notes": "Docs cover checkout sessions, webhook registration, approved to authorised transition, optional auto-authorisation, capture, cancel, refund, and order status inquiry. Official agent-readable docs index is available at llms.txt."
     },
     {
       "id": "valu-souhoola",
@@ -341,15 +346,16 @@
       "coverage_depth": "method-depth",
       "public_docs_status": "psp-routed",
       "reference_file": "references/providers/valu-souhoola.md",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-05-29",
       "source_urls": [
+        "https://docs.geidea.net/llms.txt",
         "https://docs.geidea.net/docs/buy-now-pay-later-bnpl",
         "https://docs.geidea.net/docs/valu",
         "https://docs.geidea.net/docs/souhoola",
         "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/pay-api",
         "https://developers.paymob.com/paymob-docs/payments-and-features/payment-methods/bnpls-egy-ksa-uae.md"
       ],
-      "notes": "Treat as PSP-routed methods unless direct official merchant API docs are provided."
+      "notes": "Treat as PSP-routed methods unless direct official merchant API docs are provided. Geidea-routed BNPL source pages are discoverable through the official Geidea llms.txt index."
     }
   ],
   "deferred_future_packs": [

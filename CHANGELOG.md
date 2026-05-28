@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## 1.0.3 - 2026-05-29
+
+- Added public-safe official agent-readable docs indexes for Tap Payments, Geidea, MyFatoorah, Tabby, and Tamara where providers publish `llms.txt`.
+- Added separate latest-docs fetch guidance to `mena-payment-guardian` and `egypt-payment-guardian` so agents preserve Arab/MENA vs Egypt skill boundaries.
+- Updated MENA provider references for Tap Payments, Geidea, MyFatoorah, Tabby, Tamara, HyperPay, and PSP-routed valU/Souhoola without copying full provider docs.
+- Updated Egypt provider references only for Geidea Egypt and Egypt BNPL method source discovery, avoiding unrelated MENA-only provider assumptions.
+- Added routing validation so MENA-only provider sources cannot leak into the Egypt provider index and provider references cannot claim official agent-readable docs without matching indexed source URLs.
+
 ## 1.0.2 - 2026-05-28
 
 - Refreshed public-safe source-watch fingerprints for Tap Payments, Geidea, MyFatoorah, Tabby, Tamara, and HyperPay after private watcher run 26599965590.

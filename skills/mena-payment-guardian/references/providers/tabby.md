@@ -5,9 +5,9 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public
-- Last checked: 2026-05-24
+- Last checked: 2026-05-29
 - Source confidence: High for official Tabby docs.
-- Sources: Tabby introduction, create session, checkout flow, payment processing, payment statuses, webhooks, retrieve payment.
+- Sources: Tabby introduction, create session, checkout flow, payment processing, payment statuses, webhooks, retrieve payment, and official Tabby `llms.txt` index.
 
 ## Use When
 
@@ -21,6 +21,7 @@ Use for Tabby Pay in 4/custom integration, hosted checkout, BNPL authorization/c
 - Payment processing: `https://docs.tabby.ai/pay-in-4-custom-integration/payment-processing`
 - Webhooks: `https://docs.tabby.ai/pay-in-4-custom-integration/webhooks`
 - Retrieve payment: `https://docs.tabby.ai/api-reference/payments/retrieve-a-payment`
+- Agent-readable docs: `https://docs.tabby.ai/llms.txt`
 
 ## Integration Paths
 
@@ -81,6 +82,7 @@ Use for Tabby Pay in 4/custom integration, hosted checkout, BNPL authorization/c
 
 - Do not invent merchant_code, country support, auto-capture behavior, webhook auth header value, or payment status transitions.
 - If account-specific settings differ, ask for merchant docs or Tabby integration manager confirmation.
+- Fetch the current Tabby `llms.txt` index before endpoint-level checkout, status, capture, or webhook work.
 
 ## Agent Checklist
 

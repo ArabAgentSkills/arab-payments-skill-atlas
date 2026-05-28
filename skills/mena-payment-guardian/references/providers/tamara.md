@@ -5,9 +5,9 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public
-- Last checked: 2026-05-25
+- Last checked: 2026-05-29
 - Source confidence: High for official Tamara docs.
-- Sources: Tamara docs home, online checkout, webhook registration and order authorisation, order status flow, capture order, simplified refund, get order details.
+- Sources: Tamara docs home, online checkout, webhook registration and order authorisation, order status flow, capture order, simplified refund, get order details, and official Tamara `llms.txt` index.
 
 ## Use When
 
@@ -21,6 +21,7 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 - Status flow: `https://docs.tamara.co/docs/online-order-status-flow`
 - Capture: `https://docs.tamara.co/reference/captureorder`
 - Get order details: `https://docs.tamara.co/reference/getorderdetails`
+- Agent-readable docs: `https://docs.tamara.co/llms.txt`
 
 ## Integration Paths
 
@@ -81,6 +82,7 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 
 - Do not invent webhook token validation, auto-authorisation enablement, status names, country/currency availability, capture windows, or refund limits beyond current docs.
 - Ask for merchant docs when integrating through a PSP wrapper instead of direct Tamara.
+- Fetch the current Tamara `llms.txt` index before endpoint-level checkout, authorisation, capture, refund, or webhook work.
 
 ## Agent Checklist
 

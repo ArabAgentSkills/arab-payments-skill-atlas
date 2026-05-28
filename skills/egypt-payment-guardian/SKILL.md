@@ -62,6 +62,14 @@ Load only the provider file needed for the task:
 
 Use `references/provider-index.json` to check source URLs, readiness, public/gated status, and last verification dates.
 
+## Latest Official Docs Access
+
+- Use the Egypt provider reference first as the public-safe checklist.
+- For endpoint-level fields, signatures, status values, amount/currency behavior, callback handling, or BNPL method details, check the matching Egypt provider's `source_urls` in `references/provider-index.json` and fetch official provider-controlled docs or `llms.txt` indexes when available.
+- Keep this skill Egypt-only. Do not import Tap Payments, MyFatoorah, Tabby, Tamara, HyperPay, or other MENA-only provider assumptions unless official public docs explicitly show Egypt support for the requested integration.
+- For broader Arab/MENA provider work, switch to `mena-payment-guardian` and its regional provider index.
+- Do not vendor full provider docs, watcher snapshots, screenshots, merchant docs, credentials, signatures, test cards, or dashboard material into the skill.
+
 ## Shared Patterns
 
 Load these when the implementation touches the matching risk:

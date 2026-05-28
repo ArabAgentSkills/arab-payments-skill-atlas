@@ -50,6 +50,26 @@ FORBIDDEN_MARKERS = [
     "copy vendor docs here",
 ]
 
+MENA_ONLY_DOMAINS = {
+    "developers.tap.company",
+    "docs.myfatoorah.com",
+    "docs.tabby.ai",
+    "docs.tamara.co",
+    "hyperpay.docs.oppwa.com",
+    "www.hyperpay.com",
+}
+
+REQUIRED_AGENT_DOC_SOURCES = {
+    "mena-payment-guardian:tap-payments": "https://developers.tap.company/llms.txt",
+    "mena-payment-guardian:geidea": "https://docs.geidea.net/llms.txt",
+    "mena-payment-guardian:myfatoorah": "https://docs.myfatoorah.com/llms.txt",
+    "mena-payment-guardian:tabby": "https://docs.tabby.ai/llms.txt",
+    "mena-payment-guardian:tamara": "https://docs.tamara.co/llms.txt",
+    "mena-payment-guardian:valu-souhoola": "https://docs.geidea.net/llms.txt",
+    "egypt-payment-guardian:geidea-egypt": "https://docs.geidea.net/llms.txt",
+    "egypt-payment-guardian:egypt-bnpl-methods": "https://docs.geidea.net/llms.txt",
+}
+
 
 def fail(message: str) -> None:
     print(f"ERROR: {message}")
@@ -140,13 +160,18 @@ def validate_provider_index(skill_dir: Path, providers: list[dict[str, object]])
         for url in provider["source_urls"]:
             if not isinstance(url, str) or not url.startswith("https://"):
                 fail(f"{skill_dir.name}:{provider_id} has non-HTTPS or invalid source URL: {url}")
+            if skill_dir.name == "egypt-payment-guardian" and any(domain in url for domain in MENA_ONLY_DOMAINS):
+                fail(f"Egypt provider index must not include MENA-only source URL for {provider_id}: {url}")
+        required_agent_doc = REQUIRED_AGENT_DOC_SOURCES.get(f"{skill_dir.name}:{provider_id}")
+        if required_agent_doc and required_agent_doc not in provider["source_urls"]:
+            fail(f"{skill_dir.name}:{provider_id} missing official agent-readable docs source: {required_agent_doc}")
         ref_path = skill_dir / str(provider["reference_file"])
         if not ref_path.exists():
             fail(f"{skill_dir.name}:{provider_id} reference file missing: {ref_path}")
-        validate_provider_file(f"{skill_dir.name}:{provider_id}", ref_path)
+        validate_provider_file(f"{skill_dir.name}:{provider_id}", ref_path, set(provider["source_urls"]))
 
 
-def validate_provider_file(provider_id: str, path: Path) -> None:
+def validate_provider_file(provider_id: str, path: Path, indexed_urls: set[str]) -> None:
     text = read_text(path)
     for heading in REQUIRED_PROVIDER_HEADINGS:
         if heading not in text:
@@ -164,6 +189,11 @@ def validate_provider_file(provider_id: str, path: Path) -> None:
     for prefix in required_prefixes:
         if prefix not in text:
             fail(f"{provider_id} missing metadata prefix {prefix}")
+    if "Agent-readable docs" in text:
+        referenced_agent_doc_urls = set(re.findall(r"https://[^\s`)]+/llms\.txt", text))
+        missing = sorted(referenced_agent_doc_urls - indexed_urls)
+        if missing:
+            fail(f"{provider_id} references agent-readable docs not present in provider-index.json: {missing}")
 
 
 def validate_evals(skill_dir: Path) -> None:

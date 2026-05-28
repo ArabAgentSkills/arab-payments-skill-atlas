@@ -5,9 +5,10 @@
 - Priority: P1
 - Readiness: B for method-level guidance; not a direct-provider API reference in V1.
 - Public docs status: PSP-routed public docs; direct merchant API docs not confirmed in V1.
-- Last checked: 2026-05-23
+- Last checked: 2026-05-29
 - Source confidence: Medium. Geidea docs provide public PSP-routed valU/Souhoola method coverage; direct provider API details require separate official sources.
 - Sources:
+  - https://docs.geidea.net/llms.txt
   - https://docs.geidea.net/docs/buy-now-pay-later-bnpl
   - https://docs.geidea.net/docs/valu
   - https://docs.geidea.net/docs/souhoola
@@ -23,6 +24,7 @@ Use when an Egypt PSP integration exposes valU, Souhoola, or similar BNPL/instal
 - Geidea valU and Souhoola docs cover method-specific PSP-routed setup and behavior.
 - EasyKash Pay API publicly lists valU and Souhoola-like payment option codes when enabled on the EasyKash merchant account.
 - This file intentionally does not define direct valU or direct Souhoola API endpoints.
+- Agent-readable docs: `https://docs.geidea.net/llms.txt` for Geidea-routed Egypt BNPL pages only.
 
 ## Integration Paths
 
@@ -93,6 +95,7 @@ BNPL availability usually depends on merchant enablement and test account setup.
 - Do not invent eligibility endpoints, refund endpoints, settlement timing, or signature rules.
 - Do not fulfill from BNPL approval screens without PSP backend confirmation.
 - Do not assume every PSP exposes the same BNPL fields.
+- Do not import Tap Payments, MyFatoorah, Tabby, Tamara, HyperPay, or other MENA-only BNPL assumptions into Egypt BNPL work without explicit public Egypt docs.
 
 ## Agent Checklist
 

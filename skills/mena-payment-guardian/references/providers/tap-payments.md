@@ -5,9 +5,9 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public
-- Last checked: 2026-05-25
+- Last checked: 2026-05-29
 - Source confidence: High for official Tap developer docs; webhook `hashstring` details are public but must be checked against the exact webhook/API version in use.
-- Sources: Tap get started, webhook, authentication, API actions, recurring payments.
+- Sources: Tap get started, webhook, authentication, API actions, recurring payments, and official Tap `llms.txt` index.
 
 ## Use When
 
@@ -20,6 +20,7 @@ Use for Tap checkout, charges, authorizations, captures, voids, webhooks, and re
 - Authentication: `https://developers.tap.company/docs/authentication`
 - API actions: `https://developers.tap.company/reference/api-actions`
 - Recurring: `https://developers.tap.company/docs/recurring-payments`
+- Agent-readable docs: `https://developers.tap.company/llms.txt`
 
 ## Integration Paths
 
@@ -84,6 +85,7 @@ Use for Tap checkout, charges, authorizations, captures, voids, webhooks, and re
 - Do not invent supported local methods, capture window, or status names.
 - Do not reuse one `hashstring` field set for every object type.
 - Ask for current Tap merchant docs when the account uses custom/local payment methods.
+- Fetch the current Tap `llms.txt` index before endpoint-level, signature, recurring, or local-method work because Tap docs can vary by API path and product version.
 
 ## Agent Checklist
 

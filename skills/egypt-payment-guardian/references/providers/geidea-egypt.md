@@ -5,9 +5,10 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public.
-- Last checked: 2026-05-23
+- Last checked: 2026-05-29
 - Source confidence: High for public docs, Egypt endpoint, callback signature, checkout signature, refund/cancel distinctions, and transaction management; verify account enablement and endpoint version before coding.
 - Sources:
+  - https://docs.geidea.net/llms.txt
   - https://docs.geidea.net/
   - https://docs.geidea.net/docs/geidea-checkout-v2
   - https://docs.geidea.net/docs/pay-v2
@@ -32,6 +33,7 @@ Use for Geidea Egypt checkout, hosted payment page, Direct API, Pay API, Pay by 
 - Callback docs provide callback signature construction and response code checks.
 - Refund, cancel, void, capture, and transaction-management docs define operation distinctions.
 - valU and Souhoola docs define PSP-routed BNPL method handling for Egypt.
+- Agent-readable docs: `https://docs.geidea.net/llms.txt` for Geidea Egypt source discovery only; do not import unrelated MENA provider assumptions.
 
 ## Integration Paths
 
@@ -112,6 +114,7 @@ Use Geidea test credentials and test cards before production. Test Egypt endpoin
 - Do not treat client callback events or return URL parameters as backend payment proof.
 - Do not invent signature field lists.
 - Do not assume valU/Souhoola are direct API providers when routed through Geidea checkout.
+- Fetch the current Geidea `llms.txt` index before endpoint-level or signature work, then keep only Egypt-applicable guidance in this file.
 
 ## Agent Checklist
 

@@ -5,9 +5,9 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public
-- Last checked: 2026-05-24
+- Last checked: 2026-05-29
 - Source confidence: High for official MyFatoorah docs.
-- Sources: MyFatoorah get started, ExecutePayment, Webhook v2, Get Payment Details, Updating Payment Status Guidelines, Authorization and Capture, Update Payment.
+- Sources: MyFatoorah get started, ExecutePayment, Webhook v2, Get Payment Details, Updating Payment Status Guidelines, Authorization and Capture, Update Payment, and official MyFatoorah `llms.txt` index.
 
 ## Use When
 
@@ -20,6 +20,7 @@ Use for MyFatoorah invoice/payment URL flows, webhook handling, redirection hand
 - Webhook v2: `https://docs.myfatoorah.com/docs/webhook-v2`
 - Get Payment Details: `https://docs.myfatoorah.com/docs/get-payment-details`
 - Status update guidance: `https://docs.myfatoorah.com/docs/v3-updating-payment-status-guidelines`
+- Agent-readable docs: `https://docs.myfatoorah.com/llms.txt`
 
 ## Integration Paths
 
@@ -81,6 +82,7 @@ Use for MyFatoorah invoice/payment URL flows, webhook handling, redirection hand
 
 - Do not invent PaymentMethodId, status enum, signature formula, country URL, or recurring semantics.
 - Confirm current v2/v3 endpoint version before implementation.
+- Fetch the current MyFatoorah `llms.txt` index before endpoint-level or status-mapping work.
 
 ## Agent Checklist
 

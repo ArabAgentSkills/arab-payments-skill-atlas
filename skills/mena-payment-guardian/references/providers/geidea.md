@@ -5,9 +5,9 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public
-- Last checked: 2026-05-24
+- Last checked: 2026-05-29
 - Source confidence: High for official Geidea docs.
-- Sources: Geidea docs home, overview, Checkout v2, Pay v2, sample callback responses, Pay by Link APIs, refund, cancel order, void, capture transaction.
+- Sources: Geidea docs home, overview, Checkout v2, Pay v2, sample callback responses, Pay by Link APIs, refund, cancel order, void, capture transaction, and official Geidea `llms.txt` index.
 
 ## Use When
 
@@ -20,6 +20,7 @@ Use for Geidea hosted checkout, direct Pay API, Pay by Link, callbacks, valU/Sou
 - Pay v2: `https://docs.geidea.net/docs/pay-v2`
 - Callbacks: `https://docs.geidea.net/docs/sample-callback-responses`
 - Refund/cancel/void/capture docs under official Geidea docs.
+- Agent-readable docs: `https://docs.geidea.net/llms.txt`
 
 ## Integration Paths
 
@@ -31,7 +32,7 @@ Use for Geidea hosted checkout, direct Pay API, Pay by Link, callbacks, valU/Sou
 ## Setup Prerequisites
 
 - Merchant public key/API password or equivalent credentials, country endpoint, merchant account configuration, callback URL, payment method enablement, and sandbox/live separation.
-- Egypt integrations should confirm the Egypt endpoint and account country before implementation.
+- Egypt integrations should load `egypt-payment-guardian` for Egypt endpoint, currency, signature, callback, and BNPL specifics.
 
 ## Auth And Secret Boundary
 
@@ -80,6 +81,7 @@ Use for Geidea hosted checkout, direct Pay API, Pay by Link, callbacks, valU/Sou
 
 - Do not invent country endpoint, signature fields, BNPL method parameters, or operation status names.
 - Ask for merchant docs when the account has custom payment methods or local acquirer settings.
+- Fetch the current Geidea `llms.txt` index before endpoint-level or signature work, then keep Egypt-specific findings in the Egypt skill.
 
 ## Agent Checklist
 
