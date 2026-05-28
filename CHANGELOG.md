@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 1.0.2 - 2026-05-28
+
+- Refreshed public-safe source-watch fingerprints for Tap Payments, Geidea, MyFatoorah, Tabby, Tamara, and HyperPay after private watcher run 26599965590.
+- Kept provider guidance unchanged after maintainer review found documentation fingerprint drift rather than new payment behavior.
 - Refreshed the HyperPay source-watch baseline from the validated watcher environment and normalized local TLS verification fallback handling.
 
 ## 1.0.1 - 2026-05-25

@@ -1,13 +1,13 @@
 # Source Watch Report
 
-- Generated: 2026-05-25T08:11:45Z
+- Generated: 2026-05-28T20:23:05Z
 - Total URLs checked: 98
 - Changes detected: 0
 - Full provider docs are not committed. Private watcher artifacts may contain fetched snapshots for maintainer review.
 
 ## Result
 
-No provider documentation changes detected after refreshing the public-safe HyperPay baseline from the validated watcher environment.
+No provider guidance changes detected after maintainer review of private source-watch run 26599965590. Public-safe fingerprints were refreshed for Tap Payments, Geidea, MyFatoorah, Tabby, Tamara, and HyperPay documentation drift.
 
 ## Manual Browser Verification
 
