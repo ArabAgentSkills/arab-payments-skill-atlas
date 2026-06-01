@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 1.0.4 - 2026-06-01
+
+- Refreshed public-safe source-watch fingerprints for Tap Payments, Geidea, MyFatoorah, Tamara, and Kashier after private watcher run 26740307429.
+- Kept provider guidance unchanged after maintainer review found documentation-site chrome and agent-readable docs notices rather than new payment behavior.
+- Preserved Paymob manual browser verification status for current public docs that still require browser/TLS review.
+
 ## 1.0.3 - 2026-05-29
 
 - Added public-safe official agent-readable docs indexes for Tap Payments, Geidea, MyFatoorah, Tabby, and Tamara where providers publish `llms.txt`.
