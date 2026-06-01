@@ -16,6 +16,35 @@ assert spec.loader is not None
 spec.loader.exec_module(check_source_changes)
 
 
+class NormalizeTextTests(unittest.TestCase):
+    def test_relative_updated_age_does_not_change_normalized_text(self) -> None:
+        first = b"Webhook V2 Updated 3 months ago Webhook Signature Payment Status Data Model"
+        second = b"Webhook V2 Updated 4 months ago Webhook Signature Payment Status Data Model"
+
+        self.assertEqual(
+            check_source_changes.normalize_text(first, "text/plain"),
+            check_source_changes.normalize_text(second, "text/plain"),
+        )
+
+    def test_hyperpay_greetings_nav_chrome_does_not_change_normalized_text(self) -> None:
+        first = b"Products Blogs Board of Directors Greetings Contact us Integration Guides"
+        second = b"Products Blogs Board of Directors Contact us Integration Guides"
+
+        self.assertEqual(
+            check_source_changes.normalize_text(first, "text/plain"),
+            check_source_changes.normalize_text(second, "text/plain"),
+        )
+
+    def test_real_provider_content_change_still_changes_normalized_text(self) -> None:
+        first = b"Webhook V2 validates webhook signatures before fulfillment"
+        second = b"Webhook V2 accepts redirects before fulfillment"
+
+        self.assertNotEqual(
+            check_source_changes.normalize_text(first, "text/plain"),
+            check_source_changes.normalize_text(second, "text/plain"),
+        )
+
+
 class SnapshotFilenameTests(unittest.TestCase):
     def test_snapshot_filename_removes_artifact_invalid_characters(self) -> None:
         filename = check_source_changes.snapshot_filename(

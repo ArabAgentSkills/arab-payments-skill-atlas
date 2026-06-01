@@ -28,6 +28,8 @@ ARTIFACT_INVALID_CHARS = re.compile(r'[<>:"/\\|?*\r\n]+')
 MAX_ARTIFACT_FILENAME_CHARS = 96
 FETCH_ATTEMPTS = 3
 BASELINE_DEGRADED_STATUSES = {"TLS_VERIFY"}
+RELATIVE_UPDATED_AGE = re.compile(r"\bUpdated \d+ (?:second|minute|hour|day|week|month|year)s? ago\b")
+HYPERPAY_GREETING_NAV_CHROME = re.compile(r"\bBoard of Directors Greetings Contact us\b")
 
 
 def utc_now() -> str:
@@ -77,6 +79,8 @@ def normalize_text(raw: bytes, content_type: str) -> str:
     decoded = decoded.replace("\r\n", "\n").replace("\r", "\n")
     decoded = re.sub(r"[ \t]+", " ", decoded)
     decoded = re.sub(r"\n{3,}", "\n\n", decoded)
+    decoded = RELATIVE_UPDATED_AGE.sub("Updated <relative-age> ago", decoded)
+    decoded = HYPERPAY_GREETING_NAV_CHROME.sub("Board of Directors Contact us", decoded)
     return decoded.strip()
 
 

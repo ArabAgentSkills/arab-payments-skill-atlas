@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 1.0.5 - 2026-06-01
+
+- Normalized volatile provider-docs page chrome such as `Updated 3 months ago` and transient HyperPay navigation labels so scheduled source-watch CI does not fail on chrome drift.
+- Refreshed the public-safe source-watch baseline after confirming the MyFatoorah scheduled CI failure and HyperPay validation drift were page chrome noise, not new payment behavior.
+- Added regression coverage so real provider-content changes still change the source-watch fingerprint.
+
 ## 1.0.4 - 2026-06-01
 
 - Refreshed public-safe source-watch fingerprints for Tap Payments, Geidea, MyFatoorah, Tamara, and Kashier after private watcher run 26740307429.

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T07:10:42Z",
+  "generated_at": "2026-06-01T11:54:47Z",
   "policy": "Public-safe source watch baseline. Stores hashes, lengths, statuses, timestamps, and short excerpts only. Full provider docs are not committed.",
   "sources": [
     {
@@ -13,7 +13,7 @@
       "sha256": "042e4c87205cb9167bf2375a99ccd7a5ee904444319ae834434dfe3cf1fe7183",
       "content_length": 2992,
       "excerpt": "FawryPay-Documentation Let's start Support Ticket Tracking Back Card Tokenization Overview Create and Use Card Tokens Manage Card Tokens Checking Payment Status Get Payment Notification Server Notification V2 push Get Payment Status V2 pull End-to-End Testing Error Codes Quick Links Support Card Tokenization Store your client's card information for a more secure and fast checkout experience. Introduction With FawryPay, you can securely store one or more payment details per client. Storing your c...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/get-payment-notification",
@@ -26,7 +26,7 @@
       "sha256": "dda79a586b12ad2fd2d93cd32a73c65cdc4458571fdd5ca2e19b21f7d8abba82",
       "content_length": 3027,
       "excerpt": "FawryPay-Documentation Let's start Support Ticket Tracking Back Card Tokenization Overview Create and Use Card Tokens Manage Card Tokens Checking Payment Status Get Payment Notification Server Notification V2 push Get Payment Status V2 pull End-to-End Testing Error Codes Quick Links Support Stay Updated With Your Transactions Status Whenever a transaction status has been updated, FawryPay will keep you informed. Introduction After a successful issuance of a given payment transaction by one of yo...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/get-payment-status-v2",
@@ -39,7 +39,7 @@
       "sha256": "05b805f7fd3184a1039177365c98f79e84b7fd5e11fe6744121e24a109cc0497",
       "content_length": 18689,
       "excerpt": "FawryPay-Documentation Let's start Support Ticket Tracking Back Card Tokenization Overview Create and Use Card Tokens Manage Card Tokens Checking Payment Status Get Payment Notification Server Notification V2 push Get Payment Status V2 pull End-to-End Testing Error Codes Quick Links Support Get Payment Status V2 Pull information about your transactions whenever needed. FawryPay delivers the Get Payment Status API as a responsive API for merchants who wishes to pull the status of their transactio...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/server-notification-v2",
@@ -52,7 +52,7 @@
       "sha256": "eb9a480ee00b8f941d055cd0ac8dd61982787674f41b43fe7f43651df3cb3d39",
       "content_length": 11472,
       "excerpt": "FawryPay-Documentation Let's start Support Ticket Tracking Back Card Tokenization Overview Create and Use Card Tokens Manage Card Tokens Checking Payment Status Get Payment Notification Server Notification V2 push Get Payment Status V2 pull End-to-End Testing Error Codes Quick Links Support Server To Server Notification V2 Throughout its entire roadmap, Your FawryPay transactions shall experience several status updates. Depending on the specific nature of your core business, the status of your c...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developer.fawrystaging.com/docs/introduction",
@@ -65,7 +65,7 @@
       "sha256": "d2306d6cf55e8a3dd390dae1b030dca88622ef4735e002a864004eec8fba4838",
       "content_length": 7738,
       "excerpt": "FawryPay-Documentation Let's start Support Ticket Tracking Home Getting Started Integration Guide Online Payments Overview Express Checkout Overview Checkout Button Integration Checkout Link Integration myFawry App Payment Migrate From Legacy Checkout Plugin Server-Side APIs Overview Pay Using Card Pay Using Card Moto Authorize and Capture Payments E-Wallet Payments Payment Request using Reference Number myFawry App Payment Pay Using Bank Installments Refund API Cancel Unpaid Order Checking Paym...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developer.fawrystaging.com/docs/server-apis/server-apis-overview",
@@ -78,7 +78,7 @@
       "sha256": "d65605d692a95d8274305c5fe264f0c5b67cf4e1d3536f16ed828cf5912ecd80",
       "content_length": 6137,
       "excerpt": "FawryPay-Documentation Let's start Support Ticket Tracking Back Server Side APIs Overview Pay Using Card Pay Using Card Moto Authorize and Capture Payments E-Wallet Payments Payment Request using Reference Number MyFawry Payment Pay Using Bank Installments Refund API Cancel Unpaid Order Checking Payment Status Get Payment Notification Server Notification V2 push Get Payment Status V2 pull End-to-End Testing Error Codes Quick Links Support Server to Server APIs The fastest way to build conversion...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/hmac/hmac-for-card-tokens.md",
@@ -91,7 +91,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/hmac/hmac-transaction-callback.md",
@@ -104,7 +104,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/transaction-callbacks.md",
@@ -117,7 +117,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/getting-started/integration-checklist.md",
@@ -130,7 +130,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/getting-started/overview.md",
@@ -143,7 +143,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/integration-paths/apis.md",
@@ -156,7 +156,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/capture.md",
@@ -169,7 +169,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/refund.md",
@@ -182,7 +182,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/void.md",
@@ -195,7 +195,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/payments-and-features/payment-methods.md",
@@ -208,7 +208,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/payments-and-features/payment-methods/bnpls-egy-ksa-uae.md",
@@ -220,7 +220,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.tap.company/docs/authentication",
@@ -229,10 +229,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "59749211705df2e681fad25ea0e0cff1bb14a518c40510aa41f0beb2886d453f",
-      "content_length": 10466,
+      "sha256": "7716a3e056fcb275132c0f7d884985d4383b06a56e4e26d5e7a0b1e7cec3a8ee",
+      "content_length": 10472,
       "excerpt": "Authentication For AI agents: visit https://developers.tap.company/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Home Guides API Reference Home Log In Guides Log In Home Guides API Reference Authentication Get Started Overview Acceptance Authentication Saved Cards Payment Agreement and Contracts Creating Payment Agreement Merchant Initiated Transaction Liability Shift: Customer vs Merchant Recurring Payments SDK BenefitPay Benefit Pay Web...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.tap.company/docs/get-started",
@@ -241,10 +241,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "de23a125194d53b44b391742e46d5b44f63f7d3079d568bb13a1b43a5a33ab0e",
-      "content_length": 14113,
+      "sha256": "8b734eab586d7abd0b534b1feeaa9dbff19f1d23d1002facc2698756926c2433",
+      "content_length": 14119,
       "excerpt": "Overview For AI agents: visit https://developers.tap.company/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Home Guides API Reference Home Log In Guides Log In Home Guides API Reference Overview Get Started Overview Acceptance Authentication Saved Cards Payment Agreement and Contracts Creating Payment Agreement Merchant Initiated Transaction Liability Shift: Customer vs Merchant Recurring Payments SDK BenefitPay Benefit Pay Web SDK Checkou...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.tap.company/docs/recurring-payments",
@@ -253,10 +253,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "00deb54c75e0779a6346fc52b44de85717829c9661402a9bfab2dee7fcbace82",
-      "content_length": 8927,
+      "sha256": "176e5e1455d3cd6724cf8d63ac0ed22940063f3c6a0fccce006b835af78a59d6",
+      "content_length": 8932,
       "excerpt": "Recurring Payments For AI agents: visit https://developers.tap.company/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Home Guides API Reference Home Log In Guides Log In Home Guides API Reference Recurring Payments Get Started Overview Acceptance Authentication Saved Cards Payment Agreement and Contracts Creating Payment Agreement Merchant Initiated Transaction Liability Shift: Customer vs Merchant Recurring Payments SDK BenefitPay Benefit...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.tap.company/docs/webhook",
@@ -265,10 +265,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "8761a225cb126a73870c0862b28e8ce7996eea5e86e51e2380b1d08ce99c3098",
-      "content_length": 17359,
+      "sha256": "f23c0347646e8de698f79e4e2cae174060e2604dbe7a67f8adce7c5d507c4df9",
+      "content_length": 17365,
       "excerpt": "Webhook For AI agents: visit https://developers.tap.company/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Home Guides API Reference Home Log In Guides Log In Home Guides API Reference Webhook Get Started Overview Acceptance Authentication Saved Cards Payment Agreement and Contracts Creating Payment Agreement Merchant Initiated Transaction Liability Shift: Customer vs Merchant Recurring Payments SDK BenefitPay Benefit Pay Web SDK Checkout...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.tap.company/llms.txt",
@@ -280,7 +280,7 @@
       "sha256": "355a2940624d6eb32acd587d1dcdd5b6b66a1082411d044185c94fa4b397bd4b",
       "content_length": 15968,
       "excerpt": "# Tap API Docs 1.0 Documentation ## Guides - [Authentication](https://developers.tap.company/docs/authentication.md): A detailed overview of API integration, workflow, and usage examples for 3D Secure authentication with Tap Payments. - [Recurring Payments](https://developers.tap.company/docs/recurring-payments.md): A Step-by-Step Documentation for Setting Up and Processing Recurring Payments - [Webhook](https://developers.tap.company/docs/webhook.md): Tap ensures secure and realtime webhooks fo...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://developers.tap.company/reference/api-actions",
@@ -289,10 +289,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "f663e17d4460513efbc47cc3338612b53583520fa0851b2432d5ea7cd994411b",
-      "content_length": 483,
-      "excerpt": "API Actions For AI agents: visit https://developers.tap.company/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Home Guides API Reference Home Log In API Reference Log In Home Guides API Reference API Actions JUMP TO API Actions Copy Page You can perform the following API actions on payments: Updated 12 months ago Updated 12 months ago",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "sha256": "68046607cc4f81bffc8e9508e331afb8eefb3c05670930ce0952aa4ae420d0c0",
+      "content_length": 493,
+      "excerpt": "API Actions For AI agents: visit https://developers.tap.company/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Home Guides API Reference Home Log In API Reference Log In Home Guides API Reference API Actions JUMP TO API Actions Copy Page You can perform the following API actions on payments: Updated <relative-age> ago Updated <relative-age> ago",
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.geidea.net/",
@@ -302,10 +302,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "952ba33c3300229d59539d702b833ffe95c1ad41ccd23d91003a4392a28b2159",
-      "content_length": 7180,
+      "sha256": "aad74baefdfd0440588ce9724e6b92ca17ab4c8779d1a350d3e4a14ce8d2abf4",
+      "content_length": 7186,
       "excerpt": "Overview For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Overview Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Portal [KSA] Direct API...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.geidea.net/docs/buy-now-pay-later-bnpl",
@@ -315,10 +315,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "8bd168859aa4f6af407270126fbdf0b690539a9a76a74bd5baa68aed66cd7102",
-      "content_length": 4600,
+      "sha256": "e3074a0cb6fce830a069e224075fa30a1450f7b469c012a23aa1d679b5dbddc7",
+      "content_length": 4605,
       "excerpt": "Buy Now Pay Later (BNPL) For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Buy Now Pay Later (BNPL) Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by I...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.geidea.net/docs/cancel-order-1",
@@ -328,10 +328,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "a4f417967d4061549fdb634cf801d44ec9edf3337aadcf2f71f8d6d6d7d9fcf5",
-      "content_length": 4479,
+      "sha256": "d1f5dda2f2df353f5909edc3916e9423665c40a8a51f8beac36baeb49a817a3d",
+      "content_length": 4484,
       "excerpt": "Cancel Order For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Cancel Order Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Portal [KSA] Di...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.geidea.net/docs/geidea-checkout-v2",
@@ -341,10 +341,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "7743392578149d2d3b2dd006c5c82765b7e13d1ad6bcb5157d724632417247a0",
-      "content_length": 27479,
+      "sha256": "6ea52fda4373827b18e75a26fe9dfb1c94ccbc96176b43911d87f1ffbb54d1a8",
+      "content_length": 27485,
       "excerpt": "Geidea HPP Checkout For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Geidea HPP Checkout Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - P...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.geidea.net/docs/overview-1",
@@ -354,10 +354,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "3d36c772e43da817fbf3d0fe5d672ac934a8dedd15889491e73a9fc9f1168882",
-      "content_length": 2497,
+      "sha256": "d3288526422ca88ff2fde9e89dd94a2f263295740831653e74c0c93e2c0c2dc0",
+      "content_length": 2502,
       "excerpt": "Transaction and Order Management For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Transaction and Order Management Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.geidea.net/docs/pay-by-link-apis",
@@ -367,10 +367,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "3f4984bc74747c817f117686111014d2b2b3236db306e3e56d8177c4812e64aa",
-      "content_length": 33868,
+      "sha256": "0f6f4b5be970951bc0f447487ea57232263e33aa754c2688bd0fd830ecf53a62",
+      "content_length": 33874,
       "excerpt": "Pay by Link - APIs For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Pay by Link - APIs Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Por...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.geidea.net/docs/pay-v2",
@@ -380,10 +380,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "eda590a1eaeeda70cac1e29be6479be7ecf9ea7271e12018bb994eec2bd014a4",
-      "content_length": 17278,
+      "sha256": "1bc3130ff650ca8bb19589183de047aa309f68b93a4a2b9b3423ccd07dbce0bf",
+      "content_length": 17283,
       "excerpt": "Pay For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Pay Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Portal [KSA] Direct API Integrati...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.geidea.net/docs/refund-2",
@@ -393,10 +393,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "094ae1af9978e9b48ba53c25a29b4be9563d553f44fac099d533aba8195c0666",
-      "content_length": 16022,
+      "sha256": "adba825f91089c0f5228e0febdd10230a87c7dd81468d1887cc7e4c391dd74e5",
+      "content_length": 16027,
       "excerpt": "Refund For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Refund Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Portal [KSA] Direct API Int...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.geidea.net/docs/sample-callback-responses",
@@ -406,10 +406,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "c2efc3d8677b526ecffaaa362020c5e05dfdb93f1f225a513b65e94f81ed823b",
-      "content_length": 5571,
+      "sha256": "9f3297b07a90ad1305943f8de44fe7d46d264dcd136c7a587b8b79ab40cba092",
+      "content_length": 5576,
       "excerpt": "Webhook/Callback Notifications For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Webhook/Callback Notifications Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - A...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.geidea.net/docs/souhoola",
@@ -419,10 +419,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "407c800620ed221769c4e25b565d2ddd645e40c53f07487d0930c783935a9b9f",
-      "content_length": 4073,
+      "sha256": "1b5e71ece96709f6cd25b55f410b86ce1cc9a55b5aa26ef98e999dda1f318cac",
+      "content_length": 4078,
       "excerpt": "Souhoola [Egypt] For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Souhoola [Egypt] Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Portal...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.geidea.net/docs/valu",
@@ -432,10 +432,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "6039dfd7f08640a40c0e69ab9665f028297ffce3b22084d02ed44f1cba8418bb",
-      "content_length": 3866,
+      "sha256": "560835c545d8011afe17376bcff20ade267f93155185994dbecca5160bb76ad2",
+      "content_length": 3871,
       "excerpt": "ValU [Egypt] For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference ValU [Egypt] Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Portal [KSA] Di...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.geidea.net/docs/void-1",
@@ -445,10 +445,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "c2a8c83ecbe21b9c573891cee423b2fe2b7e22bdb59cd511e519e54580d0ffeb",
-      "content_length": 2843,
+      "sha256": "f15a60aa6a76bca7f29706d8b0c46d6a2da1b49ca693fd1da27617c8b95f3a3f",
+      "content_length": 2848,
       "excerpt": "Void For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea Docs geidea Docs API Reference Void Getting Started Overview Pre-requisites Geidea HPP Checkout Express Checkout (Wallets) Pay by Link (Egypt & UAE) Pay by Link - Portal [Egypt] Pay by Link - Portal [UAE] Pay by Link - APIs Pay by Invoice (KSA) Pay by Invoice - APIs Pay by Invoice - Portal [KSA] Direct API Integra...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.geidea.net/llms.txt",
@@ -463,7 +463,7 @@
       "sha256": "205999e36b0d85a471a2d1a53c9f1877e68f653cc6396ae68f8c8678234e8b9a",
       "content_length": 8743,
       "excerpt": "# Geidea Documentation ## Guides - [Apple Pay Direct API](https://docs.geidea.net/docs/apple-pay-direct-api.md) - [Apple Pay](https://docs.geidea.net/docs/apple-pay.md) - [Branding and Customization](https://docs.geidea.net/docs/branding.md) - [Buy Now Pay Later (BNPL)](https://docs.geidea.net/docs/buy-now-pay-later-bnpl.md) - [Souhoola [Egypt]](https://docs.geidea.net/docs/souhoola.md) - [Tabby [UAE & KSA]](https://docs.geidea.net/docs/tabby-uae-ksa.md) - [Tamara [UAE & KSA]](https://docs.geide...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.geidea.net/reference/capture-transaction-1",
@@ -473,10 +473,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "f6069201d21f6546a52690f01c7ec2480406857257ef6dc93dec99915940da93",
-      "content_length": 1446,
+      "sha256": "394ce49a2db5ca3c5f8aeac1df3e3e7e4a125445bd07b3f0b9c47d8189fc486d",
+      "content_length": 1456,
       "excerpt": "Capture Transaction For AI agents: visit https://docs.geidea.net/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Home Docs API Reference Home geidea API Reference geidea Docs API Reference Capture Transaction JUMP TO Powered by Capture Transaction Copy Page post https://api.ksamerchant.geidea.net /pgw/api/v1/direct/capture Recent Requests Log in to see full request history Time Status User Agent Retrieving recent requests\\u2026 Loading Loading\\u2026 Body...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.moyasar.com/",
@@ -488,7 +488,7 @@
       "sha256": "bba608f9946715c912c5e56e19bcc036c8ac1d39b3157a8301030ffe601a0823",
       "content_length": 2575,
       "excerpt": "Developer Documentation Overview | Moyasar Online Docs Skip to main content Developer Documentation Getting Started Guides APIs SDKs eCommerce Plugins Dashboard On this page Moyasar Docs Welcome to Moyasar Developer Documentation! We will guide you through the process of integration and providing payments within your web or mobile application. Follow these steps to get started. info Click here if you would like an overview of the Developer Docs tree structure. Create An Account \\u200b If you haven't...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.moyasar.com/api/authentication/",
@@ -500,7 +500,7 @@
       "sha256": "66fef518a9bec2d98b85112bd45ea532c766d55e2c4d92eedba42f400fca3753",
       "content_length": 5148,
       "excerpt": "Authentication | Moyasar Online Docs Skip to main content Developer Documentation Getting Started Guides APIs SDKs eCommerce Plugins Dashboard API Introduction Authentication Pagination Metadata Idempotency Payments API Invoices API Payouts API Settlement API Internal Transactions API Sources API Other APIs Errors Authentication On this page Authentication Introduction \\u200b Moyasar's API uses API Keys to authenticate requests. You can view and manage your API keys in the Moyasar Dashboard. Publisha...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.moyasar.com/api/other/webhooks/webhook-reference",
@@ -512,7 +512,7 @@
       "sha256": "2c00ca894862d43001683a24f8c6f99eb9234f245d19546538bd3fd4d1711c95",
       "content_length": 3558,
       "excerpt": "Webhook Reference | Moyasar Online Docs Skip to main content Developer Documentation Getting Started Guides APIs SDKs eCommerce Plugins Dashboard API Introduction Authentication Pagination Metadata Idempotency Payments API Invoices API Payouts API Settlement API Internal Transactions API Sources API Other APIs Tokens Apple Pay Webhooks Attempts Create Webhook Fetch Webhook List Webhooks Available Webhooks Delete Webhook Webhook Reference Transfers Errors Other APIs Webhooks Webhook Reference On...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.moyasar.com/category/payments-api/",
@@ -524,7 +524,7 @@
       "sha256": "0a2850f5c6eb4d414e5d2eb7cde356180e649791551b6112157a7479430ba735",
       "content_length": 1045,
       "excerpt": "Payments API | Moyasar Online Docs Skip to main content Developer Documentation Getting Started Guides APIs SDKs eCommerce Plugins Dashboard API Introduction Authentication Pagination Metadata Idempotency Payments API Create Payment Fetch Payment List Payments Update Payment Refund Payment Capture Payment Void Payment Payment Status Reference Invoices API Payouts API Settlement API Internal Transactions API Sources API Other APIs Errors Payments API Payments API Complete reference for the Paymen...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.moyasar.com/guides/dashboard/setting-up-webhooks/",
@@ -536,7 +536,7 @@
       "sha256": "578a62ac4864e0627fa0f06bb190eeab8d211ec443c66184b9ba290d2c58d8f0",
       "content_length": 2409,
       "excerpt": "Configure Webhooks | Moyasar Online Docs Skip to main content Developer Documentation Getting Started Guides APIs SDKs eCommerce Plugins Dashboard Payment Operations Card Payments Apple Pay Samsung Pay STC Pay Tokenization Settlements Invoices Payouts Coupons Dashboard Get Your API Keys IP Whitelist Configure Webhooks Apple and Samsung Pay Certificates References Dashboard Configure Webhooks On this page Configure Webhooks This guide will go through how to setup and manage webhooks on your Moyas...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.moyasar.com/guides/payment-operations/",
@@ -548,7 +548,7 @@
       "sha256": "d2f3231144b9c8e30068a07088cd3bcf16c2397025af209fc41140a1013fbece",
       "content_length": 6117,
       "excerpt": "Payment Operations | Moyasar Online Docs Skip to main content Developer Documentation Getting Started Guides APIs SDKs eCommerce Plugins Dashboard Payment Operations Card Payments Apple Pay Samsung Pay STC Pay Tokenization Settlements Invoices Payouts Coupons Dashboard References Payment Operations On this page Payment Flows Moyasar supports two payment flows: 1. Purchase (default) \\u200b Authorizes and captures in one step. The card is charged immediately and the payment status is paid . 2. Authoriz...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.myfatoorah.com/docs/execute-payment",
@@ -557,10 +557,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "e4224e90d3353b32e621555e5cecbcbb20c0465b3d3046a96a4cc79568c2899f",
-      "content_length": 11588,
+      "sha256": "1663d081a44b898d2500e70d6ee95d71b14555066516209dd638879731e69478",
+      "content_length": 11594,
       "excerpt": "ExecutePayment For AI agents: visit https://docs.myfatoorah.com/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Features Documentation API Reference Features Documentation Log In Jump to Content Features Documentation API Reference ExecutePayment Log In Introduction Get Started Live Account Account Information Orders Information API Key Test Cards ISO Lookups Payment Flows Choose Your Payment Integration Embedded Payment Customizing Embedded Pay...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.myfatoorah.com/docs/get-payment-details",
@@ -569,10 +569,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "a186b5b9a316f4023ccd943cad079623740ec64c02174530f998f1630520e7cc",
-      "content_length": 5958,
+      "sha256": "ad3be5256e793fcf55e9b3c12fc1c1f28e485d6130c2a79829461f1a44048573",
+      "content_length": 5964,
       "excerpt": "Get Payment Details For AI agents: visit https://docs.myfatoorah.com/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Features Documentation API Reference Features Documentation Log In Jump to Content Features Documentation API Reference Get Payment Details Log In Introduction Get Started Live Account Account Information Orders Information API Key Test Cards ISO Lookups Payment Flows Choose Your Payment Integration Embedded Payment Customizing Em...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.myfatoorah.com/docs/get-started",
@@ -581,10 +581,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "9ecea844a2cbb02ecca60faff42850193dcf93d0ba172aec0e183c4d41f36a6e",
-      "content_length": 4603,
+      "sha256": "a73ccfb125ba3c181f03121e1a2e2dac719939af45d00ad47e7c2791dcc1a437",
+      "content_length": 4609,
       "excerpt": "Get Started For AI agents: visit https://docs.myfatoorah.com/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Features Documentation API Reference Features Documentation Log In Jump to Content Features Documentation API Reference Get Started Log In Introduction Get Started Live Account Account Information Orders Information API Key Test Cards ISO Lookups Payment Flows Choose Your Payment Integration Embedded Payment Customizing Embedded Payment T...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.myfatoorah.com/docs/v3-auth-capture",
@@ -593,10 +593,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "8a7a64b46052b5477cea9e78c567607b61d1cd5ea700f5aa9028501e889300b9",
-      "content_length": 10733,
+      "sha256": "ad43434dba65af8cd7536b19c30d686e45ee4606cadce68e292c2ee6359a3805",
+      "content_length": 10739,
       "excerpt": "Authorize & Capture For AI agents: visit https://docs.myfatoorah.com/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Features Documentation API Reference Features Documentation Log In Jump to Content Features Documentation API Reference Authorize & Capture Log In Introduction Get Started Live Account Account Information Orders Information API Key Test Cards ISO Lookups Payment Flows Choose Your Payment Integration Embedded Payment Customizing Em...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.myfatoorah.com/docs/v3-updating-payment-status-guidelines",
@@ -605,10 +605,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "74fcce3bb8008668ad9f81d1fb7bbe21d330d1452aeef091d6524bd424abcdbe",
-      "content_length": 7142,
+      "sha256": "02897b265aa0f9d1211ba1388c4db162c4f1b3976882a652fe9ba581734e1071",
+      "content_length": 7148,
       "excerpt": "Updating Payment Status Guidelines For AI agents: visit https://docs.myfatoorah.com/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Features Documentation API Reference Features Documentation Log In Jump to Content Features Documentation API Reference Updating Payment Status Guidelines Log In Introduction Get Started Live Account Account Information Orders Information API Key Test Cards ISO Lookups Payment Flows Choose Your Payment Integration E...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.myfatoorah.com/docs/webhook-v2",
@@ -617,10 +617,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "179bf961cd2f944eecdf3ee3e6573e2b32d13020b33ae85ddb0d4083ba672e3d",
-      "content_length": 6758,
+      "sha256": "ac53c14c791b5d91a411e4d50d51ac931c50f19697f9e7dfa58d29a61abf0cf5",
+      "content_length": 6764,
       "excerpt": "Webhook V2 For AI agents: visit https://docs.myfatoorah.com/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Features Documentation API Reference Features Documentation Log In Jump to Content Features Documentation API Reference Webhook V2 Log In Introduction Get Started Live Account Account Information Orders Information API Key Test Cards ISO Lookups Payment Flows Choose Your Payment Integration Embedded Payment Customizing Embedded Payment Tok...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.myfatoorah.com/llms.txt",
@@ -632,7 +632,7 @@
       "sha256": "8cf19e480acb6d128b7364f1e078f6d78950d9641eb1bf603d555015f04ce037",
       "content_length": 21156,
       "excerpt": "# MyFatoorah API Documentation ## Guides - [Card Verification](https://docs.myfatoorah.com/docs/card-verification.md) - [Features](https://docs.myfatoorah.com/docs/features.md) - [Get Payment Details](https://docs.myfatoorah.com/docs/get-payment-details.md) - [Updating Payment Status Guidelines](https://docs.myfatoorah.com/docs/v3-updating-payment-status-guidelines.md) - [Idempotency](https://docs.myfatoorah.com/docs/idempotency.md) - [Bypass 3DS](https://docs.myfatoorah.com/docs/bypass3ds.md) -...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.myfatoorah.com/reference/update-payment",
@@ -641,10 +641,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "253cf90584c2e14fddce51ffc9ddae34c55f1f289503fa33251f930e9dd1ea17",
-      "content_length": 1532,
+      "sha256": "732b9d45eb89069a3051ed24284d59ca4be5e07394fc13d1e61f95f3f2ebc0f2",
+      "content_length": 1544,
       "excerpt": "Update Payment (Capture or Release) For AI agents: visit https://docs.myfatoorah.com/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Features Documentation API Reference API Reference Log In Jump to Content Features Documentation API Reference Update Payment (Capture or Release) Log In JUMP TO Powered by Update Payment (Capture or Release) Copy Page put https://apitest.myfatoorah.com /v3/payments/ {paymentId} Used in the Auth & Capture flow to c...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.paytabs.com/",
@@ -656,7 +656,7 @@
       "sha256": "c5705042f6c6a42b6748d110b8f7d963ce86c19a1316953636c77d21e0fd45ea",
       "content_length": 4892,
       "excerpt": "PayTabs Technical Portal Home Documentations Developer\\u2019s Community Recently Added Home Documentations Developer\\u2019s Community Recently Added PayTabs Technical Portal Integrate your system through our Empowering your payments journey with seamless integration, comprehensive support, and innovative solutions tailored to your business needs for a smooth and efficient experience. Scroll Down Seamless Integration with Top Platforms Find your best case Build, launch and get paid. Enable your platform wi...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tabby.ai/api-reference/checkout/create-a-session",
@@ -668,7 +668,7 @@
       "sha256": "402f7aeb6a7a8bf32f1b2a59e8716b3e149958644083631a531ce088bc19cc51",
       "content_length": 12711,
       "excerpt": "Create a session - Tabby Skip to main content Tabby home page Search... \\u2318 K Register Register Search... Navigation Checkout Create a session Documentation API Playground Marketing Toolkit API Playground API Reference Documentation Checkout POST Create a session Session creation payload model Payments GET Retrieve a payment PUT Update a payment POST Capture a payment POST Refund a payment POST Close a payment GET List of all payments Webhooks POST Register a webhook GET Retrieve all webhooks GET...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tabby.ai/api-reference/payments/retrieve-a-payment",
@@ -680,7 +680,7 @@
       "sha256": "9626129d8e58facfba5007938cf5c4c82788e37093db58ddb0ae27103b478ac9",
       "content_length": 12555,
       "excerpt": "Retrieve a payment - Tabby Skip to main content Tabby home page Search... \\u2318 K Register Register Search... Navigation Payments Retrieve a payment Documentation API Playground Marketing Toolkit API Playground API Reference Documentation Checkout POST Create a session Session creation payload model Payments GET Retrieve a payment PUT Update a payment POST Capture a payment POST Refund a payment POST Close a payment GET List of all payments Webhooks POST Register a webhook GET Retrieve all webhooks...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tabby.ai/introduction/what-is-tabby",
@@ -692,7 +692,7 @@
       "sha256": "a9ef569c33bebcbd13ac6b26574cc48a8df3deb8ce8a1de26c77f291cbd9afcd",
       "content_length": 1572,
       "excerpt": "What is Tabby? - Tabby Skip to main content Tabby home page Search... \\u2318 K Register Register Search... Navigation Introduction What is Tabby? Documentation API Playground Marketing Toolkit Introduction What is Tabby? Technical Requirements F.A.Q. Quick Start Tabby Marketplace Listing Policy E-commerce Platforms Shopify Salla Zid WooCommerce Magento 2 OpenCart Matjrah Salesforce ExpandCart Online Custom Integration Quick Start Checkout Flow Payment Statuses Payment Processing Disputes Webhooks On\\u2011...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tabby.ai/llms.txt",
@@ -704,7 +704,7 @@
       "sha256": "4042c2de7e6c2529a788211878a38c6f8adb1033a5a18d25a22cd2ae68838b8b",
       "content_length": 8662,
       "excerpt": "# Tabby ## Docs - [Create a session](https://docs.tabby.ai/api-reference/checkout/create-a-session.md): Creates a Checkout session. Creates Session and Payment, returns Pre-Scoring result (status), ids of Payment and Session. - [Session creation payload model](https://docs.tabby.ai/api-reference/checkout/session-payload-model.md) - [Approve disputes](https://docs.tabby.ai/api-reference/disputes/approve-disputes.md): Approve disputes (refund money to the customer). Only 20 disputes can be approve...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tabby.ai/pay-in-4-custom-integration/checkout-flow",
@@ -716,7 +716,7 @@
       "sha256": "b82f561b39200683884e3a4a7ca72f39cd58bcedc74a9cc91c30e8edabf38b59",
       "content_length": 8576,
       "excerpt": "Checkout Flow - Tabby Skip to main content Tabby home page Search... \\u2318 K Register Register Search... Navigation Online Custom Integration Checkout Flow Documentation API Playground Marketing Toolkit Introduction What is Tabby? Technical Requirements F.A.Q. Quick Start Tabby Marketplace Listing Policy E-commerce Platforms Shopify Salla Zid WooCommerce Magento 2 OpenCart Matjrah Salesforce ExpandCart Online Custom Integration Quick Start Checkout Flow Payment Statuses Payment Processing Disputes W...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tabby.ai/pay-in-4-custom-integration/payment-processing",
@@ -728,7 +728,7 @@
       "sha256": "4ac6eee320469c5a2d22b1d72c76a89bc921c5004dd1ba40c7533beb0db46dcd",
       "content_length": 9223,
       "excerpt": "Payment Processing - Tabby Skip to main content Tabby home page Search... \\u2318 K Register Register Search... Navigation Online Custom Integration Payment Processing Documentation API Playground Marketing Toolkit Introduction What is Tabby? Technical Requirements F.A.Q. Quick Start Tabby Marketplace Listing Policy E-commerce Platforms Shopify Salla Zid WooCommerce Magento 2 OpenCart Matjrah Salesforce ExpandCart Online Custom Integration Quick Start Checkout Flow Payment Statuses Payment Processing...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tabby.ai/pay-in-4-custom-integration/payment-statuses",
@@ -740,7 +740,7 @@
       "sha256": "3233f8ab7c0e710690c10edfef89fa730622bac5028609249a31a502d2b37fbd",
       "content_length": 3248,
       "excerpt": "Payment Statuses - Tabby Skip to main content Tabby home page Search... \\u2318 K Register Register Search... Navigation Online Custom Integration Payment Statuses Documentation API Playground Marketing Toolkit Introduction What is Tabby? Technical Requirements F.A.Q. Quick Start Tabby Marketplace Listing Policy E-commerce Platforms Shopify Salla Zid WooCommerce Magento 2 OpenCart Matjrah Salesforce ExpandCart Online Custom Integration Quick Start Checkout Flow Payment Statuses Payment Processing Disp...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tabby.ai/pay-in-4-custom-integration/webhooks",
@@ -752,7 +752,7 @@
       "sha256": "055bc2622fad23d07e4d70ee7b40fdd67377d9320b3c8137e54a51ac28226852",
       "content_length": 6784,
       "excerpt": "Webhooks - Tabby Skip to main content Tabby home page Search... \\u2318 K Register Register Search... Navigation Online Custom Integration Webhooks Documentation API Playground Marketing Toolkit Introduction What is Tabby? Technical Requirements F.A.Q. Quick Start Tabby Marketplace Listing Policy E-commerce Platforms Shopify Salla Zid WooCommerce Magento 2 OpenCart Matjrah Salesforce ExpandCart Online Custom Integration Quick Start Checkout Flow Payment Statuses Payment Processing Disputes Webhooks On...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tamara.co/",
@@ -764,7 +764,7 @@
       "sha256": "5a96a872a6ee737e3afb27512ef7b882ba09ad34a80565d2abe2ee76be3cdb06",
       "content_length": 3307,
       "excerpt": "Tamara Documentation and APIs Hub For AI agents: visit https://docs.tamara.co/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Guides Api Explorer Checkout Widget Home Guides API Explorer Guides Api Explorer Checkout Widget System Status Support Business Login Home System Status Support Business Login Your new Tamara integration hub Discover the ultimate toolkit right here, enabling you to seamlessly integrate Tamara's payment solution into your...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tamara.co/docs/direct-online-checkout",
@@ -773,10 +773,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "ab0064f18d5b6f47d49c12ef97593cf041438a7ff3f90cfac73113e391c605e4",
-      "content_length": 8667,
+      "sha256": "8b705e962a1a4c69fa6cec54c4289e8af593308ad33ffcc62b1758e65eb180cd",
+      "content_length": 8674,
       "excerpt": "Online Checkout For AI agents: visit https://docs.tamara.co/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Guides Api Explorer Checkout Widget Home Guides API Explorer Guides Api Explorer Checkout Widget System Status Support Business Login Guides System Status Support Business Login Guides Online Checkout Online Checkout \\U0001f44b Introduction Get to know Tamara \\U0001f6d2 E-Commerce Platforms Platforms Quick Start ExpandCart FatherShops Magento 2 Installation...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tamara.co/docs/online-order-status-flow",
@@ -785,10 +785,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "46fa272ae36860d2fffd619d215c79c471ac50e4da0f07357994206da2b74f2c",
-      "content_length": 6282,
+      "sha256": "e5dcb889d6b24bfb916df97a1d88b26296dc65b88f86ffe10385fe84358862e2",
+      "content_length": 6289,
       "excerpt": "Online Order Status Flow For AI agents: visit https://docs.tamara.co/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Guides Api Explorer Checkout Widget Home Guides API Explorer Guides Api Explorer Checkout Widget System Status Support Business Login Guides System Status Support Business Login Guides Online Order Status Flow Online Order Status Flow \\U0001f44b Introduction Get to know Tamara \\U0001f6d2 E-Commerce Platforms Platforms Quick Start ExpandCart FatherS...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tamara.co/docs/transaction-authorisation",
@@ -797,10 +797,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "9c22d5f3e4c573676e5dd1e3fe089edf8bc8da5bb77f936b3317312d5ea8c0fb",
-      "content_length": 7621,
+      "sha256": "5e210ff99b2836e488a0f0c1ac9965126f5a8e23415138fe9b627c355831a499",
+      "content_length": 7628,
       "excerpt": "Webhook Registration & Order Authorisation For AI agents: visit https://docs.tamara.co/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Guides Api Explorer Checkout Widget Home Guides API Explorer Guides Api Explorer Checkout Widget System Status Support Business Login Guides System Status Support Business Login Guides Webhook Registration & Order Authorisation Webhook Registration & Order Authorisation \\U0001f44b Introduction Get to know Tamara \\U0001f6d2 E-Comme...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tamara.co/llms.txt",
@@ -812,7 +812,7 @@
       "sha256": "79d6528576ba8497aae33d61a057858f1d418a22d14bf5d4c4345c106b7d7074",
       "content_length": 18386,
       "excerpt": "# Tamara Documentation and APIs Hub Documentation ## Guides - [Get to know Tamara](https://docs.tamara.co/docs/introduction-to-tamara.md): Learn more about **Tamara**'s product offerings and how we can help you and your customers! - [Educational Institutions](https://docs.tamara.co/docs/education.md): For merchants with educational institutions, such as schools, colleges, etc. - [General](https://docs.tamara.co/docs/general-risk-assessment.md): For all merchant categories - [Hotel Booking](https...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tamara.co/reference/captureorder",
@@ -821,10 +821,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "05d10ee4764bffe4288cd95da6cf8079a6a2b89d465dd40a249b07b18dc45f17",
-      "content_length": 2764,
+      "sha256": "428cad09df204c01002a9ea13041d5c968e15118baf9400f5407d9ca4a82fac4",
+      "content_length": 2776,
       "excerpt": "Capture Order For AI agents: visit https://docs.tamara.co/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Guides Api Explorer Checkout Widget Home Guides API Explorer Guides Api Explorer Checkout Widget System Status Support Business Login API Explorer System Status Support Business Login API Explorer Capture Order JUMP TO Powered by Capture Order Copy Page post https://{environment}.tamara.co /payments/capture This endpoint is requested to perf...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tamara.co/reference/getorderdetails",
@@ -836,7 +836,7 @@
       "sha256": "a1cc7791863bc8bc0978937e9bf5b400a0de336f2c1b507e2c5931d3b11aca64",
       "content_length": 1524,
       "excerpt": "Get Order Details by Tamara's order_id For AI agents: visit https://docs.tamara.co/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Guides Api Explorer Checkout Widget Home Guides API Explorer Guides Api Explorer Checkout Widget System Status Support Business Login API Explorer System Status Support Business Login API Explorer Get Order Details by Tamara's order_id JUMP TO Powered by Get Order Details by Tamara's order_id Copy Page get https://{e...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://docs.tamara.co/reference/simplifiedrefund",
@@ -848,7 +848,7 @@
       "sha256": "c004d76d9673497e94a4d63f44b160a04cf37ba5cdf963c0c4330cc2f30c6c4e",
       "content_length": 1847,
       "excerpt": "Simplified Refund For AI agents: visit https://docs.tamara.co/llms.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI. Jump to Content Guides Api Explorer Checkout Widget Home Guides API Explorer Guides Api Explorer Checkout Widget System Status Support Business Login API Explorer System Status Support Business Login API Explorer Simplified Refund JUMP TO Powered by Simplified Refund Copy Page post https://{environment}.tamara.co /payments/simplified-refund/ {order_id}...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://easykash.gitbook.io/easykash-apis-documentation/",
@@ -861,7 +861,7 @@
       "sha256": "e40d22350c32faaa57c2255923be6e0a93801f001641c8bf1425a18a70c002f4",
       "content_length": 1403,
       "excerpt": "Direct Payment (Hosted) | EasyKash APIs EasyKash APIs \\u2318 Ctrl k EasyKash APIs Direct Payment (Hosted) Pay API Callback Service Payment Inquiry Cash API (Cash-only) Direct Payment (WordPress WooCommerce Plugin) Direct Payment shopify plugin Powered by GitBook On this page Copy On this page Direct Payment (Hosted) Direct Payment is an API to allow customers to integrate Easykash\\u2019s payment methods into their website. Prerequisites: To be able to begin the integration of your website with Direct Paym...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://easykash.gitbook.io/easykash-apis-documentation/cash-api-cash-only",
@@ -874,7 +874,7 @@
       "sha256": "262b17775c15c87d4fd1c719ec69a7c264a7f7bb9cf04fec5629d39d43d26cdb",
       "content_length": 1337,
       "excerpt": "Cash API (Cash-only) | EasyKash APIs EasyKash APIs \\u2318 Ctrl k EasyKash APIs Direct Payment (Hosted) Cash API (Cash-only) Create a payment Direct Payment (WordPress WooCommerce Plugin) Direct Payment shopify plugin Powered by GitBook On this page Copy On this page Cash API (Cash-only) This feature only works for Cash payment methods. What is our API feature? For Businesses that already have running websites, EasyKash provides an integration feature to perform two things. Create payments (cash only)...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/callback-service",
@@ -887,7 +887,7 @@
       "sha256": "ca7fca8c9e098c96af1132b5badf22c63beff4db0bf869f5e6703c87a482ee1d",
       "content_length": 2765,
       "excerpt": "Callback Service | EasyKash APIs EasyKash APIs \\u2318 Ctrl k EasyKash APIs Direct Payment (Hosted) Pay API Callback Service Callback response verification Payment Inquiry Cash API (Cash-only) Direct Payment (WordPress WooCommerce Plugin) Direct Payment shopify plugin Powered by GitBook On this page Copy On this page Direct Payment (Hosted) Callback Service If your API service is enabled for your account, after every successful payment, you receive an API notification to the callback URL added in your...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/callback-service/callback-response-verification",
@@ -900,7 +900,7 @@
       "sha256": "1afd85eea9915a4f89176d1a3e761644381b4079588562d4be9c78b08f7d55a2",
       "content_length": 3745,
       "excerpt": "Callback response verification | EasyKash APIs EasyKash APIs \\u2318 Ctrl k EasyKash APIs Direct Payment (Hosted) Pay API Callback Service Callback response verification Payment Inquiry Cash API (Cash-only) Direct Payment (WordPress WooCommerce Plugin) Direct Payment shopify plugin Powered by GitBook On this page Copy On this page Direct Payment (Hosted) Callback Service Callback response verification Callbacks rely on HMAC authentication to verify response's identity and integrity of its data. Prereq...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/pay-api",
@@ -915,7 +915,7 @@
       "sha256": "b54419e36667b038ac2a73feae54e6193172c2d0913c8dd17d57dbed8dab799e",
       "content_length": 3991,
       "excerpt": "Pay API | EasyKash APIs EasyKash APIs \\u2318 Ctrl k EasyKash APIs Direct Payment (Hosted) Pay API Callback Service Payment Inquiry Cash API (Cash-only) Direct Payment (WordPress WooCommerce Plugin) Direct Payment shopify plugin Powered by GitBook On this page Copy On this page Direct Payment (Hosted) Pay API API to create direct pay link Create direct pay link POST https://back.easykash.net/api/directpayv1/pay To get your api key, open your Integration Settings page Headers Name Type Description auth...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/payment-inquiry",
@@ -928,7 +928,7 @@
       "sha256": "039e841651fab5b6097e659692c754de789dc305c1cd95ed3db2730244299eb3",
       "content_length": 1591,
       "excerpt": "Payment Inquiry | EasyKash APIs EasyKash APIs \\u2318 Ctrl k EasyKash APIs Direct Payment (Hosted) Pay API Callback Service Payment Inquiry Cash API (Cash-only) Direct Payment (WordPress WooCommerce Plugin) Direct Payment shopify plugin Powered by GitBook On this page Copy On this page Direct Payment (Hosted) Payment Inquiry If you'd like to inquire about a specific transaction, use this payment inquiry API below. Inquire about specific transaction on Easykash POST https://back.easykash.net/api/cash-a...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://github.com/Kashier-payments",
@@ -941,7 +941,7 @@
       "sha256": "e027ec7636de9fea4e8aae06a6721779a2156b9136495966d9b1bd5388c5279c",
       "content_length": 9974,
       "excerpt": "Kashier \\xb7 GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Kashier-payments Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes APPLICATION SECURITY GitHub Advanced Security...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://github.com/Kashier-payments/Kashier-WooCommerce-UI-Plugin",
@@ -954,7 +954,7 @@
       "sha256": "ff6d496ff46317db301d1b5a3c58cd32d2c581d03d215245757961b18ec4c9ef",
       "content_length": 9343,
       "excerpt": "GitHub - Kashier-payments/Kashier-WooCommerce-UI-Plugin: Kashier WooCommerce Plugin \\xb7 GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://github.com/Kashier-payments/NodeJs-Checkout-Demo",
@@ -967,7 +967,7 @@
       "sha256": "b6b5980f1f67cf0e1f79cbbb31c092f8db5a7ec57bf9cd99317ca2cc2b677e54",
       "content_length": 6672,
       "excerpt": "GitHub - Kashier-payments/NodeJs-Checkout-Demo: Create and pay orders through IFrame and Hosted Payment Page in Nodejs \\xb7 GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://github.com/Kashier-payments/Php-Checkout-Demo",
@@ -980,7 +980,7 @@
       "sha256": "64b767f43403871a6c9a04e493592062bccf4dcd99830f7354f046fc2c0aed8f",
       "content_length": 9064,
       "excerpt": "GitHub - Kashier-payments/Php-Checkout-Demo: Create and pay orders through IFrame and Hosted Payment Page Demo \\xb7 GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and tra...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://hyperpay.docs.oppwa.com/integrations/server-to-server",
@@ -992,7 +992,7 @@
       "sha256": "7af3999c37525484b209b2656144a0c0fc46e86a4eb4d56ad843936d9a32cb2d",
       "content_length": 14823,
       "excerpt": "Server-to-Server | Developer Portal Get Started Guides 3D Secure 3D Secure Parameters Request Parameters Response Parameters 3D Secure Testing Guide Exemption Management Non-Payment Authentication 3RI authentication Identity Check Insights Frictionless Authentication Liability Shift Fraud Management Tokenization Network Tokens Test Cards Card-on-File Merchant Advice Code Multi-Acquiring Webhooks PCI DSS Click To Pay One-Click Payment Integrations COPYandPAY COPYandPAY API Customization Advanced...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://hyperpay.docs.oppwa.com/integrations/widget",
@@ -1004,7 +1004,7 @@
       "sha256": "17c5a1494fde3eabfcb1eeef3c33140d8bc8dada9e0b7463e46c8ee0f3c1ea9f",
       "content_length": 6787,
       "excerpt": "Widget Integration Guide | Developer Portal Get Started Guides 3D Secure 3D Secure Parameters Request Parameters Response Parameters 3D Secure Testing Guide Exemption Management Non-Payment Authentication 3RI authentication Identity Check Insights Frictionless Authentication Liability Shift Fraud Management Tokenization Network Tokens Test Cards Card-on-File Merchant Advice Code Multi-Acquiring Webhooks PCI DSS Click To Pay One-Click Payment Integrations COPYandPAY COPYandPAY API Customization A...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://hyperpay.docs.oppwa.com/reference/parameters",
@@ -1016,7 +1016,7 @@
       "sha256": "786bd4e963795cd2018301145d7e84cedbbf341bb2e09a92829484b7a98ec99a",
       "content_length": 108239,
       "excerpt": "API Reference | Developer Portal Get Started Guides 3D Secure 3D Secure Parameters Request Parameters Response Parameters 3D Secure Testing Guide Exemption Management Non-Payment Authentication 3RI authentication Identity Check Insights Frictionless Authentication Liability Shift Fraud Management Tokenization Network Tokens Test Cards Card-on-File Merchant Advice Code Multi-Acquiring Webhooks PCI DSS Click To Pay One-Click Payment Integrations COPYandPAY COPYandPAY API Customization Advanced Opt...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://hyperpay.docs.oppwa.com/reference/resultCodes",
@@ -1028,7 +1028,7 @@
       "sha256": "a37b724e0002f3b885bc5a50e27bad93d715b0482e7c6ff294e3415db318d603",
       "content_length": 53880,
       "excerpt": "Result Codes | Developer Portal Get Started Guides 3D Secure 3D Secure Parameters Request Parameters Response Parameters 3D Secure Testing Guide Exemption Management Non-Payment Authentication 3RI authentication Identity Check Insights Frictionless Authentication Liability Shift Fraud Management Tokenization Network Tokens Test Cards Card-on-File Merchant Advice Code Multi-Acquiring Webhooks PCI DSS Click To Pay One-Click Payment Integrations COPYandPAY COPYandPAY API Customization Advanced Opti...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://hyperpay.docs.oppwa.com/tutorials/webhooks",
@@ -1040,7 +1040,7 @@
       "sha256": "3bab4851d053a5d3e2e2f53b5ebdffe051ae4d4ec38c8b1679e59207582b31d2",
       "content_length": 19198,
       "excerpt": "Webhooks | Developer Portal Get Started Guides 3D Secure 3D Secure Parameters Request Parameters Response Parameters 3D Secure Testing Guide Exemption Management Non-Payment Authentication 3RI authentication Identity Check Insights Frictionless Authentication Liability Shift Fraud Management Tokenization Network Tokens Test Cards Card-on-File Merchant Advice Code Multi-Acquiring Webhooks PCI DSS Click To Pay One-Click Payment Integrations COPYandPAY COPYandPAY API Customization Advanced Options...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://paymentservices.amazon.com/docs/",
@@ -1052,7 +1052,7 @@
       "sha256": "f9377ab03442df5636e3da80f442387d693c5c5cdd322b49d3cd919e9deb9c06",
       "content_length": 4724,
       "excerpt": "Introduction | Get started with simple integrations for web, mobile and e-commerce. Skip to main content Brewing next-gen API docs experience! Got feedback? \\u2192 Documentation Set up your documentation Getting Started Introduction Quickstart Accepting Payments Available Integration Types No Code Hosted Checkout Custom Integration Mobile Integration Managing Payments Capturing a Payment Refunding a Payment Voiding a Payment Recurring Payments Tracking Payments Payment Methods Available Payment Metho...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://paymentservices.amazon.com/docs/api/faqs/faq",
@@ -1064,7 +1064,7 @@
       "sha256": "754d533d3a27bcde4f4b3566bf3ee20ea2c529ce06bffbe82e7d3e1f37a00ecf",
       "content_length": 21025,
       "excerpt": "FAQs | Get started with simple integrations for web, mobile and e-commerce. Skip to main content Brewing next-gen API docs experience! Got feedback? \\u2192 API Reference Reference for the API API Reference Introduction Accepting Payments Payment Link Hosted Checkout Custom Integration Mobile Integration Managing Payments Capture Void Authorization Refund Recurring Check Status Reporting Payment Methods Apple Pay STC Pay valU Tabby Tamara Security Standard 3DS Standalone 3DS External 3DS Protect Plus...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://paymentservices.amazon.com/docs/managing-payments/capturing-payment",
@@ -1076,7 +1076,7 @@
       "sha256": "b356369933eab867d3dccc41a23dba7eb29e398e49482c639f0b92dfffecc94f",
       "content_length": 5445,
       "excerpt": "Capturing a Payment | Get started with simple integrations for web, mobile and e-commerce. Skip to main content Brewing next-gen API docs experience! Got feedback? \\u2192 Documentation Set up your documentation Getting Started Introduction Quickstart Accepting Payments Available Integration Types No Code Hosted Checkout Custom Integration Mobile Integration Managing Payments Capturing a Payment Refunding a Payment Voiding a Payment Recurring Payments Tracking Payments Payment Methods Available Paymen...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://paymentservices.amazon.com/docs/managing-payments/tracking-a-payment/webhooks",
@@ -1088,7 +1088,7 @@
       "sha256": "99cdd994c07dce8b924f11a1c6fc3b7360b5c6eac27f87159e3ecdbae2a6bdb2",
       "content_length": 7068,
       "excerpt": "Webhooks | Get started with simple integrations for web, mobile and e-commerce. Skip to main content Brewing next-gen API docs experience! Got feedback? \\u2192 Documentation Set up your documentation Getting Started Introduction Quickstart Accepting Payments Available Integration Types No Code Hosted Checkout Custom Integration Mobile Integration Managing Payments Capturing a Payment Refunding a Payment Voiding a Payment Recurring Payments Tracking Payments Check Transaction Status Webhooks Email Not...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://paysky.io/docs/",
@@ -1101,7 +1101,7 @@
       "sha256": "b7811dd2f10e625ed0104c9c99c0965ad43a1bdadc2bc5a440e606ef45be2313",
       "content_length": 1754,
       "excerpt": "Developers Section | Paysky Payments Solutions Home Individuals Business POS Terminals Online Payments E-Receipt Banks OMNI Payment Gateway Paysky Control Paysky Billers Gateway Paysky 3Ds 2.0 Solution Developers About Paysky About Paysky Leadership Partners News Press Paysky Ads Careers Awards Contact \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 +321 123 4567 info@test.com My Account API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide Ecommerce plugins 2 PAYSKY \\u2013 WOOCOMMERCE PLUGIN PaySky OMNI Gat...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://paysky.io/docs/paysky-omni-gateway-payform-plus-integration-guide/",
@@ -1114,7 +1114,7 @@
       "sha256": "a6fe45f827c5e5a28b1c82760a5dbbe8390a2dc872ec0373ee337849d4e9deee",
       "content_length": 26024,
       "excerpt": "PaySky OMNI Gateway \\u2013 PayForm Plus Integration guide | Paysky Payments Solutions Home Individuals Business POS Terminals Online Payments E-Receipt Banks OMNI Payment Gateway Paysky Control Paysky Billers Gateway Paysky 3Ds 2.0 Solution Developers About Paysky About Paysky Leadership Partners News Press Paysky Ads Careers Awards Contact \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 +321 123 4567 info@test.com My Account API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide Ecommerce plugins 2 PAYSKY \\u2013...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://paysky.io/docs/paysky-omni-gateway/",
@@ -1127,7 +1127,7 @@
       "sha256": "8fc373d43562bd22edd49887a5dc55e2d6f54246b8eeae61593a571f778c4e69",
       "content_length": 12250,
       "excerpt": "PaySky OMNI Gateway \\u2013 Notification Services Integration Guide | Paysky Payments Solutions Home Individuals Business POS Terminals Online Payments E-Receipt Banks OMNI Payment Gateway Paysky Control Paysky Billers Gateway Paysky 3Ds 2.0 Solution Developers About Paysky About Paysky Leadership Partners News Press Paysky Ads Careers Awards Contact \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 +321 123 4567 info@test.com My Account API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide Ecommerce plugins 2...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://paysky.io/docs/paysky-paybutton-sdk-android-guide/",
@@ -1140,7 +1140,7 @@
       "sha256": "65c0959d02abb3de962d59e0570f8eebcc1078be7491f35628f93e248ccf2595",
       "content_length": 9411,
       "excerpt": "PAYSKY PAYBUTTON SDK ANDROID GUIDE | Paysky Payments Solutions Home Individuals Business POS Terminals Online Payments E-Receipt Banks OMNI Payment Gateway Paysky Control Paysky Billers Gateway Paysky 3Ds 2.0 Solution Developers About Paysky About Paysky Leadership Partners News Press Paysky Ads Careers Awards Contact \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 +321 123 4567 info@test.com My Account API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide Ecommerce plugins 2 PAYSKY \\u2013 WOOCOMMERCE PLUGIN...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://paysky.io/docs/paysky-paybutton-sdk-ios-guide/",
@@ -1153,7 +1153,7 @@
       "sha256": "1df7626001434e083eccd4d21bcac497bf744ae88e5d38adb701bba0a18799f0",
       "content_length": 6284,
       "excerpt": "PAYSKY PAYBUTTON SDK IOS GUIDE | Paysky Payments Solutions Home Individuals Business POS Terminals Online Payments E-Receipt Banks OMNI Payment Gateway Paysky Control Paysky Billers Gateway Paysky 3Ds 2.0 Solution Developers About Paysky About Paysky Leadership Partners News Press Paysky Ads Careers Awards Contact \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 +321 123 4567 info@test.com My Account API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide Ecommerce plugins 2 PAYSKY \\u2013 WOOCOMMERCE PLUGIN Pay...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000710069",
@@ -1165,7 +1165,7 @@
       "sha256": "ac9968e96e479e2d5ee85a8e8b54237a7d170c9278918b1e79d65ee831393e52",
       "content_length": 9952,
       "excerpt": "How to configure Instant Payment notification (IPN)? : PayTabs Support Portal Skip to main content PayTabs Support Portal Home Knowledge base Developers community Submit a ticket Login Sign up English English Arabic Home Knowledge base The How To? & The What is? (FAQ) The How To? (FAQ) ... Knowledge base The How To? & The What is? (FAQ) The How To? (FAQ) How to configure Instant Payment notification (IPN)? All Articles Recent Searches Clear all No recent searches Popular Articles Articles View a...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000718961",
@@ -1177,7 +1177,7 @@
       "sha256": "509f1053508ec0dee44673adef09dfc1df4469b1880efe236ad2f990ba2f63a2",
       "content_length": 7348,
       "excerpt": "How to verify the response received from PayTabs? (Signature Verification) : PayTabs Support Portal Skip to main content PayTabs Support Portal Home Knowledge base Developers community Submit a ticket Login Sign up English English Arabic Home Knowledge base The How To? & The What is? (FAQ) The How To? (FAQ) ... Knowledge base The How To? & The What is? (FAQ) The How To? (FAQ) How to verify the response received from PayTabs? (Signat... All Articles Recent Searches Clear all No recent searches Po...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000803800-request-response-parameters-the-return-url-return-",
@@ -1189,7 +1189,7 @@
       "sha256": "e3fe0e5d6efb9ba7044ada3baf1b184efe2bd93bce95a41bbe34ac52ae65ab43",
       "content_length": 7898,
       "excerpt": "Request/Response Parameters | The Return URL (return) : PayTabs Support Portal Skip to main content PayTabs Support Portal Home Knowledge base Developers community Submit a ticket Login Sign up English English Arabic Home Knowledge base How To Integrate With PayTabs? (APIs Edition) PT2 API Endpoints | Request Parameters ... Knowledge base How To Integrate With PayTabs? (APIs Edition) PT2 API Endpoints | Request Parameters Request/Response Parameters | The Return URL (return) All Articles Recent...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000805341",
@@ -1201,7 +1201,7 @@
       "sha256": "a3da51d5a2e75e6cee6c282caafcaa4290701ad4d78e9304865d7cad275d0cc5",
       "content_length": 8214,
       "excerpt": "Request/Response Parameters | The Callback URL (callback) : PayTabs Support Portal Skip to main content PayTabs Support Portal Home Knowledge base Developers community Submit a ticket Login Sign up English English Arabic Home Knowledge base How To Integrate With PayTabs? (APIs Edition) PT2 API Endpoints | Request Parameters ... Knowledge base How To Integrate With PayTabs? (APIs Edition) PT2 API Endpoints | Request Parameters Request/Response Parameters | The Callback URL (callback) All Articles...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000818152-request-response-parameters-cart-id-cart-id-",
@@ -1213,7 +1213,7 @@
       "sha256": "c968d00956a4b2ab065ec5946d2e0e50c07ea6dd8e68f3a0b505291e9fb6596b",
       "content_length": 4881,
       "excerpt": "Request/Response Parameters | Cart ID (cart_id) : PayTabs Support Portal Skip to main content PayTabs Support Portal Home Knowledge base Developers community Submit a ticket Login Sign up English English Arabic Home Knowledge base How To Integrate With PayTabs? (APIs Edition) PT2 API Endpoints | Request Parameters ... Knowledge base How To Integrate With PayTabs? (APIs Edition) PT2 API Endpoints | Request Parameters Request/Response Parameters | Cart ID (cart_id) All Articles Recent Searches Cle...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000818154-request-response-parameters-cart-amount-cart-amount-",
@@ -1225,7 +1225,7 @@
       "sha256": "c6a2f98e2cfd0edea5f153746404883c02642fec1fbc6df7b64eec9897ab584c",
       "content_length": 5007,
       "excerpt": "Request/Response Parameters | Cart Amount (cart_amount) : PayTabs Support Portal Skip to main content PayTabs Support Portal Home Knowledge base Developers community Submit a ticket Login Sign up English English Arabic Home Knowledge base How To Integrate With PayTabs? (APIs Edition) PT2 API Endpoints | Request Parameters ... Knowledge base How To Integrate With PayTabs? (APIs Edition) PT2 API Endpoints | Request Parameters Request/Response Parameters | Cart Amount (cart_amount) All Articles Rec...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000818155-request-response-parameters-cart-currency-cart-currency-",
@@ -1237,7 +1237,7 @@
       "sha256": "249e17667316fdcf63a8ec3e17c14a2d4618d2b420482e87f35958a944ef321c",
       "content_length": 5038,
       "excerpt": "Request/Response Parameters | Cart Currency (cart_currency) : PayTabs Support Portal Skip to main content PayTabs Support Portal Home Knowledge base Developers community Submit a ticket Login Sign up English English Arabic Home Knowledge base How To Integrate With PayTabs? (APIs Edition) PT2 API Endpoints | Request Parameters ... Knowledge base How To Integrate With PayTabs? (APIs Edition) PT2 API Endpoints | Request Parameters Request/Response Parameters | Cart Currency (cart_currency) All Arti...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000992876-3-2-1-hosted-payment-page-apis-initiating-the-payment",
@@ -1249,7 +1249,7 @@
       "sha256": "c91775eb739e56940ef33242db41967028678648bceba02f85c34951f9897f39",
       "content_length": 18588,
       "excerpt": "3.2.1 Hosted Payment Page APIs | Initiating the payment : PayTabs Support Portal Skip to main content PayTabs Support Portal Home Knowledge base Developers community Submit a ticket Login Sign up English English Arabic Home Knowledge base How To Integrate With PayTabs? (APIs Edition) PT2 API Endpoints | Hosted Payment Page ... Knowledge base How To Integrate With PayTabs? (APIs Edition) PT2 API Endpoints | Hosted Payment Page 3.2.1 Hosted Payment Page APIs | Initiating the payment All Articles R...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://www.hyperpay.com/integration-guide/",
@@ -1258,10 +1258,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "e80feb8ef12482f6a58ca78c5e14ac4a442c9206ef5a3d43f4089780c2d15a9a",
-      "content_length": 2686,
-      "excerpt": "Integration Guide - HyperPay Products Payments Billing Payout Protect Hospitality Hypertap Services Recurring billing Data reporting Merchants mobile app Partner Program Blogs Board of Directors Greetings Products Payments Billing Payout Protect Hospitality Hypertap Services Recurring billing Data reporting Merchants mobile app Partner Program Blogs Board of Directors Greetings Contact us \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 Contact us \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 Integration Guides The HyperPay platform offers a complete, easy-to-use guide to...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "sha256": "00f5de183272e1b46b8c3174d138ac149e6fd79a210663b1a9b5e386e6c5b7de",
+      "content_length": 2664,
+      "excerpt": "Integration Guide - HyperPay Products Payments Billing Payout Protect Hospitality Hypertap Services Recurring billing Data reporting Merchants mobile app Partner Program Blogs Board of Directors Products Payments Billing Payout Protect Hospitality Hypertap Services Recurring billing Data reporting Merchants mobile app Partner Program Blogs Board of Directors Contact us \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 Contact us \\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629 Integration Guides The HyperPay platform offers a complete, easy-to-use guide to enable seamless inte...",
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://www.kashier.io/",
@@ -1274,7 +1274,7 @@
       "sha256": "6e82608cb1e44a138d9fffad56ea31ced101d690e12682bb0fee8a717c1135e6",
       "content_length": 8154,
       "excerpt": "Kashier | Online Payment Platform Create A Free Account Log In \\u0639\\u0631\\u0628\\u064a Product Invoice Recurring Payment Payment Acceptance INVOICE Online Invoicing PAYLINX Digital Payments \\u2013 no coding ECOMMERCE Web API & App SDK Integrations SOCIAL NEW Online Store SCAN2PAY NEW In store self checkouts E-INVOICE PAYLINX ECOMMERCE SOCIAL SCAN2PAY POS SUBSCRIPTIONS SUBSCRIPTIONS Periodical Payments made easy Growth Solutions CONTROL Real-time Business Dashboard PAYOUTS COMING SOON Manage your value chain MARKETPLACE...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     },
     {
       "url": "https://www.kashier.io/blog-posts/kashier-api---power-flexibility-simplicity",
@@ -1286,7 +1286,7 @@
       "sha256": "803b6c8b83639bd66b892c76868ee78c0f23a7bfead30391eecb400390dcd191",
       "content_length": 5568,
       "excerpt": "Kashier API - Power, Flexibility, Simplicity Create A Free Account Log In \\u0639\\u0631\\u0628\\u064a Product Invoice Recurring Payment Payment Acceptance INVOICE Online Invoicing PAYLINX Digital Payments \\u2013 no coding ECOMMERCE Web API & App SDK Integrations SOCIAL NEW Online Store SCAN2PAY NEW In store self checkouts E-INVOICE PAYLINX ECOMMERCE SOCIAL SCAN2PAY POS SUBSCRIPTIONS SUBSCRIPTIONS Periodical Payments made easy Growth Solutions CONTROL Real-time Business Dashboard PAYOUTS COMING SOON Manage your value chain...",
-      "last_checked": "2026-06-01T07:09:34Z"
+      "last_checked": "2026-06-01T11:53:35Z"
     }
   ]
 }
