@@ -83,6 +83,53 @@ class CompareRecordsTests(unittest.TestCase):
 
         self.assertEqual(check_source_changes.compare_records(current, baseline), [])
 
+    def test_ok_baseline_with_current_transient_urlerror_is_not_a_change(self) -> None:
+        url = "https://developer.fawrystaging.com/docs/introduction"
+        baseline = {
+            url: {
+                "url": url,
+                "provider_ids": ["egypt-payment-guardian:fawrypay"],
+                "status": "OK",
+                "sha256": "abc123",
+            }
+        }
+        current = [
+            {
+                "url": url,
+                "provider_ids": ["egypt-payment-guardian:fawrypay"],
+                "status": "FAIL",
+                "sha256": "",
+                "excerpt": "URLError",
+            }
+        ]
+
+        self.assertEqual(check_source_changes.compare_records(current, baseline), [])
+
+    def test_ok_baseline_with_current_http_error_is_a_change(self) -> None:
+        url = "https://developer.fawrystaging.com/docs/introduction"
+        baseline = {
+            url: {
+                "url": url,
+                "provider_ids": ["egypt-payment-guardian:fawrypay"],
+                "status": "OK",
+                "sha256": "abc123",
+            }
+        }
+        current = [
+            {
+                "url": url,
+                "provider_ids": ["egypt-payment-guardian:fawrypay"],
+                "status": "HTTP_ERROR",
+                "sha256": "",
+                "excerpt": "HTTPError",
+            }
+        ]
+
+        changes = check_source_changes.compare_records(current, baseline)
+
+        self.assertEqual(len(changes), 1)
+        self.assertEqual(changes[0]["change"], "CHANGED")
+
     def test_ok_baseline_with_current_ok_hash_mismatch_is_a_change(self) -> None:
         url = "https://hyperpay.docs.oppwa.com/integrations/widget"
         baseline = {

@@ -28,6 +28,7 @@ ARTIFACT_INVALID_CHARS = re.compile(r'[<>:"/\\|?*\r\n]+')
 MAX_ARTIFACT_FILENAME_CHARS = 96
 FETCH_ATTEMPTS = 3
 BASELINE_DEGRADED_STATUSES = {"TLS_VERIFY"}
+TRANSIENT_FAILURE_EXCERPTS = {"TimeoutError", "URLError"}
 RELATIVE_UPDATED_AGE = re.compile(r"\bUpdated \d+ (?:second|minute|hour|day|week|month|year)s? ago\b")
 HYPERPAY_GREETING_NAV_CHROME = re.compile(r"\bBoard of Directors Greetings Contact us\b")
 
@@ -232,6 +233,12 @@ def compare_records(current: list[dict[str, object]], baseline: dict[str, dict[s
             continue
         if item["status"] != previous.get("status"):
             if previous.get("status") == "OK" and item["status"] in BASELINE_DEGRADED_STATUSES:
+                continue
+            if (
+                previous.get("status") == "OK"
+                and item["status"] == "FAIL"
+                and item.get("excerpt") in TRANSIENT_FAILURE_EXCERPTS
+            ):
                 continue
             changes.append({"change": "CHANGED", "current": item, "previous": previous})
             continue

@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 1.0.6 - 2026-06-01
+
+- Treated transient source-watch fetch exceptions such as `URLError` and `TimeoutError` as degraded hash evidence when the previous public baseline was OK; `check_source_links.py` remains the gate for actual broken public source URLs.
+- Documented the failed v1.0.5 workflow-dispatch validation as a FawryPay runner fetch flake after source-link reachability had already passed.
+
 ## 1.0.5 - 2026-06-01
 
 - Normalized volatile provider-docs page chrome such as `Updated 3 months ago` and transient HyperPay navigation labels so scheduled source-watch CI does not fail on chrome drift.

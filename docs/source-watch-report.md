@@ -7,7 +7,7 @@
 
 ## Maintainer Result
 
-Release v1.0.5 handles scheduled CI source-watch noise only. GitHub Actions run 26749516850 failed on MyFatoorah hashes after public docs chrome moved from `Updated 3 months ago` to `Updated 4 months ago`; local validation also exposed transient HyperPay navigation chrome around `Board of Directors` / `Contact us`. Maintainer review found no provider behavior, endpoint, auth/signature, status, test-card, adapter, or eval guidance change.
+Release v1.0.6 supersedes the v1.0.5 validation attempt and handles source-watch CI noise only. GitHub Actions run 26749516850 failed on MyFatoorah hashes after public docs chrome moved from `Updated 3 months ago` to `Updated 4 months ago`; local validation also exposed transient HyperPay navigation chrome around `Board of Directors` / `Contact us`. After v1.0.5 was published, workflow-dispatch run 26753574735 passed `validate` and source-link reachability, then failed source-change hashing on transient FawryPay `URLError` fetches. Maintainer review found no provider behavior, endpoint, auth/signature, status, test-card, adapter, or eval guidance change.
 
 ## Changes
 
