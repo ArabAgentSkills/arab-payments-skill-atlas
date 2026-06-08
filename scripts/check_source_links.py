@@ -150,6 +150,7 @@ def main() -> None:
         for item in server_errors:
             print(f"- {item}")
         print("Run source-watch snapshot capture and maintainer review before changing guidance.")
+        sys.exit(2)
     if failures:
         print("\nBroken source URLs:")
         for failure in failures:

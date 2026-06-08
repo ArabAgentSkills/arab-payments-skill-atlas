@@ -1,8 +1,11 @@
 from __future__ import annotations
 
 import importlib.util
+import io
 import unittest
+from contextlib import redirect_stdout
 from pathlib import Path
+from unittest import mock
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,6 +30,28 @@ class HttpStatusClassificationTests(unittest.TestCase):
     def test_rate_limit_style_status_is_transient(self) -> None:
         self.assertTrue(check_source_links.is_transient_http_status(408))
         self.assertTrue(check_source_links.is_transient_http_status(429))
+
+    def test_server_error_requires_review_exit_code(self) -> None:
+        with (
+            mock.patch.object(check_source_links, "load_urls", return_value=["https://example.test/docs"]),
+            mock.patch.object(check_source_links, "check_url", return_value=("server_error", "500")),
+            self.assertRaises(SystemExit) as raised,
+            redirect_stdout(io.StringIO()),
+        ):
+            check_source_links.main()
+
+        self.assertEqual(raised.exception.code, 2)
+
+    def test_clear_missing_link_remains_hard_failure(self) -> None:
+        with (
+            mock.patch.object(check_source_links, "load_urls", return_value=["https://example.test/missing"]),
+            mock.patch.object(check_source_links, "check_url", return_value=("fail", "404")),
+            self.assertRaises(SystemExit) as raised,
+            redirect_stdout(io.StringIO()),
+        ):
+            check_source_links.main()
+
+        self.assertEqual(raised.exception.code, 1)
 
 
 if __name__ == "__main__":

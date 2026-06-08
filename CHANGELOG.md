@@ -2,7 +2,10 @@
 
 ## Unreleased
 
-- Hardened source-watch automation so private snapshot capture runs before link-failure judgment, transient provider-side HTTP errors are warnings instead of broken links, and recurring maintainer review can use a dedicated source-watch subagent.
+## 1.0.9 - 2026-06-08
+
+- Hardened source-watch automation so private snapshot capture runs before link-failure judgment, transient provider-side HTTP errors are review-required `SERVER_ERROR` findings instead of confirmed broken links, and recurring maintainer review can use a dedicated source-watch subagent.
+- Added regression coverage for source-link HTTP status classification and review-required exit behavior.
 
 ## 1.0.8 - 2026-06-08
 
