@@ -207,7 +207,7 @@ python .\scripts\install_or_update_skill.py --agent codex --dry-run
 git diff --cached --check
 ```
 
-`check_source_links.py` uses the network. It reports `JS_CHALLENGE` when a public docs page requires browser or JavaScript verification, and `TLS_VERIFY` when a public docs site is browser-accessible but the simple Python fetch cannot verify its certificate chain. It fails only on clear breakage such as missing hosts or `404`.
+`check_source_links.py` uses the network. It reports `JS_CHALLENGE` when a public docs page requires browser or JavaScript verification, `TLS_VERIFY` when a public docs site is browser-accessible but the simple Python fetch cannot verify its certificate chain, and `SERVER_ERROR` for transient provider-side HTTP errors such as `408`, `429`, or `5xx`. It fails only on clear breakage such as missing hosts, `404`, or `410`.
 
 `eval_scenarios.py` validates the Markdown pressure scenarios and can score saved agent responses when they are named `skill__scenario.md` under a response directory.
 

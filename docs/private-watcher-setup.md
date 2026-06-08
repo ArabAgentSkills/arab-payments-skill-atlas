@@ -46,10 +46,6 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Check links
-        working-directory: skill
-        run: python scripts/check_source_links.py
-
       - name: Capture source changes
         id: watch
         working-directory: skill
@@ -60,15 +56,27 @@ jobs:
           echo "exit_code=$code" >> "$GITHUB_OUTPUT"
           exit 0
 
+      - name: Check links
+        id: links
+        working-directory: skill
+        run: |
+          set +e
+          python scripts/check_source_links.py
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit 0
+
       - name: Upload private snapshots
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: source-watch-artifacts
           path: source-watch-artifacts
+          if-no-files-found: warn
           retention-days: 14
 
       - name: Create private owner issue
-        if: steps.watch.outputs.exit_code == '2'
+        if: steps.watch.outputs.exit_code != '0' || steps.links.outputs.exit_code != '0'
         uses: actions/github-script@v7
         with:
           script: |
@@ -91,10 +99,12 @@ jobs:
                 throw error;
               }
             }
-            const title = 'Provider documentation changes detected';
+            const title = 'Provider source watch review required';
             const body = [
-              'Private source watcher detected provider documentation changes.',
+              'Private source watcher requires maintainer review.',
               '',
+              `Source changes exit code: ${'${{ steps.watch.outputs.exit_code }}'}`,
+              `Source links exit code: ${'${{ steps.links.outputs.exit_code }}'}`,
               'Review the workflow log and the private `source-watch-artifacts` artifact.',
               'Do not publish provider guidance until a human has reviewed the changes.',
               '',

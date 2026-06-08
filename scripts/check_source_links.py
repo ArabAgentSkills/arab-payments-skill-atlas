@@ -13,6 +13,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS_ROOT = ROOT / "skills"
 FETCH_ATTEMPTS = 3
+TRANSIENT_HTTP_STATUSES = {408, 429}
+
+
+def is_transient_http_status(status: int) -> bool:
+    return status >= 500 or status in TRANSIENT_HTTP_STATUSES
 
 
 def github_source_api_url(url: str) -> str | None:
@@ -58,10 +63,14 @@ def check_url(url: str) -> tuple[str, str]:
             with urllib.request.urlopen(api_request, timeout=25) as response:
                 if 200 <= response.status < 400:
                     return "ok", f"{response.status} github_api"
+                if is_transient_http_status(response.status):
+                    return "server_error", f"{response.status} github_api"
                 return "fail", str(response.status)
         except urllib.error.HTTPError as exc:
             if exc.code in {401, 403}:
                 return "js_challenge", f"{exc.code} github_api"
+            if is_transient_http_status(exc.code):
+                return "server_error", f"{exc.code} github_api"
             return "fail", f"{exc.code} github_api"
         except Exception as exc:
             return "fail", f"{exc.__class__.__name__} github_api"
@@ -84,10 +93,14 @@ def check_url(url: str) -> tuple[str, str]:
                     return "js_challenge", str(status)
                 if 200 <= status < 400:
                     return "ok", str(status)
+                if is_transient_http_status(status):
+                    return "server_error", str(status)
                 return "fail", str(status)
         except urllib.error.HTTPError as exc:
             if exc.code in {401, 403}:
                 return "js_challenge", str(exc.code)
+            if is_transient_http_status(exc.code):
+                return "server_error", str(exc.code)
             return "fail", str(exc.code)
         except urllib.error.URLError as exc:
             if isinstance(getattr(exc, "reason", None), ssl.SSLCertVerificationError):
@@ -106,14 +119,22 @@ def main() -> None:
     failures: list[str] = []
     js_challenges: list[str] = []
     tls_verifications: list[str] = []
+    server_errors: list[str] = []
     for url in load_urls():
         status, detail = check_url(url)
-        marker = {"ok": "OK", "js_challenge": "JS_CHALLENGE", "tls_verify": "TLS_VERIFY"}.get(status, "FAIL")
+        marker = {
+            "ok": "OK",
+            "js_challenge": "JS_CHALLENGE",
+            "tls_verify": "TLS_VERIFY",
+            "server_error": "SERVER_ERROR",
+        }.get(status, "FAIL")
         print(f"{marker} {detail} {url}")
         if status == "js_challenge":
             js_challenges.append(f"{detail} {url}")
         elif status == "tls_verify":
             tls_verifications.append(f"{detail} {url}")
+        elif status == "server_error":
+            server_errors.append(f"{detail} {url}")
         elif status != "ok":
             failures.append(f"{detail} {url}")
     if js_challenges:
@@ -124,6 +145,11 @@ def main() -> None:
         print("\nSource URLs requiring manual browser/TLS verification, not marked broken:")
         for item in tls_verifications:
             print(f"- {item}")
+    if server_errors:
+        print("\nSource URLs with transient provider/server errors, not marked broken:")
+        for item in server_errors:
+            print(f"- {item}")
+        print("Run source-watch snapshot capture and maintainer review before changing guidance.")
     if failures:
         print("\nBroken source URLs:")
         for failure in failures:

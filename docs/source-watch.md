@@ -42,4 +42,4 @@ The `source-watch-artifacts/` folder is ignored by git.
 
 Provider docs may change automatically, but public payment guidance must not. A maintainer should review the private watcher output, update provider summaries by hand, run validation, then publish an approved release.
 
-`JS_CHALLENGE` and `TLS_VERIFY` records mean the URL needs manual browser verification; they are not treated as broken source links by themselves.
+`JS_CHALLENGE`, `TLS_VERIFY`, and source-link `SERVER_ERROR` warnings mean the URL needs manual browser/provider verification; they are not treated as broken source links by themselves. Clear missing-link failures such as `404` or `410` still require maintainer action.
