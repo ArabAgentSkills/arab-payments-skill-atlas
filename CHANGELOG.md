@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+- Hardened source-watch automation so private snapshot capture runs before link-failure judgment, transient provider-side HTTP errors are warnings instead of broken links, and recurring maintainer review can use a dedicated source-watch subagent.
+
+## 1.0.8 - 2026-06-08
+
+- Refreshed the public-safe source-watch baseline for an EasyKash Pay API fingerprint change after private watcher run 27130472493.
+- Kept provider guidance unchanged after maintainer review found the existing EasyKash redirect, callback HMAC, inquiry, amount/currency, and idempotency guidance still matched the public docs.
+- Preserved Paymob manual browser verification status for current public docs that still require browser/TLS review.
+
 ## 1.0.7 - 2026-06-08
 
 - Replaced the HyperPay webhook tutorial source URL after the official route began returning HTTP 500, using the reachable official HyperPay Webhooks FAQ and existing API notification parameter reference instead.
