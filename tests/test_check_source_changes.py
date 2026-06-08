@@ -61,6 +61,27 @@ class SnapshotFilenameTests(unittest.TestCase):
         self.assertLessEqual(len(filename), check_source_changes.MAX_ARTIFACT_FILENAME_CHARS)
 
 
+class GitHubRepoApiUrlTests(unittest.TestCase):
+    def test_github_repo_root_uses_api_url(self) -> None:
+        self.assertEqual(
+            check_source_changes.github_source_api_url("https://github.com/Kashier-payments/NodeJs-Checkout-Demo"),
+            "https://api.github.com/repos/Kashier-payments/NodeJs-Checkout-Demo",
+        )
+
+    def test_github_org_root_uses_api_url(self) -> None:
+        self.assertEqual(
+            check_source_changes.github_source_api_url("https://github.com/Kashier-payments"),
+            "https://api.github.com/orgs/Kashier-payments",
+        )
+
+    def test_github_deeper_path_is_not_rewritten(self) -> None:
+        self.assertIsNone(
+            check_source_changes.github_source_api_url(
+                "https://github.com/Kashier-payments/NodeJs-Checkout-Demo/blob/main/README.md"
+            )
+        )
+
+
 class CompareRecordsTests(unittest.TestCase):
     def test_ok_baseline_with_current_tls_verify_is_not_a_change(self) -> None:
         url = "https://hyperpay.docs.oppwa.com/integrations/widget"

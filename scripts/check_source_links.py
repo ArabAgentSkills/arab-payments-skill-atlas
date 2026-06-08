@@ -5,6 +5,7 @@ import json
 import ssl
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -12,6 +13,24 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS_ROOT = ROOT / "skills"
 FETCH_ATTEMPTS = 3
+
+
+def github_source_api_url(url: str) -> str | None:
+    parsed = urllib.parse.urlparse(url)
+    if parsed.netloc.lower() != "github.com":
+        return None
+    parts = [part for part in parsed.path.strip("/").split("/") if part]
+    if len(parts) == 1:
+        owner = parts[0]
+        return f"https://api.github.com/orgs/{urllib.parse.quote(owner)}"
+    if len(parts) != 2:
+        return None
+    owner, repo = parts
+    if repo.endswith(".git"):
+        repo = repo[:-4]
+    if not owner or not repo:
+        return None
+    return f"https://api.github.com/repos/{urllib.parse.quote(owner)}/{urllib.parse.quote(repo)}"
 
 
 def load_urls() -> list[str]:
@@ -24,6 +43,29 @@ def load_urls() -> list[str]:
 
 
 def check_url(url: str) -> tuple[str, str]:
+    github_api_url = github_source_api_url(url)
+    if github_api_url:
+        api_request = urllib.request.Request(
+            github_api_url,
+            headers={
+                "User-Agent": "arab-payments-skill-atlas-link-check/1.0",
+                "Accept": "application/vnd.github+json",
+                "Accept-Encoding": "identity",
+            },
+            method="GET",
+        )
+        try:
+            with urllib.request.urlopen(api_request, timeout=25) as response:
+                if 200 <= response.status < 400:
+                    return "ok", f"{response.status} github_api"
+                return "fail", str(response.status)
+        except urllib.error.HTTPError as exc:
+            if exc.code in {401, 403}:
+                return "js_challenge", f"{exc.code} github_api"
+            return "fail", f"{exc.code} github_api"
+        except Exception as exc:
+            return "fail", f"{exc.__class__.__name__} github_api"
+
     request = urllib.request.Request(
         url,
         headers={

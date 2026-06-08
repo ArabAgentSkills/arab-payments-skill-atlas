@@ -10,6 +10,7 @@ import re
 import ssl
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -39,6 +40,24 @@ def utc_now() -> str:
 
 def ascii_safe(value: str) -> str:
     return value.encode("ascii", errors="backslashreplace").decode("ascii")
+
+
+def github_source_api_url(url: str) -> str | None:
+    parsed = urllib.parse.urlparse(url)
+    if parsed.netloc.lower() != "github.com":
+        return None
+    parts = [part for part in parsed.path.strip("/").split("/") if part]
+    if len(parts) == 1:
+        owner = parts[0]
+        return f"https://api.github.com/orgs/{urllib.parse.quote(owner)}"
+    if len(parts) != 2:
+        return None
+    owner, repo = parts
+    if repo.endswith(".git"):
+        repo = repo[:-4]
+    if not owner or not repo:
+        return None
+    return f"https://api.github.com/repos/{urllib.parse.quote(owner)}/{urllib.parse.quote(repo)}"
 
 
 def load_provider_urls() -> dict[str, dict[str, object]]:
@@ -109,6 +128,78 @@ def snapshot_filename(provider_ids: list[str], url: str) -> str:
 
 
 def fetch_url(url: str) -> dict[str, object]:
+    github_api_url = github_source_api_url(url)
+    if github_api_url:
+        request = urllib.request.Request(
+            github_api_url,
+            headers={
+                "User-Agent": USER_AGENT,
+                "Accept": "application/vnd.github+json",
+                "Accept-Encoding": "identity",
+            },
+            method="GET",
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                raw = response.read()
+                payload = json.loads(raw.decode("utf-8"))
+                if "/orgs/" in github_api_url:
+                    metadata = {
+                        "login": payload.get("login", ""),
+                        "html_url": payload.get("html_url", url),
+                        "description": payload.get("description") or "",
+                        "type": payload.get("type", ""),
+                        "public_repos": payload.get("public_repos", 0),
+                    }
+                else:
+                    metadata = {
+                        "full_name": payload.get("full_name", ""),
+                        "html_url": payload.get("html_url", url),
+                        "description": payload.get("description") or "",
+                        "default_branch": payload.get("default_branch", ""),
+                        "archived": bool(payload.get("archived")),
+                        "disabled": bool(payload.get("disabled")),
+                        "pushed_at": payload.get("pushed_at", ""),
+                        "updated_at": payload.get("updated_at", ""),
+                    }
+                normalized = json.dumps(metadata, sort_keys=True, ensure_ascii=True)
+                digest = hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+                return {
+                    "status": "OK",
+                    "http_status": response.status,
+                    "normalized": normalized,
+                    "hash": digest,
+                    "content_length": len(normalized),
+                    "excerpt": excerpt(normalized),
+                }
+        except urllib.error.HTTPError as exc:
+            if exc.code in {401, 403}:
+                return {
+                    "status": "JS_CHALLENGE",
+                    "http_status": exc.code,
+                    "normalized": "",
+                    "hash": "",
+                    "content_length": 0,
+                    "excerpt": "GitHub API verification requires retry or manual browser verification.",
+                }
+            return {
+                "status": "FAIL",
+                "http_status": exc.code,
+                "normalized": "",
+                "hash": "",
+                "content_length": 0,
+                "excerpt": f"GitHub API HTTP error {exc.code}.",
+            }
+        except Exception as exc:
+            return {
+                "status": "FAIL",
+                "http_status": "",
+                "normalized": "",
+                "hash": "",
+                "content_length": 0,
+                "excerpt": f"GitHub API {exc.__class__.__name__}",
+            }
+
     request = urllib.request.Request(
         url,
         headers={

@@ -1,7 +1,7 @@
 {
   "skill": "mena-payment-guardian",
   "version_scope": "v1-arab-mena-payments-bnpl",
-  "last_updated": "2026-05-29",
+  "last_updated": "2026-06-08",
   "source_policy": "Summaries and official links only. Do not vendor full provider docs. Workbook URLs are seed links; official/provider-controlled docs decide what is documented.",
   "coverage_tiers": {
     "full-depth": [
@@ -177,16 +177,16 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/hyperpay.md",
-      "last_checked": "2026-05-29",
+      "last_checked": "2026-06-08",
       "source_urls": [
         "https://www.hyperpay.com/integration-guide/",
         "https://hyperpay.docs.oppwa.com/integrations/widget",
         "https://hyperpay.docs.oppwa.com/integrations/server-to-server",
-        "https://hyperpay.docs.oppwa.com/tutorials/webhooks",
+        "https://hyperpay.docs.oppwa.com/support/webhooks",
         "https://hyperpay.docs.oppwa.com/reference/resultCodes",
         "https://hyperpay.docs.oppwa.com/reference/parameters"
       ],
-      "notes": "Docs cover COPYandPAY, Server-to-Server, Transaction Status query, back-office operations, and encrypted webhook payload handling. OPPWA docs may require manual browser/TLS verification in simple Python checks; no public llms.txt endpoint was available during review."
+      "notes": "Docs cover COPYandPAY, Server-to-Server, Transaction Status query, back-office operations, webhook FAQ coverage, and encrypted webhook payload parameters. OPPWA docs may require manual browser/TLS verification in simple Python checks; no public llms.txt endpoint was available during review."
     },
     {
       "id": "moyasar",

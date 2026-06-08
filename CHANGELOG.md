@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 1.0.7 - 2026-06-08
+
+- Replaced the HyperPay webhook tutorial source URL after the official route began returning HTTP 500, using the reachable official HyperPay Webhooks FAQ and existing API notification parameter reference instead.
+- Verified GitHub organization/repository-root source links through the GitHub API to avoid treating transient GitHub HTML 5xx responses as broken official demo sources.
+- Refreshed public-safe source-watch metadata for current Tap Payments, Tabby, Tamara, PayTabs, PaySky, HyperPay, and Kashier source chrome/API metadata without changing provider behavior guidance.
+
 ## 1.0.6 - 2026-06-01
 
 - Treated transient source-watch fetch exceptions such as `URLError` and `TimeoutError` as degraded hash evidence when the previous public baseline was OK; `check_source_links.py` remains the gate for actual broken public source URLs.
