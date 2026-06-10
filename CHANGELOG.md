@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 1.0.10 - 2026-06-10
+
+- Refreshed the public-safe source-watch baseline for FawryPay, MyFatoorah, Tabby, Tamara, and EasyKash after private watcher runs 27294185835 and 27294164650.
+- Kept provider guidance unchanged after maintainer review found documentation-site chrome, navigation, and agent-readable index churn rather than new payment behavior.
+- Classified the one-run Kashier GitHub API HTTP 504 as a transient fetch warning because the same source was reachable in link checking and did not recur in the paired watcher run.
+
 ## 1.0.9 - 2026-06-08
 
 - Hardened source-watch automation so private snapshot capture runs before link-failure judgment, transient provider-side HTTP errors are review-required `SERVER_ERROR` findings instead of confirmed broken links, and recurring maintainer review can use a dedicated source-watch subagent.
