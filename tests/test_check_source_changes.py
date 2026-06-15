@@ -185,6 +185,29 @@ class CompareRecordsTests(unittest.TestCase):
 
         self.assertEqual(check_source_changes.compare_records(current, baseline), [])
 
+    def test_ok_baseline_with_current_js_challenge_is_not_a_change(self) -> None:
+        url = "https://github.com/Kashier-payments/NodeJs-Checkout-Demo"
+        baseline = {
+            url: {
+                "url": url,
+                "provider_ids": ["egypt-payment-guardian:kashier", "mena-payment-guardian:kashier"],
+                "status": "OK",
+                "sha256": "abc123",
+            }
+        }
+        current = [
+            {
+                "url": url,
+                "provider_ids": ["egypt-payment-guardian:kashier", "mena-payment-guardian:kashier"],
+                "status": "JS_CHALLENGE",
+                "sha256": "",
+                "http_status": 403,
+                "excerpt": "GitHub API verification requires retry or manual browser verification.",
+            }
+        ]
+
+        self.assertEqual(check_source_changes.compare_records(current, baseline), [])
+
     def test_ok_baseline_with_current_transient_urlerror_is_not_a_change(self) -> None:
         url = "https://developer.fawrystaging.com/docs/introduction"
         baseline = {
@@ -207,7 +230,7 @@ class CompareRecordsTests(unittest.TestCase):
 
         self.assertEqual(check_source_changes.compare_records(current, baseline), [])
 
-    def test_ok_baseline_with_current_http_error_is_a_change(self) -> None:
+    def test_ok_baseline_with_current_transient_http_error_is_not_a_change(self) -> None:
         url = "https://developer.fawrystaging.com/docs/introduction"
         baseline = {
             url: {
@@ -221,9 +244,33 @@ class CompareRecordsTests(unittest.TestCase):
             {
                 "url": url,
                 "provider_ids": ["egypt-payment-guardian:fawrypay"],
-                "status": "HTTP_ERROR",
+                "status": "FAIL",
+                "http_status": 429,
                 "sha256": "",
-                "excerpt": "HTTPError",
+                "excerpt": "HTTP error 429.",
+            }
+        ]
+
+        self.assertEqual(check_source_changes.compare_records(current, baseline), [])
+
+    def test_ok_baseline_with_current_non_transient_http_error_is_a_change(self) -> None:
+        url = "https://developer.fawrystaging.com/docs/introduction"
+        baseline = {
+            url: {
+                "url": url,
+                "provider_ids": ["egypt-payment-guardian:fawrypay"],
+                "status": "OK",
+                "sha256": "abc123",
+            }
+        }
+        current = [
+            {
+                "url": url,
+                "provider_ids": ["egypt-payment-guardian:fawrypay"],
+                "status": "FAIL",
+                "http_status": 404,
+                "sha256": "",
+                "excerpt": "HTTP error 404.",
             }
         ]
 

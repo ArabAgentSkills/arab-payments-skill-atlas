@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 1.1.2 - 2026-06-15
+
+- Treated source-watch OK-to-JavaScript-challenge degradations as maintainer review warnings instead of payment documentation changes, matching the existing source-link checker behavior.
+- Treated transient HTTP 408, 429, and 5xx fetch failures as review warnings in source-change comparison while preserving non-transient HTTP failures as changes requiring review.
+- Added regression coverage for runner-only GitHub API JavaScript challenges and transient HTTP fetch failures.
+
 ## 1.1.1 - 2026-06-15
 
 - Hardened source-watch normalization to strip common provider docs navigation/sidebar/footer chrome, AI-index notices, GitBook Markdown notices, recent-request widgets, and approximate relative update ages before hashing.

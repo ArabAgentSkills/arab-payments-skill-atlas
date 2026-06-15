@@ -9,7 +9,9 @@
 
 This report was regenerated for release 1.1.1 after source-watch normalization hardening. The new normalizer strips common provider docs navigation/sidebar/footer chrome, AI-readable index notices, GitBook Markdown notices, API-reference recent-request widgets, and approximate relative update ages before hashing.
 
-Classification: `chrome_noise` / watcher hardening. No new endpoint, auth/signature, webhook, status, amount/currency, refund/capture/void, test-card, adapter, eval, or payment-behavior guidance change was identified beyond the already-released Moyasar 1.1.0 update.
+Release 1.1.2 additionally hardens source-watch comparison after immediate private watcher verification found runner-only GitHub API JavaScript challenges on Kashier source references. Those OK-to-JavaScript-challenge degradations, plus transient HTTP 408, 429, and 5xx fetch failures, are now treated as maintainer review warnings rather than payment documentation changes.
+
+Classification: `chrome_noise` plus `transient_fetch` / watcher hardening. No new endpoint, auth/signature, webhook, status, amount/currency, refund/capture/void, test-card, adapter, eval, or payment-behavior guidance change was identified beyond the already-released Moyasar 1.1.0 update.
 
 ## Changes
 

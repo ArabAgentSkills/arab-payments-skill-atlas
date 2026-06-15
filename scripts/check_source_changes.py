@@ -28,7 +28,8 @@ MAX_EXCERPT_CHARS = 500
 ARTIFACT_INVALID_CHARS = re.compile(r'[<>:"/\\|?*\r\n]+')
 MAX_ARTIFACT_FILENAME_CHARS = 96
 FETCH_ATTEMPTS = 3
-BASELINE_DEGRADED_STATUSES = {"TLS_VERIFY"}
+TRANSIENT_HTTP_STATUSES = {408, 429}
+BASELINE_DEGRADED_STATUSES = {"TLS_VERIFY", "JS_CHALLENGE"}
 TRANSIENT_FAILURE_EXCERPTS = {"TimeoutError", "URLError"}
 RELATIVE_UPDATED_AGE = re.compile(
     r"\bUpdated (?:about |over |almost |approximately )?\d+ (?:second|minute|hour|day|week|month|year)s? ago\b"
@@ -142,6 +143,27 @@ def excerpt(text: str) -> str:
     if len(compact) <= MAX_EXCERPT_CHARS:
         return ascii_safe(compact)
     return ascii_safe(compact[:MAX_EXCERPT_CHARS].rstrip() + "...")
+
+
+def is_transient_http_status(status: object) -> bool:
+    try:
+        code = int(status)
+    except (TypeError, ValueError):
+        return False
+    return code >= 500 or code in TRANSIENT_HTTP_STATUSES
+
+
+def is_review_warning_degradation(previous: dict[str, object], current: dict[str, object]) -> bool:
+    if previous.get("status") != "OK":
+        return False
+    if current.get("status") in BASELINE_DEGRADED_STATUSES:
+        return True
+    if current.get("status") == "FAIL":
+        if current.get("excerpt") in TRANSIENT_FAILURE_EXCERPTS:
+            return True
+        if is_transient_http_status(current.get("http_status")):
+            return True
+    return False
 
 
 def artifact_safe_slug(value: str) -> str:
@@ -356,13 +378,7 @@ def compare_records(current: list[dict[str, object]], baseline: dict[str, dict[s
             changes.append({"change": "NEW", "current": item, "previous": None})
             continue
         if item["status"] != previous.get("status"):
-            if previous.get("status") == "OK" and item["status"] in BASELINE_DEGRADED_STATUSES:
-                continue
-            if (
-                previous.get("status") == "OK"
-                and item["status"] == "FAIL"
-                and item.get("excerpt") in TRANSIENT_FAILURE_EXCERPTS
-            ):
+            if is_review_warning_degradation(previous, item):
                 continue
             changes.append({"change": "CHANGED", "current": item, "previous": previous})
             continue
