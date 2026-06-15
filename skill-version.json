@@ -2,7 +2,7 @@
   "name": "arab-payments-skill-atlas",
   "package_name": "arab-payments-skill-atlas",
   "package_title": "Arab Payments Skill Atlas",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "release_date": "2026-06-15",
   "canonical_repo_url": "https://github.com/ArabAgentSkills/arab-payments-skill-atlas",
   "minimum_updater_version": "1.0.0",

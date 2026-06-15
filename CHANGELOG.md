@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 1.1.1 - 2026-06-15
+
+- Hardened source-watch normalization to strip common provider docs navigation/sidebar/footer chrome, AI-index notices, GitBook Markdown notices, recent-request widgets, and approximate relative update ages before hashing.
+- Added regression coverage so docs-site chrome churn does not trigger release review while real payment guidance changes still do.
+- Refreshed the public-safe source-watch baseline with the improved normalizer.
+
 ## 1.1.0 - 2026-06-15
 
 - Added Moyasar guidance for standalone 3D Secure card-authentication webhook events after private source-watch run 27529717585.

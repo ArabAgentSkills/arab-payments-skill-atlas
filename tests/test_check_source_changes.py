@@ -17,9 +17,90 @@ spec.loader.exec_module(check_source_changes)
 
 
 class NormalizeTextTests(unittest.TestCase):
+    def test_semantic_html_navigation_chrome_does_not_change_normalized_text(self) -> None:
+        first = b"""
+        <html><body>
+          <nav>Home Guides API Reference Login</nav>
+          <aside>Payments API Create Payment Fetch Payment</aside>
+          <main><h1>Webhook Reference</h1><p>Payment Event payment_paid requires server verification.</p></main>
+          <footer>Copyright 2026 Provider</footer>
+        </body></html>
+        """
+        second = b"""
+        <html><body>
+          <nav>Home Guides API Reference Login Card Authentication API</nav>
+          <aside>Payments API Create Payment Fetch Payment Card Authentication API</aside>
+          <main><h1>Webhook Reference</h1><p>Payment Event payment_paid requires server verification.</p></main>
+          <footer>Copyright 2026 Provider</footer>
+        </body></html>
+        """
+
+        self.assertEqual(
+            check_source_changes.normalize_text(first, "text/html"),
+            check_source_changes.normalize_text(second, "text/html"),
+        )
+
+    def test_agent_readable_index_notice_does_not_change_normalized_text(self) -> None:
+        first = (
+            b"Webhook For AI agents: visit https://docs.example.com/llms.txt for an index "
+            b"of all pages formatted in Markdown and endpoints in OpenAPI. "
+            b"Payment Event payment_paid requires server verification."
+        )
+        second = b"Webhook Payment Event payment_paid requires server verification."
+
+        self.assertEqual(
+            check_source_changes.normalize_text(first, "text/plain"),
+            check_source_changes.normalize_text(second, "text/plain"),
+        )
+
     def test_relative_updated_age_does_not_change_normalized_text(self) -> None:
         first = b"Webhook V2 Updated 3 months ago Webhook Signature Payment Status Data Model"
         second = b"Webhook V2 Updated 4 months ago Webhook Signature Payment Status Data Model"
+
+        self.assertEqual(
+            check_source_changes.normalize_text(first, "text/plain"),
+            check_source_changes.normalize_text(second, "text/plain"),
+        )
+
+    def test_approximate_relative_updated_age_does_not_change_normalized_text(self) -> None:
+        first = b"API Actions Updated about 1 year ago Capture Payment"
+        second = b"API Actions Updated about 2 years ago Capture Payment"
+
+        self.assertEqual(
+            check_source_changes.normalize_text(first, "text/plain"),
+            check_source_changes.normalize_text(second, "text/plain"),
+        )
+
+    def test_gitbook_llms_markdown_notice_does_not_change_normalized_text(self) -> None:
+        first = (
+            b"Pay API For the complete documentation index, see llms.txt . "
+            b"This page is also available as Markdown . Callback response verification"
+        )
+        second = b"Pay API Callback response verification"
+
+        self.assertEqual(
+            check_source_changes.normalize_text(first, "text/plain"),
+            check_source_changes.normalize_text(second, "text/plain"),
+        )
+
+    def test_recent_requests_widget_chrome_does_not_change_normalized_text(self) -> None:
+        first = (
+            b"Capture Transaction Recent Requests Log in to see full request history "
+            b"Time Status User Agent Retrieving recent requests... Loading Loading Body amount currency"
+        )
+        second = b"Capture Transaction Body amount currency"
+
+        self.assertEqual(
+            check_source_changes.normalize_text(first, "text/plain"),
+            check_source_changes.normalize_text(second, "text/plain"),
+        )
+
+    def test_recent_requests_widget_with_ellipsis_does_not_change_normalized_text(self) -> None:
+        first = (
+            "Capture Transaction Recent Requests Log in to see full request history "
+            "Time Status User Agent Retrieving recent requests\u2026 Loading\u2026 Body amount currency"
+        ).encode()
+        second = b"Capture Transaction Body amount currency"
 
         self.assertEqual(
             check_source_changes.normalize_text(first, "text/plain"),

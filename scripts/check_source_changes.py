@@ -30,8 +30,29 @@ MAX_ARTIFACT_FILENAME_CHARS = 96
 FETCH_ATTEMPTS = 3
 BASELINE_DEGRADED_STATUSES = {"TLS_VERIFY"}
 TRANSIENT_FAILURE_EXCERPTS = {"TimeoutError", "URLError"}
-RELATIVE_UPDATED_AGE = re.compile(r"\bUpdated \d+ (?:second|minute|hour|day|week|month|year)s? ago\b")
+RELATIVE_UPDATED_AGE = re.compile(
+    r"\bUpdated (?:about |over |almost |approximately )?\d+ (?:second|minute|hour|day|week|month|year)s? ago\b"
+)
 HYPERPAY_GREETING_NAV_CHROME = re.compile(r"\bBoard of Directors Greetings Contact us\b")
+HTML_CHROME_BLOCKS = re.compile(r"(?is)<(?:nav|aside|footer|svg|button)\b[^>]*>.*?</(?:nav|aside|footer|svg|button)>")
+HTML_ARTICLE_BLOCK = re.compile(r"(?is)<article\b[^>]*>(.*?)</article>")
+HTML_MAIN_BLOCK = re.compile(r"(?is)<main\b[^>]*>(.*?)</main>")
+AI_AGENT_INDEX_NOTICE = re.compile(
+    r"\bFor AI agents: visit https://[^\s]+/llms\.txt for an index of all pages formatted in Markdown and endpoints in OpenAPI\. ?",
+    re.IGNORECASE,
+)
+TABBY_INDEX_NOTICE = re.compile(
+    r"\bIndex Fetch the complete documentation index at: /llms\.txt Use this file to discover all available pages before exploring further\. ?",
+    re.IGNORECASE,
+)
+GITBOOK_INDEX_NOTICE = re.compile(
+    r"\bFor the complete documentation index, see llms\.txt \. This page is also available as Markdown \. ?",
+    re.IGNORECASE,
+)
+RECENT_REQUESTS_CHROME = re.compile(
+    r"\bRecent Requests Log in to see full request history Time Status User Agent Retrieving recent requests(?:\.\.\.|…|\\u2026) (?:Loading(?:\.\.\.|…|\\u2026)? ?)+",
+    re.IGNORECASE,
+)
 
 
 def utc_now() -> str:
@@ -86,6 +107,14 @@ def strip_html(text: str) -> str:
     text = re.sub(r"(?is)<script[^>]*>.*?</script>", " ", text)
     text = re.sub(r"(?is)<style[^>]*>.*?</style>", " ", text)
     text = re.sub(r"(?is)<noscript[^>]*>.*?</noscript>", " ", text)
+    article_match = HTML_ARTICLE_BLOCK.search(text)
+    if article_match:
+        text = article_match.group(1)
+    else:
+        main_match = HTML_MAIN_BLOCK.search(text)
+        if main_match:
+            text = main_match.group(1)
+    text = HTML_CHROME_BLOCKS.sub(" ", text)
     text = re.sub(r"(?s)<!--.*?-->", " ", text)
     text = re.sub(r"(?s)<[^>]+>", " ", text)
     return html.unescape(text)
@@ -100,6 +129,10 @@ def normalize_text(raw: bytes, content_type: str) -> str:
     decoded = re.sub(r"[ \t]+", " ", decoded)
     decoded = re.sub(r"\n{3,}", "\n\n", decoded)
     decoded = RELATIVE_UPDATED_AGE.sub("Updated <relative-age> ago", decoded)
+    decoded = AI_AGENT_INDEX_NOTICE.sub("", decoded)
+    decoded = TABBY_INDEX_NOTICE.sub("", decoded)
+    decoded = GITBOOK_INDEX_NOTICE.sub("", decoded)
+    decoded = RECENT_REQUESTS_CHROME.sub("", decoded)
     decoded = HYPERPAY_GREETING_NAV_CHROME.sub("Board of Directors Contact us", decoded)
     return decoded.strip()
 
