@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 1.1.0 - 2026-06-15
+
+- Added Moyasar guidance for standalone 3D Secure card-authentication webhook events after private source-watch run 27529717585.
+- Clarified that `card_auth_authenticated` and `card_auth_failed` are card-authentication outcomes, not payment fulfillment states, and still require Moyasar secret-token validation plus idempotent event handling.
+- Added Moyasar card-authentication source URLs and an eval scenario covering the new webhook event handling.
+- Refreshed public-safe source-watch metadata after reviewing concurrent docs-site navigation/chrome changes.
+
 ## 1.0.10 - 2026-06-10
 
 - Refreshed the public-safe source-watch baseline for FawryPay, MyFatoorah, Tabby, Tamara, and EasyKash after private watcher runs 27294185835 and 27294164650.

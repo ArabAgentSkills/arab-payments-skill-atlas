@@ -198,16 +198,19 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/moyasar.md",
-      "last_checked": "2026-05-24",
+      "last_checked": "2026-06-15",
       "source_urls": [
         "https://docs.moyasar.com/",
         "https://docs.moyasar.com/category/payments-api/",
         "https://docs.moyasar.com/api/authentication/",
+        "https://docs.moyasar.com/api/card_auths/01-create-card-auth",
+        "https://docs.moyasar.com/api/card_auths/02-fetch-card-auth",
         "https://docs.moyasar.com/guides/payment-operations/",
+        "https://docs.moyasar.com/guides/3d-secure/standalone-authentication",
         "https://docs.moyasar.com/guides/dashboard/setting-up-webhooks/",
         "https://docs.moyasar.com/api/other/webhooks/webhook-reference"
       ],
-      "notes": "Docs cover purchase, authorization, capture, void, refund, webhook secret token validation, and payment status events."
+      "notes": "Docs cover purchase, authorization, capture, void, refund, standalone 3D Secure card authentication, webhook secret token validation, payment status events, and card-authentication webhook events."
     },
     {
       "id": "amazon-payment-services",
