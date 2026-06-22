@@ -32,7 +32,8 @@ TRANSIENT_HTTP_STATUSES = {408, 429}
 BASELINE_DEGRADED_STATUSES = {"TLS_VERIFY", "JS_CHALLENGE"}
 TRANSIENT_FAILURE_EXCERPTS = {"TimeoutError", "URLError"}
 RELATIVE_UPDATED_AGE = re.compile(
-    r"\bUpdated (?:about |over |almost |approximately )?\d+ (?:second|minute|hour|day|week|month|year)s? ago\b"
+    r"\b(?:Last )?Updated (?:about |over |almost |approximately )?\d+ (?:second|minute|hour|day|week|month|year)s? ago\b",
+    re.IGNORECASE,
 )
 HYPERPAY_GREETING_NAV_CHROME = re.compile(r"\bBoard of Directors Greetings Contact us\b")
 HTML_CHROME_BLOCKS = re.compile(r"(?is)<(?:nav|aside|footer|svg|button)\b[^>]*>.*?</(?:nav|aside|footer|svg|button)>")
@@ -52,6 +53,10 @@ GITBOOK_INDEX_NOTICE = re.compile(
 )
 RECENT_REQUESTS_CHROME = re.compile(
     r"\bRecent Requests Log in to see full request history Time Status User Agent Retrieving recent requests(?:\.\.\.|…|\\u2026) (?:Loading(?:\.\.\.|…|\\u2026)? ?)+",
+    re.IGNORECASE,
+)
+DOCS_COPY_ACTION_CHROME = re.compile(
+    r"\b(?:Copy page(?: as Markdown for LLMs)?|Open in Claude|Ask questions about this page)\b",
     re.IGNORECASE,
 )
 
@@ -80,6 +85,28 @@ def github_source_api_url(url: str) -> str | None:
     if not owner or not repo:
         return None
     return f"https://api.github.com/repos/{urllib.parse.quote(owner)}/{urllib.parse.quote(repo)}"
+
+
+def normalize_github_payload(payload: dict[str, object], url: str, github_api_url: str) -> str:
+    if "/orgs/" in github_api_url:
+        metadata = {
+            "login": payload.get("login", ""),
+            "html_url": payload.get("html_url", url),
+            "description": payload.get("description") or "",
+            "type": payload.get("type", ""),
+            "public_repos": payload.get("public_repos", 0),
+        }
+    else:
+        metadata = {
+            "full_name": payload.get("full_name", ""),
+            "html_url": payload.get("html_url", url),
+            "description": payload.get("description") or "",
+            "default_branch": payload.get("default_branch", ""),
+            "archived": bool(payload.get("archived")),
+            "disabled": bool(payload.get("disabled")),
+            "pushed_at": payload.get("pushed_at", ""),
+        }
+    return json.dumps(metadata, sort_keys=True, ensure_ascii=True)
 
 
 def load_provider_urls() -> dict[str, dict[str, object]]:
@@ -134,7 +161,9 @@ def normalize_text(raw: bytes, content_type: str) -> str:
     decoded = TABBY_INDEX_NOTICE.sub("", decoded)
     decoded = GITBOOK_INDEX_NOTICE.sub("", decoded)
     decoded = RECENT_REQUESTS_CHROME.sub("", decoded)
+    decoded = DOCS_COPY_ACTION_CHROME.sub(" ", decoded)
     decoded = HYPERPAY_GREETING_NAV_CHROME.sub("Board of Directors Contact us", decoded)
+    decoded = re.sub(r"[ \t]+", " ", decoded)
     return decoded.strip()
 
 
@@ -198,26 +227,7 @@ def fetch_url(url: str) -> dict[str, object]:
             with urllib.request.urlopen(request, timeout=30) as response:
                 raw = response.read()
                 payload = json.loads(raw.decode("utf-8"))
-                if "/orgs/" in github_api_url:
-                    metadata = {
-                        "login": payload.get("login", ""),
-                        "html_url": payload.get("html_url", url),
-                        "description": payload.get("description") or "",
-                        "type": payload.get("type", ""),
-                        "public_repos": payload.get("public_repos", 0),
-                    }
-                else:
-                    metadata = {
-                        "full_name": payload.get("full_name", ""),
-                        "html_url": payload.get("html_url", url),
-                        "description": payload.get("description") or "",
-                        "default_branch": payload.get("default_branch", ""),
-                        "archived": bool(payload.get("archived")),
-                        "disabled": bool(payload.get("disabled")),
-                        "pushed_at": payload.get("pushed_at", ""),
-                        "updated_at": payload.get("updated_at", ""),
-                    }
-                normalized = json.dumps(metadata, sort_keys=True, ensure_ascii=True)
+                normalized = normalize_github_payload(payload, url, github_api_url)
                 digest = hashlib.sha256(normalized.encode("utf-8")).hexdigest()
                 return {
                     "status": "OK",

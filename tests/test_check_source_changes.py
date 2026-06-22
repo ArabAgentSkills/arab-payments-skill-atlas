@@ -71,6 +71,15 @@ class NormalizeTextTests(unittest.TestCase):
             check_source_changes.normalize_text(second, "text/plain"),
         )
 
+    def test_last_updated_age_does_not_change_normalized_text(self) -> None:
+        first = b"Callback Service Last updated 8 months ago Payment Inquiry"
+        second = b"Callback Service Last updated 9 months ago Payment Inquiry"
+
+        self.assertEqual(
+            check_source_changes.normalize_text(first, "text/plain"),
+            check_source_changes.normalize_text(second, "text/plain"),
+        )
+
     def test_gitbook_llms_markdown_notice_does_not_change_normalized_text(self) -> None:
         first = (
             b"Pay API For the complete documentation index, see llms.txt . "
@@ -101,6 +110,19 @@ class NormalizeTextTests(unittest.TestCase):
             "Time Status User Agent Retrieving recent requests\u2026 Loading\u2026 Body amount currency"
         ).encode()
         second = b"Capture Transaction Body amount currency"
+
+        self.assertEqual(
+            check_source_changes.normalize_text(first, "text/plain"),
+            check_source_changes.normalize_text(second, "text/plain"),
+        )
+
+    def test_docs_copy_action_chrome_does_not_change_normalized_text(self) -> None:
+        first = (
+            b"Webhooks Copy page Get notified about payment status changes. "
+            b"Copy page as Markdown for LLMs Open in Claude Ask questions about this page "
+            b"Verify status server-side before fulfillment."
+        )
+        second = b"Webhooks Get notified about payment status changes. Verify status server-side before fulfillment."
 
         self.assertEqual(
             check_source_changes.normalize_text(first, "text/plain"),
@@ -160,6 +182,50 @@ class GitHubRepoApiUrlTests(unittest.TestCase):
             check_source_changes.github_source_api_url(
                 "https://github.com/Kashier-payments/NodeJs-Checkout-Demo/blob/main/README.md"
             )
+        )
+
+
+class GitHubMetadataTests(unittest.TestCase):
+    def test_repo_updated_at_only_churn_does_not_change_normalized_metadata(self) -> None:
+        url = "https://github.com/Kashier-payments/Php-Checkout-Demo"
+        api_url = check_source_changes.github_source_api_url(url)
+        assert api_url is not None
+        base_payload = {
+            "full_name": "Kashier-payments/Php-Checkout-Demo",
+            "html_url": url,
+            "description": "Create and pay orders through IFrame and Hosted Payment Page Demo ",
+            "default_branch": "master",
+            "archived": False,
+            "disabled": False,
+            "pushed_at": "2021-07-13T14:51:17Z",
+            "updated_at": "2026-06-01T13:24:24Z",
+        }
+        changed_payload = dict(base_payload, updated_at="2026-06-22T07:05:16Z")
+
+        self.assertEqual(
+            check_source_changes.normalize_github_payload(base_payload, url, api_url),
+            check_source_changes.normalize_github_payload(changed_payload, url, api_url),
+        )
+
+    def test_repo_pushed_at_change_still_changes_normalized_metadata(self) -> None:
+        url = "https://github.com/Kashier-payments/Kashier-WooCommerce-UI-Plugin"
+        api_url = check_source_changes.github_source_api_url(url)
+        assert api_url is not None
+        base_payload = {
+            "full_name": "Kashier-payments/Kashier-WooCommerce-UI-Plugin",
+            "html_url": url,
+            "description": "Kashier WooCommerce Plugin",
+            "default_branch": "main",
+            "archived": False,
+            "disabled": False,
+            "pushed_at": "2025-12-08T12:54:42Z",
+            "updated_at": "2026-06-17T21:05:00Z",
+        }
+        changed_payload = dict(base_payload, pushed_at="2026-06-22T07:05:16Z")
+
+        self.assertNotEqual(
+            check_source_changes.normalize_github_payload(base_payload, url, api_url),
+            check_source_changes.normalize_github_payload(changed_payload, url, api_url),
         )
 
 

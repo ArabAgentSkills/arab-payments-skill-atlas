@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 1.1.3 - 2026-06-22
+
+- Hardened source-watch normalization for docs copy-action chrome, EasyKash-style `Last updated ... ago` relative ages, and GitHub repository `updated_at` metadata churn.
+- Refreshed the public-safe source-watch baseline and report after reviewing private watcher run 27935465599 / issue #12.
+- Kept provider guidance unchanged after maintainer review found docs-index, relative-age, copy-action, and repository metadata drift rather than new payment behavior.
+- Added regression coverage for the new source-watch normalization cases.
+
 ## 1.1.2 - 2026-06-15
 
 - Treated source-watch OK-to-JavaScript-challenge degradations as maintainer review warnings instead of payment documentation changes, matching the existing source-link checker behavior.
