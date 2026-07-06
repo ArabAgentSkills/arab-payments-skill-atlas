@@ -1,7 +1,7 @@
 {
   "skill": "mena-payment-guardian",
   "version_scope": "v1-arab-mena-payments-bnpl",
-  "last_updated": "2026-06-08",
+  "last_updated": "2026-07-06",
   "source_policy": "Summaries and official links only. Do not vendor full provider docs. Workbook URLs are seed links; official/provider-controlled docs decide what is documented.",
   "coverage_tiers": {
     "full-depth": [
@@ -83,7 +83,7 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/geidea.md",
-      "last_checked": "2026-05-29",
+      "last_checked": "2026-07-06",
       "source_urls": [
         "https://docs.geidea.net/llms.txt",
         "https://docs.geidea.net/",
@@ -133,7 +133,7 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/tap-payments.md",
-      "last_checked": "2026-05-29",
+      "last_checked": "2026-07-06",
       "source_urls": [
         "https://developers.tap.company/llms.txt",
         "https://developers.tap.company/docs/get-started",
@@ -154,7 +154,7 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/myfatoorah.md",
-      "last_checked": "2026-05-29",
+      "last_checked": "2026-07-06",
       "source_urls": [
         "https://docs.myfatoorah.com/llms.txt",
         "https://docs.myfatoorah.com/docs/get-started",
@@ -303,7 +303,7 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/tabby.md",
-      "last_checked": "2026-05-29",
+      "last_checked": "2026-07-06",
       "source_urls": [
         "https://docs.tabby.ai/llms.txt",
         "https://docs.tabby.ai/introduction/what-is-tabby",
@@ -312,9 +312,10 @@
         "https://docs.tabby.ai/pay-in-4-custom-integration/payment-processing",
         "https://docs.tabby.ai/pay-in-4-custom-integration/payment-statuses",
         "https://docs.tabby.ai/pay-in-4-custom-integration/webhooks",
+        "https://docs.tabby.ai/pay-in-4-custom-integration/dispute-webhooks",
         "https://docs.tabby.ai/api-reference/payments/retrieve-a-payment"
       ],
-      "notes": "Docs cover checkout session, payment verification, webhooks, capture, close, refund, idempotent reference_id, and payment status handling. Official agent-readable docs index is available at llms.txt."
+      "notes": "Docs cover checkout session, payment verification, payment webhooks, dispute webhooks, capture, close, refund, 180-day refund initiation window, idempotent reference_id, and payment status handling. Official agent-readable docs index is available at llms.txt."
     },
     {
       "id": "tamara",
@@ -337,7 +338,7 @@
         "https://docs.tamara.co/reference/simplifiedrefund",
         "https://docs.tamara.co/reference/getorderdetails"
       ],
-      "notes": "Docs cover checkout sessions, webhook registration, approved to authorised transition, optional auto-authorisation, capture, cancel, refund, and order status inquiry. Official agent-readable docs index is available at llms.txt."
+      "notes": "Docs cover checkout sessions, webhook registration, approved to authorised transition, optional auto-authorisation, capture, 21-day auto-capture for authorised but uncaptured orders, cancel, refund, and order status inquiry. Official agent-readable docs index is available at llms.txt."
     },
     {
       "id": "valu-souhoola",

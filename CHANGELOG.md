@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 1.2.0 - 2026-07-06
+
+- Updated Tabby guidance for the current payment-webhook/dispute-webhook split, the documented 180-day refund initiation window, and refund/dispute handling tests.
+- Updated Tamara guidance for the current authorisation and capture lifecycle, including the documented 21-day auto-capture behavior for authorised but uncaptured orders.
+- Refreshed public-safe source-watch metadata after reviewing private watcher issue #13 and run 28774155853.
+- Kept Tap Payments, Geidea, MyFatoorah, and HyperPay guidance unchanged after review found docs formatting, index, or source fingerprint churn rather than unsupported payment guidance deltas.
+
 ## 1.1.3 - 2026-06-22
 
 - Hardened source-watch normalization for docs copy-action chrome, EasyKash-style `Last updated ... ago` relative ages, and GitHub repository `updated_at` metadata churn.

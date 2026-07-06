@@ -1,21 +1,21 @@
 # Source Watch Report
 
-- Generated: 2026-06-22T07:14:08Z
-- Total URLs checked: 106
+- Generated: 2026-07-06T07:14:18Z
+- Total URLs checked: 107
 - Changes detected: 0
 - Full provider docs are not committed. Private watcher artifacts may contain fetched snapshots for maintainer review.
 
 ## Maintainer Result
 
-Classification: `chrome_noise`.
+Classification: `payment_behavior_change`.
 
-Private watcher issue #12 and run 27935465599 were reviewed after source snapshot capture and link checking completed successfully. The reviewed drift was docs-index, relative-age, docs copy-action, and GitHub repository metadata churn rather than a source URL replacement or payment behavior change.
+Private watcher issue #13 and run 28774155853 were reviewed after source snapshot capture and source-link checking completed successfully. The reviewed release-worthy changes were Tabby payment-webhook/dispute-webhook separation, Tabby's current 180-day refund initiation window, and Tamara's current 21-day auto-capture guidance for authorised but uncaptured orders.
 
-No provider guidance changed. The source-watch normalizer and public-safe baseline were refreshed so the same non-payment drift does not keep reopening maintainer review.
+Public-safe updates were applied to the Tabby and Tamara provider references, Tabby source metadata, focused eval coverage, changelog, version metadata, and the public-safe source-watch baseline. Other reviewed drift for Tap Payments, Geidea, MyFatoorah, and HyperPay was docs formatting, index, or source fingerprint churn rather than an unsupported payment guidance delta.
 
 ## Result
 
-No provider documentation changes detected.
+Public baseline refreshed after approved provider guidance updates.
 
 ## Manual Browser Verification
 

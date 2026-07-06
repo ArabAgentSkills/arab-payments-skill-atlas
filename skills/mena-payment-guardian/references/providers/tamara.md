@@ -5,7 +5,7 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public
-- Last checked: 2026-05-29
+- Last checked: 2026-07-06
 - Source confidence: High for official Tamara docs.
 - Sources: Tamara docs home, online checkout, webhook registration and order authorisation, order status flow, capture order, simplified refund, get order details, and official Tamara `llms.txt` index.
 
@@ -26,12 +26,13 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 ## Integration Paths
 
 - Create checkout session server-side, redirect to Tamara checkout URL, receive approved notification, call Authorise Order unless documented auto-authorisation is explicitly enabled for the merchant, then capture when shipped/fulfilled.
+- Current Tamara capture docs say orders not captured within 21 days from authorisation are auto-captured to `fully_captured`; design merchant fulfillment and reconciliation so manual capture is not left open indefinitely.
 - Cancel is available before capture in the authorized stage.
 - Simplified refund applies after capture.
 
 ## Setup Prerequisites
 
-- API bearer credential, sandbox/live environment, webhook URL in Partner Portal or API, checkout URLs, country/currency support, and order reference strategy.
+- API bearer credential, sandbox/live environment, webhook URL in Partner Portal or API, checkout URLs, country/currency support, order reference strategy, and merchant account settings for auto-authorisation and auto-capture behavior.
 - Webhook approved event is mandatory for the documented flow unless merchant-specific auto-authorisation has been confirmed in current docs/account settings.
 
 ## Auth And Secret Boundary
@@ -43,6 +44,7 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 
 - Tamara sends notifications to the merchant webhook URL; an approved notification must be acknowledged by calling Authorise Order unless documented auto-authorisation is explicitly enabled.
 - Docs note server-to-server notification helps avoid frontend redirection failures.
+- If auto-authorisation is enabled, current docs describe the flow moving from new to approved to fully captured without an explicit Authorise Order call; confirm that setting before skipping authorisation logic.
 - Store Tamara order id, checkout id, order reference, notification event, authorised state, capture state, and refund ids.
 
 ## Signature Or HMAC
@@ -62,25 +64,25 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 
 ## Status Mapping
 
-- `approved` is not enough; merchant must authorise, which moves order to `authorised`, unless confirmed auto-authorisation moves the order through the documented states automatically.
+- `approved` is not enough for the standard flow; merchant must authorise, which moves order to `authorised`, unless confirmed auto-authorisation moves the order through the documented states automatically.
 - Capture moves toward `partially_captured` or `fully_captured`.
 - Cancel is valid only from the authorized stage; refunds apply after capture.
-- Declined and expired orders are non-fulfillment states. Docs note orders left at `approved` indicate a sync issue and should be authorised, cancelled, or captured according to the intended flow.
+- Declined and expired orders are non-fulfillment states. Current status-flow docs also state an order can expire if it is not authorised within 72 hours or if an authorised order is not captured or canceled within 90 days.
 
 ## Refunds Voids And Subscriptions
 
 - Cancel is for authorized but not captured orders.
-- Capture is required for settlement; non-captured orders are not settled and may be auto-captured after the documented window when that behavior applies.
+- Capture is required for settlement; current Tamara capture docs say non-captured authorised orders are auto-captured after 21 days from authorisation when that behavior applies.
 - Simplified refund can be full or partial after capture, with refund ids stored locally.
 - No subscription behavior should be invented.
 
 ## Sandbox And Test Notes
 
-- Test missing frontend redirect, approved webhook, authorise call, capture, cancel-before-capture, refund-after-capture, and Get Order Details fallback.
+- Test missing frontend redirect, approved webhook, authorise call, confirmed auto-authorisation path, capture before the 21-day auto-capture window, cancel-before-capture, refund-after-capture, and Get Order Details fallback.
 
 ## Unknowns And Do Not Invent
 
-- Do not invent webhook token validation, auto-authorisation enablement, status names, country/currency availability, capture windows, or refund limits beyond current docs.
+- Do not invent webhook token validation, auto-authorisation enablement, auto-capture account behavior, status names, country/currency availability, capture windows beyond current Tamara capture docs, or refund limits.
 - Ask for merchant docs when integrating through a PSP wrapper instead of direct Tamara.
 - Fetch the current Tamara `llms.txt` index before endpoint-level checkout, authorisation, capture, refund, or webhook work.
 
@@ -89,7 +91,8 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 - Create checkout session server-side.
 - Verify webhook token/header.
 - Call Authorise Order after approved notification unless confirmed auto-authorisation applies.
-- Capture only after fulfillment/shipment decision.
+- Capture only after fulfillment/shipment decision; do not rely on delayed auto-capture as the operational capture plan.
+- Track the 21-day auto-capture window for authorised but uncaptured orders.
 - Use Get Order Details fallback.
 - Separate cancel from refund.
 
@@ -98,4 +101,5 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 - You treat approved redirect as final paid.
 - You skip Authorise Order without confirmed auto-authorisation.
 - You capture before authorization.
+- You leave authorised orders unattended until auto-capture without a deliberate fulfillment and settlement policy.
 - You cancel after capture instead of refunding.
