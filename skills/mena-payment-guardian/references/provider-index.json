@@ -133,14 +133,14 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/tap-payments.md",
-      "last_checked": "2026-07-06",
+      "last_checked": "2026-07-13",
       "source_urls": [
         "https://developers.tap.company/llms.txt",
-        "https://developers.tap.company/docs/get-started",
-        "https://developers.tap.company/docs/webhook",
-        "https://developers.tap.company/docs/authentication",
-        "https://developers.tap.company/reference/api-actions",
-        "https://developers.tap.company/docs/recurring-payments"
+        "https://developers.tap.company/docs/get-started.md",
+        "https://developers.tap.company/docs/webhook.md",
+        "https://developers.tap.company/docs/authentication.md",
+        "https://developers.tap.company/reference/api-actions.md",
+        "https://developers.tap.company/docs/recurring-payments.md"
       ],
       "notes": "Docs cover hosted checkout, Charge and Authorize APIs, webhook payloads, hashstring validation, authorization/capture/void flows, and secret-key authentication. Official agent-readable docs index is available at llms.txt."
     },

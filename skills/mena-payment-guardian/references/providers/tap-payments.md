@@ -5,7 +5,7 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public
-- Last checked: 2026-05-29
+- Last checked: 2026-07-13
 - Source confidence: High for official Tap developer docs; webhook `hashstring` details are public but must be checked against the exact webhook/API version in use.
 - Sources: Tap get started, webhook, authentication, API actions, recurring payments, and official Tap `llms.txt` index.
 
@@ -15,11 +15,11 @@ Use for Tap checkout, charges, authorizations, captures, voids, webhooks, and re
 
 ## Source Map
 
-- Get started: `https://developers.tap.company/docs/get-started`
-- Webhook: `https://developers.tap.company/docs/webhook`
-- Authentication: `https://developers.tap.company/docs/authentication`
-- API actions: `https://developers.tap.company/reference/api-actions`
-- Recurring: `https://developers.tap.company/docs/recurring-payments`
+- Get started: `https://developers.tap.company/docs/get-started.md`
+- Webhook: `https://developers.tap.company/docs/webhook.md`
+- Authentication: `https://developers.tap.company/docs/authentication.md`
+- API actions: `https://developers.tap.company/reference/api-actions.md`
+- Recurring: `https://developers.tap.company/docs/recurring-payments.md`
 - Agent-readable docs: `https://developers.tap.company/llms.txt`
 
 ## Integration Paths

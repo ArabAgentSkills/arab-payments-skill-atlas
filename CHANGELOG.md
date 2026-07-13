@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 1.2.1 - 2026-07-13
+
+- Replaced Tap Payments monitored source URLs with the provider-published Markdown variants from the official `llms.txt` index after the extensionless HTML pages became unstable for normalized source-watch capture.
+- Refreshed public-safe source-watch metadata after reviewing private watcher issue #14 and run 29230960823.
+- Kept payment behavior guidance unchanged after maintainer review found Tap, Geidea, MyFatoorah, Tabby, and Tamara diffs were source URL, docs-index, code-example, or formatting churn rather than a new provider contract.
+
 ## 1.2.0 - 2026-07-06
 
 - Updated Tabby guidance for the current payment-webhook/dispute-webhook split, the documented 180-day refund initiation window, and refund/dispute handling tests.
