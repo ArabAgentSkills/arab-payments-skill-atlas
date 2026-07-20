@@ -5,9 +5,9 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public
-- Last checked: 2026-07-06
+- Last checked: 2026-07-20
 - Source confidence: High for official Tamara docs.
-- Sources: Tamara docs home, online checkout, webhook registration and order authorisation, order status flow, capture order, simplified refund, get order details, and official Tamara `llms.txt` index.
+- Sources: Tamara docs home, online checkout, webhook registration, authorise order guide/API, order status flow, capture order, simplified refund, get order details, and official Tamara `llms.txt` index.
 
 ## Use When
 
@@ -17,7 +17,9 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 
 - Docs: `https://docs.tamara.co/`
 - Online checkout: `https://docs.tamara.co/docs/direct-online-checkout`
-- Webhook/order authorisation: `https://docs.tamara.co/docs/transaction-authorisation`
+- Webhook registration: `https://docs.tamara.co/docs/webhook-subscription`
+- Authorise order guide: `https://docs.tamara.co/docs/pp-order-mgmt-authorise-order`
+- Authorise order API: `https://docs.tamara.co/reference/authoriseorder`
 - Status flow: `https://docs.tamara.co/docs/online-order-status-flow`
 - Capture: `https://docs.tamara.co/reference/captureorder`
 - Get order details: `https://docs.tamara.co/reference/getorderdetails`
@@ -33,7 +35,7 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 ## Setup Prerequisites
 
 - API bearer credential, sandbox/live environment, webhook URL in Partner Portal or API, checkout URLs, country/currency support, order reference strategy, and merchant account settings for auto-authorisation and auto-capture behavior.
-- Webhook approved event is mandatory for the documented flow unless merchant-specific auto-authorisation has been confirmed in current docs/account settings.
+- Approved/status webhook handling is required for the documented authorise flow unless merchant-specific auto-authorisation has been confirmed in current docs/account settings.
 
 ## Auth And Secret Boundary
 

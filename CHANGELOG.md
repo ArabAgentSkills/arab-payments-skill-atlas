@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 1.2.2 - 2026-07-20
+
+- Updated Tamara monitored source mapping to the provider's current webhook registration and authorise-order guide/API pages after the official `llms.txt` index split the old combined source.
+- Hardened source-watch normalization for provider docs feedback/footer chrome so stable payment text is not reclassified because a page adds `Did this page help you?` navigation.
+- Refreshed public-safe source-watch metadata after reviewing private watcher issue #15 and run 29723426211.
+- Kept payment behavior guidance unchanged after maintainer review found Geidea/MyFatoorah/Tamara footer churn, Tabby docs-index metadata, and HyperPay endpoint-parameter additions did not require new public guidance.
+
 ## 1.2.1 - 2026-07-13
 
 - Replaced Tap Payments monitored source URLs with the provider-published Markdown variants from the official `llms.txt` index after the extensionless HTML pages became unstable for normalized source-watch capture.

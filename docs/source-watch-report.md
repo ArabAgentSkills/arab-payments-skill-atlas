@@ -1,134 +1,102 @@
 # Source Watch Report
 
-- Generated: 2026-07-13T07:13:30Z
-- Total URLs checked: 107
-- Changes detected: 18
+- Generated: 2026-07-20T07:13:09Z
+- Total URLs checked: 109
+- Changes detected: 12
 - Full provider docs are not committed. Private watcher artifacts may contain fetched snapshots for maintainer review.
 
 ## Maintainer Result
 
 Classification: `source_url_replacement`.
 
-Private watcher issue #14 and run 29230960823 were reviewed after source snapshot capture completed before source-link checking. The reviewed public-safe update is limited to Tap Payments monitored source URLs: the provider's official `llms.txt` index now points to Markdown source variants, and those Markdown URLs preserve stable normalized content where extensionless HTML pages produced source-watch churn.
+Private watcher issue #15 and run 29723426211 were reviewed after source snapshot capture completed before source-link checking. The reviewed public-safe update replaces Tamara's old combined webhook/order-authorisation monitored source with the provider's current webhook registration, authorise-order guide, and Authorise Order API sources from the official `llms.txt` index.
 
-No payment behavior guidance changed. Tap, Geidea, MyFatoorah, Tabby, and Tamara diffs were reviewed as source URL, docs-index, code-example, or formatting churn. Paymob `JS_CHALLENGE` responses remain manual browser-verification warnings and were not treated as broken links.
+No payment behavior guidance changed. Geidea and MyFatoorah diffs were reviewed as docs feedback/footer chrome, Tamara capture/refund/get-order diffs were footer chrome, Tabby drift was docs-index metadata, and HyperPay parameter additions remain endpoint-level official-doc detail covered by the existing instruction to check current docs before field-level integration. Paymob `JS_CHALLENGE` responses remain manual browser-verification warnings and were not treated as broken links.
 
 ## Result
 
-Public baseline refreshed after approved source URL replacements and metadata review.
+Public baseline refreshed after approved Tamara source URL replacements and source-watch normalization review.
 
 ## Changes
 
-### NEW: https://developers.tap.company/docs/authentication.md
+### CHANGED: https://docs.geidea.net/reference/capture-transaction-1
 
-- Providers: mena-payment-guardian:tap-payments
-- Current status: OK / hash `8837398db3682a437379d01f371f6d9455e04a2c10b09400ba7c04b60489e915`
-- Excerpt: # Authentication A detailed overview of API integration, workflow, and usage examples for 3D Secure authentication with Tap Payments. ## Overview This guide provides a comprehensive resource for implementing 3D Secure (3DS) authentication with Tap Payments, a security protocol that adds an extra layer of authentication to online credit and debit card transactions to reduce fraud and enhance customer trust. It details how Tap Payments handles 3DS authentication, including both internal processing...
+- Providers: egypt-payment-guardian:geidea-egypt, mena-payment-guardian:geidea
+- Previous status: OK / hash `0e70ab8ebb34fa568705dd26a3fe03083d855bee15dc708a584691213880be33`
+- Current status: OK / hash `620bf22c9d3587b23d7381c044450c127f7acb6f86fd800e77b8dd7632d10ff8`
+- Excerpt: Capture Transaction post https://api.ksamerchant.geidea.net /pgw/api/v1/direct/capture Body Params orderId string required Unique ID for the order. callbackUrl string The URL of your callback server to receive useful information for keeping track of your inventory, records, etc. The URL may have protocol (http/https), subdomain (optional), domain name and path (optional) captureAmount float Amount for which capture is requested. Amount must be greater than 0.01. Won't be allowed to capture more...
 
-### NEW: https://developers.tap.company/docs/get-started.md
-
-- Providers: mena-payment-guardian:tap-payments
-- Current status: OK / hash `2465e9e23b45e2bdd7eeeacd2f0e1cd62ab8a8c166927a4cbecf9fd86922aae6`
-- Excerpt: # Overview This page guides you to set up your account with Tap, and start accepting online payments on your website or mobile App. ## 1. Registration You can create your account from here [Get-Started](https://tap.company/) <hr /> ## 2. Get Your API Keys Once registration has been completed, follow the steps below to get your API testing keys: 1. Sign in to [Tap\u2019s Dashboard](https://os.tap.company/) using your email or phone number 2. Click on Accounts 3. Click on the ID in the **Operators** se...
-
-### NEW: https://developers.tap.company/docs/recurring-payments.md
-
-- Providers: mena-payment-guardian:tap-payments
-- Current status: OK / hash `1c42ed91aca4272ee96a832cf2e2f24ff78ecca937adfe8cd7016387a6a095c8`
-- Excerpt: # Recurring Payments A Step-by-Step Documentation for Setting Up and Processing Recurring Payments Recurring payments allow merchants to charge customers on a regular basis, such as for subscriptions or installment plans. This guide provides a detailed guide on setting up and processing recurring payments using Tap APIs. Please note that this guide assumes you have already familiarized yourself with the API reference documentation for Tap Payments, specifically the [Charges](charges) API and [Au...
-
-### NEW: https://developers.tap.company/docs/webhook.md
-
-- Providers: mena-payment-guardian:tap-payments
-- Current status: OK / hash `8c8970d47a6e41c2aa646833a442d5b3c3e3c4ee7e250f3e6170260af36e6394`
-- Excerpt: # Webhook Tap ensures secure and realtime webhooks for payment events, and to send the post payment details. Payments webhook is a server-to-server call(also known as IPN "Instant Payment Notification"), that allows merchants to receive the post-payment details to automate and synchronize their internal ERPs by checking the actual payment status and other technical details, as per requirements. It's supported with all our APIs, SDKs & Libraries where it is required to be. Tap also triggers the w...
-
-### CHANGED: https://developers.tap.company/llms.txt
-
-- Providers: mena-payment-guardian:tap-payments
-- Previous status: OK / hash `d337d529523e15c13cdcd8be3847b671dc60e668f51d580d02273351d3248bc4`
-- Current status: OK / hash `4ef23d011821f1938542fb08957e009eed5d1df9734b5332706515c96b3c4226`
-- Excerpt: # Tap API Docs 1.0 Documentation > Documentation for Tap API Docs 1.0 ## Guides - [Overview](https://developers.tap.company/docs/get-started.md) - [Authentication](https://developers.tap.company/docs/authentication.md): A detailed overview of API integration, workflow, and usage examples for 3D Secure authentication with Tap Payments. - [Recurring Payments](https://developers.tap.company/docs/recurring-payments.md): A Step-by-Step Documentation for Setting Up and Processing Recurring Payments -...
-
-### NEW: https://developers.tap.company/reference/api-actions.md
-
-- Providers: mena-payment-guardian:tap-payments
-- Current status: OK / hash `1369224591c01ff2ef4aadb95702079432a7b340b615113adde1f8100640a313`
-- Excerpt: # API Actions You can perform the following API actions on payments: ## Capture a payment If your transaction is AUTHORIZED using the [Authorize API](https://tappayments.readme.io/reference/create-an-authorize), and you want to CAPTURE it, you can use the [Create a Charge API](https://tappayments.readme.io/reference/create-a-charge) and provide the Authorize ID ## Retrieve the details of a payment If you would like to retrieve the details of a payment at any stage of the payment transaction life...
-
-### CHANGED: https://docs.geidea.net/llms.txt
-
-- Providers: egypt-payment-guardian:egypt-bnpl-methods, egypt-payment-guardian:geidea-egypt, mena-payment-guardian:geidea, mena-payment-guardian:valu-souhoola
-- Previous status: OK / hash `d1ae1de9f8e3f5ff8a6135aed62b61b8c8f049c31935dc0b36258bdc3f0cb06f`
-- Current status: OK / hash `efdd9c270c8feec71f4c89214a7fc2ded01ccb9741474752b541e5955d16dd02`
-- Excerpt: # Geidea Documentation > Documentation for Geidea ## Guides - [Overview](https://docs.geidea.net/docs/overview.md) - [Pre-requisites](https://docs.geidea.net/docs/pre-requisites.md) - [Geidea HPP Checkout](https://docs.geidea.net/docs/geidea-checkout-v2.md) - [Express Checkout (Wallets)](https://docs.geidea.net/docs/express-checkout-wallets.md): Allow customers to pay instantly with Apple Pay, Google Pay, or Samsung Pay \u2014 no card entry required. - [Pay by Link (Egypt & UAE)](https://docs.geidea....
-
-### CHANGED: https://docs.myfatoorah.com/llms.txt
+### CHANGED: https://docs.myfatoorah.com/reference/update-payment
 
 - Providers: mena-payment-guardian:myfatoorah
-- Previous status: OK / hash `78d470dc063f6665ce972854f1289d008f5f64be5d7d49b689cf1f605ee02f9c`
-- Current status: OK / hash `91bc082f258ff9bc9ef85d9ea5e81e70e002234fc05bace7e48f9ae2ca909439`
-- Excerpt: # MyFatoorah API Documentation > MyFatoorah Main API & E-commerce Plugins ## Guides - [Get Started](https://docs.myfatoorah.com/docs/get-started.md): Build your integration and start accepting payments online - [Live Account](https://docs.myfatoorah.com/docs/live-account.md): How to create your account with MyFatoorah? - [Account Information](https://docs.myfatoorah.com/docs/account-information.md) - [Orders Information](https://docs.myfatoorah.com/docs/orders-information.md) - [API Key](https:/...
-
-### CHANGED: https://docs.tabby.ai/api-reference/checkout/create-a-session
-
-- Providers: mena-payment-guardian:tabby
-- Previous status: OK / hash `2f78378f1375d1a9037fa4eeab3b6220215ae3aaf4c804dd2dbd8fb7c2da326d`
-- Current status: OK / hash `d9ed855c456824a6c32f9aa493ecaeff527fbf5ebbd4f0d1e7d09795fbea8ce8`
-- Excerpt: Create a session cURL curl --request POST \ --url https://api.tabby.ai/api/v2/checkout \ --header 'Authorization: Bearer <token>' \ --header 'Content-Type: application/json' \ --data ' { "payment": { "amount": "100", "currency": "AED", "buyer": { "name": "John Doe", "email": "jsmith@example.com", "phone": "500000001", "dob": "2000-01-20" }, "shipping_address": { "city": "Dubai", "address": "Dubai", "zip": "1111" }, "order": { "reference_id": "1001", "items": [ { "title": "Name of the product", "...
-
-### CHANGED: https://docs.tabby.ai/api-reference/payments/retrieve-a-payment
-
-- Providers: mena-payment-guardian:tabby
-- Previous status: OK / hash `63a1f0f463b5658a4502ec33d3d8ff7fe797d28fcb89d8ebbfa8b7f75473da67`
-- Current status: OK / hash `5988b691c9c0c7027fd3be464a38e72d8900718cb036021ff465e9447e8fea15`
-- Excerpt: Retrieve a payment cURL curl --request GET \ --url https://api.tabby.ai/api/v2/payments/{id} \ --header 'Authorization: Bearer <token>' import requests url = "https://api.tabby.ai/api/v2/payments/ {id} " headers = { "Authorization" : "Bearer <token>" } response = requests.get(url, headers =headers) print (response.text) const options = { method: 'GET' , headers: { Authorization: 'Bearer <token>' }}; fetch ( 'https://api.tabby.ai/api/v2/payments/{id}' , options ) . then ( res => res . json ()) ....
+- Previous status: OK / hash `c61770d2badd575105e81f55feb4619b6d52603fabc5a5b57f9ad2688bee7fe5`
+- Current status: OK / hash `7f5ad7a84ef7c602b19b078ea53edef5514eb252a823ee9a26f2f450e4f525b7`
+- Excerpt: Update Payment (Capture or Release) put https://apitest.myfatoorah.com /v3/payments/ {paymentId} Used in the Auth & Capture flow to capture full/partial amount or release the authorized amount back to the customer. Only one Capture or Release operation is allowed for each invoice. Path Params paymentId string required Body Params OperationType string enum required Operation type to execute. Use CAPTURE to capture the authorized amount (fully or partially) or RELEASE to return the full amount to...
 
 ### CHANGED: https://docs.tabby.ai/llms.txt
 
 - Providers: mena-payment-guardian:tabby
-- Previous status: OK / hash `3b58681bc4accb36aa6caa4539e56537218d9ab2f8f673f4eb85955e5438da0c`
-- Current status: OK / hash `1b94cb99213215140c2b5370f82d9aa7612dce2913ffc55d734fea46536f4914`
+- Previous status: OK / hash `1b94cb99213215140c2b5370f82d9aa7612dce2913ffc55d734fea46536f4914`
+- Current status: OK / hash `cc2fd4ea5184475a7783adc995751b276294973e002d38e2e6d7fb2594b6f42c`
 - Excerpt: # Tabby ## Docs - [Create a session](https://docs.tabby.ai/api-reference/checkout/create-a-session.md): Creates a Checkout session. Creates Session and Payment, returns Pre-Scoring result (status), ids of Payment and Session. - [Session creation payload model](https://docs.tabby.ai/api-reference/checkout/session-payload-model.md) - [Approve disputes](https://docs.tabby.ai/api-reference/disputes/approve-disputes.md): Approve disputes (refund money to the customer). Only 20 disputes can be approve...
 
-### CHANGED: https://docs.tamara.co/docs/online-order-status-flow
+### NEW: https://docs.tamara.co/docs/pp-order-mgmt-authorise-order
 
 - Providers: mena-payment-guardian:tamara
-- Previous status: OK / hash `19229a3c6b5fe5a8fc301b58ca4afaf48f6f9152ac36dcc0967080c6a0695abf`
-- Current status: OK / hash `262b656d7c6985d27fd8db898002d145ece7f83299b51acc2e096d830a6c8fc8`
-- Excerpt: Online Order Status Flow To integrate with Tamara and connect your e-commerce platform with our service, it is necessary to fully understand how the flow of our order statuses work and map them to your system\u2019s statuses. \U0001f449 Click on any status in the flow to learn more about it. Online Order Status Flow Online Order Status Description new Customer has initiated the checkout session with Tamara as a payment method. declined Customer was declined to continue the payment with Tamara . expired Custom...
+- Current status: OK / hash `228dbda0244131f4bb8c39c930b2c99361e86adda59c048c065735683d2ec449`
+- Excerpt: Authorise an order Once Tamara verifies the customer's payment and approves the order, it's considered as paid, and you should proceed accordingly by authorising the order at your end. Step 1. Click on the Approved order to be authorised to go into its Order Details, then click on the Authorise button. Step 2. Click on the Authorise Order button to complete the authorisation of the order. \U0001f44d A confirmation message will appear on the screen to indicate that the order has been successfully authoris...
+
+### NEW: https://docs.tamara.co/docs/webhook-subscription
+
+- Providers: mena-payment-guardian:tamara
+- Current status: OK / hash `6e89cdc1ed82bbb6bc133ce0cf6289109b3f137e9854319e9d7c0de803a816d8`
+- Excerpt: Webhook Registration Register your notification webhook URL to recieve real-time events from Tamara. This one-time setup ensures your system is notified whenever a customer payment is processed succesfully. This is an important step in the Tamara online order flow as it ensures that you, as the merchant, successfully receive webhook notifications that confirm the customer payment, and further related events. Register a notification webhook URL (One-time Only) 1. Login to Tamara's Partner Portal...
 
 ### CHANGED: https://docs.tamara.co/llms.txt
 
 - Providers: mena-payment-guardian:tamara
-- Previous status: OK / hash `fe0f899b780c35e00e8933df1458512507aa35d0532c095973a4b315568d9547`
-- Current status: OK / hash `880bafcb87ae7be86834fb0075cf151d40cd7347b9b3c8b0bc0214c1d5e807f4`
+- Previous status: OK / hash `880bafcb87ae7be86834fb0075cf151d40cd7347b9b3c8b0bc0214c1d5e807f4`
+- Current status: OK / hash `0f4d7f65b16cb529eebd4cfd613d8b611c2bf74357d4f674578c8013be034a03`
 - Excerpt: # Tamara Documentation and APIs Hub Documentation > Discover the ultimate toolkit right here, enabling you to seamlessly integrate Tamara's payment solution into your site with detailed guides and an interactive API explorer at your fingertips. ## Guides - [Get to know Tamara](https://docs.tamara.co/docs/introduction-to-tamara.md): Learn more about **Tamara**'s product offerings and how we can help you and your customers! - [Platforms Quick Start](https://docs.tamara.co/docs/platforms-quick-star...
 
-### REMOVED: https://developers.tap.company/docs/authentication
+### NEW: https://docs.tamara.co/reference/authoriseorder
 
-- Providers: mena-payment-guardian:tap-payments
-- Previous status: OK / hash `d431bfe5b9c12b10ad079d1615abc9544f6237405187859776437f56426ee0ef`
+- Providers: mena-payment-guardian:tamara
+- Current status: OK / hash `21f9e7f62c64d6de154ec4213c5444ea56f8e4e3693858c22210717af6ca1e2d`
+- Excerpt: Authorise Order post https://{environment}.tamara.co /orders/ {order_id} /authorise This endpoint plays a crucial role in the online checkout flow and should be executed upon receipt of the approved status webook event from Tamara . Its primary function is to update the order status to authorised ensuring status synchronization and smooth progression of the online order flow. \U0001f44d We now support Auto-authorisation! If this is enabled, then the order status will move from New --> Approved --> Fully...
 
-### REMOVED: https://developers.tap.company/docs/get-started
+### CHANGED: https://docs.tamara.co/reference/captureorder
 
-- Providers: mena-payment-guardian:tap-payments
-- Previous status: OK / hash `fe1c892c3e9e84e9b279ce72098fbce810dfd97c1737c096bf96a5c694af628a`
+- Providers: mena-payment-guardian:tamara
+- Previous status: OK / hash `543bded8eebc37e98306443b6f55e4d4c1bab11576ad0d7f77fb11eeea9159be`
+- Current status: OK / hash `cc37743a7240969dfcf4aa97d200247bcdc4930e2beda219e52720b98b45e5a8`
+- Excerpt: Capture Order post https://{environment}.tamara.co /payments/capture This endpoint is requested to perform a full or partial capture of the order, confirming the fulfillment or shipment of the items to the customer. The order status value will be fully_captured or partially_captured based on the total amount value sent in the request. \U0001f4d8 If an order is not Captured within 21 days from when it is Authorised, Tamara will auto-capture that order and it will be moved to Fully Captured status Body Par...
 
-### REMOVED: https://developers.tap.company/docs/recurring-payments
+### CHANGED: https://docs.tamara.co/reference/getorderdetails
 
-- Providers: mena-payment-guardian:tap-payments
-- Previous status: OK / hash `8aaeec8c5e5e7cdc3fcf2ebcba999ba66c6be5638073bf1aa24a1ff5dee7dd12`
+- Providers: mena-payment-guardian:tamara
+- Previous status: OK / hash `1e20ce887213c7baa818c780e69c4079eea11972b4f28062746411e5f635b6d7`
+- Current status: OK / hash `6e8fe153ba0ad7283b9b59295d4fcb6eb5e5c2f7f347546a9a06314eb9406c9b`
+- Excerpt: Get Order Details by Tamara's order_id get https://{environment}.tamara.co /orders/ {order_id} Fetch all the order details available on Tamara's side using the unique order_id that is issued by Tamara for every order whether online or in-store. Path Params order_id uuid required Defaults to ff776045-513b-4cd7-8b4f-e60673daad84 Unique Tamara order_id from the response of the creation of the checkout session whether online or in-store. Response
 
-### REMOVED: https://developers.tap.company/docs/webhook
+### CHANGED: https://docs.tamara.co/reference/simplifiedrefund
 
-- Providers: mena-payment-guardian:tap-payments
-- Previous status: OK / hash `a3e018ea60989feb69b93151b23b8b7b4fafdbd2d373ad91a590cd14aa9e2fdb`
+- Providers: mena-payment-guardian:tamara
+- Previous status: OK / hash `62cfbda5c0b48006c2e7a17d7973dc4dddebfb9c79f7a39f23f78b0bcd668f03`
+- Current status: OK / hash `696a19714e607046ddec34e7a95ed5e15e0aa0cd5714451d73b14c6977434295`
+- Excerpt: Simplified Refund post https://{environment}.tamara.co /payments/simplified-refund/ {order_id} This API is to be used to process refunds for captured orders. Path Params order_id uuid required Defaults to ff776045-513b-4cd7-8b4f-e60673daad84 Unique Tamara order_id from the response of the creation of the checkout session whether online or in-store. Body Params total_amount object required Total amount to be refunded to consumer, not including any discount amount. comment string required Defaults...
 
-### REMOVED: https://developers.tap.company/reference/api-actions
+### CHANGED: https://hyperpay.docs.oppwa.com/reference/parameters
 
-- Providers: mena-payment-guardian:tap-payments
-- Previous status: OK / hash `4cc236197baafa3170048fec8a8268480da73429fe6e263cc613d5eeee7d5af3`
+- Providers: mena-payment-guardian:hyperpay
+- Previous status: OK / hash `dec0ba1e1a2af1e17721ee26026be54ceb59ead23d4475e7cf57a7074f9bd50c`
+- Current status: OK / hash `f39783fbdd3b97a7043e581f951e06b5e4f6547207cb94a6736044bbfd7b0613`
+- Excerpt: API Reference Introduction This reference section provides you with a complete and in-depth description of the Open Payment Platform API. Hosts Test: https://eu-test.oppwa.com/ Live: https://eu-prod.oppwa.com/ Security / Authentication All requests must be sent over SSL All requests are authenticated against an Authorization Bearer header with an access token. All the other data parameters are sent as body parameters, see Authentication Parameters for more information. Throttling Throttling is t...
+
+### REMOVED: https://docs.tamara.co/docs/transaction-authorisation
+
+- Providers: mena-payment-guardian:tamara
+- Previous status: OK / hash `6e0e8d6795abc45e559d77a4e4d679ddd4d051feaad8ef7797c9b59e44ed8a01`
 
 ## Manual Browser Verification
 

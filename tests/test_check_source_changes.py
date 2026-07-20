@@ -129,6 +129,18 @@ class NormalizeTextTests(unittest.TestCase):
             check_source_changes.normalize_text(second, "text/plain"),
         )
 
+    def test_docs_feedback_footer_chrome_does_not_change_normalized_text(self) -> None:
+        first = (
+            "Capture Order Response Updated 3 days ago "
+            "What\u2019s Next Simplified Refund Did this page help you?"
+        ).encode()
+        second = b"Capture Order Response"
+
+        self.assertEqual(
+            check_source_changes.normalize_text(first, "text/plain"),
+            check_source_changes.normalize_text(second, "text/plain"),
+        )
+
     def test_hyperpay_greetings_nav_chrome_does_not_change_normalized_text(self) -> None:
         first = b"Products Blogs Board of Directors Greetings Contact us Integration Guides"
         second = b"Products Blogs Board of Directors Contact us Integration Guides"

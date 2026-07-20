@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T07:13:30Z",
+  "generated_at": "2026-07-20T07:13:09Z",
   "policy": "Public-safe source watch baseline. Stores hashes, lengths, statuses, timestamps, and short excerpts only. Full provider docs are not committed.",
   "sources": [
     {
@@ -13,7 +13,7 @@
       "sha256": "36a515834b38bcc1eea00d16ffd913ec4a14998bd5e086cf55a64c5e4a14ab4b",
       "content_length": 1812,
       "excerpt": "Card Tokenization Store your client's card information for a more secure and fast checkout experience. Introduction With FawryPay, you can securely store one or more payment details per client. Storing your clients' payment data not only allows you to offer subscription payments, but also gives your clients a faster and more convenient checkout experience by using their stored card. We refer to these saved card details as card tokens and storing a client's card details as card tokenization. Why...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/get-payment-notification",
@@ -26,7 +26,7 @@
       "sha256": "9fb651bd7faeac9236c06fb9ce9fe6a88eebbbb0ab451e795a2bdf41c6060655",
       "content_length": 1925,
       "excerpt": "Stay Updated With Your Transactions Status Whenever a transaction status has been updated, FawryPay will keep you informed. Introduction After a successful issuance of a given payment transaction by one of your clients using any of our payment methods, you will need to be up-to-date with the status of your transaction. FawryPay delivers several solutions to keep our valued merchants informed once the status of their respective transactions has been updated. For our valued merchants\\u2019 convenience,...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/get-payment-status-v2",
@@ -39,7 +39,7 @@
       "sha256": "9112537dfc050d8eb39bd5136524dcfccbbb658c89c4ac91197fe62e73c11827",
       "content_length": 17471,
       "excerpt": "Get Payment Status V2 Pull information about your transactions whenever needed. FawryPay delivers the Get Payment Status API as a responsive API for merchants who wishes to pull the status of their transactions whenever needed. Our valued merchants can use Get Payment Status API to retrieve the payment status for the charge request, using GET method. FawryPay Sample GET Request: A sample GET where you can pull your transaction status updates whenever needed is provided below. HTTP GET Parameters...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developer.fawrystaging.com/docs/card-tokens/payment-notifications/server-notification-v2",
@@ -52,7 +52,7 @@
       "sha256": "90ec9caaf1d7e519d6c58a419a1ba48accc689aa87cf185a6e6554c517725b7c",
       "content_length": 10284,
       "excerpt": "Server To Server Notification V2 Throughout its entire roadmap, Your FawryPay transactions shall experience several status updates. Depending on the specific nature of your core business, the status of your clients\\u2019 transactions can range from created, paid, cancelled, expired, shipped to delivered. Whenever the status of one of your transactions has been altered, FawryPay will send an informative HTTP POST request to your preconfigured endpoint on your own application server with the current de...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developer.fawrystaging.com/docs/introduction",
@@ -65,7 +65,7 @@
       "sha256": "35a3f1c7ba6ce4d388d0fafd4f982eb8b28113f60da997b43230b2e5eb386a69",
       "content_length": 5238,
       "excerpt": "FawryPay Online Payments Start accepting payments on your website and/or mobile apps through Fawry retail network, banking channels, cards, and mobile wallets. Introduction FawryPay is Egypt\\u2019s top online payment processing technology service provider. It provides a collection of comprehensive solutions to fulfill the needs of the diverse range of merchants\\u2019 core businesses, products, and services nature enabling different payment methods. FawryPay enables both front-end and back-end technologies...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developer.fawrystaging.com/docs/server-apis/server-apis-overview",
@@ -78,7 +78,7 @@
       "sha256": "9b164d49c6068d6867e97a734986505ede0e2af1a67e8c808ee4459dab16c064",
       "content_length": 4826,
       "excerpt": "Server to Server APIs The fastest way to build conversion-optimized payment forms, hosted on FawryPay. Introduction If you are looking forward taking control over the look and feel of your checkout page, our set of comprehensive server side APIs are ready for you. With our set of APIs you can: Make payments using Cards. Issue tokens for your clients' Cards so a more secure payments. Receive payments at any of our FawryPay POS retail store. Issue cash on delivery payments. Take full control of ch...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/hmac/hmac-for-card-tokens.md",
@@ -91,7 +91,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/hmac/hmac-transaction-callback.md",
@@ -104,7 +104,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/developers/webhook-callbacks-and-hmac/transaction-callbacks.md",
@@ -117,7 +117,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/getting-started/integration-checklist.md",
@@ -130,7 +130,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/getting-started/overview.md",
@@ -143,7 +143,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/integration-paths/apis.md",
@@ -156,7 +156,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/capture.md",
@@ -169,7 +169,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/refund.md",
@@ -182,7 +182,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/payments-and-features/managing-payments/void.md",
@@ -195,7 +195,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/payments-and-features/payment-methods.md",
@@ -208,7 +208,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.paymob.com/paymob-docs/payments-and-features/payment-methods/bnpls-egy-ksa-uae.md",
@@ -220,7 +220,7 @@
       "sha256": "",
       "content_length": 0,
       "excerpt": "Manual browser verification required.",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.tap.company/docs/authentication.md",
@@ -232,7 +232,7 @@
       "sha256": "8837398db3682a437379d01f371f6d9455e04a2c10b09400ba7c04b60489e915",
       "content_length": 9693,
       "excerpt": "# Authentication A detailed overview of API integration, workflow, and usage examples for 3D Secure authentication with Tap Payments. ## Overview This guide provides a comprehensive resource for implementing 3D Secure (3DS) authentication with Tap Payments, a security protocol that adds an extra layer of authentication to online credit and debit card transactions to reduce fraud and enhance customer trust. It details how Tap Payments handles 3DS authentication, including both internal processing...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.tap.company/docs/get-started.md",
@@ -244,7 +244,7 @@
       "sha256": "2465e9e23b45e2bdd7eeeacd2f0e1cd62ab8a8c166927a4cbecf9fd86922aae6",
       "content_length": 15330,
       "excerpt": "# Overview This page guides you to set up your account with Tap, and start accepting online payments on your website or mobile App. ## 1. Registration You can create your account from here [Get-Started](https://tap.company/) <hr /> ## 2. Get Your API Keys Once registration has been completed, follow the steps below to get your API testing keys: 1. Sign in to [Tap\\u2019s Dashboard](https://os.tap.company/) using your email or phone number 2. Click on Accounts 3. Click on the ID in the **Operators** se...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.tap.company/docs/recurring-payments.md",
@@ -256,7 +256,7 @@
       "sha256": "1c42ed91aca4272ee96a832cf2e2f24ff78ecca937adfe8cd7016387a6a095c8",
       "content_length": 7306,
       "excerpt": "# Recurring Payments A Step-by-Step Documentation for Setting Up and Processing Recurring Payments Recurring payments allow merchants to charge customers on a regular basis, such as for subscriptions or installment plans. This guide provides a detailed guide on setting up and processing recurring payments using Tap APIs. Please note that this guide assumes you have already familiarized yourself with the API reference documentation for Tap Payments, specifically the [Charges](charges) API and [Au...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.tap.company/docs/webhook.md",
@@ -268,7 +268,7 @@
       "sha256": "8c8970d47a6e41c2aa646833a442d5b3c3e3c4ee7e250f3e6170260af36e6394",
       "content_length": 16371,
       "excerpt": "# Webhook Tap ensures secure and realtime webhooks for payment events, and to send the post payment details. Payments webhook is a server-to-server call(also known as IPN \"Instant Payment Notification\"), that allows merchants to receive the post-payment details to automate and synchronize their internal ERPs by checking the actual payment status and other technical details, as per requirements. It's supported with all our APIs, SDKs & Libraries where it is required to be. Tap also triggers the w...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.tap.company/llms.txt",
@@ -280,7 +280,7 @@
       "sha256": "4ef23d011821f1938542fb08957e009eed5d1df9734b5332706515c96b3c4226",
       "content_length": 17993,
       "excerpt": "# Tap API Docs 1.0 Documentation > Documentation for Tap API Docs 1.0 ## Guides - [Overview](https://developers.tap.company/docs/get-started.md) - [Authentication](https://developers.tap.company/docs/authentication.md): A detailed overview of API integration, workflow, and usage examples for 3D Secure authentication with Tap Payments. - [Recurring Payments](https://developers.tap.company/docs/recurring-payments.md): A Step-by-Step Documentation for Setting Up and Processing Recurring Payments -...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://developers.tap.company/reference/api-actions.md",
@@ -292,7 +292,7 @@
       "sha256": "1369224591c01ff2ef4aadb95702079432a7b340b615113adde1f8100640a313",
       "content_length": 1464,
       "excerpt": "# API Actions You can perform the following API actions on payments: ## Capture a payment If your transaction is AUTHORIZED using the [Authorize API](https://tappayments.readme.io/reference/create-an-authorize), and you want to CAPTURE it, you can use the [Create a Charge API](https://tappayments.readme.io/reference/create-a-charge) and provide the Authorize ID ## Retrieve the details of a payment If you would like to retrieve the details of a payment at any stage of the payment transaction life...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.geidea.net/",
@@ -305,7 +305,7 @@
       "sha256": "0f991862a4e4c890ef394b946097877641204339aaeb904645f635e822aabd95",
       "content_length": 5543,
       "excerpt": "Overview Geidea is one of the leading financial technology companies in the MENA region, providing innovative payment solutions and digital financial services. Established in Saudi Arabia and now operating across several countries, Geidea focuses on enabling businesses of all sizes\\u2014from small merchants to large enterprises\\u2014to accept and manage payments seamlessly. The company\\u2019s mission is to make financial technology accessible, affordable, and easy to use, supporting merchants with reliable inf...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.geidea.net/docs/buy-now-pay-later-bnpl",
@@ -318,7 +318,7 @@
       "sha256": "0f4f0f33cf754a37233ffb27d2cac1b9c30312c44e92055ac265246801aa0eb5",
       "content_length": 2906,
       "excerpt": "Buy Now Pay Later (BNPL) What is BNPL? Buy Now Pay Later (BNPL) has emerged as one of the most popular payment methods worldwide recently. One of the main reasons is that it allows customers to buy goods immediately and pay for them later, over time, without paying the full amount upfront. It is used by a wide variety of businesses, especially e-commerce retailers, to increase conversions, boost average order value, and reach new customers. The most commonly used Buy Now Pay Later service is 'In...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.geidea.net/docs/cancel-order-1",
@@ -331,7 +331,7 @@
       "sha256": "feaa4af336a731a0a2953749578bb5018322ab78cc6c4bd361938b9bf722a05e",
       "content_length": 2779,
       "excerpt": "Cancel Order Cancel on order for which payment has been initiated You can use the Cancel Order API to initiate a request to cancel an order that has been initiated. \\U0001f6a7 You can cancel an order only if you have executed the Cancel Order API call either after the Initiate Authentication API call or the Authenticate Payer API call. Trying the execute the Cancel Order API call after the Pay API call will not cancel the order. This attempt returns a response with the message \" Order is already complete...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.geidea.net/docs/geidea-checkout-v2",
@@ -344,7 +344,7 @@
       "sha256": "ab111e0dd5c71ddd1019168c947b1f0f58bd59b529463f383efb51563fd98e60",
       "content_length": 25659,
       "excerpt": "Geidea HPP Checkout Overview Our Checkout offering is a pre-built payment UI that offers the quickest way to integrate and start securely accepting payments. It allows you to accept popular payment methods through a single web front-end implementation. Geidea Checkout supports both one-time payments and subscriptions for your customers - through a quick, easy and low-code integration into your website's checkout flow. It is very user-friendly and customizable. Additional payment methods can be e...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.geidea.net/docs/overview-1",
@@ -357,7 +357,7 @@
       "sha256": "f81df134e67361380ceee981d42eaabb9d813cb766d651cf5ee638d8b2927141",
       "content_length": 794,
       "excerpt": "Transaction and Order Management You can use the following capabilities to manage your orders and payments after they have occurred. # Capability Description 1 Cancel Order Cancel an Order 2 Refund Payment Refund a payment 3 Void Transaction This operation is available only on the Geidea platform in Saudi Arabia now. Based on the merchant's requirements, we will enable them on a case-by-case basis for the merchant. For details on integration, please get in touch with our support team via our sup...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.geidea.net/docs/pay-by-link-apis",
@@ -370,7 +370,7 @@
       "sha256": "f86c28842104c9262f09a14695332d148cb097b530d2599b213674db1da305cb",
       "content_length": 31986,
       "excerpt": "Pay by Link - APIs You can use our Pay by Link APIs to create your custom flows to personalize the digital journey of your customers. Advantages of Geidea's Pay by Link APIs Advantage Description Personalization The APIs empower you to tailor the digital user experience and equip you with robust tools for monitoring payment links. Control Take full command of the payment process using our Pay by Link APIs. They offer a multitude of capabilities, including configuring accepted payment methods, cu...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.geidea.net/docs/pay-v2",
@@ -383,7 +383,7 @@
       "sha256": "7fbab9f49196c070b0c1ad7f9d2aea58bffff0b0303fe9aa5937ba2c77891796",
       "content_length": 15600,
       "excerpt": "Pay Complete the payment using the Pay API You can complete the payment using the Pay API Call the Pay operation as soon as you have executed the authentication operations successfully through the Initiate Authentication and Authenticate Payer API calls. You must use the same parameter values used in the authentication operations or any mismatch between parameters will result in an error. To carry out this operation, you will need the following details from other API calls: Parameter Datatype De...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.geidea.net/docs/refund-2",
@@ -396,7 +396,7 @@
       "sha256": "9a02354c5c5d44b920921756871d0b6535dfde06f82840bb6ce21dc9f47c4464",
       "content_length": 14348,
       "excerpt": "Refund Overview When a customer buys an item and wants to return it, then you can easily refund their payment. You can use the Geidea merchant portal or our Refund API to refund money to your customers either fully or partially. \\U0001f6a7 You can refund a payment only for payments that have been completed i.e. the Pay API has been executed successfully or the Authorise and Capture APIs have been executed successfully. \\U0001f44d You can refund a transaction for the full amount or a partial amount. You can refund...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.geidea.net/docs/sample-callback-responses",
@@ -409,7 +409,7 @@
       "sha256": "704961a57475165c641ee2c292b61cccf0c2c740a6b02edfb90fe9978ec4bde1",
       "content_length": 3858,
       "excerpt": "Webhook/Callback Notifications A callback URL, also known as a webhook or notification URL, is a URL (Uniform Resource Locator) which can be used by you when you integrate with our payment gateway to receive real-time notifications and data regarding payment transactions. Callback URLs are an essential component of online payment processing, and they serve several important purposes like: 1 : Transaction Status Updates: When a customer makes a payment through our payment gateway, the transaction...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.geidea.net/docs/souhoola",
@@ -422,7 +422,7 @@
       "sha256": "4a2c6bb0cf8840f2112a479a9671228ecd108f46765bb0ca751c9ebe2c76eaf4",
       "content_length": 2404,
       "excerpt": "Souhoola [Egypt] Souhoola is an Egyptian Buy Now, Pay Later (BNPL) provider that offers customers a convenient way to pay for their purchases through monthly installment plans. As a merchant, you benefit from receiving the full payment upfront as soon as the transaction is processed, while your customers enjoy the flexibility of spreading their payments over time. With Souhoola, customers can enjoy a quick and remote credit approval process, allowing them to obtain their credit limit instantly....",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.geidea.net/docs/valu",
@@ -435,7 +435,7 @@
       "sha256": "44136eff769fe55107f41b595c19433a96233fadd1d4579e37fc19a0bb77ce62",
       "content_length": 2195,
       "excerpt": "ValU [Egypt] ValU offers Egyptian customers a way to pay for purchases through a specific monthly installment plan over time. As a merchant, you have the advantage of receiving the full payment upfront as soon as the transaction is processed. Established in 2017, ValU is the leading Buy-Now Pay-Later (BNPL) Fintech platform, providing convenient and customizable financing plans in the MENA region. ValU offers customers an ultra-fast approval process, allowing them to buy what they want now and p...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.geidea.net/docs/void-1",
@@ -448,7 +448,7 @@
       "sha256": "330c1cc745bdc552ba695cf2c487af3b283ec00aa2771bcbd908ee4c811a396a",
       "content_length": 1182,
       "excerpt": "Void Overview If you authorised a payment, but do not want to capture it, say because you found the inventory for the product was accidentally damaged and it suddenly becomes out of stock, you have the option to void the payment. \\U0001f4d8 Void means that the uncaptured/unpaid/unsettled transaction is cancelled from the merchant side. You can use the Void operation for pre-authorized and uncaptured transactions, while refunds can be initiated only for captured or paid or settled transactions. Using the...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.geidea.net/llms.txt",
@@ -463,7 +463,7 @@
       "sha256": "efdd9c270c8feec71f4c89214a7fc2ded01ccb9741474752b541e5955d16dd02",
       "content_length": 8771,
       "excerpt": "# Geidea Documentation > Documentation for Geidea ## Guides - [Overview](https://docs.geidea.net/docs/overview.md) - [Pre-requisites](https://docs.geidea.net/docs/pre-requisites.md) - [Geidea HPP Checkout](https://docs.geidea.net/docs/geidea-checkout-v2.md) - [Express Checkout (Wallets)](https://docs.geidea.net/docs/express-checkout-wallets.md): Allow customers to pay instantly with Apple Pay, Google Pay, or Samsung Pay \\u2014 no card entry required. - [Pay by Link (Egypt & UAE)](https://docs.geidea....",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.geidea.net/reference/capture-transaction-1",
@@ -473,10 +473,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "0e70ab8ebb34fa568705dd26a3fe03083d855bee15dc708a584691213880be33",
-      "content_length": 588,
+      "sha256": "620bf22c9d3587b23d7381c044450c127f7acb6f86fd800e77b8dd7632d10ff8",
+      "content_length": 561,
       "excerpt": "Capture Transaction post https://api.ksamerchant.geidea.net /pgw/api/v1/direct/capture Body Params orderId string required Unique ID for the order. callbackUrl string The URL of your callback server to receive useful information for keeping track of your inventory, records, etc. The URL may have protocol (http/https), subdomain (optional), domain name and path (optional) captureAmount float Amount for which capture is requested. Amount must be greater than 0.01. Won't be allowed to capture more...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.moyasar.com/",
@@ -488,7 +488,7 @@
       "sha256": "25e1f69749756ad85d954918b589d6e725fc27a646411d1f14ee09d8f6228325",
       "content_length": 2125,
       "excerpt": "Moyasar Docs Welcome to Moyasar Developer Documentation! We will guide you through the process of integration and providing payments within your web or mobile application. Follow these steps to get started. info Click here if you would like an overview of the Developer Docs tree structure. Create An Account \\u200b If you haven't created an account yet, please do so by visiting the sign up page then continue with the next step Sign Up Here . tip Moyasar offers a free account for you to try the service...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.moyasar.com/api/authentication/",
@@ -500,7 +500,7 @@
       "sha256": "1aee05b2a71b7fbb5912b025bafb2502486551eb292ca732f18cfc0639ec5152",
       "content_length": 4574,
       "excerpt": "Authentication Authentication Introduction \\u200b Moyasar's API uses API Keys to authenticate requests. You can view and manage your API keys in the Moyasar Dashboard. Publishable Key \\u200b Sending cardholder data to the merchant backend is prohibited and will result in canceling the agreement between Moyasar and the merchant in addition to the immediate termination of the service. To address this issue, Moyasar has implemented a publishable API key, enabling merchants to initiate payments directly from...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.moyasar.com/api/card_auths/01-create-card-auth",
@@ -512,7 +512,7 @@
       "sha256": "ad29a3fdfd6054ec1096190ba1b764c4e0c512dd4e0486463abf05e00ce3dbb4",
       "content_length": 6007,
       "excerpt": "Card Authentication API Create Card Authentication Create Card Authentication POST /card_auths Start a standalone 3D Secure authentication for a card, without charging it. Standalone 3D Secure is enabled only for selected merchants. When the authentication is created, its status will be one of: available \\u2014 a challenge is required; redirect the cardholder to transaction_url . failed \\u2014 the card is not enrolled or enrollment failed. Once the cardholder completes the in-browser flow, the status beco...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.moyasar.com/api/card_auths/02-fetch-card-auth",
@@ -524,7 +524,7 @@
       "sha256": "2f1ae2c5960a7c81ffb769025a32ecb6a63128a8ac66038ae98d13a5218de0ae",
       "content_length": 4749,
       "excerpt": "Card Authentication API Fetch Card Authentication Fetch Card Authentication GET /card_auths/:id Retrieve a card authentication and its result once the cardholder has finished. The result object is returned only with secret key authentication. A publishable key may fetch the authentication for 15 minutes after creation \\u2014 for example to check the status after the cardholder is redirected back \\u2014 but result is always null on those responses. Request \\u200b Path Parameters id uuid required ID of the card...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.moyasar.com/api/other/webhooks/webhook-reference",
@@ -536,7 +536,7 @@
       "sha256": "81131a2dfadbcf71eba33cd240a626b52c017a1b572d4d66c1c719bf7188a23d",
       "content_length": 4361,
       "excerpt": "Other APIs Webhooks Webhook Reference Webhook Reference Introduction \\u200b With Moyasar's webhooks, you can stay in the know about payment events in real time. Set up webhooks by specifying a notification URL. Choose the specific events you want to be alerted about, such as successful payments or refunds. Then, handle these events in your application to stay updated on payment activity. It's that easy! Payment Events \\u200b Payment events provide valuable information about the status and progress of your...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.moyasar.com/category/payments-api/",
@@ -548,7 +548,7 @@
       "sha256": "543ccdfd8cd3aaf2461c0b9679812a12c04e7cab7c3b851ca27dd4263af7c02a",
       "content_length": 78,
       "excerpt": "\\U0001f4c4\\ufe0f Create Payment Start a new Card, Apple Pay, Samsung Pay or STC Pay payment.",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.moyasar.com/guides/3d-secure/standalone-authentication",
@@ -560,7 +560,7 @@
       "sha256": "8e13e05f1b7b2eda90fb4a13a1a834e9665e25d8da01a91e383df203dd476bc4",
       "content_length": 3661,
       "excerpt": "3D Secure Standalone Authentication Standalone Authentication A standalone authentication ( card_auth ) is a 3D Secure authentication on its own \\u2014 it has an amount, a currency, and a card, but it does not charge anything. Use it to authenticate now and charge later, or to authenticate on Moyasar and authorize elsewhere. Full request/response details are in the Card Authentication API reference; this page walks through the flow. note Standalone 3D Secure is enabled only for selected merchants. 1....",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.moyasar.com/guides/dashboard/setting-up-webhooks/",
@@ -572,7 +572,7 @@
       "sha256": "0a70a2954f3bfb426c5227aaf2ee50397a7cfa9337eb9b00590f336b3a4c00ca",
       "content_length": 1736,
       "excerpt": "Dashboard Configure Webhooks Configure Webhooks This guide will go through how to setup and manage webhooks on your Moyasar account. Getting Started \\u200b Go to https://dashboard.moyasar.com/ Log in to your account. Click on the Settings tab. Go to the Webhooks tab Webhooks \\u200b Add Webhook \\u200b To get started, click on add webhook Required Fields \\u200b Term Description Endpoint a URL on your server that will receive the notification (must be HTTPS) Secret Token is a password you need to validate on your serv...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.moyasar.com/guides/payment-operations/",
@@ -584,7 +584,7 @@
       "sha256": "a8ba8b54d230877cde580b7abd5fa074d0940ead889f8924e68ed99727c48617",
       "content_length": 5487,
       "excerpt": "Payment Operations Payment Flows Moyasar supports two payment flows: 1. Purchase (default) \\u200b Authorizes and captures in one step. The card is charged immediately and the payment status is paid . 2. Authorization \\u200b Only places a hold on the card without capturing the funds. You then decide whether to capture (charge) or void (release) the held amount. Authorization \\u200b To authorize a payment without charging, set manual to true in the source when creating the payment. Endpoint: POST /v1/payments Au...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.myfatoorah.com/docs/execute-payment",
@@ -596,7 +596,7 @@
       "sha256": "dca315434db6474c55afd07a7697897dbc6d31047a4db7eed1bfaa527663e9e1",
       "content_length": 9106,
       "excerpt": "ExecutePayment Endpoint Overview The \"ExecutePayment\" endpoint is a POST request. It is used to create a MyFatoorah invoice against a certain gateway. Detailed functionality of how to create an invoice is explained in the Gateway Integration section. The endpoint on Swagger is: Payment_ExecutePayment . Now, we are going to declare the endpoint and its models along with each accepted parameter and possible value. \\U0001f4d8 Request Header Add \"Authorization\": \"Bearer {Token}\" to request header. Token of d...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.myfatoorah.com/docs/get-payment-details",
@@ -608,7 +608,7 @@
       "sha256": "66363f671714023ef4e2fc2d081434bd3aac5f746982f00f7061bcba8e677851",
       "content_length": 3438,
       "excerpt": "Get Payment Details Overview Use this endpoint to retrieve the status and detailed information of a specific payment. When a payment is processed through MyFatoorah, the PaymentId is returned as a parameter in the Redirection URL . This PaymentId should then be used to inquire about the payment details and confirm whether the payment was successful or not. \\U0001f44d Good Practice As a good practice, to ensure the payment response is returned from the MyFatoorah end, we encourage you to call GET /v3/paym...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.myfatoorah.com/docs/get-started",
@@ -620,7 +620,7 @@
       "sha256": "356f2e31af780b0037da71d62b9eb6ab99441b0322679bc82229afc69a64c694",
       "content_length": 2150,
       "excerpt": "Get Started Build your integration and start accepting payments online Introduction In this section of the documentation, we will explain the different types of integration with MyFatoorah. This guide helps developers to get a better understanding of the exact technical endpoints and functions needed. It will serve the business accordingly and save development time and efforts to project the required business needs on the desired API and integration. Integration Methods Embedded Payment (Recomme...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.myfatoorah.com/docs/v3-auth-capture",
@@ -632,7 +632,7 @@
       "sha256": "452b03c8a70e2711aa3b8f972f92d115b0a1ea2acd315d6a929ab94af35f5771",
       "content_length": 8061,
       "excerpt": "Authorize & Capture Capturing/Releasing Amounts Introduction When a payment is made using a gateway that supports Authorization & Capture , you have the ability to capture (either partially or fully) the amount of the authorized payment or release it back to the customer. Once the invoice is paid, it will appear in your MyFatoorah Portal and in the response of GET /v3/payments with the status \"AUTHORIZE\" . You can perform Capture or Release operations using the PUT /v3/payments/{paymentId} endpo...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.myfatoorah.com/docs/v3-updating-payment-status-guidelines",
@@ -644,7 +644,7 @@
       "sha256": "bcb4bcf5d44abd36c7e8638ea7c53773455aba5abf16a7cd75b1eaaf9255ab94",
       "content_length": 4615,
       "excerpt": "Updating Payment Status Guidelines Overview In this section, we will cover the paths available to update the order status on your system after the customer makes the payment on the MyFatoorah system. We are covering the: Redirection to RedirectionUrl Transactions Webhook Handling both the webhook and the redirection together RedirectionUrl: After the customer makes a payment, MyFatoorah redirects the customer to the provided redirection URL, appending the PaymentId to the URL. Steps: Call the (...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.myfatoorah.com/docs/webhook-v2",
@@ -656,7 +656,7 @@
       "sha256": "c4adeae66f623079ab42e864d0cf080de22ad54d807421fda9a9bfd72e8cb492",
       "content_length": 4243,
       "excerpt": "Webhook V2 Introduction In Webhook v2, we have restructured the webhook event format and enriched its content for each event type. Compared to Webhook v1, it now provides more detailed information. Additionally, the webhook structure has been redesigned to follow an object-based format. With Webhook v2, you can configure a retry count for events that your server fails to receive and specify the delay between each retry. The maximum number of retries is 5 , and the maximum delay is 180 seconds ....",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.myfatoorah.com/llms.txt",
@@ -668,7 +668,7 @@
       "sha256": "91bc082f258ff9bc9ef85d9ea5e81e70e002234fc05bace7e48f9ae2ca909439",
       "content_length": 19975,
       "excerpt": "# MyFatoorah API Documentation > MyFatoorah Main API & E-commerce Plugins ## Guides - [Get Started](https://docs.myfatoorah.com/docs/get-started.md): Build your integration and start accepting payments online - [Live Account](https://docs.myfatoorah.com/docs/live-account.md): How to create your account with MyFatoorah? - [Account Information](https://docs.myfatoorah.com/docs/account-information.md) - [Orders Information](https://docs.myfatoorah.com/docs/orders-information.md) - [API Key](https:/...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.myfatoorah.com/reference/update-payment",
@@ -677,10 +677,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "c61770d2badd575105e81f55feb4619b6d52603fabc5a5b57f9ad2688bee7fe5",
-      "content_length": 656,
+      "sha256": "7f5ad7a84ef7c602b19b078ea53edef5514eb252a823ee9a26f2f450e4f525b7",
+      "content_length": 629,
       "excerpt": "Update Payment (Capture or Release) put https://apitest.myfatoorah.com /v3/payments/ {paymentId} Used in the Auth & Capture flow to capture full/partial amount or release the authorized amount back to the customer. Only one Capture or Release operation is allowed for each invoice. Path Params paymentId string required Body Params OperationType string enum required Operation type to execute. Use CAPTURE to capture the authorized amount (fully or partially) or RELEASE to return the full amount to...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.paytabs.com/",
@@ -692,7 +692,7 @@
       "sha256": "570d06f7cfe9c9152c7f047a5dde9605903baf8dd696d9698f7b8627747b88e8",
       "content_length": 4147,
       "excerpt": "PayTabs Technical Portal Integrate your system through our Empowering your payments journey with seamless integration, comprehensive support, and innovative solutions tailored to your business needs for a smooth and efficient experience. Scroll Down Seamless Integration with Top Platforms Find your best case Build, launch and get paid. Enable your platform with flexible payment solutions for every business model. Find Your Use Case Meet Our AI Assistant! Our AI chatbot is ready to assist you 24/...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tabby.ai/api-reference/checkout/create-a-session",
@@ -704,7 +704,7 @@
       "sha256": "d9ed855c456824a6c32f9aa493ecaeff527fbf5ebbd4f0d1e7d09795fbea8ce8",
       "content_length": 54063,
       "excerpt": "Create a session cURL curl --request POST \\ --url https://api.tabby.ai/api/v2/checkout \\ --header 'Authorization: Bearer <token>' \\ --header 'Content-Type: application/json' \\ --data ' { \"payment\": { \"amount\": \"100\", \"currency\": \"AED\", \"buyer\": { \"name\": \"John Doe\", \"email\": \"jsmith@example.com\", \"phone\": \"500000001\", \"dob\": \"2000-01-20\" }, \"shipping_address\": { \"city\": \"Dubai\", \"address\": \"Dubai\", \"zip\": \"1111\" }, \"order\": { \"reference_id\": \"1001\", \"items\": [ { \"title\": \"Name of the product\", \"...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tabby.ai/api-reference/payments/retrieve-a-payment",
@@ -716,7 +716,7 @@
       "sha256": "5988b691c9c0c7027fd3be464a38e72d8900718cb036021ff465e9447e8fea15",
       "content_length": 15788,
       "excerpt": "Retrieve a payment cURL curl --request GET \\ --url https://api.tabby.ai/api/v2/payments/{id} \\ --header 'Authorization: Bearer <token>' import requests url = \"https://api.tabby.ai/api/v2/payments/ {id} \" headers = { \"Authorization\" : \"Bearer <token>\" } response = requests.get(url, headers =headers) print (response.text) const options = { method: 'GET' , headers: { Authorization: 'Bearer <token>' }}; fetch ( 'https://api.tabby.ai/api/v2/payments/{id}' , options ) . then ( res => res . json ()) ....",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tabby.ai/introduction/what-is-tabby",
@@ -728,7 +728,7 @@
       "sha256": "f6e10623dc103eca94637dfe6e260b0b444c1752811897113be34c4f00ed78b7",
       "content_length": 693,
       "excerpt": "Introduction What is Tabby? Tabby is MENA\\u2019s biggest Buy Now Pay Later, operating in KSA, UAE and Kuwait. Tabby lets merchants grow their business by offering their shoppers flexible payments, and is constantly growing its product offering. Pay in Installments - Split your purchase into several payments Online - easily through nearly any e-commerce platform In-Store - with the Tabby Card, through paylinks or with a QR code Pay next month - Pay for groceries, food, rides at the end of the month Wa...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tabby.ai/llms.txt",
@@ -737,10 +737,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "1b94cb99213215140c2b5370f82d9aa7612dce2913ffc55d734fea46536f4914",
-      "content_length": 9551,
+      "sha256": "cc2fd4ea5184475a7783adc995751b276294973e002d38e2e6d7fb2594b6f42c",
+      "content_length": 10596,
       "excerpt": "# Tabby ## Docs - [Create a session](https://docs.tabby.ai/api-reference/checkout/create-a-session.md): Creates a Checkout session. Creates Session and Payment, returns Pre-Scoring result (status), ids of Payment and Session. - [Session creation payload model](https://docs.tabby.ai/api-reference/checkout/session-payload-model.md) - [Approve disputes](https://docs.tabby.ai/api-reference/disputes/approve-disputes.md): Approve disputes (refund money to the customer). Only 20 disputes can be approve...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tabby.ai/pay-in-4-custom-integration/checkout-flow",
@@ -752,7 +752,7 @@
       "sha256": "a031e7c276e61751f3f56617d1072b7d7cbd997807d75daed5b2bcb1f37bf702",
       "content_length": 8578,
       "excerpt": "On this page Tabby on Checkout Recommended: Checkout Snippet Alternative: Payment Method Description Background Pre-scoring Check Quick Implementation Response handling Possible rejection_reason values Best Practices Eligibility Check vs Session Creation Checkout Session Initiation Example of a minimal payload for eligibility check Response and Validation At Tabby Hosted Payment Page Redirection to the Store Handling redirects Approved messages for redirects Allowed characters in redirect URLs (...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tabby.ai/pay-in-4-custom-integration/dispute-webhooks",
@@ -764,7 +764,7 @@
       "sha256": "254e51a820155c59285040245a0c7acb0db6a1fdb57a31e6633384ea8956dbc3",
       "content_length": 2826,
       "excerpt": "On this page Payload Dispute statuses Delivery Webhooks Dispute webhooks Get notified when a dispute is opened on your payment and when its status changes: payload, statuses, and delivery. Dispute webhooks notify your endpoint about disputes raised on your payments \\u2014 when a customer opens a dispute, when you challenge it, and when it is resolved. This lets you react to disputes without polling the Disputes API . Dispute webhooks cannot be managed through the API . Unlike payment webhooks , they...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tabby.ai/pay-in-4-custom-integration/payment-processing",
@@ -776,7 +776,7 @@
       "sha256": "e592e1d4b5669703f135ffb4a1c217184221b690632cd1c1fc41593ae3a9fe65",
       "content_length": 5591,
       "excerpt": "On this page Payment Verification Don\\u2019t Miss Authorized Payments Session Expiration Payment Capture Missing Captures Payment Refund Refunds Troubleshooting Idempotent Requests Online Custom Integration Payment Processing What to do after the customer completes the Tabby checkout: verify the payment, capture it, and process refunds when needed. Once the customer completes the Tabby checkout, three server-side steps remain: 1 2 3 \\u200b Payment Verification Never rely on the redirect alone \\u2014 always ver...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tabby.ai/pay-in-4-custom-integration/payment-statuses",
@@ -788,7 +788,7 @@
       "sha256": "2426c26c0ec31d9b7d11a9a8c7a08c50589260708c3ef4453f720f271cbda9b0",
       "content_length": 4138,
       "excerpt": "On this page Payment Lifecycle Merchant Dashboard Statuses Lifecycle in Detail Statuses in API Responses vs Webhooks Online Custom Integration Payment Statuses How a Tabby payment moves through its lifecycle, and how API statuses map to what you see on Merchant Dashboard. \\u200b Payment Lifecycle The status field of a payment ( GET /api/v2/payments/{id} ) has five possible values: CREATED , AUTHORIZED , CLOSED , REJECTED , and EXPIRED . Two statuses allow repeated actions without changing: a partial...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tabby.ai/pay-in-4-custom-integration/webhooks",
@@ -800,7 +800,7 @@
       "sha256": "b13d03db19b694e363b3011db0ad66ad4d405e03632cade5c997a03670e515ef",
       "content_length": 5045,
       "excerpt": "On this page How They Work Payload Supported Events A Typical Payment Best Practices Retry Attempts Webhooks Payment webhooks Get notified about payment status changes: registration, payload, supported events, delivery order, and retries. Tabby Webhooks are HTTPS callbacks that notify you about payment-related and token-related events. You register a URL once, and Tabby sends a POST request to it whenever an event related to your account occurs \\u2014 even when the customer never returns to your site...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tamara.co/",
@@ -812,7 +812,7 @@
       "sha256": "5fa6f7fa5acded8571b4f11be195c777119a0cd0c7be5c6bfc9a08b74d41dd4b",
       "content_length": 1264,
       "excerpt": "Explore our comprehensive library Integrations Platform Integrations Tamara works with all major eCommerce platforms to make integration effortless. Direct Integrations Explore direct integration options with Tamara\\u2019s API to provide customers with a smooth checkout experience. In-Store Checkout Enhance your in-store payment experience with our versatile integrations. Testing Guide Your key to seamless test transactions - our testing guide. Widgets Enhance your e-commerce site with Tamara\\u2019s widge...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tamara.co/docs/direct-online-checkout",
@@ -824,7 +824,7 @@
       "sha256": "f90a47a4de92c148b15fa16004f8d585b114104a3942705eb48bab79437a8a74",
       "content_length": 5801,
       "excerpt": "Online Checkout \\U0001f6a7 This page is a high-level explanation only. Consult the API References for further details on how to use our APIs properly. The Tamara online payment journey will always start with a customer adding items to their cart and heading to the checkout page to choose Tamara as the payment method to use. Step 1. Create Checkout Session API Customer now sees Tamara as an available payment method on your store, and proceeds to choose it to checkout with. When a customer decides to pay u...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tamara.co/docs/online-order-status-flow",
@@ -836,19 +836,31 @@
       "sha256": "262b656d7c6985d27fd8db898002d145ece7f83299b51acc2e096d830a6c8fc8",
       "content_length": 2430,
       "excerpt": "Online Order Status Flow To integrate with Tamara and connect your e-commerce platform with our service, it is necessary to fully understand how the flow of our order statuses work and map them to your system\\u2019s statuses. \\U0001f449 Click on any status in the flow to learn more about it. Online Order Status Flow Online Order Status Description new Customer has initiated the checkout session with Tamara as a payment method. declined Customer was declined to continue the payment with Tamara . expired Custom...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
-      "url": "https://docs.tamara.co/docs/transaction-authorisation",
+      "url": "https://docs.tamara.co/docs/pp-order-mgmt-authorise-order",
       "provider_ids": [
         "mena-payment-guardian:tamara"
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "6e0e8d6795abc45e559d77a4e4d679ddd4d051feaad8ef7797c9b59e44ed8a01",
-      "content_length": 4679,
-      "excerpt": "Webhook Registration & Order Authorisation One of the most important steps merchants must do to complete online checkout integration is the Order Authorisation. This is an important step in the Tamara online order flow as it ensures that you, as the merchant, successfully acknowledge receiving the approved order status notification from Tamara . Register a notification webhook URL (One-time Only) 1. Login to Tamara's Partner Portal 2. Go to Settings --> General Settings --> Webhooks Click on Add...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "sha256": "228dbda0244131f4bb8c39c930b2c99361e86adda59c048c065735683d2ec449",
+      "content_length": 561,
+      "excerpt": "Authorise an order Once Tamara verifies the customer's payment and approves the order, it's considered as paid, and you should proceed accordingly by authorising the order at your end. Step 1. Click on the Approved order to be authorised to go into its Order Details, then click on the Authorise button. Step 2. Click on the Authorise Order button to complete the authorisation of the order. \\U0001f44d A confirmation message will appear on the screen to indicate that the order has been successfully authoris...",
+      "last_checked": "2026-07-20T07:11:58Z"
+    },
+    {
+      "url": "https://docs.tamara.co/docs/webhook-subscription",
+      "provider_ids": [
+        "mena-payment-guardian:tamara"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "6e89cdc1ed82bbb6bc133ce0cf6289109b3f137e9854319e9d7c0de803a816d8",
+      "content_length": 4070,
+      "excerpt": "Webhook Registration Register your notification webhook URL to recieve real-time events from Tamara. This one-time setup ensures your system is notified whenever a customer payment is processed succesfully. This is an important step in the Tamara online order flow as it ensures that you, as the merchant, successfully receive webhook notifications that confirm the customer payment, and further related events. Register a notification webhook URL (One-time Only) 1. Login to Tamara's Partner Portal...",
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tamara.co/llms.txt",
@@ -857,10 +869,22 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "880bafcb87ae7be86834fb0075cf151d40cd7347b9b3c8b0bc0214c1d5e807f4",
-      "content_length": 17134,
+      "sha256": "0f4d7f65b16cb529eebd4cfd613d8b611c2bf74357d4f674578c8013be034a03",
+      "content_length": 17362,
       "excerpt": "# Tamara Documentation and APIs Hub Documentation > Discover the ultimate toolkit right here, enabling you to seamlessly integrate Tamara's payment solution into your site with detailed guides and an interactive API explorer at your fingertips. ## Guides - [Get to know Tamara](https://docs.tamara.co/docs/introduction-to-tamara.md): Learn more about **Tamara**'s product offerings and how we can help you and your customers! - [Platforms Quick Start](https://docs.tamara.co/docs/platforms-quick-star...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
+    },
+    {
+      "url": "https://docs.tamara.co/reference/authoriseorder",
+      "provider_ids": [
+        "mena-payment-guardian:tamara"
+      ],
+      "status": "OK",
+      "http_status": 200,
+      "sha256": "21f9e7f62c64d6de154ec4213c5444ea56f8e4e3693858c22210717af6ca1e2d",
+      "content_length": 928,
+      "excerpt": "Authorise Order post https://{environment}.tamara.co /orders/ {order_id} /authorise This endpoint plays a crucial role in the online checkout flow and should be executed upon receipt of the approved status webook event from Tamara . Its primary function is to update the order status to authorised ensuring status synchronization and smooth progression of the online order flow. \\U0001f44d We now support Auto-authorisation! If this is enabled, then the order status will move from New --> Approved --> Fully...",
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tamara.co/reference/captureorder",
@@ -869,10 +893,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "543bded8eebc37e98306443b6f55e4d4c1bab11576ad0d7f77fb11eeea9159be",
-      "content_length": 1833,
+      "sha256": "cc37743a7240969dfcf4aa97d200247bcdc4930e2beda219e52720b98b45e5a8",
+      "content_length": 1776,
       "excerpt": "Capture Order post https://{environment}.tamara.co /payments/capture This endpoint is requested to perform a full or partial capture of the order, confirming the fulfillment or shipment of the items to the customer. The order status value will be fully_captured or partially_captured based on the total amount value sent in the request. \\U0001f4d8 If an order is not Captured within 21 days from when it is Authorised, Tamara will auto-capture that order and it will be moved to Fully Captured status Body Par...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tamara.co/reference/getorderdetails",
@@ -881,10 +905,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "1e20ce887213c7baa818c780e69c4079eea11972b4f28062746411e5f635b6d7",
-      "content_length": 511,
-      "excerpt": "Get Order Details by Tamara's order_id get https://{environment}.tamara.co /orders/ {order_id} Fetch all the order details available on Tamara's side using the unique order_id that is issued by Tamara for every order whether online or in-store. Path Params order_id uuid required Defaults to ff776045-513b-4cd7-8b4f-e60673daad84 Unique Tamara order_id from the response of the creation of the checkout session whether online or in-store. Response Updated <relative-age> ago What\\u2019s Next Update order_r...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "sha256": "6e8fe153ba0ad7283b9b59295d4fcb6eb5e5c2f7f347546a9a06314eb9406c9b",
+      "content_length": 446,
+      "excerpt": "Get Order Details by Tamara's order_id get https://{environment}.tamara.co /orders/ {order_id} Fetch all the order details available on Tamara's side using the unique order_id that is issued by Tamara for every order whether online or in-store. Path Params order_id uuid required Defaults to ff776045-513b-4cd7-8b4f-e60673daad84 Unique Tamara order_id from the response of the creation of the checkout session whether online or in-store. Response",
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://docs.tamara.co/reference/simplifiedrefund",
@@ -893,10 +917,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "62cfbda5c0b48006c2e7a17d7973dc4dddebfb9c79f7a39f23f78b0bcd668f03",
-      "content_length": 870,
+      "sha256": "696a19714e607046ddec34e7a95ed5e15e0aa0cd5714451d73b14c6977434295",
+      "content_length": 774,
       "excerpt": "Simplified Refund post https://{environment}.tamara.co /payments/simplified-refund/ {order_id} This API is to be used to process refunds for captured orders. Path Params order_id uuid required Defaults to ff776045-513b-4cd7-8b4f-e60673daad84 Unique Tamara order_id from the response of the creation of the checkout session whether online or in-store. Body Params total_amount object required Total amount to be refunded to consumer, not including any discount amount. comment string required Defaults...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://easykash.gitbook.io/easykash-apis-documentation/",
@@ -909,7 +933,7 @@
       "sha256": "5ba6b9d35c322805e21e37e28229dd057ef059a1aedded94f74642d72ad12cbe",
       "content_length": 1133,
       "excerpt": "Copy On this page Direct Payment (Hosted) Direct Payment is an API to allow customers to integrate Easykash\\u2019s payment methods into their website. Prerequisites: To be able to begin the integration of your website with Direct Payment, you must have the feature enabled for your EasyKash business account (contact support for that). When it\\u2019s enabled head to the Integration Settings page on your side menu (under Settings) for the below: The API Key is your authentication in the initial request. Call...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://easykash.gitbook.io/easykash-apis-documentation/cash-api-cash-only",
@@ -922,7 +946,7 @@
       "sha256": "80b7df9005afc4c94a852f2e04821809ad7ae7f336aa5cc50b19ddf702dbcdc5",
       "content_length": 1094,
       "excerpt": "Copy On this page Cash API (Cash-only) This feature only works for Cash payment methods. What is our API feature? For Businesses that already have running websites, EasyKash provides an integration feature to perform two things. Create payments (cash only) with two types. Quick Cash (Type: in) and Cash Out (Type: out) Callback service, to confirm current pending payments (all payment methods) Prerequisites: To be able to begin the integration of your website with Easykash, you must have the feat...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/callback-service",
@@ -935,7 +959,7 @@
       "sha256": "4bda2d612415b91e1920d330c8055c779eb6b04ea304dcfcc530f73814d3d4aa",
       "content_length": 2442,
       "excerpt": "Copy On this page Callback Service If your API service is enabled for your account, after every successful payment, you receive an API notification to the callback URL added in your Easykash account If you still haven't configured your Callback URL, head to your Integration Settings page and configure it ahead of this step. Callback URL is the URL you\\u2019ll receive the details of transactions on such as status, reference number, etc. Make sure it\\u2019s a working URL on your end that will receive and pr...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/callback-service/callback-response-verification",
@@ -948,7 +972,7 @@
       "sha256": "fd5345809658a4c3741b1327638b4e56fbb48532205c7e2bc7c0dcb920f67648",
       "content_length": 1301,
       "excerpt": "Copy On this page Callback Service Callback response verification Callbacks rely on HMAC authentication to verify response's identity and integrity of its data. Prerequisites HMAC secret key is needed for response verification, you can find it in your Integration Settings page HMAC calculation Whenever you receive a callback from Easykash, you will receive a value of the HMAC related to the data, HMAC value is signatureHash in response body . In order to calculate an HMAC similar to the one you...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/pay-api",
@@ -963,7 +987,7 @@
       "sha256": "c4ba2ee760e030879c2e8831d1ca9cd4f9cedfafdffc681bf1459bc09926a76c",
       "content_length": 3566,
       "excerpt": "Copy On this page Pay API API to create direct pay link Create direct pay link POST https://back.easykash.net/api/directpayv1/pay To get your api key, open your Integration Settings page Headers Name Type Description authorization * String API key Request Body Name Type Description amount * number Base amount. Amount must be in the currency being sent and NOT in EGP. Note: The end user will be charged in EGP ( Total amount in currency sent * Exchange Rate at the time of payment). Deprecated proc...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://easykash.gitbook.io/easykash-apis-documentation/direct-payment-hosted/payment-inquiry",
@@ -976,7 +1000,7 @@
       "sha256": "6c24f908b9f17bcc7d5c7dade03b4ea9779414a92c484e40edcee9c69a27af29",
       "content_length": 1054,
       "excerpt": "Copy On this page Payment Inquiry If you'd like to inquire about a specific transaction, use this payment inquiry API below. Inquire about specific transaction on Easykash POST https://back.easykash.net/api/cash-api/inquire Headers Name Type Description authorization * String API key Request Body Name Type Description customerReference * String Product's reference number of the Direct Pay customer Request Example { \" customerReference \" : \" 111 \" } Response PaymentMethod Method of payment. All p...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://github.com/Kashier-payments",
@@ -989,7 +1013,7 @@
       "sha256": "0a0052294cc4b18bccbbccc9034648e670e3aaa8721e7e7e3496a7ee88feec6a",
       "content_length": 198,
       "excerpt": "{\"description\": \"Create seamless checkout experience for your customers.\", \"html_url\": \"https://github.com/Kashier-payments\", \"login\": \"Kashier-payments\", \"public_repos\": 18, \"type\": \"Organization\"}",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://github.com/Kashier-payments/Kashier-WooCommerce-UI-Plugin",
@@ -1002,7 +1026,7 @@
       "sha256": "b3b767c788b7240a553024a5ffade4d86997904010a4b58eb1187d5b51a10065",
       "content_length": 290,
       "excerpt": "{\"archived\": false, \"default_branch\": \"main\", \"description\": \"Kashier WooCommerce Plugin\", \"disabled\": false, \"full_name\": \"Kashier-payments/Kashier-WooCommerce-UI-Plugin\", \"html_url\": \"https://github.com/Kashier-payments/Kashier-WooCommerce-UI-Plugin\", \"pushed_at\": \"2025-12-08T12:54:42Z\"}",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://github.com/Kashier-payments/NodeJs-Checkout-Demo",
@@ -1015,7 +1039,7 @@
       "sha256": "3c9364917a963973448002b437cd79b6304548017bd61d8657cfe73272789097",
       "content_length": 318,
       "excerpt": "{\"archived\": false, \"default_branch\": \"master\", \"description\": \"Create and pay orders through IFrame and Hosted Payment Page in Nodejs\", \"disabled\": false, \"full_name\": \"Kashier-payments/NodeJs-Checkout-Demo\", \"html_url\": \"https://github.com/Kashier-payments/NodeJs-Checkout-Demo\", \"pushed_at\": \"2022-12-11T10:23:09Z\"}",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://github.com/Kashier-payments/Php-Checkout-Demo",
@@ -1028,7 +1052,7 @@
       "sha256": "bda624cf5b7f1c9247ebba81a8a89066c9232cc65694f4546d24eeef4666bafe",
       "content_length": 308,
       "excerpt": "{\"archived\": false, \"default_branch\": \"master\", \"description\": \"Create and pay orders through IFrame and Hosted Payment Page Demo \", \"disabled\": false, \"full_name\": \"Kashier-payments/Php-Checkout-Demo\", \"html_url\": \"https://github.com/Kashier-payments/Php-Checkout-Demo\", \"pushed_at\": \"2021-07-13T14:51:17Z\"}",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://hyperpay.docs.oppwa.com/integrations/server-to-server",
@@ -1040,7 +1064,7 @@
       "sha256": "d9610a43ec824a47834d912b2226770b0c9605bf49a17cb5dca2d2b066a93324",
       "content_length": 12256,
       "excerpt": "Server-to-Server Integration Guide Last updated: December 27, 2024 This guide walks you through the entire payment journey, from start to finish. As a merchant, you\\u2019ll be in full control, collecting all card and payment details directly. This behind-the-scenes process ensures a smooth and seamless experience for your shoppers. Navigate the complexities of the payment landscape with ease and efficiency, all thanks to our Server-to-Server guide. Start your journey today! PCI-DSS Compliance : To co...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://hyperpay.docs.oppwa.com/integrations/widget",
@@ -1052,7 +1076,7 @@
       "sha256": "e74d9aa10204afe8899d0857a8ae83053085f902fff1d6aa3c47f977011a3a0f",
       "content_length": 4405,
       "excerpt": "COPYandPAY Integration Guide COPYandPAY is a SAQ-A compliant payment-form solution, making it both secure and simple-to-integrate. There are just three simple steps required to integrate : How it works 1 Prepare the checkout Send the request parameters server-to-server to prepare the payment form. 2 Create the payment form(s) Display the payment form on your checkout page and the shopper submits the payment information. 3 Get the payment status Find out if the payment was successful. 1. Prepare...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://hyperpay.docs.oppwa.com/reference/parameters",
@@ -1061,10 +1085,10 @@
       ],
       "status": "OK",
       "http_status": 200,
-      "sha256": "dec0ba1e1a2af1e17721ee26026be54ceb59ead23d4475e7cf57a7074f9bd50c",
-      "content_length": 105868,
+      "sha256": "f39783fbdd3b97a7043e581f951e06b5e4f6547207cb94a6736044bbfd7b0613",
+      "content_length": 106916,
       "excerpt": "API Reference Introduction This reference section provides you with a complete and in-depth description of the Open Payment Platform API. Hosts Test: https://eu-test.oppwa.com/ Live: https://eu-prod.oppwa.com/ Security / Authentication All requests must be sent over SSL All requests are authenticated against an Authorization Bearer header with an access token. All the other data parameters are sent as body parameters, see Authentication Parameters for more information. Throttling Throttling is t...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://hyperpay.docs.oppwa.com/reference/resultCodes",
@@ -1076,7 +1100,7 @@
       "sha256": "6cc7567fe1841a11393b46be06f9506bdbc0697e9e48fd109326795b6516da8a",
       "content_length": 51505,
       "excerpt": "Result Codes Last updated: September 29, 2025 This guide helps merchants and integrators understand the structure, meaning, and recommended actions for each result code returned in the result field of the API response, enabling accurate handling of transaction outcomes across success, pending, rejection, and risk scenarios. Quick links What are result codes? Download JSON result code list Success & pending transactions Rejected transactions Rejections specific to risk handling Rejections due to...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://hyperpay.docs.oppwa.com/support/webhooks",
@@ -1088,7 +1112,7 @@
       "sha256": "df71730fc06af8d30b9ddb659c085bd8ed621a8a0bb0210036fbf99a4c6db672",
       "content_length": 3070,
       "excerpt": "Webhooks FAQ Last updated: May 12, 2026 How can I verify that my webhook URL is correctly set to receive notifications? You have the ability to send test notitications to the webhook URL at the configuration time in the user interface. This guarantees the correctness of the webhook setup before the notifications feature is turned on. I'm not receiving webhooks anymore. Am I alerted when something goes wrong? An automated daily email is going to be sent to all the configured webhook email address...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://paymentservices.amazon.com/docs/",
@@ -1100,7 +1124,7 @@
       "sha256": "d02277c0b5c3cef6089819c5d37eca0843c03443f1a87cd50ffeed27ae2190e0",
       "content_length": 3618,
       "excerpt": "Brewing next-gen API docs. Got feedback? \\u2192 Documentation Explore guides, examples, and resources for every step of your Amazon Payment Services journey. Quickstart API Reference amazon-payment-services.com Payment Status Processing Transaction ID #APS-2024-156 Amount 499.99 Secured by APS \\u2022 Processing time: 2.3s Choose your integration path From no-code solutions to fully customizable APIs, we have the right integration type for your business needs. No-Code Solutions Payment Links for invoicing...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://paymentservices.amazon.com/docs/api/faqs/faq",
@@ -1112,7 +1136,7 @@
       "sha256": "4a082b8a653efe2e63b823492ea356deac54a0a7417760a2f20f47027885ca79",
       "content_length": 19664,
       "excerpt": "FAQ FAQs Frequently Asked Questions This comprehensive FAQ addresses the most common questions and challenges developers encounter when integrating with Amazon Payment Services (APS). Each section provides practical solutions, step-by-step guidance, and direct links to relevant documentation. Can't find what you're looking for? Check our Error Codes Guide or contact our support team at merchantsupport-ps@amazon.com New to APS? Start with our Getting Started Guide for a smooth onboarding experien...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://paymentservices.amazon.com/docs/managing-payments/capturing-payment",
@@ -1124,7 +1148,7 @@
       "sha256": "b12205f80c979764a1388939033567465162c509a444e2177668ecd513b157d3",
       "content_length": 4036,
       "excerpt": "Managing Payments Capturing a Payment Capturing a Payment Capture is used after authorizing a payment, as authorization alone doesn't transfer the funds it only puts them on hold. To complete the transaction and move the money to your account, the payment must be captured within a set timeframe usually 5-7 days maximum. Amazon Payment Services provides merchants with flexible options to capture payments according to their business needs and technical capabilities. You can choose the method that...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://paymentservices.amazon.com/docs/managing-payments/tracking-a-payment/webhooks",
@@ -1136,7 +1160,7 @@
       "sha256": "47b5c706d6f5502fee316348603c756daeb896120a8b01c2ec014b63b7d08d62",
       "content_length": 5596,
       "excerpt": "Managing Payments Tracking Payments Webhooks Webhooks Amazon Payment Services provides real-time webhook notifications to keep your system synchronized with payment statuses. Webhooks ensure you receive transaction updates even when customers don't complete the return flow, making them essential for reliable payment processing. Overview \\u200b Amazon Payment Services offers two types of webhooks for comprehensive transaction monitoring: Transaction Feedback - Immediate payment results sent directly a...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://paysky.io/docs/",
@@ -1149,7 +1173,7 @@
       "sha256": "b5c309578fa201211b2740d81e71ab11ee8d49f0606e2760b2cfd57ee19f84cc",
       "content_length": 105,
       "excerpt": "API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://paysky.io/docs/paysky-omni-gateway-payform-plus-integration-guide/",
@@ -1162,7 +1186,7 @@
       "sha256": "d48c2cdd8cbb8b1350ba20f20539b5a6901279346760025cbda1f4d41bf5650a",
       "content_length": 107,
       "excerpt": "API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://paysky.io/docs/paysky-omni-gateway/",
@@ -1175,7 +1199,7 @@
       "sha256": "d48c2cdd8cbb8b1350ba20f20539b5a6901279346760025cbda1f4d41bf5650a",
       "content_length": 107,
       "excerpt": "API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://paysky.io/docs/paysky-paybutton-sdk-android-guide/",
@@ -1188,7 +1212,7 @@
       "sha256": "d48c2cdd8cbb8b1350ba20f20539b5a6901279346760025cbda1f4d41bf5650a",
       "content_length": 107,
       "excerpt": "API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://paysky.io/docs/paysky-paybutton-sdk-ios-guide/",
@@ -1201,7 +1225,7 @@
       "sha256": "d48c2cdd8cbb8b1350ba20f20539b5a6901279346760025cbda1f4d41bf5650a",
       "content_length": 107,
       "excerpt": "API\\u2019s & documentation 1 PaySky OMNI Gateway \\u2013 Notification Services Integration Guide",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000710069",
@@ -1213,7 +1237,7 @@
       "sha256": "0b9c24654ccca1dd9bbcee7d38a862933da4cb94cc8a285b4312e3878c202cdd",
       "content_length": 8042,
       "excerpt": "Recent Searches No recent searches Popular Articles Articles View all Topics View all Tickets View all Sorry! nothing found for How to configure Instant Payment notification (IPN)? Modified on Sun, Mar 9, 2025 at 12:34 PM In this article you will get to know: Video Tutorial What is the Instant Payment Notification (IPN)? How to configure a new IPN? How does the IPN service work? IPN vs Callback: How to Configure UserAgent Sent in IPN Request Headers? Sample IPNs Response Payload: Default Web JSO...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000718961",
@@ -1225,7 +1249,7 @@
       "sha256": "9432f6d9eb12f8312cd817b27d9970a11f9869dff1427c9d028e75ba9d3798c2",
       "content_length": 5317,
       "excerpt": "Recent Searches No recent searches Popular Articles Articles View all Topics View all Tickets View all Sorry! nothing found for How to verify the response received from PayTabs? (Signature Verification) Modified on Sat, Dec 17, 2022 at 3:58 PM To ensure that the response you are receiving is genuine, we are sending a custom header Signature including an HMAC signature hashed by Profile ServerKey for you to validate and verify the response. In this article you will be going to know how to perform...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000803800-request-response-parameters-the-return-url-return-",
@@ -1237,7 +1261,7 @@
       "sha256": "45ae77b53ade9b6ad24f4576d0dec1b0bba45dbb8334ce8ccfaac2bbcf29df1b",
       "content_length": 5848,
       "excerpt": "Recent Searches No recent searches Popular Articles Articles View all Topics View all Tickets View all Sorry! nothing found for Request/Response Parameters | The Return URL (return) Modified on Tue, Jun 4, 2024 at 12:21 PM Paytabs provides you with a collection of API endpoints which used to process all payments, regardless of if they are through either your own payment pages, the managed payment pages, or if you are using the hosted payment pages. This article is dedicated to the clarification...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000805341",
@@ -1249,7 +1273,7 @@
       "sha256": "093af641acb689d05c090743b2762802e3299d4a693b0a723d616d97f4c9b02a",
       "content_length": 6124,
       "excerpt": "Recent Searches No recent searches Popular Articles Articles View all Topics View all Tickets View all Sorry! nothing found for Request/Response Parameters | The Callback URL (callback) Modified on Wed, Jan 4, 2023 at 3:55 PM Paytabs provides you with a collection of API endpoints which used to process all payments, regardless of if they are through either your own payment pages, the managed payment pages, or if you are using the hosted payment pages. This article is dedicated to the clarificati...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000818152-request-response-parameters-cart-id-cart-id-",
@@ -1261,7 +1285,7 @@
       "sha256": "c6257ea8b0a069bf54ce58feca7b306ed787b064acc6426630c4575b49330689",
       "content_length": 2872,
       "excerpt": "Recent Searches No recent searches Popular Articles Articles View all Topics View all Tickets View all Sorry! nothing found for Request/Response Parameters | Cart ID (cart_id) Modified on Wed, Jan 4, 2023 at 1:31 PM Paytabs provides you with a collection of API endpoints which used to process all payments, regardless of if they are through either your own payment pages, the managed payment pages, or if you are using the hosted payment pages. This article is dedicated to the clarification of the...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000818154-request-response-parameters-cart-amount-cart-amount-",
@@ -1273,7 +1297,7 @@
       "sha256": "cee9047d6fe74cc1d03215247c88c33657f22bb37e3b5759ad93ad7100cc52d1",
       "content_length": 2945,
       "excerpt": "Recent Searches No recent searches Popular Articles Articles View all Topics View all Tickets View all Sorry! nothing found for Request/Response Parameters | Cart Amount (cart_amount) Modified on Wed, Jan 4, 2023 at 6:10 PM Paytabs provides you with a collection of API endpoints which used to process all payments, regardless of if they are through either your own payment pages, the managed payment pages, or if you are using the hosted payment pages. This article is dedicated to the clarification...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000818155-request-response-parameters-cart-currency-cart-currency-",
@@ -1285,7 +1309,7 @@
       "sha256": "b2a21b855fe311ed46b542647f11ed9d5175bc4e3cf500a7c2b9569eae416043",
       "content_length": 2972,
       "excerpt": "Recent Searches No recent searches Popular Articles Articles View all Topics View all Tickets View all Sorry! nothing found for Request/Response Parameters | Cart Currency (cart_currency) Modified on Tue, Jun 4, 2024 at 12:16 PM Paytabs provides you with a collection of API endpoints which used to process all payments, regardless of if they are through either your own payment pages, the managed payment pages, or if you are using the hosted payment pages. This article is dedicated to the clarific...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://support.paytabs.com/en/support/solutions/articles/60000992876-3-2-1-hosted-payment-page-apis-initiating-the-payment",
@@ -1297,7 +1321,7 @@
       "sha256": "e06616c6007bf71c6fef92abb84d2f2560624f5fb065128b5316fed0421f73a3",
       "content_length": 16478,
       "excerpt": "Recent Searches No recent searches Popular Articles Articles View all Topics View all Tickets View all Sorry! nothing found for 3.2.1 Hosted Payment Page APIs | Initiating the payment Modified on Tue, Jun 4, 2024 at 11:22 AM Paytabs provides you with a collection of API endpoints which used to process all payments, regardless of if they are through either your own payment pages, the managed payment pages, or if you are using the hosted payment pages. Hosted Payment Page integration type is suita...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://www.hyperpay.com/integration-guide/",
@@ -1309,7 +1333,7 @@
       "sha256": "1d0501589c4245e809b20fbbfc83c4036298db2f94f1fc70f702b05abd1615b4",
       "content_length": 1443,
       "excerpt": "Integration Guides The HyperPay platform offers a complete, easy-to-use guide to enable seamless integration of our end-to-end payment gateway for mobile and desktop browsers. Through a unified API, you can enable and gain access to all platform features. Choose one of the options below to quickly get started Integration Options COPY AND PAY COPYandPay is our JavaScript payment widget that sends sensitive payment data directly from the Shopper\\u2019s browser to our paymets platform. Learn more SERVER...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://www.kashier.io/",
@@ -1322,7 +1346,7 @@
       "sha256": "d053e8ddd717abb0a782efe94e6f6bdd31adc8ae352133e9388f51ca1b4f5f94",
       "content_length": 6163,
       "excerpt": "Kashier | Online Payment Platform Company Pricing Partners Developers Support Create A Free Account Log In \\u0639\\u0631\\u0628\\u064a We Grow Your Online Sales We are a digital payment platform that aims to grow your business through enabling fast, easy and secure acceptance of digital payments from your customers and partners. We celebrate achievement when our digital services enable your business to interact with the growing digital economy, adding direct value to your bottom line. Create Free Account >> GROW SMART...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     },
     {
       "url": "https://www.kashier.io/blog-posts/kashier-api---power-flexibility-simplicity",
@@ -1334,7 +1358,7 @@
       "sha256": "778db8953e67ba182e4d6e17848c9d5ddbc32c6cb3d669f0ff5e8d10cf729c0e",
       "content_length": 4211,
       "excerpt": "Kashier API - Power, Flexibility, Simplicity Company Pricing Partners Developers Support Create A Free Account Log In \\u0639\\u0631\\u0628\\u064a Back to Blog Kashier API - Power, Flexibility, Simplicity Business Growth August 12, 2025 Introducingthe Kashier API: Power, Flexibility, Simplicity In Egypt and across the MENA region, digital payment adoption is accelerating. Businesses, from growing e-commerce startups to established enterprises, need reliable payment infrastructure that is fast to integrate, secure by de...",
-      "last_checked": "2026-07-13T07:12:17Z"
+      "last_checked": "2026-07-20T07:11:58Z"
     }
   ]
 }

@@ -59,6 +59,10 @@ DOCS_COPY_ACTION_CHROME = re.compile(
     r"\b(?:Copy page(?: as Markdown for LLMs)?|Open in Claude|Ask questions about this page)\b",
     re.IGNORECASE,
 )
+DOCS_FEEDBACK_FOOTER_CHROME = re.compile(
+    r"\bUpdated <relative-age> ago(?:\s+What(?:'|\u2019)s Next\b.*?|\s+)Did this page help you\?",
+    re.IGNORECASE,
+)
 
 
 def utc_now() -> str:
@@ -162,6 +166,7 @@ def normalize_text(raw: bytes, content_type: str) -> str:
     decoded = GITBOOK_INDEX_NOTICE.sub("", decoded)
     decoded = RECENT_REQUESTS_CHROME.sub("", decoded)
     decoded = DOCS_COPY_ACTION_CHROME.sub(" ", decoded)
+    decoded = DOCS_FEEDBACK_FOOTER_CHROME.sub(" ", decoded)
     decoded = HYPERPAY_GREETING_NAV_CHROME.sub("Board of Directors Contact us", decoded)
     decoded = re.sub(r"[ \t]+", " ", decoded)
     return decoded.strip()
