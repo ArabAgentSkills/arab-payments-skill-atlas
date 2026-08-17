@@ -5,7 +5,7 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public
-- Last checked: 2026-07-20
+- Last checked: 2026-08-17
 - Source confidence: High for official Tamara docs.
 - Sources: Tamara docs home, online checkout, webhook registration, authorise order guide/API, order status flow, capture order, simplified refund, get order details, and official Tamara `llms.txt` index.
 
@@ -46,7 +46,7 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 
 - Tamara sends notifications to the merchant webhook URL; an approved notification must be acknowledged by calling Authorise Order unless documented auto-authorisation is explicitly enabled.
 - Docs note server-to-server notification helps avoid frontend redirection failures.
-- If auto-authorisation is enabled, current docs describe the flow moving from new to approved to fully captured without an explicit Authorise Order call; confirm that setting before skipping authorisation logic.
+- If auto-authorisation is enabled, current status-flow docs describe the flow moving from new to approved to authorised without an explicit Authorise Order call; capture remains a separate fulfillment/settlement step unless current merchant-specific docs or account settings explicitly say otherwise.
 - Store Tamara order id, checkout id, order reference, notification event, authorised state, capture state, and refund ids.
 
 ## Signature Or HMAC
@@ -66,7 +66,7 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 
 ## Status Mapping
 
-- `approved` is not enough for the standard flow; merchant must authorise, which moves order to `authorised`, unless confirmed auto-authorisation moves the order through the documented states automatically.
+- `approved` is not enough for the standard flow; merchant must authorise, which moves order to `authorised`, unless confirmed auto-authorisation moves the order to `authorised` automatically.
 - Capture moves toward `partially_captured` or `fully_captured`.
 - Cancel is valid only from the authorized stage; refunds apply after capture.
 - Declined and expired orders are non-fulfillment states. Current status-flow docs also state an order can expire if it is not authorised within 72 hours or if an authorised order is not captured or canceled within 90 days.
@@ -84,7 +84,7 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 
 ## Unknowns And Do Not Invent
 
-- Do not invent webhook token validation, auto-authorisation enablement, auto-capture account behavior, status names, country/currency availability, capture windows beyond current Tamara capture docs, or refund limits.
+- Do not invent webhook token validation, auto-authorisation enablement, auto-authorisation-to-capture behavior, auto-capture account behavior, status names, country/currency availability, capture windows beyond current Tamara capture docs, or refund limits.
 - Ask for merchant docs when integrating through a PSP wrapper instead of direct Tamara.
 - Fetch the current Tamara `llms.txt` index before endpoint-level checkout, authorisation, capture, refund, or webhook work.
 
@@ -94,6 +94,7 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 - Verify webhook token/header.
 - Call Authorise Order after approved notification unless confirmed auto-authorisation applies.
 - Capture only after fulfillment/shipment decision; do not rely on delayed auto-capture as the operational capture plan.
+- Treat confirmed auto-authorisation as reaching `authorised`, not `fully_captured`, unless merchant-specific current docs prove capture is also automatic.
 - Track the 21-day auto-capture window for authorised but uncaptured orders.
 - Use Get Order Details fallback.
 - Separate cancel from refund.
@@ -102,6 +103,7 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 
 - You treat approved redirect as final paid.
 - You skip Authorise Order without confirmed auto-authorisation.
+- You treat auto-authorisation as immediate capture or settlement.
 - You capture before authorization.
 - You leave authorised orders unattended until auto-capture without a deliberate fulfillment and settlement policy.
 - You cancel after capture instead of refunding.

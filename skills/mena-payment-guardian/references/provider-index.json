@@ -1,7 +1,7 @@
 {
   "skill": "mena-payment-guardian",
   "version_scope": "v1-arab-mena-payments-bnpl",
-  "last_updated": "2026-07-20",
+  "last_updated": "2026-08-17",
   "source_policy": "Summaries and official links only. Do not vendor full provider docs. Workbook URLs are seed links; official/provider-controlled docs decide what is documented.",
   "coverage_tiers": {
     "full-depth": [
@@ -327,7 +327,7 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/tamara.md",
-      "last_checked": "2026-07-20",
+      "last_checked": "2026-08-17",
       "source_urls": [
         "https://docs.tamara.co/llms.txt",
         "https://docs.tamara.co/",

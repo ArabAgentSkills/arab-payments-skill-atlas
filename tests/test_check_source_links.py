@@ -31,6 +31,17 @@ class HttpStatusClassificationTests(unittest.TestCase):
         self.assertTrue(check_source_links.is_transient_http_status(408))
         self.assertTrue(check_source_links.is_transient_http_status(429))
 
+    def test_github_api_headers_uses_available_token(self) -> None:
+        with mock.patch.dict("os.environ", {"GH_TOKEN": "test-token"}, clear=True):
+            self.assertEqual(
+                check_source_links.github_api_headers()["Authorization"],
+                "Bearer test-token",
+            )
+
+    def test_github_api_headers_does_not_require_token(self) -> None:
+        with mock.patch.dict("os.environ", {}, clear=True):
+            self.assertNotIn("Authorization", check_source_links.github_api_headers())
+
     def test_server_error_requires_review_exit_code(self) -> None:
         with (
             mock.patch.object(check_source_links, "load_urls", return_value=["https://example.test/docs"]),

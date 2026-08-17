@@ -4,6 +4,7 @@ import importlib.util
 import re
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -195,6 +196,19 @@ class GitHubRepoApiUrlTests(unittest.TestCase):
                 "https://github.com/Kashier-payments/NodeJs-Checkout-Demo/blob/main/README.md"
             )
         )
+
+
+class GitHubApiHeaderTests(unittest.TestCase):
+    def test_github_api_headers_uses_available_token(self) -> None:
+        with mock.patch.dict("os.environ", {"GITHUB_TOKEN": "test-token"}, clear=True):
+            self.assertEqual(
+                check_source_changes.github_api_headers()["Authorization"],
+                "Bearer test-token",
+            )
+
+    def test_github_api_headers_does_not_require_token(self) -> None:
+        with mock.patch.dict("os.environ", {}, clear=True):
+            self.assertNotIn("Authorization", check_source_changes.github_api_headers())
 
 
 class GitHubMetadataTests(unittest.TestCase):

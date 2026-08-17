@@ -6,6 +6,7 @@ import gzip
 import hashlib
 import html
 import json
+import os
 import re
 import ssl
 import sys
@@ -89,6 +90,18 @@ def github_source_api_url(url: str) -> str | None:
     if not owner or not repo:
         return None
     return f"https://api.github.com/repos/{urllib.parse.quote(owner)}/{urllib.parse.quote(repo)}"
+
+
+def github_api_headers() -> dict[str, str]:
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "application/vnd.github+json",
+        "Accept-Encoding": "identity",
+    }
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    return headers
 
 
 def normalize_github_payload(payload: dict[str, object], url: str, github_api_url: str) -> str:
@@ -221,11 +234,7 @@ def fetch_url(url: str) -> dict[str, object]:
     if github_api_url:
         request = urllib.request.Request(
             github_api_url,
-            headers={
-                "User-Agent": USER_AGENT,
-                "Accept": "application/vnd.github+json",
-                "Accept-Encoding": "identity",
-            },
+            headers=github_api_headers(),
             method="GET",
         )
         try:

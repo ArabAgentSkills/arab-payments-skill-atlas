@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import ssl
 import sys
 import urllib.error
@@ -14,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILLS_ROOT = ROOT / "skills"
 FETCH_ATTEMPTS = 3
 TRANSIENT_HTTP_STATUSES = {408, 429}
+USER_AGENT = "arab-payments-skill-atlas-link-check/1.0"
 
 
 def is_transient_http_status(status: int) -> bool:
@@ -38,6 +40,18 @@ def github_source_api_url(url: str) -> str | None:
     return f"https://api.github.com/repos/{urllib.parse.quote(owner)}/{urllib.parse.quote(repo)}"
 
 
+def github_api_headers() -> dict[str, str]:
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "application/vnd.github+json",
+        "Accept-Encoding": "identity",
+    }
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    return headers
+
+
 def load_urls() -> list[str]:
     urls: list[str] = []
     for index_path in sorted(SKILLS_ROOT.glob("*/references/provider-index.json")):
@@ -52,11 +66,7 @@ def check_url(url: str) -> tuple[str, str]:
     if github_api_url:
         api_request = urllib.request.Request(
             github_api_url,
-            headers={
-                "User-Agent": "arab-payments-skill-atlas-link-check/1.0",
-                "Accept": "application/vnd.github+json",
-                "Accept-Encoding": "identity",
-            },
+            headers=github_api_headers(),
             method="GET",
         )
         try:

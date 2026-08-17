@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## 1.3.0 - 2026-08-17
+
+- Updated Tamara guidance after the official status-flow docs changed the auto-authorisation path from `New -> Approved -> Fully Captured` to `New -> Approved -> Authorised`.
+- Clarified that confirmed Tamara auto-authorisation reaches `authorised`, not capture/settlement, and capture remains a separate fulfillment step unless current merchant-specific docs prove otherwise.
+- Added an eval guard so agents do not treat Tamara auto-authorisation as immediate capture or settlement.
+- Hardened source-watch GitHub API checks to use `GITHUB_TOKEN` or `GH_TOKEN` when available so public GitHub source metadata does not flap into manual-verification placeholders.
+- Refreshed public-safe source-watch metadata after reviewing private watcher issue #16 and runs through 32000027072.
+
 ## 1.2.2 - 2026-07-20
 
 - Updated Tamara monitored source mapping to the provider's current webhook registration and authorise-order guide/API pages after the official `llms.txt` index split the old combined source.
