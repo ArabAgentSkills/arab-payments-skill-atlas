@@ -93,6 +93,33 @@ class NormalizeTextTests(unittest.TestCase):
             check_source_changes.normalize_text(second, "text/plain"),
         )
 
+    def test_markdown_url_hint_notice_does_not_change_normalized_text(self) -> None:
+        first = (
+            b"Webhook Fetch the complete documentation index at: https://docs.example.com/llms.txt. "
+            b"Use this file to discover all available pages before exploring further. "
+            b"Append .md to any documentation page URL to get its markdown version. "
+            b"Verify status server-side before fulfillment."
+        )
+        second = (
+            b"Webhook Fetch the complete documentation index at: https://docs.example.com/llms.txt. "
+            b"Use this file to discover all available pages before exploring further. "
+            b"Verify status server-side before fulfillment."
+        )
+
+        self.assertEqual(
+            check_source_changes.normalize_text(first, "text/plain"),
+            check_source_changes.normalize_text(second, "text/plain"),
+        )
+
+    def test_mintlify_command_hint_does_not_change_normalized_text(self) -> None:
+        first = "Payment Statuses Was this page helpful? Yes No \u2318 I instagram linkedin x".encode()
+        second = b"Payment Statuses Was this page helpful? Yes No instagram linkedin x"
+
+        self.assertEqual(
+            check_source_changes.normalize_text(first, "text/plain"),
+            check_source_changes.normalize_text(second, "text/plain"),
+        )
+
     def test_recent_requests_widget_chrome_does_not_change_normalized_text(self) -> None:
         first = (
             b"Capture Transaction Recent Requests Log in to see full request history "

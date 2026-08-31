@@ -5,7 +5,7 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public-tls-manual-verify
-- Last checked: 2026-06-08
+- Last checked: 2026-08-31
 - Source confidence: High for HyperPay/OPPWA docs; endpoint host and entity IDs are account/environment-specific. Simple Python checks may report manual TLS verification for OPPWA pages. No public `llms.txt` endpoint was available during review. The older public webhook tutorial route returned HTTP 500 during this review, so the source map now uses the official HyperPay Webhooks FAQ plus API notification parameters.
 - Sources: HyperPay integration guide, COPYandPAY widget, Server-to-Server guide, Webhooks FAQ, result codes, API parameters.
 
@@ -64,6 +64,7 @@ Use for HyperPay COPYandPAY, direct Server-to-Server card flows, transaction sta
 
 - Use official result code patterns and transaction status query response.
 - Successful result codes map to paid/captured only after amount/currency/reference checks.
+- Current result-code docs include `000.000.001` as succeeded but partially approved. Treat it as success-like only for the provider-approved amount; do not fulfill a full-order obligation unless the approved amount, local order policy, and merchant reconciliation support that state.
 - Pending/async statuses remain pending; rejected/failed codes remain non-fulfillment.
 
 ## Refunds Voids And Subscriptions
@@ -89,6 +90,7 @@ Use for HyperPay COPYandPAY, direct Server-to-Server card flows, transaction sta
 - Verify status via `resourcePath` or transaction status API.
 - Decrypt/verify webhooks before use.
 - Compare amount, currency, brand, type, and references.
+- Handle partial-approval success codes without over-fulfilling the order.
 - Deduplicate out-of-order events.
 
 ## Fail If
@@ -96,4 +98,5 @@ Use for HyperPay COPYandPAY, direct Server-to-Server card flows, transaction sta
 - You fulfill only because shopper reached `shopperResultUrl`.
 - You skip transaction status query after redirect.
 - You ignore encrypted webhook authentication.
+- You treat a partially approved success code as full payment without checking amount and order policy.
 - You treat multiple final webhook messages as separate fulfillments.

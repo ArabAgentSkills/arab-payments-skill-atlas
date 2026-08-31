@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+## 1.4.0 - 2026-08-31
+
+- Updated Tabby guidance for the current UAE/AED and Saudi Arabia/SAR custom integration scope, nested hosted-checkout URL path, merchant-code webhook registration header, and duplicate-capture race handling.
+- Updated Tamara guidance to include the documented pre-check eligibility step before creating the checkout session or offering Tamara as an available payment method.
+- Updated HyperPay status guidance for the `000.000.001` partially approved success result code so agents do not over-fulfill full-order obligations.
+- Hardened source-watch normalization for provider docs Markdown URL hints and Mintlify command-palette chrome.
+- Added eval guards for Tabby currency/capture races, Tamara eligibility pre-checks, and HyperPay partial approvals.
+- Refreshed public-safe source-watch metadata after reviewing private watcher issue #17 and runs 32695874748 and 33381932301.
+
 ## 1.3.0 - 2026-08-17
 
 - Updated Tamara guidance after the official status-flow docs changed the auto-authorisation path from `New -> Approved -> Fully Captured` to `New -> Approved -> Authorised`.

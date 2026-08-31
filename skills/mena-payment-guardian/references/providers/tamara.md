@@ -5,7 +5,7 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public
-- Last checked: 2026-08-17
+- Last checked: 2026-08-31
 - Source confidence: High for official Tamara docs.
 - Sources: Tamara docs home, online checkout, webhook registration, authorise order guide/API, order status flow, capture order, simplified refund, get order details, and official Tamara `llms.txt` index.
 
@@ -17,6 +17,7 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 
 - Docs: `https://docs.tamara.co/`
 - Online checkout: `https://docs.tamara.co/docs/direct-online-checkout`
+- Pre-check eligibility: `https://docs.tamara.co/reference/pre-checkout-eligibility`
 - Webhook registration: `https://docs.tamara.co/docs/webhook-subscription`
 - Authorise order guide: `https://docs.tamara.co/docs/pp-order-mgmt-authorise-order`
 - Authorise order API: `https://docs.tamara.co/reference/authoriseorder`
@@ -27,14 +28,15 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 
 ## Integration Paths
 
-- Create checkout session server-side, redirect to Tamara checkout URL, receive approved notification, call Authorise Order unless documented auto-authorisation is explicitly enabled for the merchant, then capture when shipped/fulfilled.
+- Pre-check customer eligibility before offering Tamara or creating the final checkout session. If the customer is not eligible, do not send them into the Tamara checkout flow as an available payment method.
+- Create checkout session server-side after eligibility passes, redirect to Tamara checkout URL, receive approved notification, call Authorise Order unless documented auto-authorisation is explicitly enabled for the merchant, then capture when shipped/fulfilled.
 - Current Tamara capture docs say orders not captured within 21 days from authorisation are auto-captured to `fully_captured`; design merchant fulfillment and reconciliation so manual capture is not left open indefinitely.
 - Cancel is available before capture in the authorized stage.
 - Simplified refund applies after capture.
 
 ## Setup Prerequisites
 
-- API bearer credential, sandbox/live environment, webhook URL in Partner Portal or API, checkout URLs, country/currency support, order reference strategy, and merchant account settings for auto-authorisation and auto-capture behavior.
+- API bearer credential, sandbox/live environment, pre-check eligibility route, webhook URL in Partner Portal or API, checkout URLs, country/currency support, order reference strategy, and merchant account settings for auto-authorisation and auto-capture behavior.
 - Approved/status webhook handling is required for the documented authorise flow unless merchant-specific auto-authorisation has been confirmed in current docs/account settings.
 
 ## Auth And Secret Boundary
@@ -91,6 +93,7 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 ## Agent Checklist
 
 - Create checkout session server-side.
+- Run the documented pre-check eligibility step before showing Tamara as a payable option.
 - Verify webhook token/header.
 - Call Authorise Order after approved notification unless confirmed auto-authorisation applies.
 - Capture only after fulfillment/shipment decision; do not rely on delayed auto-capture as the operational capture plan.
@@ -102,6 +105,7 @@ Use for Tamara online checkout, BNPL approval/authorisation/capture lifecycle, w
 ## Fail If
 
 - You treat approved redirect as final paid.
+- You skip the documented eligibility pre-check when deciding whether Tamara is available to the customer.
 - You skip Authorise Order without confirmed auto-authorisation.
 - You treat auto-authorisation as immediate capture or settlement.
 - You capture before authorization.

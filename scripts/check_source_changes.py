@@ -52,6 +52,11 @@ GITBOOK_INDEX_NOTICE = re.compile(
     r"\bFor the complete documentation index, see llms\.txt \. This page is also available as Markdown \. ?",
     re.IGNORECASE,
 )
+MARKDOWN_URL_HINT_NOTICE = re.compile(
+    r"\bAppend \.md to any documentation page URL to get its markdown version\. ?",
+    re.IGNORECASE,
+)
+MINTLIFY_COMMAND_HINT = re.compile(r"\s*\u2318 I\s*")
 RECENT_REQUESTS_CHROME = re.compile(
     r"\bRecent Requests Log in to see full request history Time Status User Agent Retrieving recent requests(?:\.\.\.|…|\\u2026) (?:Loading(?:\.\.\.|…|\\u2026)? ?)+",
     re.IGNORECASE,
@@ -177,6 +182,8 @@ def normalize_text(raw: bytes, content_type: str) -> str:
     decoded = AI_AGENT_INDEX_NOTICE.sub("", decoded)
     decoded = TABBY_INDEX_NOTICE.sub("", decoded)
     decoded = GITBOOK_INDEX_NOTICE.sub("", decoded)
+    decoded = MARKDOWN_URL_HINT_NOTICE.sub("", decoded)
+    decoded = MINTLIFY_COMMAND_HINT.sub(" ", decoded)
     decoded = RECENT_REQUESTS_CHROME.sub("", decoded)
     decoded = DOCS_COPY_ACTION_CHROME.sub(" ", decoded)
     decoded = DOCS_FEEDBACK_FOOTER_CHROME.sub(" ", decoded)

@@ -1,7 +1,7 @@
 {
   "skill": "mena-payment-guardian",
   "version_scope": "v1-arab-mena-payments-bnpl",
-  "last_updated": "2026-08-17",
+  "last_updated": "2026-08-31",
   "source_policy": "Summaries and official links only. Do not vendor full provider docs. Workbook URLs are seed links; official/provider-controlled docs decide what is documented.",
   "coverage_tiers": {
     "full-depth": [
@@ -177,7 +177,7 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/hyperpay.md",
-      "last_checked": "2026-06-08",
+      "last_checked": "2026-08-31",
       "source_urls": [
         "https://www.hyperpay.com/integration-guide/",
         "https://hyperpay.docs.oppwa.com/integrations/widget",
@@ -297,13 +297,13 @@
       "id": "tabby",
       "name": "Tabby",
       "category": "BNPL / Consumer Finance",
-      "market": "UAE / Saudi Arabia / MENA",
+      "market": "UAE / Saudi Arabia",
       "priority": "P0",
       "readiness": "A",
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/tabby.md",
-      "last_checked": "2026-07-06",
+      "last_checked": "2026-08-31",
       "source_urls": [
         "https://docs.tabby.ai/llms.txt",
         "https://docs.tabby.ai/introduction/what-is-tabby",
@@ -327,11 +327,12 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/tamara.md",
-      "last_checked": "2026-08-17",
+      "last_checked": "2026-08-31",
       "source_urls": [
         "https://docs.tamara.co/llms.txt",
         "https://docs.tamara.co/",
         "https://docs.tamara.co/docs/direct-online-checkout",
+        "https://docs.tamara.co/reference/pre-checkout-eligibility",
         "https://docs.tamara.co/docs/webhook-subscription",
         "https://docs.tamara.co/docs/pp-order-mgmt-authorise-order",
         "https://docs.tamara.co/docs/online-order-status-flow",
