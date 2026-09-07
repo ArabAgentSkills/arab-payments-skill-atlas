@@ -16,7 +16,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION_PATH = ROOT / "skill-version.json"
-UPDATER_VERSION = "1.0.0"
+UPDATER_VERSION = "1.0.1"
+USER_AGENT = "egypt-payment-guardian-updater/1.0"
 MANIFEST_NAME = ".arab-payments-skill-atlas-install.json"
 AVAILABLE_SKILLS = ["egypt-payment-guardian", "mena-payment-guardian"]
 GENERIC_PROMPTS = {
@@ -158,9 +159,20 @@ def repo_api_url(repo_url: str) -> str:
     return f"https://api.github.com/repos/{owner}/{repo}/releases/latest"
 
 
+def github_headers() -> dict[str, str]:
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "application/vnd.github+json",
+    }
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    return headers
+
+
 def download_latest_release(repo_url: str) -> Path:
     api_url = repo_api_url(repo_url)
-    request = urllib.request.Request(api_url, headers={"User-Agent": "egypt-payment-guardian-updater/1.0"})
+    request = urllib.request.Request(api_url, headers=github_headers())
     with urllib.request.urlopen(request, timeout=30) as response:
         data = json.loads(response.read().decode("utf-8"))
     zip_url = data.get("zipball_url")
@@ -168,7 +180,7 @@ def download_latest_release(repo_url: str) -> Path:
         raise RuntimeError("latest release has no zipball_url")
     tmp_dir = Path(tempfile.mkdtemp(prefix="egypt-payment-guardian-release-"))
     zip_path = tmp_dir / "release.zip"
-    with urllib.request.urlopen(urllib.request.Request(zip_url, headers={"User-Agent": "egypt-payment-guardian-updater/1.0"}), timeout=60) as response:
+    with urllib.request.urlopen(urllib.request.Request(zip_url, headers=github_headers()), timeout=60) as response:
         zip_path.write_bytes(response.read())
     with zipfile.ZipFile(zip_path) as archive:
         archive.extractall(tmp_dir)

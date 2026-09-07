@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 1.4.2 - 2026-09-08
+
+- Updated the Python installer to use `GH_TOKEN` or `GITHUB_TOKEN` for latest-release GitHub API and zipball downloads, preventing authenticated maintainer runs from failing on unauthenticated rate limits.
+- Added regression coverage for authenticated updater request headers.
+
 ## 1.4.1 - 2026-09-08
 
 - Added current MyFatoorah refund source coverage after the official `llms.txt` index consolidated older refund pages into the new Refunds guide and linked Create Refund, Get Refund Details, and Refund Status Changed webhook references.
