@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 1.4.1 - 2026-09-08
+
+- Added current MyFatoorah refund source coverage after the official `llms.txt` index consolidated older refund pages into the new Refunds guide and linked Create Refund, Get Refund Details, and Refund Status Changed webhook references.
+- Clarified MyFatoorah refund handling so agents treat Create Refund as a request, rely on Refund Status Changed webhooks for refund-state updates, use Get Refund Details as fallback, and protect duplicate partial-refund retries with local idempotency.
+- Added an eval guard for MyFatoorah refund status handling and refreshed public-safe source-watch metadata after reviewing private watcher issue #18 and run 34112647995.
+
 ## 1.4.0 - 2026-08-31
 
 - Updated Tabby guidance for the current UAE/AED and Saudi Arabia/SAR custom integration scope, nested hosted-checkout URL path, merchant-code webhook registration header, and duplicate-capture race handling.

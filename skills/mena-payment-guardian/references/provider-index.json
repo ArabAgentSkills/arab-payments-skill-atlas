@@ -154,7 +154,7 @@
       "coverage_depth": "full-depth",
       "public_docs_status": "public",
       "reference_file": "references/providers/myfatoorah.md",
-      "last_checked": "2026-07-06",
+      "last_checked": "2026-09-08",
       "source_urls": [
         "https://docs.myfatoorah.com/llms.txt",
         "https://docs.myfatoorah.com/docs/get-started",
@@ -163,9 +163,13 @@
         "https://docs.myfatoorah.com/docs/get-payment-details",
         "https://docs.myfatoorah.com/docs/v3-updating-payment-status-guidelines",
         "https://docs.myfatoorah.com/docs/v3-auth-capture",
+        "https://docs.myfatoorah.com/docs/refunds",
+        "https://docs.myfatoorah.com/reference/create-refund",
+        "https://docs.myfatoorah.com/reference/get-refund-details",
+        "https://docs.myfatoorah.com/docs/webhook-v2-refund-data-model",
         "https://docs.myfatoorah.com/reference/update-payment"
       ],
-      "notes": "Docs explicitly recommend combining webhooks with Get Payment Details and treating success as final. Official agent-readable docs index is available at llms.txt."
+      "notes": "Docs explicitly recommend combining webhooks with Get Payment Details for payments and relying on refund-status webhooks with Get Refund Details as fallback for refunds. Official agent-readable docs index is available at llms.txt."
     },
     {
       "id": "hyperpay",

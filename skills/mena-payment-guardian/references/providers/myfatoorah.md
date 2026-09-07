@@ -5,9 +5,9 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public
-- Last checked: 2026-05-29
+- Last checked: 2026-09-08
 - Source confidence: High for official MyFatoorah docs.
-- Sources: MyFatoorah get started, ExecutePayment, Webhook v2, Get Payment Details, Updating Payment Status Guidelines, Authorization and Capture, Update Payment, and official MyFatoorah `llms.txt` index.
+- Sources: MyFatoorah get started, ExecutePayment, Webhook v2, Get Payment Details, Updating Payment Status Guidelines, Authorization and Capture, Update Payment, Refunds, Create Refund, Get Refund Details, Refund Status Changed webhook model, and official MyFatoorah `llms.txt` index.
 
 ## Use When
 
@@ -20,6 +20,10 @@ Use for MyFatoorah invoice/payment URL flows, webhook handling, redirection hand
 - Webhook v2: `https://docs.myfatoorah.com/docs/webhook-v2`
 - Get Payment Details: `https://docs.myfatoorah.com/docs/get-payment-details`
 - Status update guidance: `https://docs.myfatoorah.com/docs/v3-updating-payment-status-guidelines`
+- Refunds: `https://docs.myfatoorah.com/docs/refunds`
+- Create Refund: `https://docs.myfatoorah.com/reference/create-refund`
+- Get Refund Details: `https://docs.myfatoorah.com/reference/get-refund-details`
+- Refund Status Changed webhook model: `https://docs.myfatoorah.com/docs/webhook-v2-refund-data-model`
 - Agent-readable docs: `https://docs.myfatoorah.com/llms.txt`
 
 ## Integration Paths
@@ -28,6 +32,7 @@ Use for MyFatoorah invoice/payment URL flows, webhook handling, redirection hand
 - Redirection URL returns a PaymentId for inquiry.
 - Webhook v2 sends structured event data for payment/refund/capture/release and other events.
 - Auth/capture flow is available when enabled.
+- Refunds can be requested directly for successful payments, then reconciled through refund-status webhooks or Get Refund Details fallback.
 
 ## Setup Prerequisites
 
@@ -43,6 +48,7 @@ Use for MyFatoorah invoice/payment URL flows, webhook handling, redirection hand
 
 - Webhook v2 includes unique event reference, event type, country ISO code, creation date, and data.
 - MyFatoorah recommends using both webhook and Get Payment Details for latest transaction status.
+- Refund Status Changed webhooks should drive refund status updates; Get Refund Details is the fallback when webhook delivery is unavailable or delayed.
 - Redirection should call Get Payment Details, but webhook is more resilient when customers close the browser.
 
 ## Signature Or HMAC
@@ -54,12 +60,14 @@ Use for MyFatoorah invoice/payment URL flows, webhook handling, redirection hand
 ## Idempotency Keys
 
 - Use webhook `Event.Reference`, invoice id/reference, transaction id, and PaymentId.
+- Store one local refund operation per Create Refund request and reject duplicate partial-refund retries before calling MyFatoorah again.
 - A successful payment status should override weaker duplicate events, and success must not be overwritten by later non-final signals.
 
 ## Amount And Currency
 
 - Compare invoice value, display/pay/base currency, and local order reference.
 - If using invoice items, ensure the total matches `InvoiceValue`.
+- Refund requests use the account base currency; compare refund amount and available refund balance before marking money returned.
 
 ## Status Mapping
 
@@ -70,7 +78,9 @@ Use for MyFatoorah invoice/payment URL flows, webhook handling, redirection hand
 ## Refunds Voids And Subscriptions
 
 - Auth/capture flow uses Update Payment with `CAPTURE` or `RELEASE`; only one capture or release operation is allowed per invoice per current docs.
-- Refund webhooks and refund APIs require separate local operation records.
+- Create Refund creates a refund request for a successful payment; do not treat request creation as final refunded settlement.
+- Refund webhooks and refund APIs require separate local operation records, amount checks, and duplicate-request protection.
+- Prefer Refund Status Changed webhook events for refund state updates, with Get Refund Details as fallback.
 - Recurring payments require explicit docs and merchant enablement.
 
 ## Sandbox And Test Notes
