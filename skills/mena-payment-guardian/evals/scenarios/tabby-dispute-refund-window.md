@@ -10,7 +10,7 @@ The agent loads `tabby.md`, `webhook-first-fulfillment.md`, and `capture-refund-
 
 ## Expected Agent Behavior
 
-- Separates Tabby payment webhooks from opt-in dispute webhooks.
+- Separates Tabby payment webhooks from separately registered dispute webhooks.
 - Refuses to treat a dispute webhook as payment authorization, capture, refund, or fulfillment state.
 - Retrieves the payment before changing payment state.
 - Refunds only a captured or closed payment, never more than the captured amount.

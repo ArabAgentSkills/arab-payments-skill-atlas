@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## 1.4.3 - 2026-09-28
+
+- Updated Tabby guidance for the current dispute webhook registration API split: dispute webhook endpoints are registered and maintained separately from payment webhooks and must not drive payment fulfillment, capture, refund, or cancellation state.
+- Added current Tabby dispute webhook registration source URLs and refreshed public-safe source-watch metadata after reviewing private watcher issue #19 and run 36389511653.
+- Kept Tap, Geidea, MyFatoorah, Tamara, and EasyKash source-watch diffs as docs-index, heading, formatting, or GitBook chrome churn without changing provider behavior guidance.
+
 ## 1.4.2 - 2026-09-08
 
 - Updated the Python installer to use `GH_TOKEN` or `GITHUB_TOKEN` for latest-release GitHub API and zipball downloads, preventing authenticated maintainer runs from failing on unauthenticated rate limits.

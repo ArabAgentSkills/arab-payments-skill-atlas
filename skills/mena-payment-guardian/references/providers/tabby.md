@@ -5,9 +5,9 @@
 - Priority: P0
 - Readiness: A
 - Public docs status: public
-- Last checked: 2026-08-31
+- Last checked: 2026-09-28
 - Source confidence: High for official Tabby docs.
-- Sources: Tabby introduction, create session, checkout flow, payment processing, payment statuses, payment webhooks, dispute webhooks, retrieve payment, and official Tabby `llms.txt` index.
+- Sources: Tabby introduction, create session, checkout flow, payment processing, payment statuses, payment webhooks, dispute webhook registration APIs, dispute webhooks, retrieve payment, and official Tabby `llms.txt` index.
 
 ## Use When
 
@@ -20,6 +20,11 @@ Use for Tabby Pay in 4/custom integration, hosted checkout, BNPL authorization/c
 - Checkout flow: `https://docs.tabby.ai/pay-in-4-custom-integration/checkout-flow`
 - Payment processing: `https://docs.tabby.ai/pay-in-4-custom-integration/payment-processing`
 - Payment webhooks: `https://docs.tabby.ai/pay-in-4-custom-integration/webhooks`
+- Register dispute webhook: `https://docs.tabby.ai/api-reference/dispute-webhooks/register-a-dispute-webhook`
+- Retrieve dispute webhooks: `https://docs.tabby.ai/api-reference/dispute-webhooks/retrieve-all-dispute-webhooks`
+- Retrieve a dispute webhook: `https://docs.tabby.ai/api-reference/dispute-webhooks/retrieve-a-dispute-webhook`
+- Update dispute webhook: `https://docs.tabby.ai/api-reference/dispute-webhooks/update-a-dispute-webhook`
+- Remove dispute webhook: `https://docs.tabby.ai/api-reference/dispute-webhooks/remove-a-dispute-webhook`
 - Dispute webhooks: `https://docs.tabby.ai/pay-in-4-custom-integration/dispute-webhooks`
 - Retrieve payment: `https://docs.tabby.ai/api-reference/payments/retrieve-a-payment`
 - Agent-readable docs: `https://docs.tabby.ai/llms.txt`
@@ -31,11 +36,12 @@ Use for Tabby Pay in 4/custom integration, hosted checkout, BNPL authorization/c
 - Use retrieve payment and payment webhooks to verify status after redirect.
 - Capture authorized payments from OMS/backend.
 - Close/cancel and refund through documented APIs.
-- Keep dispute notifications separate from payment fulfillment events.
+- Register and handle dispute webhook endpoints separately from payment webhook endpoints; dispute notifications are not payment fulfillment events.
 
 ## Setup Prerequisites
 
-- Secret key, merchant code, merchant URLs, current country/currency support, payment webhook registration, dispute webhook opt-in status, auth header/IP allowlist strategy, and sandbox/live separation.
+- Secret key, merchant code, merchant URLs, current country/currency support, payment webhook registration, dispute webhook registration per merchant code, auth header/IP allowlist strategy, and sandbox/live separation.
+- Current dispute webhook registration docs require production secret-key authorization and `X-Merchant-Code`; confirm merchant enablement and do not use test keys for dispute webhook registration.
 - Current public docs list UAE/AED and Saudi Arabia/SAR for the custom integration pages reviewed on 2026-08-31; do not assume Kuwait/KWD support without current merchant-specific confirmation.
 - Confirm auto-capture settings with Tabby if the merchant account behavior differs from custom integration docs.
 
@@ -51,7 +57,8 @@ Use for Tabby Pay in 4/custom integration, hosted checkout, BNPL authorization/c
 - Webhook registration is per merchant code and current docs show `X-Merchant-Code` as a required registration header.
 - The webhook can arrive before the local order is saved; persist incoming verified events and reconcile once the order exists.
 - Treat a webhook with an already populated captures array as capture confirmation, not a new command to capture again.
-- Dispute webhooks are separate opt-in notifications for dispute lifecycle changes; route them to dispute handling and do not treat them as payment authorization, capture, refund, or fulfillment events.
+- Dispute webhooks are registered separately from payment webhooks for dispute lifecycle changes; route them to dispute handling and do not treat them as payment authorization, capture, refund, or fulfillment events.
+- Dispute webhook update calls replace the stored registration object, so send the full intended URL/header configuration and keep auth-header material server-side.
 - Store payment id, checkout/session id, order reference, status, captures, refunds, and webhook receipt data.
 
 ## Signature Or HMAC
@@ -89,10 +96,11 @@ Use for Tabby Pay in 4/custom integration, hosted checkout, BNPL authorization/c
 ## Sandbox And Test Notes
 
 - Test payment webhooks out of order, duplicate webhook, redirect missing, authorization without capture, capture retry with same `reference_id`, close, refund within and outside the documented refund window, and dispute webhook routing.
+- Dispute webhook registration is live-only in current docs; do not run destructive registration/update/remove tests against production merchant settings without explicit merchant approval.
 
 ## Unknowns And Do Not Invent
 
-- Do not invent merchant_code, country support, auto-capture behavior, webhook auth header value, dispute webhook enablement, refund-window exceptions, or payment status transitions.
+- Do not invent merchant_code, country support, auto-capture behavior, webhook auth header value, dispute webhook enablement, dispute webhook registration limits, refund-window exceptions, or payment status transitions.
 - If account-specific settings differ, ask for merchant docs or Tabby integration manager confirmation.
 - Fetch the current Tabby `llms.txt` index before endpoint-level checkout, status, capture, or webhook work.
 
@@ -102,7 +110,7 @@ Use for Tabby Pay in 4/custom integration, hosted checkout, BNPL authorization/c
 - Store payment id.
 - Treat payment webhook as notification.
 - Register webhooks for the correct `merchant_code` and verify the configured static auth header.
-- Keep dispute webhook handling separate.
+- Register and handle dispute webhooks separately from payment webhooks.
 - Retrieve payment before fulfillment/capture.
 - Use stable `reference_id` idempotency and a local capture-in-progress guard for capture/refund.
 - Separate authorization, capture, close, and refund.
@@ -116,3 +124,4 @@ Use for Tabby Pay in 4/custom integration, hosted checkout, BNPL authorization/c
 - You assume Kuwait/KWD support from older docs without current merchant confirmation.
 - You capture from both redirect and webhook paths with different `reference_id` values.
 - You treat dispute webhook delivery as payment success or refund confirmation.
+- You use test keys for dispute webhook registration or mutate live dispute webhook settings without approval.

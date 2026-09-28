@@ -1,23 +1,39 @@
 # Source Watch Report
 
-- Generated: 2026-09-07T22:03:16Z
-- Total URLs checked: 114
-- Changes detected: 0
+- Generated: 2026-09-28T07:16:28Z
+- Total URLs checked: 119
+- Changes detected: 4
 - Full provider docs are not committed. Private watcher artifacts may contain fetched snapshots for maintainer review.
 
-## Maintainer Result
+## Changes
 
-Classification: `payment_behavior_change`, with supporting `source_url_replacement` evidence for MyFatoorah refund documentation.
+### CHANGED: https://github.com/Kashier-payments
 
-Private watcher issue #18 and run 34112647995 were reviewed after source snapshot capture completed before source-link checking. The run reported source-change exit code `2`, source-link exit code `0`, artifact `10014995338`, and artifact digest `sha256:9be8c99314ba3567522fbd0904dd7b9f9bd2818dd830760fe38de331068ee59a`.
+- Providers: egypt-payment-guardian:kashier, mena-payment-guardian:kashier
+- Previous status: JS_CHALLENGE / hash ``
+- Current status: OK / hash `0a0052294cc4b18bccbbccc9034648e670e3aaa8721e7e7e3496a7ee88feec6a`
+- Excerpt: {"description": "Create seamless checkout experience for your customers.", "html_url": "https://github.com/Kashier-payments", "login": "Kashier-payments", "public_repos": 18, "type": "Organization"}
 
-The public-safe update covers current MyFatoorah refund source coverage and refund handling: Create Refund is a refund request, Refund Status Changed webhooks are the primary refund-state update path, Get Refund Details is the fallback, refund amount/account-base-currency/PaymentId checks are required, and duplicate partial-refund retries must be blocked with local idempotency.
+### CHANGED: https://github.com/Kashier-payments/Kashier-WooCommerce-UI-Plugin
 
-PayTabs blank-line diffs, Tabby `llms.txt` docs-index cleanup, and local Tabby Retrieve Payment code-example formatting drift were reviewed as `chrome_noise`. Paymob JavaScript-challenge responses remain manual browser verification warnings, not broken source links. Kashier GitHub API records were reverified as `OK`.
+- Providers: egypt-payment-guardian:kashier, mena-payment-guardian:kashier
+- Previous status: JS_CHALLENGE / hash ``
+- Current status: OK / hash `b3b767c788b7240a553024a5ffade4d86997904010a4b58eb1187d5b51a10065`
+- Excerpt: {"archived": false, "default_branch": "main", "description": "Kashier WooCommerce Plugin", "disabled": false, "full_name": "Kashier-payments/Kashier-WooCommerce-UI-Plugin", "html_url": "https://github.com/Kashier-payments/Kashier-WooCommerce-UI-Plugin", "pushed_at": "2025-12-08T12:54:42Z"}
 
-## Result
+### CHANGED: https://github.com/Kashier-payments/NodeJs-Checkout-Demo
 
-Public baseline refreshed after reviewed MyFatoorah refund guidance and source-watch metadata updates. No provider documentation changes remain against the refreshed baseline.
+- Providers: egypt-payment-guardian:kashier, mena-payment-guardian:kashier
+- Previous status: JS_CHALLENGE / hash ``
+- Current status: OK / hash `3c9364917a963973448002b437cd79b6304548017bd61d8657cfe73272789097`
+- Excerpt: {"archived": false, "default_branch": "master", "description": "Create and pay orders through IFrame and Hosted Payment Page in Nodejs", "disabled": false, "full_name": "Kashier-payments/NodeJs-Checkout-Demo", "html_url": "https://github.com/Kashier-payments/NodeJs-Checkout-Demo", "pushed_at": "2022-12-11T10:23:09Z"}
+
+### CHANGED: https://github.com/Kashier-payments/Php-Checkout-Demo
+
+- Providers: egypt-payment-guardian:kashier, mena-payment-guardian:kashier
+- Previous status: JS_CHALLENGE / hash ``
+- Current status: OK / hash `bda624cf5b7f1c9247ebba81a8a89066c9232cc65694f4546d24eeef4666bafe`
+- Excerpt: {"archived": false, "default_branch": "master", "description": "Create and pay orders through IFrame and Hosted Payment Page Demo ", "disabled": false, "full_name": "Kashier-payments/Php-Checkout-Demo", "html_url": "https://github.com/Kashier-payments/Php-Checkout-Demo", "pushed_at": "2021-07-13T14:51:17Z"}
 
 ## Manual Browser Verification
 

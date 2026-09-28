@@ -1,7 +1,7 @@
 {
   "skill": "mena-payment-guardian",
   "version_scope": "v1-arab-mena-payments-bnpl",
-  "last_updated": "2026-08-31",
+  "last_updated": "2026-09-28",
   "source_policy": "Summaries and official links only. Do not vendor full provider docs. Workbook URLs are seed links; official/provider-controlled docs decide what is documented.",
   "coverage_tiers": {
     "full-depth": [
@@ -316,10 +316,15 @@
         "https://docs.tabby.ai/pay-in-4-custom-integration/payment-processing",
         "https://docs.tabby.ai/pay-in-4-custom-integration/payment-statuses",
         "https://docs.tabby.ai/pay-in-4-custom-integration/webhooks",
+        "https://docs.tabby.ai/api-reference/dispute-webhooks/register-a-dispute-webhook",
+        "https://docs.tabby.ai/api-reference/dispute-webhooks/retrieve-all-dispute-webhooks",
+        "https://docs.tabby.ai/api-reference/dispute-webhooks/retrieve-a-dispute-webhook",
+        "https://docs.tabby.ai/api-reference/dispute-webhooks/update-a-dispute-webhook",
+        "https://docs.tabby.ai/api-reference/dispute-webhooks/remove-a-dispute-webhook",
         "https://docs.tabby.ai/pay-in-4-custom-integration/dispute-webhooks",
         "https://docs.tabby.ai/api-reference/payments/retrieve-a-payment"
       ],
-      "notes": "Docs cover checkout session, payment verification, payment webhooks, dispute webhooks, capture, close, refund, 180-day refund initiation window, idempotent reference_id, and payment status handling. Official agent-readable docs index is available at llms.txt."
+      "notes": "Docs cover checkout session, payment verification, payment webhooks, separate dispute webhook registration APIs, capture, close, refund, 180-day refund initiation window, idempotent reference_id, and payment status handling. Official agent-readable docs index is available at llms.txt."
     },
     {
       "id": "tamara",
