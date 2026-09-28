@@ -1,39 +1,23 @@
 # Source Watch Report
 
-- Generated: 2026-09-28T07:16:28Z
+- Generated: 2026-09-28T07:18:57Z
 - Total URLs checked: 119
-- Changes detected: 4
+- Changes detected: 0
 - Full provider docs are not committed. Private watcher artifacts may contain fetched snapshots for maintainer review.
 
-## Changes
+## Maintainer Result
 
-### CHANGED: https://github.com/Kashier-payments
+Classification: `payment_behavior_change` for Tabby dispute webhook registration guidance, with non-release source-watch deltas treated as docs-index, heading, formatting, or GitBook chrome churn.
 
-- Providers: egypt-payment-guardian:kashier, mena-payment-guardian:kashier
-- Previous status: JS_CHALLENGE / hash ``
-- Current status: OK / hash `0a0052294cc4b18bccbbccc9034648e670e3aaa8721e7e7e3496a7ee88feec6a`
-- Excerpt: {"description": "Create seamless checkout experience for your customers.", "html_url": "https://github.com/Kashier-payments", "login": "Kashier-payments", "public_repos": 18, "type": "Organization"}
+Private watcher issue #19 and run 36389511653 were reviewed after source snapshot capture completed before source-link checking. The run reported source-change exit code `2`, source-link exit code `0`, artifact `10956110613`, and artifact digest `sha256:3a58eb323377e8ce319cc17abb1cd03171bed1d4fda900d4941637e583912466`.
 
-### CHANGED: https://github.com/Kashier-payments/Kashier-WooCommerce-UI-Plugin
+The public-safe update covers current Tabby dispute webhook source coverage and setup guidance: dispute webhook registration is separate from payment webhooks, uses the documented dispute-webhook API surface, requires merchant-code-aware registration, should not drive payment fulfillment/capture/refund/cancel state, and live dispute webhook settings must not be mutated without explicit approval.
 
-- Providers: egypt-payment-guardian:kashier, mena-payment-guardian:kashier
-- Previous status: JS_CHALLENGE / hash ``
-- Current status: OK / hash `b3b767c788b7240a553024a5ffade4d86997904010a4b58eb1187d5b51a10065`
-- Excerpt: {"archived": false, "default_branch": "main", "description": "Kashier WooCommerce Plugin", "disabled": false, "full_name": "Kashier-payments/Kashier-WooCommerce-UI-Plugin", "html_url": "https://github.com/Kashier-payments/Kashier-WooCommerce-UI-Plugin", "pushed_at": "2025-12-08T12:54:42Z"}
+Tap, Geidea, MyFatoorah, Tamara, and EasyKash source-watch diffs were reviewed as docs-index, heading, formatting, or GitBook chrome churn against existing public guidance. Paymob JavaScript-challenge responses remain manual browser verification warnings, not broken source links. Kashier GitHub API records were reverified as `OK` with authenticated source-watch metadata.
 
-### CHANGED: https://github.com/Kashier-payments/NodeJs-Checkout-Demo
+## Result
 
-- Providers: egypt-payment-guardian:kashier, mena-payment-guardian:kashier
-- Previous status: JS_CHALLENGE / hash ``
-- Current status: OK / hash `3c9364917a963973448002b437cd79b6304548017bd61d8657cfe73272789097`
-- Excerpt: {"archived": false, "default_branch": "master", "description": "Create and pay orders through IFrame and Hosted Payment Page in Nodejs", "disabled": false, "full_name": "Kashier-payments/NodeJs-Checkout-Demo", "html_url": "https://github.com/Kashier-payments/NodeJs-Checkout-Demo", "pushed_at": "2022-12-11T10:23:09Z"}
-
-### CHANGED: https://github.com/Kashier-payments/Php-Checkout-Demo
-
-- Providers: egypt-payment-guardian:kashier, mena-payment-guardian:kashier
-- Previous status: JS_CHALLENGE / hash ``
-- Current status: OK / hash `bda624cf5b7f1c9247ebba81a8a89066c9232cc65694f4546d24eeef4666bafe`
-- Excerpt: {"archived": false, "default_branch": "master", "description": "Create and pay orders through IFrame and Hosted Payment Page Demo ", "disabled": false, "full_name": "Kashier-payments/Php-Checkout-Demo", "html_url": "https://github.com/Kashier-payments/Php-Checkout-Demo", "pushed_at": "2021-07-13T14:51:17Z"}
+Public baseline refreshed after reviewed Tabby dispute webhook guidance and source-watch metadata updates. Authenticated `check_source_changes.py --check` verified that no provider documentation changes remain against the refreshed baseline.
 
 ## Manual Browser Verification
 

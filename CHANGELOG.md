@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 1.4.4 - 2026-09-28
+
+- Corrected the public source-watch report for the Tabby dispute webhook review so it records the final zero-change verification against the refreshed baseline and the authenticated Kashier GitHub metadata recheck.
+- No provider behavior guidance changed from `v1.4.3`.
+
 ## 1.4.3 - 2026-09-28
 
 - Updated Tabby guidance for the current dispute webhook registration API split: dispute webhook endpoints are registered and maintained separately from payment webhooks and must not drive payment fulfillment, capture, refund, or cancellation state.
